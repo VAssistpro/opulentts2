@@ -1,36 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
-import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { useDesktopNavigation } from "../../contexts/DesktopNavigationContext";
 
 const Hero = () => {
   const { setActiveSection } = useDesktopNavigation();
 
   const handleScrollToSection = (sectionId: string) => {
-     setActiveSection(sectionId);
-     setTimeout(() => {
-       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-     }, 100);
+    setActiveSection(sectionId);
+    setTimeout(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
   };
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden scrollbar-hide">
       {/* Background Video */}
       <div className="absolute inset-0 -z-10">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center'
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-fit: cover"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
           }}
         >
-          <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
+          <source
+            src="http://opulentts.com/bgvideo/otsbgvido2.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
         {/* Professional overlay for better text readability */}
@@ -40,7 +45,6 @@ const Hero = () => {
 
       {/* Professional Hero Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        
         {/* Premium Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -62,17 +66,23 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-8"
         >
-          <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4
+          <div
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4
                          text-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)]
-                         tracking-tight leading-[0.85]">
+                         tracking-tight leading-[0.85]"
+          >
             <span className="block">OPULENT</span>
-            <span className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
-                             bg-clip-text text-transparent drop-shadow-none">
+            <span
+              className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
+                             bg-clip-text text-transparent drop-shadow-none"
+            >
               TRANSPORT
             </span>
           </div>
-          <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-[0.2em]
-                         text-white/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <div
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-[0.2em]
+                         text-white/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+          >
             SOLUTIONS
           </div>
         </motion.h1>
@@ -84,11 +94,13 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-light mb-6
-                        drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]">
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl text-white font-light mb-6
+                        drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
+          >
             Premium Chauffeur Services
           </h2>
-          
+
           {/* Service Areas */}
           <div className="flex flex-wrap items-center justify-center gap-4 text-white/90 text-base sm:text-lg">
             <span className="font-medium">Manhattan</span>
@@ -111,9 +123,9 @@ const Hero = () => {
           <p className="text-white/85 text-xl sm:text-2xl font-light">
             Experience luxury. Arrive in style.
           </p>
-          
+
           <motion.button
-            onClick={() => handleScrollToSection('book')}
+            onClick={() => handleScrollToSection("book")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-16 py-5 rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-dark
@@ -132,7 +144,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.button
-        onClick={() => handleScrollToSection('about')}
+        onClick={() => handleScrollToSection("about")}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
@@ -141,7 +153,9 @@ const Hero = () => {
                  text-white/70 hover:text-gold transition-colors duration-300"
         aria-label="Scroll down"
       >
-        <span className="text-xs md:text-sm font-medium tracking-wider uppercase">Scroll</span>
+        <span className="text-xs md:text-sm font-medium tracking-wider uppercase">
+          Scroll
+        </span>
         <ChevronDown className="w-5 h-5 md:w-6 md:h-6 animate-bounce" />
       </motion.button>
     </div>

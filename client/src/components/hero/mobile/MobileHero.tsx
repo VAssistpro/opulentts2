@@ -69,32 +69,73 @@ const MobileHero = () => {
             </span>
           </motion.p>
 
-          <motion.button
+          {/* Call to Action Buttons */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleBookNow}
-            className="mt-12 relative group overflow-hidden
-                     px-8 py-4 rounded-full
-                     bg-black/40 backdrop-blur-md
-                     border border-gold/30
-                     text-white font-bold text-lg tracking-wider
-                     flex items-center gap-3 mx-auto
-                     transition-all duration-300
-                     hover:border-gold/50
-                     hover:bg-black/50
-                     shadow-[0_0_20px_rgba(147,113,39,0.3)]
-                     hover:shadow-[0_0_30px_rgba(147,113,39,0.5)]"
+            className="mt-8 flex flex-col xs:flex-row gap-4 justify-center items-center"
           >
-            {/* Shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            
-            {/* Content */}
-            <span className="relative z-10">Book Your Journey</span>
-            <ArrowRight className="w-6 h-6 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
-          </motion.button>
+            <button
+              onClick={handleBookNow}
+              className="group relative overflow-hidden bg-gradient-to-r from-gold to-gold-dark
+                       text-black font-bold py-4 px-8 rounded-xl
+                       shadow-[0_8px_32px_rgba(147,113,39,0.4)]
+                       hover:shadow-[0_12px_40px_rgba(147,113,39,0.6)]
+                       transform hover:scale-105 transition-all duration-300
+                       min-w-[180px] border border-gold/30"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Book Now
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+
+            <a
+              href="tel:+15163245483"
+              className="group relative overflow-hidden bg-transparent border-2 border-white/30
+                       text-white font-bold py-4 px-8 rounded-xl
+                       backdrop-blur-md hover:border-gold/50
+                       transform hover:scale-105 transition-all duration-300
+                       min-w-[180px] hover:bg-white/10"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Call Now
+                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" 
+                     fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </span>
+            </a>
+          </motion.div>
+
+          {/* Service Areas */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
+            className="mt-12 text-center"
+          >
+            <p className="text-white/70 text-sm font-medium mb-3 tracking-wider uppercase">
+              Premium Chauffeur Services
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-xs text-white/80">
+              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                Manhattan
+              </span>
+              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                Brooklyn
+              </span>
+              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                Queens
+              </span>
+              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                JFK • LGA • EWR
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

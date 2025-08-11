@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionTitle from '../ui/SectionTitle';
+import SectionBackground from '../ui/SectionBackground';
 import FleetShowcase from '../fleet/FleetShowcase';
 import AnimatedSection from '../ui/AnimatedSection';
 import LuxuryButton from '../ui/design-system/LuxuryButton';
@@ -10,10 +11,7 @@ const Fleet = () => {
   const { setActiveSection } = useNavigationContext();
 
   return (
-    <section className="relative py-0.5 overflow-auto">
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
-
-      <div className="relative z-10">
+    <SectionBackground>
         <AnimatedSection>
           <SectionTitle
             title="Our Fleet"
@@ -34,8 +32,7 @@ const Fleet = () => {
             Book Your Journey
           </LuxuryButton>
         </div>
-      </div>
-    </section>
+    </SectionBackground>
   );
 };
 

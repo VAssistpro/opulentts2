@@ -3,7 +3,7 @@ import { ArrowUp } from 'lucide-react';
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className={`relative z-[40] w-full flex-shrink-0 mt-4 ${className || ''}`}>
+    <footer className={`relative z-[40] w-full flex-shrink-0 mt-2 ${className || ''}`}>
       {/* Burgundy divider line with glow effect */}
       <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent 
                     shadow-[0_0_9px_rgba(128,0,32,0.4)]"></div>

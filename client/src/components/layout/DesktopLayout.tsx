@@ -10,7 +10,7 @@ import ShimmerBackground from '../effects/ShimmerBackground';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
   const sidebarMarginClass = "ml-56";
-  const mainContentHeight = "h-[calc(100vh-16rem)]";
+  const mainContentHeight = "h-[calc(100vh-8rem)]";
 
   return (
     <ErrorBoundary>
@@ -29,7 +29,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-24 pb-1 pr-2 pl-6 transition-all duration-500`}>
+        <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-20 pb-2 pr-2 pl-6 transition-all duration-500`}>
           <div className={`relative ${mainContentHeight} mr-8`}>
             <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent shadow-[0_0_9px_rgba(147,113,39,0.3)] pointer-events-none" />
             <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent shadow-[0_0_9px_rgba(147,113,39,0.3)] pointer-events-none" />

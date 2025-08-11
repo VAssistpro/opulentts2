@@ -67,7 +67,7 @@ const Testimonials = () => {
             </div>
 
             {/* Rating */}
-            <div className="flex gap-1 mb-4">
+            <div className="flex gap-1 mb-4 pl-[5px] pr-[5px] ml-[5px] mr-[5px]">
               {[...Array(TESTIMONIALS[activeIndex].rating)].map((_, i) => (
                 <motion.div
                   key={i}

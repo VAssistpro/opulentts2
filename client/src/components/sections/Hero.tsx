@@ -36,9 +36,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_20%,rgba(0,0,0,0.4)_70%)] z-10 pointer-events-none" />
       </div>
-
       {/* Professional Hero Content */}
-      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pl-[0px] pr-[0px]">
         {/* Premium Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -135,7 +134,6 @@ const Hero = () => {
           </motion.button>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.button
         onClick={() => handleScrollToSection("about")}

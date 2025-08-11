@@ -1,95 +1,99 @@
 import React from 'react';
-import AnimatedElement from '../ui/AnimatedElement'; // Adjust path
-import HeroTitle from './HeroTitle'; // Adjust path
-import HeroSubtext from './HeroSubtext'; // Adjust path
+import { motion } from 'framer-motion';
 
 const HeroContent = () => {
-  // Define RGBA for subtle gold shadow on panel
-  const GOLD_DEFAULT_RGB = '147, 113, 39';
-  const PANEL_SHADOW_COLOR = `rgba(${GOLD_DEFAULT_RGB}, 0.15)`; // Very subtle shadow
-
   return (
-    // Outer container still needs padding for fixed CTA below
-    <div className="text-center px-4 sm:px-6 pb-36 md:pb-48">
-      {/* --- FROSTED GLASS PANEL --- */}
-      <AnimatedElement animation="fade-in" delay={200} duration={700}>
-        <div
-          className="max-w-3xl xl:max-w-4xl mx-auto
-                   bg-black/40  /* Semi-transparent background */
-                   backdrop-blur-md /* Blur effect */
-                   rounded-xl
-                   border border-white/10 /* Subtle border */
-                   p-6 py-8 sm:p-8 md:p-10 /* Padding inside panel */
-                   shadow-[0_8px_30px_var(--panel-shadow)]"
-           style={
-               { '--panel-shadow': PANEL_SHADOW_COLOR } as React.CSSProperties
-           }
+    <div className="text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      {/* Professional Hero Content with Modern Design */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative"
+      >
+        {/* Premium Badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="inline-flex items-center px-4 py-2 mb-6 rounded-full 
+                     bg-gradient-to-r from-gold/20 to-gold-lighter/20 
+                     border border-gold/30 backdrop-blur-sm"
         >
-          {/* Render Title and Subtext INSIDE */}
-          {/* Ensure HeroTitle/HeroSubtext have NO drop-shadows if panel provides contrast */}
-          <HeroTitle />
+          <span className="text-gold text-sm font-medium tracking-wider uppercase">
+            ★ Premium Luxury Service ★
+          </span>
+        </motion.div>
 
-          {/* Divider */}
-          <AnimatedElement animation="fade-in" delay={500}>
-            <div className="w-24 md:w-32 h-0.5 mx-auto my-5 md:my-6 divider-glow" />
-          </AnimatedElement>
-
-          <HeroSubtext />
-
-        </div>
-      </AnimatedElement>
-
-      {/* --- PRIMARY CTA BUTTON (Rendered Separately in Hero.tsx below this component) --- */}
-      {/* The main gold button will be positioned after this panel in Hero.tsx */}
-
-    </div>
-  );
-};
-
-export default HeroContent;import React from 'react';
-import AnimatedElement from '../ui/AnimatedElement'; // Adjust path
-import HeroTitle from './HeroTitle'; // Adjust path
-import HeroSubtext from './HeroSubtext'; // Adjust path
-
-const HeroContent = () => {
-  // Define RGBA for subtle gold shadow on panel
-  const GOLD_DEFAULT_RGB = '147, 113, 39';
-  const PANEL_SHADOW_COLOR = `rgba(${GOLD_DEFAULT_RGB}, 0.15)`; // Very subtle shadow
-
-  return (
-    // Outer container still needs padding for fixed CTA below
-    <div className="text-center px-4 sm:px-6 pb-36 md:pb-48">
-      {/* --- FROSTED GLASS PANEL --- */}
-      <AnimatedElement animation="fade-in" delay={200} duration={700}>
-        <div
-          className="max-w-3xl xl:max-w-4xl mx-auto
-                   bg-black/40  /* Semi-transparent background */
-                   backdrop-blur-md /* Blur effect */
-                   rounded-xl
-                   border border-white/10 /* Subtle border */
-                   p-6 py-8 sm:p-8 md:p-10 /* Padding inside panel */
-                   shadow-[0_8px_30px_var(--panel-shadow)]"
-           style={
-               { '--panel-shadow': PANEL_SHADOW_COLOR } as React.CSSProperties
-           }
+        {/* Main Title */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6
+                     bg-gradient-to-b from-white via-white to-gray-200 
+                     bg-clip-text text-transparent
+                     tracking-tight leading-tight"
         >
-          {/* Render Title and Subtext INSIDE */}
-          {/* Ensure HeroTitle/HeroSubtext have NO drop-shadows if panel provides contrast */}
-          <HeroTitle />
+          <span className="block">New York's</span>
+          <span className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
+                           bg-clip-text text-transparent">
+            Premier Chauffeur
+          </span>
+          <span className="block">Experience</span>
+        </motion.h1>
 
-          {/* Divider */}
-          <AnimatedElement animation="fade-in" delay={500}>
-            <div className="w-24 md:w-32 h-0.5 mx-auto my-5 md:my-6 divider-glow" />
-          </AnimatedElement>
+        {/* Elegant Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="flex items-center justify-center my-8"
+        >
+          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-32"></div>
+          <div className="mx-4 text-gold">✦</div>
+          <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent w-32"></div>
+        </motion.div>
 
-          <HeroSubtext />
+        {/* Refined Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="text-lg sm:text-xl md:text-2xl text-white/90 
+                     max-w-4xl mx-auto leading-relaxed font-light"
+        >
+          Elevate your journey with{' '}
+          <span className="font-semibold text-gold">Opulent Transport Solutions</span>
+          {' – '}where luxury meets reliability across Manhattan, Brooklyn, Queens, 
+          and all major airports including JFK, LGA, and Newark.
+        </motion.p>
 
-        </div>
-      </AnimatedElement>
-
-      {/* --- PRIMARY CTA BUTTON (Rendered Separately in Hero.tsx below this component) --- */}
-      {/* The main gold button will be positioned after this panel in Hero.tsx */}
-
+        {/* Key Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-white/70"
+        >
+          <div className="flex items-center space-x-2">
+            <span className="text-gold">●</span>
+            <span>24/7 Availability</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="text-gold">●</span>
+            <span>Professional Chauffeurs</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="text-gold">●</span>
+            <span>Luxury Fleet</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="text-gold">●</span>
+            <span>Airport Specialists</span>
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Testimonials = () => {
       </motion.div>
 
       {/* Testimonial Card */}
-      <div className="relative h-[300px] rounded-2xl overflow-hidden">
+      <div className="relative h-[350px] rounded-2xl overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}

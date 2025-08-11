@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionTitle from '../ui/SectionTitle';
+import SectionBackground from '../ui/SectionBackground';
 import { SERVICES } from '../../utils/constants';
 import AnimatedSection from '../ui/AnimatedSection';
 import LuxuryButton from '../ui/design-system/LuxuryButton';
@@ -10,10 +11,7 @@ const Services = () => {
   const { setActiveSection } = useNavigationContext();
 
   return (
-    <section className="py-1 relative overflow-auto">
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
-
-      <div className="relative z-10 container mx-auto px-4">
+    <SectionBackground>
         <AnimatedSection>
           <SectionTitle
             title="Our Services"
@@ -58,8 +56,7 @@ const Services = () => {
             Book Your Journey
           </LuxuryButton>
         </div>
-      </div>
-    </section>
+    </SectionBackground>
   );
 };
 

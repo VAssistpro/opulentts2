@@ -52,7 +52,7 @@ const Testimonials = () => {
       </motion.div>
 
       {/* Testimonial Card */}
-      <div className="relative h-[280px] rounded-2xl overflow-hidden">
+      <div className="relative h-[300px] rounded-2xl overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -64,7 +64,7 @@ const Testimonials = () => {
                        backdrop-blur-xl rounded-2xl border border-gold/20 p-6
                        shadow-[0_8px_32px_rgba(0,0,0,0.4)]
                        hover:border-gold/40 hover:shadow-[0_12px_40px_rgba(147,113,39,0.2)]
-                       transition-all duration-500"
+                       transition-all duration-500 flex flex-col"
           >
             {/* Quote Icon */}
             <div className="absolute top-4 right-4 text-gold/30">
@@ -85,24 +85,25 @@ const Testimonials = () => {
               ))}
             </div>
 
-            {/* Testimonial Text */}
+            {/* Testimonial Text - Flex grow to take available space */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-white/90 text-sm leading-relaxed mb-20 italic font-light px-2"
+              className="text-white/90 text-sm leading-relaxed italic font-light flex-grow px-1 mb-4"
             >
               "{TESTIMONIALS[activeIndex].text}"
             </motion.p>
 
-            {/* Author Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute bottom-3 left-6 right-24"
-            >
-              <div>
+            {/* Bottom Section - Fixed at bottom */}
+            <div className="mt-auto flex justify-between items-end">
+              {/* Author Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="flex-1 mr-4"
+              >
                 <h4 className="text-white font-semibold text-sm">
                   {TESTIMONIALS[activeIndex].author}
                 </h4>
@@ -112,23 +113,23 @@ const Testimonials = () => {
                 <p className="text-white/60 text-xs mt-1">
                   {TESTIMONIALS[activeIndex].location}
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Navigation Dots */}
-            <div className="absolute bottom-6 right-6 flex gap-2">
-              {TESTIMONIALS.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    activeIndex === index
-                      ? 'w-6 bg-gold shadow-[0_0_8px_rgba(147,113,39,0.6)]'
-                      : 'bg-gold/30 hover:bg-gold/60'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
+              {/* Navigation Dots */}
+              <div className="flex gap-2 flex-shrink-0">
+                {TESTIMONIALS.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      activeIndex === index
+                        ? 'w-6 bg-gold shadow-[0_0_8px_rgba(147,113,39,0.6)]'
+                        : 'bg-gold/30 hover:bg-gold/60'
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

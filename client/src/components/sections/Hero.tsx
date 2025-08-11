@@ -14,10 +14,10 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden scrollbar-hide">
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden scrollbar-hide" style={{ height: '100vh' }}>
       {/* Background Video */}
-      <div className="absolute inset-0 -z-10">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <video autoPlay muted loop playsInline className="w-full h-full object-cover min-h-screen">
           <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

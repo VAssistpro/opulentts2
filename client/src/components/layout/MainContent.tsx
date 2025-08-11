@@ -8,9 +8,7 @@ const MainContent = () => {
   const ActiveComponent = SECTIONS[activeSection];
 
   return (
-    <div className={`w-full h-full ${
-      activeSection === 'home' ? 'overflow-hidden' : 'overflow-y-auto custom-scrollbar'
-    }`}>
+    <div className="w-full h-full overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={activeSection}

@@ -37,8 +37,8 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
             <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent shadow-[0_0_9px_rgba(147,113,39,0.3)] pointer-events-none" />
 
             <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-10">
-              <div className="relative h-full w-full overflow-y-auto scrollbar-hide">
-                <div className="p-4 md:p-6">
+              <div className="relative h-full w-full">
+                <div className="h-full w-full">
                   {children ? children : <MainContent />}
                 </div>
               </div>

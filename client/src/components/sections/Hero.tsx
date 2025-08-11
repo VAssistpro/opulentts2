@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden scrollbar-hide">
       {/* Background Video */}
       <div className="absolute inset-0 -z-10">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">

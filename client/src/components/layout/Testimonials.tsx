@@ -90,7 +90,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-white/90 text-sm leading-relaxed mb-16 italic font-light"
+              className="text-white/90 text-sm leading-relaxed mb-20 italic font-light px-2"
             >
               "{TESTIMONIALS[activeIndex].text}"
             </motion.p>
@@ -100,7 +100,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute bottom-6 left-6 right-16"
+              className="absolute bottom-3 left-6 right-24"
             >
               <div>
                 <h4 className="text-white font-semibold text-sm">

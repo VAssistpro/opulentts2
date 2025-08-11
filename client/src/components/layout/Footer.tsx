@@ -7,7 +7,7 @@ const Footer = ({ className }: { className?: string }) => {
       {/* Burgundy divider line with glow effect */}
       <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent 
                     shadow-[0_0_9px_rgba(128,0,32,0.4)]"></div>
-      <div className="container mx-auto px-6 py-3">
+      <div className="container mx-auto px-6 py-3 ml-[73px] mr-[73px] pl-[76px] pr-[76px]">
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           {/* Left aligned text with glow effect */}
           <div className="text-center md:text-left text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)]">

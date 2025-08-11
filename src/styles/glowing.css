@@ -1,0 +1,55 @@
+/* Glowing Effects */
+.glow-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-gold {
+  box-shadow: 
+    0 0 30px rgba(147, 113, 39, 0.5),
+    0 0 60px rgba(147, 113, 39, 0.3),
+    0 0 90px rgba(147, 113, 39, 0.2);
+}
+
+.glow-gold:hover {
+  box-shadow: 
+    0 0 40px rgba(147, 113, 39, 0.6),
+    0 0 80px rgba(147, 113, 39, 0.4),
+    0 0 120px rgba(147, 113, 39, 0.2);
+}
+
+.shimmer-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-200%);
+  transition: transform 1.5s;
+}
+
+.shimmer-effect:hover::before {
+  transform: translateX(200%);
+}
+
+/* Form Input Glow */
+.input-glow {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(147, 113, 39, 0.2);
+}
+
+.input-glow:hover {
+  border-color: rgba(147, 113, 39, 0.4);
+  box-shadow: 0 0 15px rgba(147, 113, 39, 0.2);
+}
+
+.input-glow:focus {
+  border-color: rgba(147, 113, 39, 0.6);
+  box-shadow: 
+    0 0 20px rgba(147, 113, 39, 0.3),
+    0 0 40px rgba(147, 113, 39, 0.1);
+}

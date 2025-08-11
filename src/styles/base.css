@@ -1,0 +1,82 @@
+@layer base {
+  :root {
+    --color-background-primary: #000000;
+    --color-background-secondary: #0A0A0A;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #E5E5E5;
+    --color-gold: #937127;
+    --color-gold-light: #B38D3F;
+    --color-gold-lighter: #D4AF37;
+    --color-gold-dark: #785C1F;
+    --color-teal: #014D40;
+    --color-teal-light: #016A52;
+    --color-teal-dark: #01362D;
+  }
+
+  body {
+    @apply bg-background-primary text-text-primary font-montserrat;
+    background: radial-gradient(circle at center, #0A0A0A 0%, #000000 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .glassmorphic-panel {
+    @apply relative overflow-hidden rounded-xl
+           bg-gradient-to-br from-black/60 via-black/40 to-black/60
+           backdrop-blur-xl border border-gold/20
+           shadow-[0_0_30px_rgba(147,113,39,0.2)]
+           hover:shadow-[0_0_50px_rgba(147,113,39,0.3)]
+           hover:border-gold/30
+           transition-all duration-500;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(147, 113, 39, 0.3) rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-black/20 rounded;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gold/30 rounded hover:bg-gold/50 transition-colors;
+  }
+
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent my-8
+           shadow-[0_0_10px_rgba(147,113,39,0.3)];
+  }
+
+  .gold-divider {
+    @apply w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-6
+           shadow-[0_0_10px_rgba(147,113,39,0.5)];
+  }
+
+  .animated-border {
+    @apply relative;
+    &::before {
+      content: '';
+      @apply absolute inset-0 rounded-xl border-2 border-gold/30
+             shadow-[0_0_20px_rgba(147,113,39,0.3)]
+             animate-pulse;
+    }
+  }
+
+  .animated-gradient {
+    @apply relative overflow-hidden;
+    &::after {
+      content: '';
+      @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
+             -translate-x-full hover:translate-x-full transition-transform duration-1000;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.contact-button-wrapper {
+  @apply relative flex items-center transition-all duration-300;
+}
+
+.contact-button-wrapper:hover {
+  transform: translateX(5px);
+}
+
+.contact-tooltip {
+  @apply absolute left-full ml-4 px-4 py-2 bg-black/90 text-white text-sm
+         rounded-lg opacity-0 invisible -translate-x-2 pointer-events-none
+         whitespace-nowrap transition-all duration-300;
+}
+
+.contact-button-wrapper:hover .contact-tooltip {
+  @apply opacity-100 visible translate-x-0;
+}
+
+.contact-form-input {
+  @apply w-full px-6 py-4 rounded-lg border border-gray-200 dark:border-gray-700 
+         bg-white dark:bg-dark-bg dark:text-dark-text focus:border-gold 
+         focus:ring-2 focus:ring-gold/20 outline-none transition-all duration-300
+         hover:border-gold/50;
+}
+
+.contact-form-input:hover {
+  box-shadow: 0 4px 12px rgba(180, 145, 39, 0.1);
+}
+
+.contact-form-input:focus {
+  box-shadow: 0 0 0 3px rgba(180, 145, 39, 0.1);
+}
+
+.contact-info-icon {
+  @apply w-10 h-10 rounded-full bg-gold/10 dark:bg-gold/5 
+         flex items-center justify-center transition-all duration-300;
+}
+
+.contact-info-icon:hover {
+  @apply bg-gold/20 dark:bg-gold/10;
+  transform: scale(1.1);
+}

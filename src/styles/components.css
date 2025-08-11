@@ -1,0 +1,49 @@
+@layer components {
+  /* Scrollbar using neutral grey variables defined in :root (from previous index.css update) */
+  .custom-scrollbar {
+    @apply scrollbar-thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color); /* For Firefox */
+  }
+  /* Webkit scrollbar parts - reference variables if possible, or apply directly */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-[6px]; /* Use specific width from previous styles */
+    background-color: var(--scrollbar-track-color);
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    @apply rounded-[3px];
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+     @apply rounded-[3px];
+     /* Optional border */
+     border: 1px solid var(--scrollbar-track-color);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+  }
+
+
+  /* Mobile Section - No color changes needed */
+  .mobile-section {
+    @apply py-8 space-y-8;
+  }
+
+  /* Mobile Card - Using Gold Accents */
+  .mobile-card {
+    @apply bg-black/50 backdrop-blur-lg /* Slightly adjusted bg/blur */
+           border border-gold/20 /* Subtle gold border */
+           rounded-xl p-6 space-y-4 transition-all duration-300
+           hover:border-gold/40 /* Stronger gold border on hover */
+           hover:shadow-[0_0_20px_rgba(147,113,39,0.3)]; /* Gold shadow on hover */
+  }
+
+  /* Mobile Input - Neutral border, Gold focus */
+  .mobile-input {
+    @apply w-full px-4 py-3 rounded-lg bg-black/50 /* Adjusted bg */
+           border border-white/15 /* Neutral subtle border */
+           text-text-primary placeholder-text-secondary/70 /* Theme text colors */
+           focus:border-gold/50 focus:ring-0 /* Gold focus border, remove default ring */
+           transition-colors duration-300 outline-none; /* Added outline-none */
+  }
+}

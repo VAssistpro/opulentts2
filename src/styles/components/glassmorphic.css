@@ -1,0 +1,16 @@
+@layer components {
+  .glassmorphic-panel {
+    @apply bg-gradient-to-b from-black/80 via-black/60 to-black/80
+           backdrop-blur-xl border border-gold/30
+           shadow-[0_0_12px_rgba(147,113,39,0.2)]
+           hover:shadow-[0_0_20px_rgba(147,113,39,0.3)]
+           transition-all duration-500;
+  }
+
+  .glassmorphic-content {
+    @apply relative rounded-xl border border-gold/30 overflow-hidden
+           shadow-[0_0_50px_rgba(147,113,39,0.1)]
+           hover:shadow-[0_0_100px_rgba(147,113,39,0.15)]
+           transition-all duration-500;
+  }
+}

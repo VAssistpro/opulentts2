@@ -1,0 +1,78 @@
+/* Glassmorphic Menu Animations */
+@keyframes menu-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.menu-fade-in {
+  animation: menu-fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Glassmorphic Effects */
+.glassmorphic-bg {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(147, 113, 39, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.glassmorphic-button {
+  background: rgba(147, 113, 39, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(147, 113, 39, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glassmorphic-button:hover {
+  background: rgba(147, 113, 39, 0.3);
+  border-color: rgba(147, 113, 39, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Luxury Decorative Elements */
+.luxury-border {
+  position: relative;
+}
+
+.luxury-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(147, 113, 39, 0.5) 50%,
+    transparent 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Animation Keyframes */
+@keyframes shine {
+  from {
+    background-position: 200% center;
+  }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(147, 113, 39, 0.2),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 2s linear infinite;
+}

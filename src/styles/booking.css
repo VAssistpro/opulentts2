@@ -1,0 +1,44 @@
+.booking-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-container:hover {
+  box-shadow: 0 10px 15px -3px rgba(196, 161, 55, 0.1), 0 4px 6px -2px rgba(196, 161, 55, 0.05);
+}
+
+.booking-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(147, 113, 39, 0.3) rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(147, 113, 39, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(147, 113, 39, 0.5);
+}

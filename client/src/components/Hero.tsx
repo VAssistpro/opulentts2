@@ -42,31 +42,85 @@ const Hero = () => {
       {/* Ensure this container's padding works with the fixed CTA */}
       <div className="relative z-20 flex flex-col items-center w-full"> {/* Use z-20 for content */}
 
-        {/* Render the Frosted Glass Panel with Text */}
-        <HeroContent />
+        {/* Professional Hero Content - No Panel Background */}
+        <div className="text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          {/* Premium Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="inline-flex items-center px-6 py-3 mb-8 rounded-full 
+                       bg-black/60 backdrop-blur-xl border border-gold/40"
+          >
+            <span className="text-gold text-sm font-semibold tracking-wider uppercase">
+              ★ NEW YORK'S PREMIER LUXURY SERVICE ★
+            </span>
+          </motion.div>
 
-        {/* Primary CTA Button - Positioned AFTER the panel */}
-         <motion.button
-            onClick={() => handleScrollToSection('book')}
+          {/* Main Title with Professional Typography */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8
+                       text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]
+                       tracking-tight leading-[0.9]"
+          >
+            <span className="block">OPULENT</span>
+            <span className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
+                             bg-clip-text text-transparent drop-shadow-none">
+              TRANSPORT
+            </span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mt-4 tracking-widest">
+              SOLUTIONS
+            </span>
+          </motion.h1>
+
+          {/* Professional Subtitle */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.8 }} // Adjust delay based on panel animations
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
-            // Use mt-* relative to the panel above it
-            className="mt-8 md:mt-10 px-10 md:px-12 py-4 md:py-5 rounded-full
-                     bg-gradient-to-r from-gold-dark via-gold to-gold-dark
-                     hover:from-[#5c4718] hover:via-[#937127] hover:to-[#5c4718]
-                     text-black font-bold text-lg md:text-xl tracking-wider
-                     border border-gold/50
-                     shadow-[0_0_20px_var(--shadow-color)]
-                     hover:shadow-[0_0_30px_var(--shadow-hover-color)]
-                     flex items-center justify-center gap-3 group"
-             style={{ '--shadow-color': GOLD_SHADOW_COLOR, '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR } as React.CSSProperties}
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="mb-10"
           >
-            <span>Book Your Journey</span>
-            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1.5" />
-          </motion.button>
+            <p className="text-xl sm:text-2xl md:text-3xl text-white font-light 
+                         drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] mb-4">
+              Premium Chauffeur Services
+            </p>
+            <div className="flex items-center justify-center space-x-4 text-white/90 text-sm sm:text-base">
+              <span>NYC</span>
+              <span className="text-gold">•</span>
+              <span>JFK • LGA • EWR</span>
+              <span className="text-gold">•</span>
+              <span>Charter Services</span>
+            </div>
+          </motion.div>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="space-y-4"
+          >
+            <p className="text-white/80 text-lg mb-6">Ready to elevate your travel experience?</p>
+            <motion.button
+              onClick={() => handleScrollToSection('book')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-12 py-4 rounded-full bg-gradient-to-r from-gold-dark via-gold to-gold-dark
+                         hover:from-[#5c4718] hover:via-[#937127] hover:to-[#5c4718]
+                         text-black font-bold text-xl tracking-wider
+                         border border-gold/50 shadow-[0_0_25px_rgba(147,113,39,0.5)]
+                         hover:shadow-[0_0_35px_rgba(147,113,39,0.7)]
+                         flex items-center justify-center gap-3 group mx-auto
+                         transition-all duration-300"
+            >
+              <span>BOOK NOW</span>
+              <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-2" />
+            </motion.button>
+          </motion.div>
+        </div>
 
       </div>
 

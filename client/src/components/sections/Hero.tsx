@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center overflow-hidden scrollbar-hide">
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 -z-10">
         <video
@@ -24,13 +24,7 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-fit: cover"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
+          className="w-full h-full object-cover"
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

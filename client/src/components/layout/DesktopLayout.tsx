@@ -10,7 +10,7 @@ import ShimmerBackground from '../effects/ShimmerBackground';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
   const sidebarMarginClass = "ml-56";
-  const mainContentHeight = "h-[calc(100vh-12rem)]";
+  const mainContentHeight = "h-[calc(100vh-16rem)]";
 
   return (
     <ErrorBoundary>
@@ -46,7 +46,9 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </main>
 
-        <Footer className={`${sidebarMarginClass}`} />
+        <div className="mt-auto">
+          <Footer className={`${sidebarMarginClass}`} />
+        </div>
       </div>
     </ErrorBoundary>
   );

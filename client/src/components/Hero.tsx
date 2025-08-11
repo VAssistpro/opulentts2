@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { useDesktopNavigation } from '../../../contexts/DesktopNavigationContext'; // Adjust path
-import HeroContent from '../content/HeroContent'; // Import the panel component
+import { useDesktopNavigation } from '../contexts/DesktopNavigationContext';
 // Assume HeroOverlay is separate and handles background effects
 // import HeroOverlay from '../effects/HeroOverlay';
 
@@ -23,10 +22,16 @@ const Hero = () => {
 
   return (
     // Use items-start and pt-* for vertical positioning
-    <div className="relative w-full h-screen flex items-start justify-center pt-28 md:pt-32 lg:pt-36 overflow-hidden"> {/* Adjust pt-* */}
-      {/* Background Video (Keep as is) */}
+    <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
       <div className="absolute inset-0 -z-10">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover" /* poster="..." */ >
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
           <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://opulentts.com/sitemap.xml

@@ -90,7 +90,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-white/90 text-sm leading-relaxed mb-6 italic font-light"
+              className="text-white/90 text-sm leading-relaxed mb-16 italic font-light"
             >
               "{TESTIMONIALS[activeIndex].text}"
             </motion.p>
@@ -100,20 +100,18 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute bottom-6 left-6 right-6"
+              className="absolute bottom-6 left-6 right-16"
             >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="text-white font-semibold text-sm">
-                    {TESTIMONIALS[activeIndex].author}
-                  </h4>
-                  <p className="text-gold/80 text-xs font-medium">
-                    {TESTIMONIALS[activeIndex].role}
-                  </p>
-                  <p className="text-white/60 text-xs mt-1">
-                    {TESTIMONIALS[activeIndex].location}
-                  </p>
-                </div>
+              <div>
+                <h4 className="text-white font-semibold text-sm">
+                  {TESTIMONIALS[activeIndex].author}
+                </h4>
+                <p className="text-gold/80 text-xs font-medium">
+                  {TESTIMONIALS[activeIndex].role}
+                </p>
+                <p className="text-white/60 text-xs mt-1">
+                  {TESTIMONIALS[activeIndex].location}
+                </p>
               </div>
             </motion.div>
 

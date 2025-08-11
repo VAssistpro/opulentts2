@@ -43,9 +43,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center px-8 py-3 mb-10 rounded-full 
-                     bg-black/70 backdrop-blur-xl border border-gold/50
-                     shadow-[0_0_30px_rgba(147,113,39,0.3)]"
+          className="inline-flex items-center px-8 py-3 rounded-full bg-black/70 backdrop-blur-xl border border-gold/50 shadow-[0_0_30px_rgba(147,113,39,0.3)] mt-[21px] mb-[21px]"
         >
           <span className="text-gold text-sm font-bold tracking-wider uppercase">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★

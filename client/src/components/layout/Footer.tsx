@@ -3,11 +3,10 @@ import { ArrowUp } from 'lucide-react';
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className={`relative z-[40] w-full flex-shrink-0 mt-2 ${className || ''}`}>
+    <footer className="relative z-[40] w-full flex-shrink-0 mt-2 ml-[65px] mr-[65px]">
       {/* Burgundy divider line with glow effect */}
       <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent 
                     shadow-[0_0_9px_rgba(128,0,32,0.4)]"></div>
-      
       <div className="container mx-auto px-6 py-3">
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           {/* Left aligned text with glow effect */}
@@ -46,7 +45,6 @@ const Footer = ({ className }: { className?: string }) => {
           </div>
         </div>
       </div>
-      
       {/* Back to top button with glow effect */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

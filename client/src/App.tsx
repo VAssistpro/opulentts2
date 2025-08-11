@@ -8,26 +8,31 @@ import DesktopLayout from './components/layout/DesktopLayout';
 import MobileLayout from './components/mobile/MobileLayout';
 import SEOHead from './components/seo/SEOHead';
 import ScrollToTop from './components/ui/ScrollToTop';
+import StatusBar from './components/ui/StatusBar';
+import { ToastProvider } from './components/ui/EnhancedToast';
 
 const App = () => {
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
         <ThemeProvider>
-          <ParallaxProvider>
-            <MobileNavigationProvider>
-              <DesktopNavigationProvider>
-                <SEOHead />
-                <div className="lg:hidden">
-                  <MobileLayout />
-                </div>
-                <div className="hidden lg:block">
-                  <DesktopLayout />
-                </div>
-                <ScrollToTop />
-              </DesktopNavigationProvider>
-            </MobileNavigationProvider>
-          </ParallaxProvider>
+          <ToastProvider>
+            <ParallaxProvider>
+              <MobileNavigationProvider>
+                <DesktopNavigationProvider>
+                  <SEOHead />
+                  <StatusBar />
+                  <div className="lg:hidden">
+                    <MobileLayout />
+                  </div>
+                  <div className="hidden lg:block">
+                    <DesktopLayout />
+                  </div>
+                  <ScrollToTop />
+                </DesktopNavigationProvider>
+              </MobileNavigationProvider>
+            </ParallaxProvider>
+          </ToastProvider>
         </ThemeProvider>
       </HelmetProvider>
     </GlobalErrorBoundary>

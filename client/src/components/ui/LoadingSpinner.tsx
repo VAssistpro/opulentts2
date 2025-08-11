@@ -1,11 +1,47 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const LoadingSpinner = () => (
-  <div className="flex flex-col items-center justify-center space-y-4 py-8">
-    <Loader2 className="w-8 h-8 text-gold animate-spin" />
-    <p className="text-gray-600 dark:text-gray-400">Loading booking system...</p>
-  </div>
-);
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'gold' | 'white' | 'primary';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'gold',
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    gold: 'border-gold-lighter border-t-transparent',
+    white: 'border-white border-t-transparent',
+    primary: 'border-primary border-t-transparent'
+  };
+
+  return (
+    <motion.div
+      className={`
+        ${sizeClasses[size]}
+        ${colorClasses[color]}
+        border-2 rounded-full
+        ${className}
+      `}
+      animate={{ rotate: 360 }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        ease: "linear"
+      }}
+      data-testid="loading-spinner"
+    />
+  );
+};
 
 export default LoadingSpinner;

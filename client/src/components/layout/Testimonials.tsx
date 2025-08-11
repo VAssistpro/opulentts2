@@ -91,7 +91,7 @@ const Testimonials = () => {
             </motion.p>
 
             {/* Bottom Section - Fixed at bottom */}
-            <div className="mt-auto flex justify-between items-end">
+            <div className="flex justify-between items-end pl-[4px] pr-[4px] pt-[4px] pb-[4px] ml-[2px] mr-[2px] mt-[2px] mb-[2px] text-left">
               {/* Author Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

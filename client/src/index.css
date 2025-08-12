@@ -152,18 +152,8 @@
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Ensure video containers stay within bounds */
+/* Ensure video displays properly */
 video {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 0.75rem;
   display: block;
-}
-
-/* Force strict container bounds */
-.video-container {
-  contain: layout style size;
-  border-radius: 0.75rem;
-  overflow: hidden;
+  object-fit: cover;
 }

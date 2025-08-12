@@ -17,14 +17,18 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {/* Background Video - Simple and Effective */}
+      {/* Background Video - Full Container Fill */}
       <div className="absolute inset-0 -z-10">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="min-w-full min-h-full w-full h-full object-cover"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

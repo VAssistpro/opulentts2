@@ -152,8 +152,10 @@
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Ensure video displays properly */
+/* Ensure video fills container completely */
 video {
   display: block;
   object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
 }

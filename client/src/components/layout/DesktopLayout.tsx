@@ -38,9 +38,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
 
             <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-10">
               <div className="relative h-full w-full">
-                <div className="h-full w-full">
                   {children ? children : <MainContent />}
-                </div>
               </div>
             </div>
           </div>

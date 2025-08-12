@@ -17,15 +17,14 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-      {/* Background Video - Fitted to container */}
-      <div className="absolute inset-0 -z-10 flex items-center justify-center overflow-hidden">
+      {/* Background Video - Optimally fitted */}
+      <div className="absolute inset-0 -z-10">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="max-w-full max-h-full object-contain"
-          style={{ display: "block" }}
+          className="w-full h-full object-cover"
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

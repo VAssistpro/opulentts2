@@ -17,17 +17,17 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {/* Background Video - Full Container Fill */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background Video - Force Full Fill */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="min-w-full min-h-full w-full h-full object-cover"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
           style={{
             objectFit: 'cover',
-            objectPosition: 'center'
+            transform: 'translate(-50%, -50%) scale(1.1)'
           }}
         >
           <source

@@ -152,10 +152,16 @@
   transform: translateY(-2px) scale(1.02);
 }
 
-/* Ensure video fills container completely */
+/* Force video to fill container completely */
 video {
   display: block;
   object-fit: cover;
+}
+
+/* Hero video specific styling */
+.hero-video {
   min-width: 100%;
   min-height: 100%;
+  width: 100vw;
+  height: 100vh;
 }

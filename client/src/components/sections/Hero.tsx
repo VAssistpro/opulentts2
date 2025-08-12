@@ -18,13 +18,14 @@ const Hero = () => {
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
       {/* Background Video - Fitted to container */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="max-w-full max-h-full object-contain"
+          style={{ display: "block" }}
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"
@@ -33,9 +34,10 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         {/* Professional overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/69 via-black/39 to-black/69 z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_20%,rgba(0,0,0,0.4)_70%)] z-10 pointer-events-none" />
       </div>
+
       {/* Professional Hero Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pl-[0px] pr-[0px]">
         {/* Premium Badge */}
@@ -43,7 +45,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center px-8 py-3 rounded-full bg-black/70 backdrop-blur-xl border border-gold/50 shadow-[0_0_30px_rgba(147,113,39,0.3)] mt-[21px] mb-[21px]"
+          className="inline-flex items-center px-8 py-3 rounded-full bg-black/70 backdrop-blur-xl border border-gold/50 shadow-[0_0_30px_rgba(147,113,39,0.3)] mt-[14px] mb-[14px]"
         >
           <span className="text-gold text-sm font-bold tracking-wider uppercase">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★
@@ -55,10 +57,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-8"
+          className="mb-4"
         >
           <div
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-4
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-3
                          text-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)]
                          tracking-tight leading-[0.85]"
           >
@@ -83,10 +85,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="mb-12"
+          className="mb-4"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl text-white font-light mb-6
+            className="text-2xl sm:text-3xl md:text-4xl text-white font-light mb-3
                         drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]"
           >
             Premium Chauffeur Services
@@ -132,6 +134,7 @@ const Hero = () => {
           </motion.button>
         </motion.div>
       </div>
+
       {/* Scroll Indicator */}
       <motion.button
         onClick={() => handleScrollToSection("about")}

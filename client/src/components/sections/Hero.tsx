@@ -6,7 +6,7 @@ import { useDesktopNavigation } from "../../contexts/DesktopNavigationContext";
 const Hero = () => {
   const { setActiveSection } = useDesktopNavigation();
 
-  const handleScrollToSection = (sectionId: string) => {
+  const handleScrollToSection = (sectionId: 'home' | 'about' | 'services' | 'fleet' | 'contact' | 'book') => {
     setActiveSection(sectionId);
     setTimeout(() => {
       document

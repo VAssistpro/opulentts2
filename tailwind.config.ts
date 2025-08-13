@@ -69,6 +69,8 @@ export default {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "float": {

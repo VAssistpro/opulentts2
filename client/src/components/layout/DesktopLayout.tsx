@@ -30,23 +30,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         </div>
 
         <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-20 pb-2 pr-2 pl-6 transition-all duration-500`}>
-          <div className={`relative ${mainContentHeight} mr-8`}>
-            {/* Enhanced dramatic border lighting */}
-            <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-
-            {/* Enhanced shadow and depth effects */}
-            <div className="absolute inset-0 bg-black/20 rounded-xl shadow-dramatic pointer-events-none" />
-            <div className="absolute inset-2 bg-gradient-to-br from-black/10 via-transparent to-black/20 rounded-xl pointer-events-none" />
-            
-            <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-10 shadow-inner-glow border-depth">
-              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/5">
-                  {children ? children : <MainContent />}
-              </div>
-            </div>
-          </div>
+          
         </main>
 
         <div className="mt-auto">

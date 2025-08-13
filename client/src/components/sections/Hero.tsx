@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-            Where luxury meets reliability. Professional chauffeur services delivering unparalleled comfort and sophistication across New York City.
+            Where luxury meets reliability across Manhattan, Brooklyn, Queens, and all major airports including JFK, LGA, and Newark.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -28,12 +28,12 @@ const Hero = () => {
           className="max-w-4xl"
         >
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Luxury Transportation
-            <span className="block text-gold"> Redefined</span>
+            Opulent Transport
+            <span className="block text-gold"> Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-            Experience the pinnacle of elegance and comfort with our premium limousine services in New York City
+            Where luxury meets reliability. Professional chauffeur services delivering unparalleled comfort and sophistication across New York City.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

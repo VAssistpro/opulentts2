@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden rounded-xl">
       {/* Background Video - Force Full Fill */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <video
@@ -24,14 +24,12 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+          className="absolute inset-0 w-full h-full object-cover"
           style={{
-            objectFit: 'cover',
-            transform: 'translate(-50%, -50%) scale(1.02)',
             width: '100%',
             height: '100%',
-            minWidth: '100%',
-            minHeight: '100%'
+            objectFit: 'cover',
+            objectPosition: 'center center'
           }}
         >
           <source

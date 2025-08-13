@@ -51,14 +51,6 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => handleScrollToSection("fleet")}
-              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300 drop-shadow-[0_6px_12px_rgba(0,0,0,0.5)] font-inter"
-            >
-              View Fleet
-            </motion.button>
           </div>
         </motion.div>
 

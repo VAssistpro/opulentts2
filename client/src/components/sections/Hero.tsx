@@ -16,21 +16,15 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-xl bg-red-500">
-      {/* Background Video - Testing */}
-      <div className="absolute inset-0 overflow-hidden rounded-xl">
+    <div className="w-full h-full bg-red-500 p-4">
+      <h1 className="text-white text-4xl">HERO COMPONENT LOADED</h1>
+      <div className="w-full h-96 bg-blue-500 mt-4">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center center'
-          }}
+          className="w-full h-full object-cover"
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

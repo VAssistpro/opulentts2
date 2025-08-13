@@ -71,7 +71,7 @@ const Contact = () => {
 
         <AnimatedSection delay={200}>
           {/* Container for Contact Info and Form */}
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mt-2 md:mt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mt-2 md:mt-4">
             {/* Contact Info Column */}
             <div className="group">
               <div
@@ -89,18 +89,18 @@ const Contact = () => {
                     '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
                   } as React.CSSProperties}
                >
-                <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <div className="relative z-10 grid grid-cols-1 gap-4 md:gap-6">
                   {CONTACT_INFO.map((info, index) => (
-                    <div key={index} className="flex items-start gap-3 group/item">
+                    <div key={index} className="flex items-start gap-3 group/item mb-4 last:mb-0">
                       <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0
                                   group-hover/item:bg-gold/20 transition-colors duration-300">
                         <info.icon className="w-4 h-4 text-text-secondary group-hover/item:text-gold transition-colors" />
                       </div>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <h3 className="text-base font-semibold mb-1 text-text-primary">
                           {info.title}
                         </h3>
-                        <div className="text-sm text-text-secondary" dangerouslySetInnerHTML={{ __html: info.content }}></div>
+                        <div className="text-sm text-text-secondary break-words" dangerouslySetInnerHTML={{ __html: info.content }}></div>
                       </div>
                     </div>
                   ))}

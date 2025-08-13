@@ -19,27 +19,6 @@ const Hero = () => {
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {/* Background Video */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="w-full h-full object-cover"
-        >
-          <source
-            src="http://opulentts.com/bgvideo/otsbgvido2.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
-
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-8">
         <motion.div

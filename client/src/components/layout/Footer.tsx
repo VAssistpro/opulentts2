@@ -7,15 +7,15 @@ const Footer = ({ className }: { className?: string }) => {
       {/* Burgundy divider line with glow effect */}
       <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent 
                     shadow-[0_0_9px_rgba(128,0,32,0.4)]"></div>
-      <div className="container mx-auto px-6 py-3 ml-[73px] mr-[73px] pl-[76px] pr-[76px]">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+      <div className="container mx-auto px-4 py-3 max-w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
           {/* Left aligned text with glow effect */}
-          <div className="text-center md:text-left text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)]">
+          <div className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)] flex-shrink-0">
             © {new Date().getFullYear()} Opulent Transport Solutions
           </div>
 
           {/* Center aligned text with logo and glow effect */}
-          <div className="text-center order-first md:order-none mb-1 md:mb-0 ml-6">
+          <div className="order-first lg:order-none mb-1 lg:mb-0 flex-shrink-0">
             <div className="flex items-center justify-center gap-1">
               <span className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
                 Website made with
@@ -40,7 +40,7 @@ const Footer = ({ className }: { className?: string }) => {
           </div>
 
           {/* Right aligned text with glow effect */}
-          <div className="text-center md:text-right text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)]">
+          <div className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)] flex-shrink-0 whitespace-nowrap">
             (516) 324-5483 Available 24/7
           </div>
         </div>

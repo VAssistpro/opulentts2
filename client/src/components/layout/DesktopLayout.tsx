@@ -60,35 +60,8 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
                 </video>
               </div>
               
-              {/* Video Text Overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 z-20">
-                <div className="max-w-4xl">
-                  <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Luxury Transportation
-                    <span className="block text-gold"> Redefined</span>
-                  </h1>
-                  
-                  <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                    Experience the pinnacle of elegance and comfort with our premium limousine services in New York City
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button className="group px-8 py-4 bg-gold text-black font-semibold rounded-lg shadow-xl hover:bg-gold/90 transition-all duration-300 flex items-center gap-2">
-                      Book Your Ride
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                    
-                    <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300">
-                      View Fleet
-                    </button>
-                  </div>
-                </div>
-              </div>
-
               {/* Content overlay with slight transparency */}
-              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/30">
+              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/20">
                   {children ? children : <MainContent />}
               </div>
             </div>

@@ -2,6 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom dramatic animations */
+@keyframes slow-drift {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(10px) translateY(-5px) rotate(1deg); }
+  50% { transform: translateX(-5px) translateY(-10px) rotate(-0.5deg); }
+  75% { transform: translateX(-10px) translateY(5px) rotate(0.5deg); }
+}
+
+@keyframes slow-drift-reverse {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(-8px) translateY(3px) rotate(-0.5deg); }
+  50% { transform: translateX(3px) translateY(8px) rotate(0.5deg); }
+  75% { transform: translateX(8px) translateY(-3px) rotate(-1deg); }
+}
+
+@keyframes shimmer-reverse {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  25% { transform: translateY(-10px) translateX(2px); opacity: 0.7; }
+  50% { transform: translateY(-20px) translateX(-2px); opacity: 1; }
+  75% { transform: translateY(-10px) translateX(2px); opacity: 0.7; }
+}
+
+.animate-slow-drift {
+  animation: slow-drift 25s ease-in-out infinite;
+}
+
+.animate-slow-drift-reverse {
+  animation: slow-drift-reverse 30s ease-in-out infinite;
+}
+
+.animate-shimmer-reverse {
+  animation: shimmer-reverse 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Enhanced background texture */
+.bg-noise {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    radial-gradient(circle at 25% 75%, rgba(147, 113, 39, 0.01) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px;
+}
+
+/* Dramatic shadow utilities */
+.shadow-dramatic {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 10px 20px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.shadow-inner-glow {
+  box-shadow: 
+    inset 0 0 20px rgba(147, 113, 39, 0.1),
+    inset 0 0 40px rgba(147, 113, 39, 0.05);
+}
+
+/* Enhanced depth borders */
+.border-depth {
+  border: 1px solid rgba(147, 113, 39, 0.2);
+  box-shadow: 
+    0 0 20px rgba(147, 113, 39, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

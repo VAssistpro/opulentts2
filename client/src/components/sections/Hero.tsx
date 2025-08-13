@@ -6,7 +6,9 @@ import { useDesktopNavigation } from "../../contexts/DesktopNavigationContext";
 const Hero = () => {
   const { setActiveSection } = useDesktopNavigation();
 
-  const handleScrollToSection = (sectionId: 'home' | 'about' | 'services' | 'fleet' | 'contact' | 'book') => {
+  const handleScrollToSection = (
+    sectionId: "home" | "about" | "services" | "fleet" | "contact" | "book",
+  ) => {
     setActiveSection(sectionId);
     setTimeout(() => {
       document
@@ -18,21 +20,14 @@ const Hero = () => {
   return (
     <div className="w-full h-full bg-red-500 p-4">
       <h1 className="text-white text-4xl">HERO COMPONENT LOADED</h1>
-      <div className="w-full h-96 bg-blue-500 mt-4 overflow-hidden relative">
+      <div className="relative w-full h-96 overflow-visible">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center center',
-            minWidth: '100%',
-            minHeight: '100%'
-          }}
+          preload="metadata"
+          className="w-full h-full object-cover"
         >
           <source
             src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

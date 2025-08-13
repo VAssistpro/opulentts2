@@ -24,10 +24,9 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
+          className="absolute inset-0 w-full h-full object-cover"
           style={{
-            objectFit: 'cover',
-            transform: 'translate(-50%, -50%) scale(1.1)'
+            objectFit: 'cover'
           }}
         >
           <source
@@ -53,7 +52,7 @@ const Hero = () => {
                      shadow-[0_0_30px_rgba(147,113,39,0.3)] mb-4"
         >
           <span className="text-gold text-xs font-bold tracking-wider uppercase">
-            ★ NEW YORK'S PREMIER LUXURY SERVICE ★
+            ��� NEW YORK'S PREMIER LUXURY SERVICE ★
           </span>
         </motion.div>
 

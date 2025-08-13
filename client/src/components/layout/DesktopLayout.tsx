@@ -45,7 +45,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         </main>
 
         <div className="mt-auto">
-          <Footer className={`${sidebarMarginClass}`} />
+          <Footer className="" />
         </div>
       </div>
     </ErrorBoundary>

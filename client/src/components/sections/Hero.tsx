@@ -32,7 +32,7 @@ const Hero = () => {
             <span className="block text-gold"> Solutions</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-semibold pl-[49px] pr-[49px] mt-[14px] mb-[14px] pt-[4px] pb-[4px] bg-[#8f6f6f00]">
             Where luxury meets reliability across Manhattan, Brooklyn, Queens, and all major airports including JFK, LGA, and Newark.
           </p>
 

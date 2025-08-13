@@ -18,18 +18,19 @@ const Hero = () => {
   return (
     <div className="relative w-full h-full overflow-hidden rounded-xl">
       {/* Background Video - Force Full Fill */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 -z-10 overflow-hidden rounded-xl">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full"
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center center'
+            objectPosition: 'center center',
+            transform: 'scale(1.01)'
           }}
         >
           <source

@@ -24,10 +24,14 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
           style={{
             objectFit: 'cover',
-            transform: 'translate(-50%, -50%) scale(1.1)'
+            transform: 'translate(-50%, -50%) scale(1.02)',
+            width: '100%',
+            height: '100%',
+            minWidth: '100%',
+            minHeight: '100%'
           }}
         >
           <source

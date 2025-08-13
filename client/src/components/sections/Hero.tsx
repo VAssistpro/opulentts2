@@ -27,7 +27,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="max-w-4xl mt-[157px] mb-[157px] bg-[#e0d1d100]"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-6xl md:text-7xl text-white mb-6 leading-tight font-extrabold">
             Opulent Transport
             <span className="block text-gold"> Solutions</span>
           </h1>

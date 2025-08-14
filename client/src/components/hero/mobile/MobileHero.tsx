@@ -82,15 +82,16 @@ const MobileHero = () => {
                        text-black font-bold py-4 px-8 rounded-xl
                        shadow-[0_8px_32px_rgba(147,113,39,0.4)]
                        hover:shadow-[0_12px_40px_rgba(147,113,39,0.6)]
-                       transform hover:scale-105 transition-all duration-300
-                       min-w-[180px] border border-gold/30"
+                       transform transition-all duration-300 ease-out
+                       min-w-[180px] border border-gold/30 will-change-transform
+                       hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span className="relative z-10 flex items-center justify-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2 will-change-transform">
                 Book Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold 
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out" />
             </button>
 
             <a
@@ -98,8 +99,8 @@ const MobileHero = () => {
               className="group relative overflow-hidden bg-transparent border-2 border-white/30
                        text-white font-bold py-4 px-8 rounded-xl
                        backdrop-blur-md hover:border-gold/50
-                       transform hover:scale-105 transition-all duration-300
-                       min-w-[180px] hover:bg-white/10"
+                       transform hover:scale-[1.02] transition-all duration-300 ease-out
+                       min-w-[180px] hover:bg-white/10 will-change-transform"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Call Now

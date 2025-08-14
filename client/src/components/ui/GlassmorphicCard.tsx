@@ -21,10 +21,11 @@ const GlassmorphicCard: React.FC<GlassmorphicCardProps> = ({
   };
 
   const hoverStyles = hoverEffect ? `
-    hover:-translate-y-1
+    hover:-translate-y-0.5
     hover:border-gold/40
     hover:shadow-[0_0_60px_rgba(147,113,39,0.3)]
     hover:bg-gradient-to-br hover:from-black/70 hover:via-black/50 hover:to-black/70
+    will-change-transform
   ` : '';
 
   return (
@@ -37,7 +38,7 @@ const GlassmorphicCard: React.FC<GlassmorphicCardProps> = ({
         bg-gradient-to-br from-black/60 via-black/40 to-black/60
         backdrop-blur-xl
         border border-gold/20
-        transition-all duration-500
+        transition-all duration-300 ease-out
         group
         ${glowStyles[glowIntensity]}
         ${hoverStyles}

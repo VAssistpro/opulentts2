@@ -42,10 +42,10 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleScrollToSection("book")}
-              className="group px-8 py-4 bg-gold text-black font-semibold rounded-lg shadow-xl hover:bg-gold/90 transition-all duration-300 flex items-center gap-2 drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] font-inter"
+              className="group px-8 py-4 bg-gold text-black font-semibold rounded-lg shadow-xl hover:bg-gold/90 transition-all duration-300 ease-out flex items-center gap-2 drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)] font-inter will-change-transform"
             >
               Book Your Ride
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

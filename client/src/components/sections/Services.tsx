@@ -24,13 +24,13 @@ const Services = () => {
             {SERVICES.map((service, index) => (
               <div
                 key={index}
-                className="group hover:translate-x-4 transition-all duration-500"
+                className="group hover:translate-x-2 transition-all duration-300 ease-out will-change-transform"
               >
-                <div className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full glassmorphic-panel before:absolute before:inset-0 before:rounded-xl before:border before:border-gold/5 before:shadow-[0_0_15px_rgba(128,128,128,0.2)] before:transition-all before:duration-500 group-hover:before:border-gold/20 group-hover:before:shadow-[0_0_30px_rgba(147,113,39,0.4)]">
+                <div className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full glassmorphic-panel border border-gold/5 shadow-[0_0_15px_rgba(128,128,128,0.2)] transition-all duration-300 ease-out group-hover:border-gold/30 group-hover:shadow-[0_0_25px_rgba(147,113,39,0.3)] will-change-auto">
                   <div className="flex flex-col items-center text-center transition-all duration-500">
-                    <div className="flex flex-col items-center group-hover:items-start group-hover:text-left transition-all duration-500">
-                      <service.icon className="w-7 h-7 text-gray-400 group-hover:text-gold transition-colors duration-300 mb-4" />
-                      <div className="h-0.5 w-16 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-500 mb-4" />
+                    <div className="flex flex-col items-center group-hover:items-start group-hover:text-left transition-all duration-300 ease-out">
+                      <service.icon className="w-7 h-7 text-gray-400 group-hover:text-gold transition-colors duration-300 ease-out mb-4" />
+                      <div className="h-0.5 w-16 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-300 ease-out mb-4" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">
                       {service.title}

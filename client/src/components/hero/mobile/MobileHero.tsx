@@ -99,8 +99,8 @@ const MobileHero = () => {
               className="group relative overflow-hidden bg-transparent border-2 border-white/30
                        text-white font-bold py-4 px-8 rounded-xl
                        backdrop-blur-md hover:border-gold/50
-                       transform hover:scale-105 transition-all duration-300
-                       min-w-[180px] hover:bg-white/10"
+                       transform hover:scale-[1.02] transition-all duration-300 ease-out
+                       min-w-[180px] hover:bg-white/10 will-change-transform"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Call Now

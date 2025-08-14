@@ -24,7 +24,7 @@ const FleetControls: React.FC<FleetControlsProps> = ({
                  transition-all duration-300 group"
         aria-label="Previous vehicle"
       >
-        <ChevronLeft className="w-8 h-8 mx-auto group-hover:scale-110 transition-transform" />
+        <ChevronLeft className="w-8 h-8 mx-auto group-hover:scale-105 transition-transform duration-300 ease-out will-change-transform" />
       </button>
       
       <button
@@ -35,7 +35,7 @@ const FleetControls: React.FC<FleetControlsProps> = ({
                  transition-all duration-300 group"
         aria-label="Next vehicle"
       >
-        <ChevronRight className="w-8 h-8 mx-auto group-hover:scale-110 transition-transform" />
+        <ChevronRight className="w-8 h-8 mx-auto group-hover:scale-105 transition-transform duration-300 ease-out will-change-transform" />
       </button>
     </div>
   );

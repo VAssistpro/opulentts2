@@ -10,7 +10,7 @@ const HeaderLayout = () => {
         {/* Logo */}
         <div className="pt-4">
           <Logo
-            className="w-32 h-auto transform scale-[0.85] hover:scale-90 transition-transform duration-300 ease-in-out hover:shadow-[0_0_15px_rgba(255,215,0,0.6)]"
+            className="w-32 h-auto transform scale-[0.85] hover:scale-[0.88] transition-transform duration-300 ease-out hover:shadow-[0_0_15px_rgba(255,215,0,0.6)] will-change-transform"
           />
         </div>
 
@@ -20,15 +20,15 @@ const HeaderLayout = () => {
             icon={Phone}
             href="tel:+15163245483"
             label="Call us"
-            className="transition-all duration-300 ease-in-out hover:scale-110 
-                     hover:shadow-[0_0_15px_rgba(147,113,39,0.4)]"
+            className="transition-all duration-300 ease-out hover:scale-105
+                     hover:shadow-[0_0_15px_rgba(147,113,39,0.4)] will-change-transform"
           />
           <GlowingIcon
             icon={MessageSquare}
             href="sms:+15163245483"
             label="Send SMS"
-            className="transition-all duration-300 ease-in-out hover:scale-110 
-                     hover:shadow-[0_0_15px_rgba(147,113,39,0.4)]"
+            className="transition-all duration-300 ease-out hover:scale-105
+                     hover:shadow-[0_0_15px_rgba(147,113,39,0.4)] will-change-transform"
           />
         </div>
       </div>

@@ -20,6 +20,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         <ShimmerBackground />
         <BackgroundEffects />
         <FloatingLightOrbs />
+        <AtmosphericEnhancement />
         
         {/* Fixed Navigation */}
         <LuxuryNavbar />

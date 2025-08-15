@@ -47,7 +47,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative px-8">
           <DesktopHeader />
           
-          <div className="fixed left-2 top-[20%] z-40 w-52 xl:w-56 2xl:w-60">
+          <div className="fixed left-2 top-56 z-40 w-52 xl:w-56 2xl:w-60">
             <Testimonials />
           </div>
         </div>

@@ -26,35 +26,17 @@ const MobileHero = () => {
           className="text-center max-w-[90vw] sm:max-w-lg mx-auto"
         >
           <h1 className="font-playfair text-white">
-            <div className="block space-y-2">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="block text-4xl xs:text-5xl sm:text-6xl font-bold tracking-wide leading-tight
-                         drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
-              >
-                OPULENT
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="block text-4xl xs:text-5xl sm:text-6xl font-bold tracking-wide leading-tight
-                         text-gold drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
-              >
-                TRANSPORT
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
-                className="block text-3xl xs:text-4xl sm:text-5xl font-light tracking-[0.2em] leading-tight
-                         drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mt-2"
-              >
-                SOLUTIONS
-              </motion.span>
-            </div>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="block text-2xl xs:text-3xl sm:text-4xl font-bold tracking-wide leading-tight
+                       drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
+            >
+              OPULENT{' '}
+              <span className="text-gold">TRANSPORT</span>{' '}
+              SOLUTIONS
+            </motion.span>
           </h1>
 
           <motion.div

@@ -48,19 +48,19 @@ const MobileLayout = () => {
   ];
 
   return (
-    <div className="lg:hidden min-h-screen relative" key={refreshKey}>
+    <div className="lg:hidden min-h-screen relative overflow-hidden" key={refreshKey}>
       <ShimmerBackground />
       <OfflineIndicator />
       <MobileHeader />
-      
-      <main className="relative z-10">
+
+      <main className="relative z-10 h-screen">
         {activeSection === 'home' ? (
-          <PullToRefresh onRefresh={handleRefresh}>
+          <div className="h-full overflow-y-auto overflow-x-hidden">
             <MobileHero />
-          </PullToRefresh>
+          </div>
         ) : (
-          <PullToRefresh onRefresh={handleRefresh}>
-            <div className="min-h-[calc(100vh-8rem)] pt-24 pb-40 px-4 overflow-y-auto custom-scrollbar">
+          <div className="h-full overflow-y-auto overflow-x-hidden">
+            <div className="min-h-screen pt-24 pb-32 px-4">
               <div className="container mx-auto max-w-4xl space-y-8">
                 {activeSection === 'about' && <About />}
                 {activeSection === 'services' && <Services />}
@@ -69,7 +69,7 @@ const MobileLayout = () => {
                 {activeSection === 'book' && <Booking />}
               </div>
             </div>
-          </PullToRefresh>
+          </div>
         )}
       </main>
 

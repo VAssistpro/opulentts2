@@ -11,7 +11,7 @@ const SOCIAL_LINKS = [
 
 const SocialIcons = () => {
   return (
-    <div className="flex justify-center items-center gap-3 md:gap-4 mt-0">
+    <div className="flex justify-center items-center gap-3 md:gap-4">
       {SOCIAL_LINKS.map(({ icon, href, label }) => (
         <Tooltip key={label} content={label} position="top">
           <LuxuryIcon

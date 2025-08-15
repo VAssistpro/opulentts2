@@ -11,17 +11,18 @@ const MobileHeroBackground = () => {
         transition={{ duration: 1.2 }}
         className="absolute inset-0"
       >
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="w-full h-full object-cover"
-          style={{ 
-            width: '100%', 
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover scale-110"
+          style={{
+            width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center'
+            objectPosition: 'center center',
+            transform: 'scale(1.1)'
           }}
         >
           <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />

@@ -26,12 +26,12 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative px-8">
           <DesktopHeader />
           
-          <div className="fixed left-2 top-56 z-40 w-48 lg:w-52 xl:w-56 2xl:w-60">
+          <div className="fixed left-2 top-56 z-40 w-52 xl:w-56 2xl:w-60">
             <Testimonials />
           </div>
         </div>
 
-        <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-20 pb-2 pr-2 pl-4 lg:pl-6 transition-all duration-500`}>
+        <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-20 pb-2 pr-2 pl-6 transition-all duration-500`}>
           <div className={`relative ${mainContentHeight} mr-8`}>
             {/* Enhanced dramatic border lighting */}
             <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />

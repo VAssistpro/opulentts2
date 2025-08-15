@@ -40,9 +40,11 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         {/* Enhanced overlay for optimal text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_10%,rgba(0,0,0,0.5)_40%,rgba(0,0,0,0.7)_80%)] z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_5%,rgba(0,0,0,0.6)_30%,rgba(0,0,0,0.8)_70%)] z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />
+        {/* Additional text backdrop for central content area */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-black/40 blur-xl z-10 pointer-events-none" />
       </div>
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center p-4 w-full max-w-[906px] mx-auto">
@@ -68,7 +70,8 @@ const Hero = () => {
           <div
             className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl
                        font-black mb-2
-                       text-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)]
+                       text-white drop-shadow-[0_8px_20px_rgba(0,0,0,1)]
+                       [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)]
                        tracking-tight leading-[0.9]"
           >
             OPULENT{' '}
@@ -90,12 +93,18 @@ const Hero = () => {
           className="mt-[13px] mb-[13px] bg-[#69656512]"
         >
           <h2
-            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] tracking-wide mt-[4px] mb-[4px]"
+            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold 
+                       drop-shadow-[0_4px_12px_rgba(0,0,0,1)]
+                       [text-shadow:0_0_30px_rgba(0,0,0,0.9),_0_4px_12px_rgba(0,0,0,1)]
+                       tracking-wide mt-[4px] mb-[4px]"
           >
             Where Excellence Meets Luxury
           </h2>
 
-          <p className="text-base md:text-lg text-white/95 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium mt-[2px] mb-[2px]">
+          <p className="text-base md:text-lg text-white/95 max-w-2xl mx-auto leading-relaxed 
+                 drop-shadow-[0_3px_10px_rgba(0,0,0,1)]
+                 [text-shadow:0_0_20px_rgba(0,0,0,0.8),_0_3px_10px_rgba(0,0,0,1)]
+                 font-medium mt-[2px] mb-[2px]">
             Experience unparalleled sophistication with our fleet of premium vehicles,
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>

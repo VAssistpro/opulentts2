@@ -95,8 +95,7 @@ const Hero = () => {
             Where Excellence Meets Luxury
           </h2>
 
-          <p className="text-base md:text-lg text-white/95 font-light mb-4 max-w-2xl mx-auto leading-relaxed
-                     drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          <p className="text-base md:text-lg text-white/95 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] mt-[6px] mb-[6px]">
             Experience unparalleled sophistication with our fleet of premium vehicles,
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>

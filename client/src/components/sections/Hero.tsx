@@ -44,7 +44,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_10%,rgba(0,0,0,0.5)_40%,rgba(0,0,0,0.7)_80%)] z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
       </div>
-
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center p-4 w-full max-w-[906px] mx-auto">
         {/* Premium Badge - Compact */}
@@ -91,9 +90,7 @@ const Hero = () => {
           className="mb-8"
         >
           <h2
-            className="text-xl md:text-2xl lg:text-3xl
-                       text-gold font-semibold mb-3
-                       drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] tracking-wide"
+            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] tracking-wide mt-[4px] mb-[4px]"
           >
             Where Excellence Meets Luxury
           </h2>
@@ -196,7 +193,6 @@ const Hero = () => {
           </motion.p>
         </motion.div>
       </div>
-
       {/* Scroll Indicator - Compact */}
       <motion.button
         onClick={() => handleScrollToSection("about")}

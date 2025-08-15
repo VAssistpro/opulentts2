@@ -71,19 +71,13 @@ const Hero = () => {
                        text-white drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)]
                        tracking-tight leading-[0.9]"
           >
-            <span className="block">OPULENT</span>
+            OPULENT{' '}
             <span
-              className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
+              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark
                              bg-clip-text text-transparent drop-shadow-none"
             >
               TRANSPORT
-            </span>
-          </div>
-          <div
-            className="text-xl md:text-2xl lg:text-3xl xl:text-4xl
-                       font-light tracking-[0.15em]
-                       text-white/95 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
-          >
+            </span>{' '}
             SOLUTIONS
           </div>
         </motion.h1>

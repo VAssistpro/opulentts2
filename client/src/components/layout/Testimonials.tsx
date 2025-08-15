@@ -59,11 +59,7 @@ const Testimonials = () => {
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             exit={{ opacity: 0, x: -50, rotateY: -10 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-<<<<<<< HEAD
             className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/80 backdrop-blur-xl rounded-2xl border border-gold/20 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/40 hover:shadow-[0_12px_40px_rgba(147,113,39,0.2)] transition-all duration-500 flex flex-col pl-[4px] pr-[4px] pt-[6px] pb-[12px] text-center mt-[1px] mb-[4px] text-[15px]"
-=======
-            className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/80 backdrop-blur-xl rounded-2xl border border-gold/20 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/40 hover:shadow-[0_12px_40px_rgba(147,113,39,0.2)] transition-all duration-500 flex flex-col pl-[4px] pr-[4px] pt-[12px] pb-[1px] text-center mt-[4px] mb-[-1px] text-[15px]"
->>>>>>> refs/remotes/origin/main
           >
             {/* Quote Icon */}
             <div className="absolute top-4 right-4 text-gold/30">

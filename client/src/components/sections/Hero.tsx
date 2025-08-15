@@ -39,9 +39,10 @@ const Hero = () => {
           />
           Your browser does not support the video tag.
         </video>
-        {/* Professional overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/69 via-black/39 to-black/69 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_20%,rgba(0,0,0,0.4)_70%)] z-10 pointer-events-none" />
+        {/* Enhanced overlay for optimal text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_10%,rgba(0,0,0,0.5)_40%,rgba(0,0,0,0.7)_80%)] z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
       </div>
 
       {/* Professional Hero Content - Properly Scaled */}

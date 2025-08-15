@@ -25,19 +25,16 @@ const Hero = () => {
     // Use items-start and pt-* for vertical positioning
     <div className="relative w-full h-screen flex items-start justify-center pt-28 md:pt-32 lg:pt-36 overflow-hidden"> {/* Adjust pt-* */}
       {/* Background Video (Keep as is) */}
-      <div className="absolute inset-0 -z-10">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-105"
           style={{
-            width: '100%',
-            height: '100%',
-            minWidth: '100%',
-            minHeight: '100%',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            objectPosition: 'center center'
           }}
         >
           <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />

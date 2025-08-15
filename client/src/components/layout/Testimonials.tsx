@@ -3,24 +3,17 @@ import { Star, Quote } from 'lucide-react';
 import SocialIcons from './SocialIcons';
 
 const TESTIMONIALS = [
-  { 
-    text: "Absolutely flawless service. From the moment they arrived to the final destination, everything was executed with precision and elegance.", 
-    author: "James Wilson", 
-    role: "CEO, Manhattan Financial Group", 
+  {
+    text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.",
+    author: "Ava Richardson",
+    role: "Venture Capitalist",
     rating: 5,
-    location: "Manhattan to JFK Airport"
+    location: "Manhattan Executive Travel"
   },
-  { 
-    text: "I've used many car services, but Opulent Transport is in a league of their own. Professional, punctual, and luxurious.", 
-    author: "Sarah Mitchell", 
-    role: "Senior Event Coordinator", 
-    rating: 5,
-    location: "Brooklyn Corporate Event"
-  },
-  { 
-    text: "The attention to detail and level of service exceeded my expectations. This is how luxury transportation should be done.", 
-    author: "Michael Brown", 
-    role: "Investment Director", 
+  {
+    text: "The only car service I trust for my high-profile clients. Professional, punctual, and never a single issue.",
+    author: "Jonathan Miles",
+    role: "Investment Director",
     rating: 5,
     location: "Newark Airport Transfer"
   },

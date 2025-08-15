@@ -47,15 +47,15 @@ const Testimonials = () => {
       </div>
       {/* Testimonial Card */}
       <div className="relative h-[280px] xl:h-[320px] rounded-xl overflow-hidden mx-1">
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-gold/60 rounded-xl p-4 xl:p-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center text-sm xl:text-[15px]">
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-gold/60 rounded-xl p-6 xl:p-7 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center text-sm xl:text-[15px]">
           {/* Quote Icon */}
-          <div className="absolute top-3 right-3 xl:top-4 xl:right-4 text-gold/30">
-            <Quote size={20} className="xl:w-6 xl:h-6" />
+          <div className="absolute top-4 right-4 xl:top-5 xl:right-5 text-gold/30">
+            <Quote size={18} className="xl:w-5 xl:h-5" />
           </div>
 
           {/* Client Experiences Pill */}
-          <div className="mb-3">
-            <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
+          <div className="mb-4">
+            <div className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
               <span className="text-xs font-medium tracking-wider">
                 Client Experiences
               </span>
@@ -63,7 +63,7 @@ const Testimonials = () => {
           </div>
 
           {/* Rating */}
-          <div className="flex gap-1 mb-3 justify-center">
+          <div className="flex gap-1.5 mb-4 justify-center">
             {[...Array(testimonial.rating)].map((_, i) => (
               <Star
                 key={i}
@@ -73,21 +73,21 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonial Text */}
-          <div className="transition-opacity duration-300" key={activeIndex}>
-            <blockquote className="text-white/90 text-xs xl:text-sm leading-relaxed mb-3 xl:mb-4 italic flex-grow min-h-[50px] xl:min-h-[60px] flex items-center px-2">
+          <div className="transition-opacity duration-300 flex-grow flex flex-col" key={activeIndex}>
+            <blockquote className="text-white/90 text-sm xl:text-base leading-relaxed mb-4 xl:mb-5 italic flex-grow flex items-center justify-center px-3">
               "{testimonial.text}"
             </blockquote>
 
             {/* Author */}
-            <div className="mt-auto space-y-1 xl:space-y-1.5 px-2">
+            <div className="mt-auto space-y-2 px-3">
               <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
-              <h4 className="font-semibold text-white text-xs xl:text-sm">
+              <h4 className="font-semibold text-white text-sm xl:text-base">
                 {testimonial.author}
               </h4>
-              <p className="text-gold/80 text-xs">
+              <p className="text-gold/80 text-sm">
                 {testimonial.role}
               </p>
-              <p className="text-white/60 text-xs">
+              <p className="text-white/60 text-sm">
                 {testimonial.location}
               </p>
             </div>

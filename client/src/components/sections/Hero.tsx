@@ -123,7 +123,7 @@ const Hero = () => {
 
           {/* Service Areas - Enhanced Pills */}
           <div className="mb-4">
-            <p className="text-white/70 text-sm mb-2 tracking-wider uppercase bg-[#bfbbbb33] font-semibold">
+            <p className="text-white/70 text-sm mb-2 tracking-wider uppercase font-semibold bg-[#bfbbbb00]">
               Serving All of NYC Metro Area
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-sm bg-[#9692923b]">

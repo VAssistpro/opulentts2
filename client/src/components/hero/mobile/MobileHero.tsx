@@ -34,16 +34,25 @@ const MobileHero = () => {
                 className="block text-4xl xs:text-5xl sm:text-6xl font-bold tracking-wide leading-tight
                          drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
               >
-                New York's Premier
+                OPULENT
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="block text-4xl xs:text-5xl sm:text-6xl font-bold tracking-wide leading-tight
-                         drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
+                         text-gold drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
               >
-                Chauffeur Service
+                TRANSPORT
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="block text-3xl xs:text-4xl sm:text-5xl font-light tracking-[0.2em] leading-tight
+                         drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mt-2"
+              >
+                SOLUTIONS
               </motion.span>
             </div>
           </h1>
@@ -59,21 +68,28 @@ const MobileHero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            className="mt-6 text-lg xs:text-xl sm:text-2xl text-white/90 font-medium leading-relaxed
+            transition={{ delay: 1.0, duration: 0.8 }}
+            className="mt-6 text-lg xs:text-xl sm:text-2xl text-white/95 font-medium leading-relaxed
                      tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
-            Travel in comfort and style with{' '}
-            <span className="text-gold font-bold tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              Opulent Transport Solutions
-            </span>
+            <span className="text-gold font-semibold">★ NEW YORK'S PREMIER LUXURY SERVICE ★</span>
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="mt-4 text-base xs:text-lg text-white/90 font-normal leading-relaxed
+                     tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+          >
+            Experience luxury, arrive in style.
           </motion.p>
 
           {/* Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
             className="mt-8 flex flex-col xs:flex-row gap-4 justify-center items-center"
           >
             <button
@@ -116,23 +132,23 @@ const MobileHero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.8 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
             className="mt-12 text-center"
           >
-            <p className="text-white/70 text-sm font-medium mb-3 tracking-wider uppercase">
+            <p className="text-white/80 text-sm font-semibold mb-3 tracking-wider uppercase">
               Premium Chauffeur Services
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs text-white/80">
-              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+            <div className="flex flex-wrap justify-center gap-3 text-sm text-white/90">
+              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
                 Manhattan
               </span>
-              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
                 Brooklyn
               </span>
-              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
                 Queens
               </span>
-              <span className="px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
                 JFK • LGA • EWR
               </span>
             </div>

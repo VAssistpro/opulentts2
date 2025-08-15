@@ -74,14 +74,11 @@ const LuxuryNavbar: React.FC = () => {
              <div className="flex items-center gap-4 ml-4">
                 <button
                   onClick={handleBookNowClick}
-                  style={{ boxShadow: GLOW_BASE_SHADOW_STYLE } as React.CSSProperties}
-                  className={`hidden lg:inline-flex items-center gap-4 px-5 py-2 rounded-lg text-sm font-semibold whitespace-nowrap ${focusVisibleStyles}
-                           bg-gradient-to-r from-gold-dark via-gold to-gold-dark
-                           text-black border border-gold/50
-                           hover:from-[#5c4718] hover:via-[#937127] hover:to-[#5c4718]
-                           hover:[box-shadow:${GLOW_STRONGER_SHADOW_STYLE}]
-                           transform transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]
-                           focus-visible:[box-shadow:${GLOW_STRONGER_SHADOW_STYLE}] `}
+                  className={`hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${focusVisibleStyles}
+                           bg-white/10 backdrop-blur-sm border border-white/20 text-white/90
+                           transition-all duration-300
+                           hover:bg-white/20 hover:border-white/40
+                           transform hover:scale-[1.03] active:scale-[0.97]`}
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Book Now</span>
@@ -89,11 +86,11 @@ const LuxuryNavbar: React.FC = () => {
 
                 <button
                   onClick={handleAccountClick}
-                  className={`hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${focusVisibleStyles}
-                           bg-black/50 border border-gold/40 text-white/80
+                  className={`hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${focusVisibleStyles}
+                           bg-white/10 backdrop-blur-sm border border-white/20 text-white/90
                            transition-all duration-300
-                           hover:text-gold hover:border-gold/60 hover:[box-shadow:${GLOW_BASE_SHADOW_STYLE}]
-                           focus-visible:[box-shadow:${GLOW_BASE_SHADOW_STYLE}] `}
+                           hover:bg-white/20 hover:border-white/40
+                           transform hover:scale-[1.03] active:scale-[0.97]`}
                 >
                   <User className="w-4 h-4" />
                   <span>Account</span>

@@ -74,7 +74,8 @@ const LuxuryNavbar: React.FC = () => {
              <div className="flex items-center gap-4 ml-4">
                 <button
                   onClick={handleBookNowClick}
-                  className="hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black backdrop-blur-sm border border-teal/40 text-white transition-all duration-300 hover:bg-teal/20 hover:border-teal/60 transform hover:scale-[1.03] active:scale-[0.97] bg-teal/80 font-semibold"
+                  className="hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-teal/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black backdrop-blur-sm text-white transition-all duration-300 hover:bg-teal/20 hover:border-teal/60 transform hover:scale-[1.03] active:scale-[0.97] bg-teal/80 font-semibold"
+                  style={{ border: '0.5px solid #916f26' }}
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Book Now</span>

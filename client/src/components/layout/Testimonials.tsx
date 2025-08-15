@@ -44,13 +44,12 @@ const Testimonials = () => {
       {/* Header */}
       <div className="text-center mb-3">
         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-3"></div>
-        <div className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
+        <div className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block pl-[29px] pr-[29px]">
           <span className="text-sm font-medium tracking-wider">
             Client Experiences
           </span>
         </div>
       </div>
-      
       {/* Testimonial Card */}
       <div className="relative h-[350px] rounded-2xl overflow-hidden">
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-gold/60 rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col pl-[4px] pr-[4px] pt-[12px] pb-[1px] text-center mt-[4px] mb-[-1px] text-[15px]">
@@ -103,7 +102,6 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-
       {/* Social Icons */}
       <div className="mt-6">
         <SocialIcons />

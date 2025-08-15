@@ -51,7 +51,7 @@ const Testimonials = () => {
         </div>
       </div>
       {/* Testimonial Card */}
-      <div className="relative h-[320px] xl:h-[350px] rounded-xl overflow-hidden mx-1">
+      <div className="relative h-[280px] xl:h-[320px] rounded-xl overflow-hidden mx-1">
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-gold/60 rounded-xl p-4 xl:p-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center text-sm xl:text-[15px]">
           {/* Quote Icon */}
           <div className="absolute top-3 right-3 xl:top-4 xl:right-4 text-gold/30">
@@ -70,7 +70,7 @@ const Testimonials = () => {
 
           {/* Testimonial Text */}
           <div className="transition-opacity duration-300" key={activeIndex}>
-            <blockquote className="text-white/90 text-xs xl:text-sm leading-relaxed mb-3 xl:mb-4 italic flex-grow min-h-[60px] xl:min-h-[80px] flex items-center px-2">
+            <blockquote className="text-white/90 text-xs xl:text-sm leading-relaxed mb-3 xl:mb-4 italic flex-grow min-h-[50px] xl:min-h-[60px] flex items-center px-2">
               "{testimonial.text}"
             </blockquote>
 
@@ -103,7 +103,7 @@ const Testimonials = () => {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="mt-6">
+      <div className="mt-3">
         <SocialIcons />
       </div>
     </div>

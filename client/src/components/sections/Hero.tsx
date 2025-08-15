@@ -156,7 +156,7 @@ const Hero = () => {
             <p className="text-white text-lg md:text-xl font-medium">
               Ready to Experience True Luxury?
             </p>
-            <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a212]">
               Join NYC's elite who trust Opulent Transport for their most important journeys.
               Discretion, punctuality, and unmatched comfort guaranteed.
             </p>

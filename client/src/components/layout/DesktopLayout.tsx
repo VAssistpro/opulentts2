@@ -8,6 +8,7 @@ import Testimonials from './Testimonials';
 import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 import ShimmerBackground from '../effects/ShimmerBackground';
 import FloatingLightOrbs from '../effects/FloatingLightOrbs';
+import AtmosphericEnhancement from '../effects/AtmosphericEnhancement';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
   const sidebarMarginClass = "ml-56";

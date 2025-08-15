@@ -52,8 +52,8 @@ const Testimonials = () => {
         <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
       </div>
       {/* Testimonial Card */}
-      <div className="relative h-[420px] sm:h-[440px] lg:h-[460px] xl:h-[480px] 2xl:h-[500px] rounded-xl overflow-hidden mx-1">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-md border border-gold/70 rounded-xl p-4 sm:p-5 lg:p-6 xl:p-7 shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:border-gold/90 hover:shadow-[0_16px_48px_rgba(255,215,0,0.15)] hover:bg-gradient-to-br hover:from-white/20 hover:via-white/15 hover:to-white/10 transition-all duration-500 flex flex-col text-center group">
+      <div className="testimonial-container mx-1">
+        <div className="testimonial-card absolute inset-0 p-4 sm:p-5 lg:p-6 xl:p-7 flex flex-col text-center group">
           {/* Quote Icon */}
           <div className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gold/40 group-hover:text-gold/60 transition-colors duration-300">
             <Quote size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
@@ -73,7 +73,7 @@ const Testimonials = () => {
             {[...Array(testimonial.rating)].map((_, i) => (
               <Star
                 key={i}
-                className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 fill-gold text-gold group-hover:scale-110 transition-transform duration-300"
+                className="testimonial-star w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5"
                 style={{ animationDelay: `${i * 100}ms` }}
               />
             ))}
@@ -81,10 +81,10 @@ const Testimonials = () => {
 
           {/* Testimonial Text */}
           <div className="transition-all duration-500 flex-grow flex flex-col justify-between" key={activeIndex}>
-            <blockquote className="text-white/95 text-sm sm:text-base lg:text-base xl:text-lg leading-relaxed mb-4 sm:mb-6 font-medium text-center px-1 sm:px-2">
-              <span className="text-gold/80 text-lg sm:text-xl font-serif mr-1">"</span>
+            <blockquote className="testimonial-text mb-4 sm:mb-6 px-1 sm:px-2">
+              <span className="testimonial-quote mr-1">"</span>
               {testimonial.text}
-              <span className="text-gold/80 text-lg sm:text-xl font-serif ml-1">"</span>
+              <span className="testimonial-quote ml-1">"</span>
             </blockquote>
 
             {/* Author */}
@@ -92,16 +92,16 @@ const Testimonials = () => {
               <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gold/40 to-transparent group-hover:via-gold/60 transition-colors duration-300"></div>
 
               <div className="space-y-1 sm:space-y-1.5">
-                <h4 className="font-bold text-white text-sm sm:text-base lg:text-base">
+                <h4 className="testimonial-author">
                   {testimonial.author}
                 </h4>
-                <p className="text-gold/90 text-xs sm:text-sm font-medium">
+                <p className="testimonial-role">
                   {testimonial.role}
                 </p>
-                <p className="text-gold/70 text-xs sm:text-sm font-semibold">
+                <p className="testimonial-company">
                   {testimonial.company}
                 </p>
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 text-xs text-white/70">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 testimonial-meta">
                   <span>{testimonial.location}</span>
                   <span className="hidden sm:inline">•</span>
                   <span className="font-medium text-gold/60">{testimonial.service}</span>
@@ -116,10 +116,8 @@ const Testimonials = () => {
           {TESTIMONIALS.map((_, index) => (
             <div
               key={index}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex
-                  ? 'bg-gold shadow-[0_0_8px_rgba(255,215,0,0.6)] scale-110'
-                  : 'bg-white/40 hover:bg-white/60'
+              className={`testimonial-indicator ${
+                index === activeIndex ? 'active' : ''
               }`}
             />
           ))}

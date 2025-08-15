@@ -13,8 +13,8 @@ import Footer from './Footer';
 import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 
 const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
-  const sidebarWidth = "w-60 md:w-64 lg:w-72"; // Define sidebar width classes
-  const mainPadding = "pl-60 md:pl-64 lg:pl-72"; // Define corresponding padding
+  const sidebarWidth = "w-56 lg:w-60 xl:w-64 2xl:w-72"; // Define sidebar width classes
+  const mainPadding = "pl-56 lg:pl-60 xl:pl-64 2xl:pl-72"; // Define corresponding padding
 
   return (
     <ErrorBoundary>
@@ -25,7 +25,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
         <aside
           className={`fixed top-0 left-0 h-screen ${sidebarWidth} z-30
                     flex flex-col items-center justify-between // CHANGED: justify-between
-                    pt-8 pb-8 px-4 // Adjusted vertical padding
+                    pt-6 lg:pt-8 pb-6 lg:pb-8 px-3 lg:px-4 // Adjusted vertical padding
                     bg-black/70 backdrop-blur-lg
                     border-r border-gold/10
                     overflow-y-auto custom-scrollbar
@@ -35,7 +35,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
           {/* Group Logo and Contact Icons together at the top */}
           <div className="flex flex-col items-center gap-y-5 flex-shrink-0 w-full"> {/* Added w-full */}
             {/* 1. Logo */}
-            <div className="w-36 md:w-44">
+            <div className="w-32 lg:w-36 xl:w-40 2xl:w-44">
               <a href="#home" aria-label="Home">
                  <Logo />
               </a>
@@ -63,7 +63,7 @@ const DesktopLayout = ({ children }: { children: React.ReactNode }) => {
 
         {/* --- MAIN CONTENT AREA --- */}
         <div className={`relative ${mainPadding}`}>
-           <main className="pt-20 md:pt-24 pb-10 min-h-[calc(100vh-80px)]">
+           <main className="pt-16 lg:pt-20 xl:pt-24 pb-10 min-h-[calc(100vh-80px)]">
               <MainContent />
            </main>
            <Footer className={`${mainPadding}`} /> {/* Ensure Footer gets padding */}

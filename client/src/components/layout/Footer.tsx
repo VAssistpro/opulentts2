@@ -5,17 +5,10 @@ const Footer = ({ className }: { className?: string }) => {
   return (
     <footer className="relative z-[40] w-full flex-shrink-0 mt-2 mx-auto max-w-full overflow-hidden">
       {/* Burgundy divider line with glow effect */}
-<<<<<<< HEAD
       <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent
                     shadow-[0_0_9px_rgba(128,0,32,0.4)] mx-4"></div>
       <div className="w-full px-4 py-3 max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
-=======
-      <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent 
-                    shadow-[0_0_9px_rgba(128,0,32,0.4)]"></div>
-      <div className="container mx-auto px-6 py-3 ml-[60px] mr-[34px] pl-[99px] pr-[43px]">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
->>>>>>> refs/remotes/origin/main
           {/* Left aligned text with glow effect */}
           <div className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)] flex-shrink-0">
             © {new Date().getFullYear()} Opulent Transport Solutions

@@ -19,7 +19,7 @@ const BookingButton = () => {
                    rounded-full border border-gold/30 hover:border-transparent
                    shadow-[0_0_30px_rgba(147,113,39,0.6)]
                    hover:shadow-[0_0_40px_rgba(147,113,39,0.9)]
-                   transition-all duration-300 transform hover:scale-105
+                   transition-all duration-300 ease-out transform hover:scale-[1.02] will-change-transform
                    group whitespace-nowrap w-full sm:w-auto min-w-[200px] sm:min-w-[240px] lg:min-w-[260px]"
         >
           <span>Book Your Journey</span>

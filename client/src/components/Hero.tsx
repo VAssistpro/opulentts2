@@ -24,13 +24,19 @@ const Hero = () => {
     // Use items-start and pt-* for vertical positioning
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <video 
           autoPlay 
           muted 
           loop 
           playsInline 
-          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center'
+          }}
         >
           <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
           Your browser does not support the video tag.

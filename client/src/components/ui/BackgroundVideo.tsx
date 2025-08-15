@@ -10,7 +10,13 @@ const BackgroundVideo = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center'
+          }}
         >
           <source src={VIDEO_CONFIG.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ShimmerBackground = () => {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 z-30 pointer-events-none overflow-hidden">
       {/* Simplified foundation layer */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#000512] via-[#001224] to-[#000512]" />
       

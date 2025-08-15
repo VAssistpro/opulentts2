@@ -86,7 +86,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="mt-[13px] mb-[13px] bg-[#69656512]"
+          className="bg-[#69656500] mt-[6px] mb-[6px]"
         >
           <h2
             className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold 

@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Testimonials from './Testimonials';
 import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 import ShimmerBackground from '../effects/ShimmerBackground';
+import FloatingLightOrbs from '../effects/FloatingLightOrbs';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
   const sidebarMarginClass = "ml-56";
@@ -17,6 +18,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
       <div className="relative min-h-screen bg-transparent text-text-primary flex flex-col">
         <ShimmerBackground />
         <BackgroundEffects />
+        <FloatingLightOrbs />
         
         {/* Fixed Navigation */}
         <LuxuryNavbar />
@@ -60,8 +62,8 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
                 </video>
               </div>
               
-              {/* Content overlay with slight transparency */}
-              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/20">
+              {/* Content overlay with enhanced transparency for background visibility */}
+              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
                   {children ? children : <MainContent />}
               </div>
             </div>

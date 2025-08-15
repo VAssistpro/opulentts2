@@ -88,10 +88,10 @@ const Hero = () => {
           className="bg-[#69656500] mt-[6px] mb-[6px]"
         >
           <h2
-            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold 
+            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold
                        drop-shadow-[0_4px_12px_rgba(0,0,0,1)]
                        [text-shadow:0_0_30px_rgba(0,0,0,0.9),_0_4px_12px_rgba(0,0,0,1)]
-                       tracking-wide mt-[4px] mb-[4px]"
+                       tracking-wide mt-[1px] mb-[4px]"
           >
             Where Excellence Meets Luxury
           </h2>
@@ -155,9 +155,6 @@ const Hero = () => {
           className="space-y-5"
         >
           <div className="space-y-2">
-            <p className="text-white text-lg md:text-xl font-medium">
-              Ready to Experience True Luxury?
-            </p>
             <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200]">
               Join NYC's elite who trust Opulent Transport for their most important journeys.
               Discretion, punctuality, and unmatched comfort guaranteed.

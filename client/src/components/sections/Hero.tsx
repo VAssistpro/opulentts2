@@ -112,7 +112,7 @@ const Hero = () => {
               <div className="text-white/70 text-xs">Available</div>
             </div>
             <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
-              <div className="text-gold text-lg font-bold">5⭐</div>
+              <div className="text-gold text-lg font-bold">5 ⭐</div>
               <div className="text-white/70 text-xs">Rating</div>
             </div>
             <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">

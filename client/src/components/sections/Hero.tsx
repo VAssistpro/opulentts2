@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { useDesktopNavigation } from "../../contexts/DesktopNavigationContext";
+import GlassmorphicBookButton from "../ui/buttons/GlassmorphicBookButton";
 
 const Hero = () => {
   const { setActiveSection } = useDesktopNavigation();
@@ -104,16 +105,20 @@ const Hero = () => {
             Premium Chauffeur Services
           </h2>
 
-          {/* Service Areas - Compact */}
-          <div className="flex flex-wrap items-center justify-center gap-3 
-                          text-white/90 text-sm md:text-base">
-            <span className="font-medium">Manhattan</span>
-            <span className="text-gold text-xs">●</span>
-            <span className="font-medium">Brooklyn</span>
-            <span className="text-gold text-xs">●</span>
-            <span className="font-medium">Queens</span>
-            <span className="text-gold text-xs">●</span>
-            <span className="font-medium">JFK • LGA • EWR</span>
+          {/* Service Areas - Glassmorphic Pills */}
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            <span className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90">
+              Manhattan
+            </span>
+            <span className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90">
+              Brooklyn
+            </span>
+            <span className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90">
+              Queens
+            </span>
+            <span className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90">
+              JFK • LGA • EWR
+            </span>
           </div>
         </motion.div>
 
@@ -128,23 +133,14 @@ const Hero = () => {
             Experience luxury. Arrive in style.
           </p>
 
-          <motion.button
-            onClick={() => handleScrollToSection("book")}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 md:px-12 md:py-4 rounded-full 
-                       bg-gradient-to-r from-gold-dark via-gold to-gold-dark
-                       hover:from-[#5c4718] hover:via-[#b8901f] hover:to-[#5c4718]
-                       text-black font-bold text-sm md:text-base
-                       tracking-wider border-2 border-gold/60 
-                       shadow-[0_0_40px_rgba(147,113,39,0.6)]
-                       hover:shadow-[0_0_60px_rgba(147,113,39,0.8)]
-                       flex items-center justify-center gap-3 group mx-auto
-                       transition-all duration-300 uppercase"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="flex justify-center"
           >
-            <span>Book Now</span>
-            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" />
-          </motion.button>
+            <GlassmorphicBookButton onClick={() => handleScrollToSection("book")} />
+          </motion.div>
         </motion.div>
       </div>
 

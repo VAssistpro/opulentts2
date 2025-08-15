@@ -44,7 +44,7 @@ const Testimonials = () => {
       {/* Header */}
       <div className="text-center mb-2">
         <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-2"></div>
-        <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
+        <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block pl-[34px] pr-[34px]">
           <span className="text-xs font-medium tracking-wider">
             Client Experiences
           </span>

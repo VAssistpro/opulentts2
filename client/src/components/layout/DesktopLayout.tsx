@@ -17,6 +17,66 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
       <div className="relative min-h-screen bg-transparent text-text-primary flex flex-col">
         <ShimmerBackground />
         <BackgroundEffects />
+
+        {/* Desktop-specific blue lights positioned over the main content area */}
+        <div className="fixed inset-0 z-50 pointer-events-none">
+          {/* Left vertical blue light */}
+          <div
+            className="absolute left-0 top-0 h-full opacity-80"
+            style={{
+              width: '6px',
+              background: 'linear-gradient(to bottom, transparent, rgba(59,130,246,1), rgba(59,130,246,0.9), rgba(59,130,246,1), transparent)',
+              filter: 'blur(2px)',
+              boxShadow: '0 0 25px rgba(59,130,246,0.8), 0 0 50px rgba(59,130,246,0.4)'
+            }}
+          />
+          <div
+            className="absolute left-0 top-0 h-full opacity-60"
+            style={{
+              width: '12px',
+              background: 'linear-gradient(to bottom, transparent, rgba(59,130,246,0.6), rgba(59,130,246,0.4), rgba(59,130,246,0.6), transparent)',
+              filter: 'blur(6px)'
+            }}
+          />
+
+          {/* Top horizontal blue light */}
+          <div
+            className="absolute top-0 left-0 w-full opacity-80"
+            style={{
+              height: '6px',
+              background: 'linear-gradient(to right, transparent, rgba(59,130,246,1), rgba(59,130,246,0.9), rgba(59,130,246,1), transparent)',
+              filter: 'blur(2px)',
+              boxShadow: '0 0 25px rgba(59,130,246,0.8), 0 0 50px rgba(59,130,246,0.4)'
+            }}
+          />
+          <div
+            className="absolute top-0 left-0 w-full opacity-60"
+            style={{
+              height: '12px',
+              background: 'linear-gradient(to right, transparent, rgba(59,130,246,0.6), rgba(59,130,246,0.4), rgba(59,130,246,0.6), transparent)',
+              filter: 'blur(6px)'
+            }}
+          />
+
+          {/* Right vertical blue light */}
+          <div
+            className="absolute right-0 top-0 h-full opacity-80"
+            style={{
+              width: '6px',
+              background: 'linear-gradient(to bottom, transparent, rgba(59,130,246,1), rgba(59,130,246,0.9), rgba(59,130,246,1), transparent)',
+              filter: 'blur(2px)',
+              boxShadow: '0 0 25px rgba(59,130,246,0.8), 0 0 50px rgba(59,130,246,0.4)'
+            }}
+          />
+          <div
+            className="absolute right-0 top-0 h-full opacity-60"
+            style={{
+              width: '12px',
+              background: 'linear-gradient(to bottom, transparent, rgba(59,130,246,0.6), rgba(59,130,246,0.4), rgba(59,130,246,0.6), transparent)',
+              filter: 'blur(6px)'
+            }}
+          />
+        </div>
         
         {/* Fixed Navigation */}
         <LuxuryNavbar />
@@ -60,8 +120,8 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
                 </video>
               </div>
               
-              {/* Content overlay with slight transparency */}
-              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/20">
+              {/* Content overlay with enhanced transparency for background visibility */}
+              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
                   {children ? children : <MainContent />}
               </div>
             </div>

@@ -30,16 +30,16 @@ const BackgroundEffects = () => {
         <div className="absolute top-1/6 left-1/5 w-[500px] h-[500px] bg-gold/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '0.5s' }} />
         <div className="absolute top-1/6 left-1/5 w-[300px] h-[300px] bg-gold/12 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
 
-        {/* Secondary ambient lights - Enhanced */}
+        {/* Secondary ambient lights - Changed purple to blue */}
         <div className="absolute top-2/3 right-1/6 w-[600px] h-[600px] bg-blue-400/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-purple-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '3s' }} />
         <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-emerald-400/6 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }} />
 
         {/* Dramatic edge lighting - Enhanced */}
         <div className="absolute top-0 left-0 w-[800px] h-[300px] bg-gold/12 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-[700px] h-[300px] bg-gold/8 rounded-full blur-3xl" />
         <div className="absolute top-0 right-0 w-[600px] h-[250px] bg-blue-400/6 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[650px] h-[250px] bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[650px] h-[250px] bg-blue-500/5 rounded-full blur-3xl" />
       </div>
       
       {/* Enhanced particle system with multiple types */}
@@ -80,11 +80,11 @@ const BackgroundEffects = () => {
           />
         ))}
 
-        {/* Tertiary purple particles */}
+        {/* Tertiary blue particles - Changed from purple */}
         {[...Array(15)].map((_, i) => (
           <div
-            key={`purple-${i}`}
-            className="absolute bg-purple-400/25 rounded-full animate-float"
+            key={`blue-extra-${i}`}
+            className="absolute bg-blue-400/25 rounded-full animate-float"
             style={{
               width: `${0.8 + Math.random() * 1.5}px`,
               height: `${0.8 + Math.random() * 1.5}px`,
@@ -92,7 +92,7 @@ const BackgroundEffects = () => {
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 30}s`,
               animationDuration: `${25 + Math.random() * 15}s`,
-              boxShadow: `0 0 ${2 + Math.random() * 3}px rgba(168,85,247,0.4)`,
+              boxShadow: `0 0 ${2 + Math.random() * 3}px rgba(59,130,246,0.4)`,
               opacity: 0.15 + Math.random() * 0.25
             }}
           />
@@ -106,20 +106,20 @@ const BackgroundEffects = () => {
         <div className="absolute top-0 right-1/3 w-1.5 h-full bg-gradient-to-b from-gold/25 via-gold/6 to-transparent transform skew-x-6 blur-sm" />
         <div className="absolute top-0 left-2/3 w-1 h-full bg-gradient-to-b from-gold/20 via-gold/4 to-transparent transform -skew-x-3 blur-sm" />
 
-        {/* Secondary light shafts */}
+        {/* Secondary light shafts - Changed purple to blue */}
         <div className="absolute top-0 left-1/6 w-1 h-full bg-gradient-to-b from-blue-400/15 via-blue-400/3 to-transparent transform skew-x-8 blur-sm" />
-        <div className="absolute top-0 right-1/5 w-1.5 h-full bg-gradient-to-b from-purple-400/12 via-purple-400/2 to-transparent transform -skew-x-5 blur-sm" />
+        <div className="absolute top-0 right-1/5 w-1.5 h-full bg-gradient-to-b from-blue-400/12 via-blue-400/2 to-transparent transform -skew-x-5 blur-sm" />
 
         {/* Intersecting light beams */}
         <div className="absolute left-0 top-1/4 w-full h-1 bg-gradient-to-r from-transparent via-gold/20 to-transparent transform rotate-1 blur-sm" />
         <div className="absolute left-0 top-3/4 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400/15 to-transparent transform -rotate-1 blur-sm" />
       </div>
       
-      {/* Complex radial lighting system - Enhanced */}
+      {/* Complex radial lighting system - Changed purple to blue */}
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_20%_10%,rgba(147,113,39,0.25),rgba(147,113,39,0.08)_40%,transparent_70%)] pointer-events-none" />
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_80%_90%,rgba(147,113,39,0.15),rgba(147,113,39,0.04)_50%,transparent_80%)] pointer-events-none" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(59,130,246,0.12),rgba(59,130,246,0.03)_60%,transparent_85%)] pointer-events-none" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(168,85,247,0.08),transparent_50%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(59,130,246,0.08),transparent_50%)] pointer-events-none" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_30%_60%,rgba(16,185,129,0.06),transparent_45%)] pointer-events-none" />
       
       {/* Enhanced depth shadows - Multi-layered */}
@@ -146,10 +146,10 @@ const BackgroundEffects = () => {
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-black/6 to-transparent animate-slow-drift-reverse opacity-50" style={{ animationDelay: '9s' }} />
       </div>
 
-      {/* Atmospheric haze layers */}
+      {/* Atmospheric haze layers - Changed purple to blue */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-blue-400/3 animate-pulse-slow opacity-40" style={{ animationDuration: '15s' }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-400/2 via-transparent to-gold/3 animate-pulse-slow opacity-30" style={{ animationDuration: '20s', animationDelay: '5s' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-400/2 via-transparent to-gold/3 animate-pulse-slow opacity-30" style={{ animationDuration: '20s', animationDelay: '5s' }} />
       </div>
     </>
   );

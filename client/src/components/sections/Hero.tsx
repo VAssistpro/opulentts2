@@ -51,11 +51,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center px-4 py-2 rounded-full 
-                     bg-black/70 backdrop-blur-xl border border-gold/50 
-                     shadow-[0_0_30px_rgba(147,113,39,0.3)] mb-4"
+          className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 mb-4 inline-block"
         >
-          <span className="text-gold text-xs font-bold tracking-wider uppercase">
+          <span className="text-xs font-medium tracking-wider uppercase">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★
           </span>
         </motion.div>
@@ -155,9 +153,6 @@ const Hero = () => {
                  text-white/70 hover:text-gold transition-colors duration-300"
         aria-label="Scroll down"
       >
-        <span className="text-xs font-medium tracking-wider uppercase">
-          Scroll
-        </span>
         <ChevronDown className="w-4 h-4 animate-bounce" />
       </motion.button>
     </div>

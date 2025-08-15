@@ -17,8 +17,6 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
       <div className="relative min-h-screen bg-transparent text-text-primary flex flex-col">
         <ShimmerBackground />
         <BackgroundEffects />
-        <FloatingLightOrbs />
-        <AtmosphericEnhancement />
         
         {/* Fixed Navigation */}
         <LuxuryNavbar />

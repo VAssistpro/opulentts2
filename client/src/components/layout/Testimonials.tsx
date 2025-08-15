@@ -46,7 +46,7 @@ const Testimonials = () => {
         <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
       </div>
       {/* Testimonial Card */}
-      <div className="relative h-[350px] xl:h-[380px] rounded-xl overflow-hidden mx-1">
+      <div className="relative h-[400px] xl:h-[420px] rounded-xl overflow-hidden mx-1">
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border border-gold/60 rounded-xl p-5 xl:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center">
           {/* Quote Icon */}
           <div className="absolute top-3 right-3 xl:top-4 xl:right-4 text-gold/30">

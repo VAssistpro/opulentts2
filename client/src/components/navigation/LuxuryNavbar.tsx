@@ -74,11 +74,7 @@ const LuxuryNavbar: React.FC = () => {
              <div className="flex items-center gap-4 ml-4">
                 <button
                   onClick={handleBookNowClick}
-                  className={`hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ${focusVisibleStyles}
-                           bg-white/10 backdrop-blur-sm border border-white/20 text-white/90
-                           transition-all duration-300
-                           hover:bg-white/20 hover:border-white/40
-                           transform hover:scale-[1.03] active:scale-[0.97]`}
+                  className="hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black backdrop-blur-sm border border-white/20 text-white/90 transition-all duration-300 hover:bg-white/20 hover:border-white/40 transform hover:scale-[1.03] active:scale-[0.97] bg-[#c79a38d1] font-semibold"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Book Now</span>
@@ -109,10 +105,8 @@ const LuxuryNavbar: React.FC = () => {
            </div>
         </div>
       </div>
-
-       <div className={`lg:hidden absolute top-full left-0 w-full bg-black/95 shadow-lg border-t border-gold/20 backdrop-blur-xl overflow-y-auto transition-all duration-300 ease-in-out ${ isMobileMenuOpen ? 'max-h-[80vh] opacity-100 visible py-4' : 'max-h-0 opacity-0 invisible py-0' }`}>
-       </div>
-
+      <div className={`lg:hidden absolute top-full left-0 w-full bg-black/95 shadow-lg border-t border-gold/20 backdrop-blur-xl overflow-y-auto transition-all duration-300 ease-in-out ${ isMobileMenuOpen ? 'max-h-[80vh] opacity-100 visible py-4' : 'max-h-0 opacity-0 invisible py-0' }`}>
+      </div>
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
     </nav>
   );

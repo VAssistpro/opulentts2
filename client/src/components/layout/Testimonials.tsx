@@ -62,10 +62,11 @@ const Testimonials = () => {
           {/* Rating */}
           <div className="flex gap-1 mb-4 pl-[5px] pr-[5px] ml-[5px] mr-[5px]">
             {[...Array(testimonial.rating)].map((_, i) => (
-              <Star 
-                key={i} 
-                className="w-4 h-4 fill-gold text-gold" 
-              />
+              <div key={i} className="p-1 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
+                <Star
+                  className="w-3 h-3 fill-white/90 text-white/90"
+                />
+              </div>
             ))}
           </div>
 

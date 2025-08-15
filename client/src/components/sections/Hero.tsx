@@ -126,7 +126,7 @@ const Hero = () => {
             <p className="text-white/70 text-sm mb-2 tracking-wider uppercase bg-[#bfbbbb33] font-semibold">
               Serving All of NYC Metro Area
             </p>
-            <div className="flex flex-wrap justify-center gap-2 text-sm">
+            <div className="flex flex-wrap justify-center gap-2 text-sm bg-[#9692923b]">
               <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
                 Manhattan
               </span>

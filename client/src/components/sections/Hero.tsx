@@ -72,8 +72,7 @@ const Hero = () => {
           >
             OPULENT{' '}
             <span
-              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark
-                             bg-clip-text text-transparent drop-shadow-none"
+              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark bg-clip-text drop-shadow-none text-[#fcfcfcf7]"
             >
               TRANSPORT
             </span>{' '}

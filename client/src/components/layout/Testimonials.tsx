@@ -43,12 +43,7 @@ const Testimonials = () => {
     <div className="w-full px-2">
       {/* Header */}
       <div className="text-center mb-2">
-        <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-2"></div>
-        <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block pl-[34px] pr-[34px]">
-          <span className="text-xs font-medium tracking-wider">
-            Client Experiences
-          </span>
-        </div>
+        <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
       </div>
       {/* Testimonial Card */}
       <div className="relative h-[280px] xl:h-[320px] rounded-xl overflow-hidden mx-1">
@@ -56,6 +51,15 @@ const Testimonials = () => {
           {/* Quote Icon */}
           <div className="absolute top-3 right-3 xl:top-4 xl:right-4 text-gold/30">
             <Quote size={20} className="xl:w-6 xl:h-6" />
+          </div>
+
+          {/* Client Experiences Pill */}
+          <div className="mb-3">
+            <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
+              <span className="text-xs font-medium tracking-wider">
+                Client Experiences
+              </span>
+            </div>
           </div>
 
           {/* Rating */}

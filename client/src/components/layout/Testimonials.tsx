@@ -43,9 +43,11 @@ const Testimonials = () => {
     <div className="w-full max-w-sm">
       {/* Header */}
       <div className="text-center mb-6">
-        <h3 className="text-lg font-semibold text-white mb-0.5">
-          Client Experiences
-        </h3>
+        <div className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 mb-2 inline-block">
+          <span className="text-sm font-medium tracking-wider">
+            Client Experiences
+          </span>
+        </div>
         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
       </div>
       

@@ -106,10 +106,6 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-      {/* Social Icons */}
-      <div className="mt-4">
-        <SocialIcons />
-      </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import DesktopHeader from './DesktopLayout/DesktopHeader';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import Testimonials from './Testimonials';
+import SocialIcons from './SocialIcons';
 import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 import ShimmerBackground from '../effects/ShimmerBackground';
 
@@ -89,6 +90,11 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
             </div>
           </div>
         </main>
+
+        {/* Social Icons - Fixed Position */}
+        <div className="fixed bottom-20 left-4 z-30">
+          <SocialIcons />
+        </div>
 
         <div className="mt-auto pt-4">
           <Footer className="" />

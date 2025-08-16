@@ -28,10 +28,15 @@ const TESTIMONIALS = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+        setIsTransitioning(false);
+      }, 150);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -73,7 +78,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonial Text */}
-          <div className="transition-opacity duration-300 flex-grow flex flex-col justify-between" key={activeIndex}>
+          <div className={`transition-opacity duration-300 flex-grow flex flex-col justify-between ${isTransitioning ? 'opacity-30' : 'opacity-100'}`}>
             <blockquote className="text-white/90 text-xs xl:text-sm leading-relaxed mb-4 italic text-center px-2">
               "{testimonial.text}"
             </blockquote>

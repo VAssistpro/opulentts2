@@ -64,7 +64,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
               
               {/* Content overlay with enhanced transparency for background visibility */}
               <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
-                  {children ? children : <MainContent />}
+                  <MainContent />
               </div>
             </div>
           </div>

@@ -39,15 +39,15 @@ const LuxuryButton: React.FC<LuxuryButtonProps> = ({
 
   const variants = {
     primary: `
-      bg-black/80
-      text-teal
-      border border-[#C9A227] border-[1.5px]
-      shadow-[0_0_20px_rgba(0,128,128,0.2)]
-      hover:shadow-[0_0_30px_rgba(0,128,128,0.4)]
-      hover:border-[#C9A227]
+      bg-gradient-to-r from-gold to-gold-dark
+      text-white
+      border border-gold/30
+      shadow-[0_4px_20px_rgba(147,113,39,0.3)]
+      hover:shadow-[0_8px_30px_rgba(147,113,39,0.5)]
+      hover:border-gold/50
       backdrop-blur-lg
-      hover:bg-gradient-to-r hover:from-teal hover:via-teal-light hover:to-teal
-      hover:text-white
+      hover:from-gold-lighter hover:to-gold
+      transform hover:scale-[1.02] active:scale-[0.98]
     `,
     secondary: `
       bg-black/80

@@ -26,7 +26,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative px-8">
           <DesktopHeader />
           
-          <div className="fixed left-2 top-56 z-40 w-52 xl:w-56 2xl:w-60">
+          <div className="fixed left-2 top-56 z-50 w-52 xl:w-56 2xl:w-60">
             <Testimonials />
           </div>
         </div>
@@ -43,7 +43,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
             <div className="absolute inset-0 bg-black/20 rounded-xl shadow-dramatic pointer-events-none" />
             <div className="absolute inset-2 bg-gradient-to-br from-black/10 via-transparent to-black/20 rounded-xl pointer-events-none" />
             
-            <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-10 shadow-inner-glow border-depth">
+            <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-20 shadow-inner-glow border-depth">
               {/* Background Video for Main Content */}
               <div className="absolute inset-0">
                 <video
@@ -64,7 +64,7 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
               
               {/* Content overlay with enhanced transparency for background visibility */}
               <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
-                  {children ? children : <MainContent />}
+                  <MainContent />
               </div>
             </div>
           </div>

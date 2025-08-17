@@ -105,7 +105,7 @@ const Hero = () => {
           </p>
 
           {/* Stats Grid - Compact */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">
             <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
               <div className="text-gold text-lg font-bold">24/7</div>
               <div className="text-white/70 text-xs">Available</div>

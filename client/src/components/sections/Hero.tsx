@@ -106,19 +106,19 @@ const Hero = () => {
 
           {/* Stats Grid - Compact */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">24/7</div>
               <div className="text-white/70 text-xs">Available</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">5 ⭐</div>
               <div className="text-white/70 text-xs">Rating</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">10+</div>
               <div className="text-white/70 text-xs">Years</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">100%</div>
               <div className="text-white/70 text-xs">Satisfaction</div>
             </div>

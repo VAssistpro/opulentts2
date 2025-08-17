@@ -70,10 +70,6 @@ const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </main>
 
-        {/* Social Icons - Fixed Position */}
-        <div className="fixed bottom-20 left-4 z-50">
-          <SocialIcons />
-        </div>
 
         <div className="mt-auto pt-4">
           <Footer className="" />

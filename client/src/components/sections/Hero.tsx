@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-black/40 blur-xl z-10 pointer-events-none" />
       </div>
       {/* Professional Hero Content - Properly Scaled */}
-      <div className="relative z-20 text-center p-4 w-full max-w-[906px] mx-auto">
+      <div className="relative z-20 text-center p-4 pb-12 w-full max-w-[906px] mx-auto">
         {/* Premium Badge - Compact */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

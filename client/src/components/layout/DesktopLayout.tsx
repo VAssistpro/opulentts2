@@ -9,7 +9,7 @@ import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 import ShimmerBackground from '../effects/ShimmerBackground';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
-  const sidebarMarginClass = "ml-56";
+  const sidebarMarginClass = "ml-48";
   const mainContentHeight = "h-[calc(100vh-10rem)]";
 
   return (

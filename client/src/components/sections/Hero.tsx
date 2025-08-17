@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-black/40 blur-xl z-10 pointer-events-none" />
       </div>
       {/* Professional Hero Content - Properly Scaled */}
-      <div className="relative z-20 text-center p-4 w-full max-w-[906px] mx-auto">
+      <div className="relative z-20 text-center p-4 pb-12 w-full max-w-[906px] mx-auto">
         {/* Premium Badge - Compact */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -105,20 +105,20 @@ const Hero = () => {
           </p>
 
           {/* Stats Grid - Compact */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 max-w-2xl mx-auto">
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">24/7</div>
               <div className="text-white/70 text-xs">Available</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">5 ⭐</div>
               <div className="text-white/70 text-xs">Rating</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">10+</div>
               <div className="text-white/70 text-xs">Years</div>
             </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm rounded-lg border border-gold/30">
+            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
               <div className="text-gold text-lg font-bold">100%</div>
               <div className="text-white/70 text-xs">Satisfaction</div>
             </div>

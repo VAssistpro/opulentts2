@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Section = 'home' | 'about' | 'services' | 'fleet' | 'contact' | 'book';
 
@@ -10,7 +10,14 @@ interface DesktopNavigationContextType {
 const DesktopNavigationContext = createContext<DesktopNavigationContextType | undefined>(undefined);
 
 export const DesktopNavigationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [activeSection, setActiveSection] = useState<Section>('home');
+  const [activeSection, setActiveSection] = useState<Section>(() => {
+    const savedSection = localStorage.getItem('activeSection');
+    return (savedSection as Section) || 'home';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('activeSection', activeSection);
+  }, [activeSection]);
 
   return (
     <DesktopNavigationContext.Provider value={{ activeSection, setActiveSection }}>

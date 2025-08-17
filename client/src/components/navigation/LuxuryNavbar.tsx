@@ -46,7 +46,7 @@ const LuxuryNavbar: React.FC = () => {
           ? 'py-2 bg-black/80 backdrop-blur-lg shadow-lg border-b border-white/10'
           : 'py-3 lg:py-4 bg-gradient-to-b from-black/70 via-black/40 to-transparent'
         }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl pl-2 w-full">
         <div className="flex items-center justify-end h-12 md:h-14">
            <div className="hidden lg:flex items-center gap-x-4">
              {NAV_ITEMS.map(({ icon: Icon, label, section }) => {

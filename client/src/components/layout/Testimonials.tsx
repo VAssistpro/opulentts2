@@ -45,7 +45,7 @@ const Testimonials = () => {
   const testimonial = TESTIMONIALS[activeIndex];
 
   return (
-    <div className="w-full pr-1.5 pl-2">
+    <div className="w-full pr-1.5 pl-1.5">
       {/* Header */}
       <div className="text-center mb-2">
         <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>

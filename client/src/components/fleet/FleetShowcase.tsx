@@ -48,7 +48,7 @@ const FleetShowcase = () => {
   }
 
   return (
-    <div className="container mx-auto px-3 py-0">
+    <div className="container mx-auto px-2 py-0">
       {/* Vehicle Counter */}
       {totalVehicles > 1 && (
         <div className="text-center mb-4">
@@ -58,7 +58,7 @@ const FleetShowcase = () => {
         </div>
       )}
 
-      <div className="relative bg-black/50 rounded-xl overflow-hidden min-h-[490px] md:min-h-[510px] lg:min-h-[530px] flex flex-col shadow-lg border border-white/10">
+      <div className="relative bg-black/50 rounded-xl overflow-hidden min-h-[520px] md:min-h-[550px] lg:min-h-[580px] flex flex-col shadow-lg border border-white/10">
         {/* Background Image */}
         {vehicle.images?.[0] && (
           <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -78,7 +78,7 @@ const FleetShowcase = () => {
         {/* Content Area */}
         <div className="relative z-10 flex flex-grow flex-col md:flex-row items-center gap-4 md:gap-6 p-3 md:p-6 pb-2">
           {/* Vehicle Info */}
-          <div className="w-full md:w-5/12 text-white space-y-3 md:space-y-4 order-2 md:order-1 self-center md:self-auto">
+          <div className="w-full md:w-4/12 text-white space-y-3 md:space-y-4 order-2 md:order-1 self-center md:self-auto">
             <h3 className="text-3xl md:text-4xl font-bodoni font-bold transition-opacity duration-200">
               {vehicle.name}
             </h3>
@@ -115,7 +115,7 @@ const FleetShowcase = () => {
           </div>
 
           {/* Image Display Area */}
-          <div className="w-full md:w-7/12 relative aspect-video rounded-lg overflow-hidden order-1 md:order-2 flex flex-col">
+          <div className="w-full md:w-8/12 relative aspect-video rounded-lg overflow-hidden order-1 md:order-2 flex flex-col">
             {/* Main Image */}
             <div className="relative w-full flex-grow rounded-lg overflow-hidden">
               <img

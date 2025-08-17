@@ -1,81 +1,8 @@
 import React from 'react';
-import ErrorBoundary from '../error/ErrorBoundary';
-import LuxuryNavbar from '../navigation/LuxuryNavbar';
-import DesktopHeader from './DesktopLayout/DesktopHeader';
-import MainContent from './MainContent';
-import Footer from './Footer';
-import Testimonials from './Testimonials';
-import BackgroundEffects from './DesktopLayout/BackgroundEffects';
-import ShimmerBackground from '../effects/ShimmerBackground';
+import ConsoleLayout from './ConsoleLayout';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
-  const sidebarMarginClass = "ml-48";
-  const mainContentHeight = "h-[calc(100vh-10rem)]";
-
-  return (
-    <ErrorBoundary>
-      <div className="relative min-h-screen bg-transparent text-text-primary flex flex-col">
-        <ShimmerBackground />
-        <BackgroundEffects />
-
-        
-        {/* Fixed Navigation */}
-        <LuxuryNavbar />
-        
-        <div className="relative px-8">
-          <DesktopHeader />
-          
-          <div className="fixed -left-2 top-56 z-50 w-48 xl:w-52 2xl:w-56">
-            <Testimonials />
-          </div>
-        </div>
-
-        <main className={`relative z-10 flex-1 ${sidebarMarginClass} pt-20 pb-2 pr-2 pl-4 transition-all duration-500`}>
-          <div className={`relative ${mainContentHeight} mr-8`}>
-            {/* Enhanced dramatic border lighting */}
-            <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-            <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6),0_0_30px_rgba(147,113,39,0.3)] pointer-events-none" />
-
-            {/* Enhanced shadow and depth effects */}
-            <div className="absolute inset-0 bg-black/20 rounded-xl shadow-dramatic pointer-events-none" />
-            <div className="absolute inset-2 bg-gradient-to-br from-black/10 via-transparent to-black/20 rounded-xl pointer-events-none" />
-            
-            <div className="relative h-full rounded-xl overflow-hidden mx-[5px] z-20 shadow-inner-glow border-depth">
-              {/* Background Video for Main Content */}
-              <div className="absolute inset-0">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                >
-                  <source
-                    src="http://opulentts.com/bgvideo/otsbgvido2.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              
-              {/* Content overlay with enhanced transparency for background visibility */}
-              <div className="relative h-full w-full rounded-xl overflow-hidden bg-black/40">
-                  <MainContent />
-              </div>
-            </div>
-          </div>
-        </main>
-
-
-        <div className="mt-auto pt-4">
-          <Footer className="" />
-        </div>
-      </div>
-    </ErrorBoundary>
-  );
+  return <ConsoleLayout>{children}</ConsoleLayout>;
 };
 
 export default DesktopLayout;

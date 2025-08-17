@@ -5,7 +5,6 @@ import DesktopHeader from './DesktopLayout/DesktopHeader';
 import MainContent from './MainContent';
 import Footer from './Footer';
 import Testimonials from './Testimonials';
-import SocialIcons from './SocialIcons';
 import BackgroundEffects from './DesktopLayout/BackgroundEffects';
 import ShimmerBackground from '../effects/ShimmerBackground';
 

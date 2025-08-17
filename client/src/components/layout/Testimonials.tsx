@@ -45,14 +45,14 @@ const Testimonials = () => {
   const testimonial = TESTIMONIALS[activeIndex];
 
   return (
-    <div className="w-full px-2">
+    <div className="w-full px-2 pr-3 pl-2">
       {/* Header */}
       <div className="text-center mb-2">
         <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
       </div>
       {/* Testimonial Card */}
       <div className="relative h-[400px] xl:h-[420px] rounded-xl overflow-hidden mx-1">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#000512]/80 via-[#001224]/70 to-[#000512]/80 backdrop-blur-sm border border-gold/60 rounded-xl p-5 xl:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-gold/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#000512]/80 via-[#001224]/70 to-[#000512]/80 backdrop-blur-sm rounded-xl p-5 pr-1 xl:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] transition-all duration-300 flex flex-col text-center border border-[rgba(240,211,147,0.15)]">
           {/* Quote Icon */}
           <div className="absolute top-3 right-3 xl:top-4 xl:right-4 text-gold/30">
             <Quote size={16} className="xl:w-5 xl:h-5" />
@@ -60,7 +60,7 @@ const Testimonials = () => {
 
           {/* Client Experiences Pill */}
           <div className="mb-3">
-            <div className="px-3 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
+            <div className="px-4 py-1.5 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 inline-block">
               <span className="text-xs font-medium tracking-wider">
                 Client Experiences
               </span>

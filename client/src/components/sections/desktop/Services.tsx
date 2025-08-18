@@ -19,26 +19,21 @@ const Services = () => {
             {SERVICES.map((service, index) => (
               <div key={index} className="group">
                 <div
-                  className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
-                             text-center
-                             transition-all duration-500 group-hover:-translate-y-1
-                             before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                             before:border before:border-gray-500/30
-                             before:shadow-[0_0_15px_rgba(128,128,128,0.2)]
-                             before:transition-all before:duration-500
-                             group-hover:before:border-gold/30
-                             group-hover:before:shadow-[0_0_25px_rgba(147,113,39,0.4)]"
+                  className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                             text-center shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                             transition-all duration-500 group-hover:-translate-y-1 hover:bg-white/[0.05] hover:border-gold/20
+                             before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                 >
                   <div className="relative z-10 flex flex-col items-center h-full">
                     <service.icon
                       className="w-7 h-7 md:w-8 md:h-8 mb-5 md:mb-6
-                                text-gray-400 group-hover:text-gold
+                                text-black/60 dark:text-gray-400 group-hover:text-gold
                                 transition-colors duration-300"
                     />
-                    <h3 className="text-xl md:text-2xl font-playfair font-semibold mb-3 md:mb-4 text-text-primary tracking-wide">
+                    <h3 className="text-xl md:text-2xl font-playfair font-semibold mb-3 md:mb-4 text-black dark:text-white tracking-wide">
                       {service.title}
                     </h3>
-                    <p className="text-base text-text-secondary leading-relaxed font-light tracking-wide flex-grow">
+                    <p className="text-base text-black/80 dark:text-white/80 leading-relaxed font-light tracking-wide flex-grow">
                       {service.description}
                     </p>
                   </div>

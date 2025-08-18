@@ -66,7 +66,7 @@ const ConsoleNavbar: React.FC = () => {
       <div className="flex items-center gap-2">
         <button
           onClick={handleBookNowClick}
-          className="flex items-center gap-1 px-2 py-1 bg-gold/90 text-black rounded text-xs font-mono font-semibold hover:bg-gold transition-all duration-150"
+          className="flex items-center gap-1 px-2 py-1 bg-gold/90 text-black rounded text-xs font-mono font-semibold hover:bg-gold transition-all duration-150 pt-[6px] pb-[6px] pl-[12px] pr-[12px]"
         >
           <Calendar className="w-3 h-3" />
           <span className="text-[#ede8e8]">BOOK NOW</span>

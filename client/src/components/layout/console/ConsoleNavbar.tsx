@@ -63,15 +63,15 @@ const ConsoleNavbar: React.FC = () => {
         <button
           onClick={handleBookNowClick}
           className="relative flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg
-                     bg-gradient-to-r from-emerald-600/90 via-emerald-500 to-emerald-600/90 backdrop-blur-xl border border-emerald-500/30
-                     shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(34,197,94,0.3)]
-                     hover:from-emerald-500 hover:via-emerald-400 hover:to-emerald-500 hover:border-emerald-400/50 transition-all duration-300
+                     bg-gradient-to-r from-gold/90 via-gold to-gold/90 backdrop-blur-xl border border-gold/30
+                     shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(147,113,39,0.4)]
+                     hover:from-gold hover:via-gold-lighter hover:to-gold hover:border-gold/50 transition-all duration-300
                      transform hover:scale-[1.02] active:scale-[0.98]
-                     before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
+                     before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none before:rounded-lg
                      text-xs font-mono font-semibold"
         >
-          <Calendar className="w-3 h-3 text-white" />
-          <span className="text-white">BOOK NOW</span>
+          <Calendar className="w-3 h-3 text-black" />
+          <span className="text-black">BOOK NOW</span>
         </button>
 
         <button

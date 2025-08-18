@@ -74,12 +74,12 @@ const LuxuryNavbar: React.FC = () => {
              <div className="flex items-center gap-4 ml-4">
                 <button
                   onClick={handleBookNowClick}
-                  className="hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm whitespace-nowrap 
-                           bg-white/[0.03] backdrop-blur-xl border border-white/10 text-white font-semibold
+                  className="hidden lg:inline-flex items-center gap-3 px-4 py-2 rounded-full text-sm whitespace-nowrap 
+                           bg-white/[0.03] backdrop-blur-xl border border-white/10 text-black dark:text-white font-medium
                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
-                           transform hover:scale-[1.03] active:scale-[0.97]
-                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none
+                           transform hover:scale-[1.03] active:scale-[0.97] relative
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-full
                            focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   <Calendar className="w-4 h-4" />
@@ -88,12 +88,12 @@ const LuxuryNavbar: React.FC = () => {
 
                 <button
                   onClick={handleAccountClick}
-                  className={`hidden lg:inline-flex items-center gap-4 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap
-                           bg-white/[0.03] backdrop-blur-xl border border-white/10 text-white/90
+                  className={`hidden lg:inline-flex items-center gap-3 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap relative
+                           bg-white/[0.03] backdrop-blur-xl border border-white/10 text-black dark:text-white
                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
                            transform hover:scale-[1.03] active:scale-[0.97]
-                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-full
                            ${focusVisibleStyles}`}
                 >
                   <User className="w-4 h-4" />

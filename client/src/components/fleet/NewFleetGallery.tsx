@@ -17,19 +17,21 @@ const NewFleetGallery = () => {
   };
 
   return (
-    <div className="h-full flex flex-col relative py-2 md:py-4">
-      <div className="relative z-10 w-full max-w-full px-1 md:px-2">
+    <div className="h-full w-full flex flex-col relative">
+      <div className="relative z-10 w-full h-full flex flex-col">
         <AnimatedSection>
-          <SectionTitle
-            title="Our Fleet"
-            description="Discover our collection of meticulously maintained luxury vehicles"
-          />
+          <div className="px-2 pt-2">
+            <SectionTitle
+              title="Our Fleet"
+              description="Discover our collection of meticulously maintained luxury vehicles"
+            />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <div className="w-full max-w-full mt-3 md:mt-4 overflow-hidden flex flex-col flex-1">
+          <div className="flex-1 flex flex-col px-2 pb-2">
             {/* Vehicle Selection Tabs */}
-            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-3 md:mb-4 px-1">
+            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-2 px-1">
               {FLEET_DATA.map((vehicle, index) => (
                 <button
                   key={index}
@@ -49,11 +51,11 @@ const NewFleetGallery = () => {
             <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
-                          flex-1 w-full overflow-hidden">
+                          flex-1 w-full overflow-hidden min-h-0">
               
-              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 items-stretch h-full">
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 h-full min-h-0">
                 {/* Vehicle Details - Left Side */}
-                <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1">
+                <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1 min-h-0">
                   <div>
                     <h2 className="text-xl md:text-2xl xl:text-3xl font-playfair font-bold text-black dark:text-white mb-2">
                       {currentVehicle.name}
@@ -92,10 +94,10 @@ const NewFleetGallery = () => {
                 </div>
 
                 {/* Main Image Display - Right Side */}
-                <div className="xl:col-span-3 flex flex-col order-1 xl:order-2">
-                  <div className="relative flex-1 w-full max-w-full">
+                <div className="xl:col-span-3 flex flex-col order-1 xl:order-2 min-h-0">
+                  <div className="relative flex-1 w-full max-w-full min-h-0">
                     {/* Main Image */}
-                    <div className="relative aspect-video bg-black/10 rounded-lg overflow-hidden min-h-[250px] md:min-h-[300px] w-full">
+                    <div className="relative bg-black/10 rounded-lg overflow-hidden w-full h-full flex-1">
                       <img
                         src={currentImage.url}
                         alt={currentImage.alt}
@@ -159,7 +161,7 @@ const NewFleetGallery = () => {
               </div>
 
               {/* Vehicle Counter */}
-              <div className="text-center mt-3">
+              <div className="text-center mt-2 flex-shrink-0">
                 <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
                   Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
                 </div>

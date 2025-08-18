@@ -6,7 +6,7 @@ const Footer = ({ className }: { className?: string }) => {
     <footer className="relative z-[50] w-full flex-shrink-0 mt-1 mx-auto max-w-full overflow-hidden">
       {/* Console-style footer with golden accent */}
       <div className="max-w-[95vw] mx-auto px-2">
-        <div className="bg-black/80 backdrop-blur-xl rounded-lg border border-gold/30 shadow-[0_0_20px_rgba(147,113,39,0.2)] p-3">
+        <div className="bg-black/80 backdrop-blur-xl rounded-lg border border-gold/30 shadow-[0_0_20px_rgba(147,113,39,0.2)] p-3 pt-[0px] pb-[0px]">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
             {/* Left - Copyright with console styling */}
             <div className="text-xs text-gold/80 font-mono flex-shrink-0 flex items-center gap-2">
@@ -42,7 +42,6 @@ const Footer = ({ className }: { className?: string }) => {
           </div>
         </div>
       </div>
-      
       {/* Console-style back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

@@ -32,11 +32,11 @@ const DesktopNavigation = () => {
                   onClick={() => setActiveSection(section)}
                   className="group flex flex-col items-center"
                 >
-                  <div className={`p-3 rounded-xl transition-all duration-300
+                  <div className={`p-3 rounded-xl transition-all duration-300 backdrop-blur-xl
+                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                                ${isActive 
-                                 ? 'bg-gradient-to-r from-[#937127] via-[#FFD700] to-[#937127] text-black' 
-                                 : 'bg-black/80 backdrop-blur-xl border border-gold/50 text-gold'}
-                               shadow-[0_4px_12px_rgba(147,113,39,0.2)]
+                                 ? 'bg-gradient-to-r from-[#937127] via-[#FFD700] to-[#937127] text-black border border-gold/20' 
+                                 : 'bg-white/[0.03] border border-white/10 text-gold hover:bg-white/[0.05] hover:border-gold/20'}
                                hover:shadow-[0_4px_16px_rgba(147,113,39,0.3)]`}>
                     <Icon className="w-5 h-5" />
                   </div>

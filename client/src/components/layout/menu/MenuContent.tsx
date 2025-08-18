@@ -22,10 +22,10 @@ const MenuContent: React.FC<MenuContentProps> = ({ onClose }) => {
         <button
           onClick={onClose}
           className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center
-                   rounded-xl bg-black/80 backdrop-blur-xl border border-gold/30 text-gold
-                   hover:text-white hover:bg-gold/40
-                   transition-all duration-300 transform hover:scale-110
-                   shadow-[0_0_15px_rgba(147,113,39,0.2)]"
+                   rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 text-gold
+                   shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                   hover:bg-white/[0.05] hover:border-gold/20 hover:text-white
+                   transition-all duration-300 transform hover:scale-110"
           aria-label="Close menu"
         >
           <X className="w-6 h-6" />

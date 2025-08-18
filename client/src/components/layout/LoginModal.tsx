@@ -27,12 +27,10 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-12 h-10 flex items-center justify-center
-                     rounded-full bg-gradient-to-r from-[#ffffff60] via-[#ffffff30] to-[#ffffff60]
-                     border border-white/20 text-white hover:text-gold
-                     hover:bg-gradient-to-r hover:from-[#FFD70080] hover:via-[#FFD70060] hover:to-[#FFD70080]
-                     transition-all duration-300 transform hover:scale-110
-                     shadow-[0_8px_30px_rgba(255,255,255,0.25),_0_0_20px_rgba(255,223,0,0.8)]
-                     hover:shadow-[0_12px_50px_rgba(255,223,0,0.9),_0_4px_15px_rgba(255,255,255,0.4)]"
+                     rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 text-white hover:text-gold
+                     shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                     hover:bg-white/[0.05] hover:border-gold/20
+                     transition-all duration-300 transform hover:scale-110"
             aria-label="Close login modal"
           >
             <X className="w-5 h-5" />

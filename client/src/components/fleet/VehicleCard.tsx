@@ -28,7 +28,6 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
     <GlassmorphicCard
       className="w-full h-[600px]"
       glowIntensity="strong"
-      glowColor="rgba(147, 113, 39, 0.4)"
     >
       <div className="relative w-full h-full">
         <img
@@ -45,9 +44,10 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
             <button
               onClick={previousImage}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                       bg-black/50 text-white flex items-center justify-center opacity-0
-                       group-hover:opacity-100 transition-all duration-300 ease-out hover:bg-gold
-                       hover:text-black will-change-transform hover:scale-[0.98]"
+                       bg-white/[0.03] backdrop-blur-xl border border-white/10 text-white flex items-center justify-center opacity-0
+                       shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                       group-hover:opacity-100 transition-all duration-300 ease-out hover:bg-white/[0.05] hover:border-gold/20
+                       hover:text-gold will-change-transform hover:scale-[0.98]"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-8 h-8" />
@@ -55,9 +55,10 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                       bg-black/50 text-white flex items-center justify-center opacity-0
-                       group-hover:opacity-100 transition-all duration-300 ease-out hover:bg-gold
-                       hover:text-black will-change-transform hover:scale-[0.98]"
+                       bg-white/[0.03] backdrop-blur-xl border border-white/10 text-white flex items-center justify-center opacity-0
+                       shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                       group-hover:opacity-100 transition-all duration-300 ease-out hover:bg-white/[0.05] hover:border-gold/20
+                       hover:text-gold will-change-transform hover:scale-[0.98]"
               aria-label="Next image"
             >
               <ChevronRight className="w-8 h-8" />

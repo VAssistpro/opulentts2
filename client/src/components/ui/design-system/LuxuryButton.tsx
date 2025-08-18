@@ -1,5 +1,5 @@
 import React from 'react';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface LuxuryButtonProps {
   children: React.ReactNode;
@@ -39,32 +39,27 @@ const LuxuryButton: React.FC<LuxuryButtonProps> = ({
 
   const variants = {
     primary: `
+      bg-white/[0.03] backdrop-blur-xl border border-white/10 
+      shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+      hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
       bg-gradient-to-r from-gold to-gold-dark
       text-white
-      border border-gold/30
-      shadow-[0_4px_20px_rgba(147,113,39,0.3)]
       hover:shadow-[0_8px_30px_rgba(147,113,39,0.5)]
-      hover:border-gold/50
-      backdrop-blur-lg
       hover:from-gold-lighter hover:to-gold
       transform hover:scale-[1.02] active:scale-[0.98]
     `,
     secondary: `
-      bg-black/80
+      bg-white/[0.03] backdrop-blur-xl border border-white/10 
+      shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+      hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
       text-gold
-      border border-gold/20
-      shadow-[0_0_20px_rgba(147,113,39,0.2)]
       hover:shadow-[0_0_30px_rgba(147,113,39,0.4)]
-      hover:border-gold/40
-      backdrop-blur-lg
     `,
     ghost: `
-      bg-transparent
+      bg-white/[0.03] backdrop-blur-xl border border-white/10 
+      shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+      hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
       text-gold
-      border border-gold/20
-      hover:bg-gold/10
-      hover:border-gold/40
-      backdrop-blur-lg
     `
   };
 

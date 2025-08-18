@@ -106,10 +106,11 @@ const ConsoleTestimonials = () => {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+            className={`w-2 h-2 rounded-full transition-all duration-200 backdrop-blur-xl
+                      shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] ${
               index === activeIndex 
-                ? 'bg-gold shadow-[0_0_6px_rgba(147,113,39,0.4)]' 
-                : 'bg-white/15 hover:bg-white/30'
+                ? 'bg-gold border border-gold/20 shadow-[0_0_6px_rgba(147,113,39,0.4)]' 
+                : 'bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-gold/20'
             }`}
           />
         ))}

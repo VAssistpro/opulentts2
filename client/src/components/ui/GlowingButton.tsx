@@ -25,9 +25,12 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({
     relative inline-flex items-center justify-center gap-2 /* Center content */
     text-base md:text-lg font-semibold rounded-full /* Responsive text */
     transition-all duration-300 transform hover:scale-105 active:scale-95
-    overflow-hidden group backdrop-blur-sm
+    overflow-hidden group backdrop-blur-xl
     disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
     px-8 py-3 tracking-wider /* Added tracking */
+    bg-white/[0.03] border border-white/10 
+    shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+    before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none
   `;
 
   // Define styles using CSS variables for cleaner templates

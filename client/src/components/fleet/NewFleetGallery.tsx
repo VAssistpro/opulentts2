@@ -25,17 +25,20 @@ const NewFleetGallery = () => {
         
         <AnimatedSection>
           {/* Header Section */}
-          <div className="flex-shrink-0 px-4 pt-4 pb-2">
+          <div className="flex-shrink-0 px-4 pt-4 pb-3">
             <SectionTitle
               title="Our Fleet"
               description="Discover our collection of meticulously maintained luxury vehicles"
             />
           </div>
+          
+          {/* Header Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mx-4"></div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
           {/* Vehicle Selection Tabs */}
-          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 mb-3 px-4">
+          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 my-4 px-4">
             {FLEET_DATA.map((vehicle, index) => (
               <button
                 key={index}
@@ -50,13 +53,16 @@ const NewFleetGallery = () => {
               </button>
             ))}
           </div>
+          
+          {/* Tabs Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-4 mb-4"></div>
 
           {/* Main Content Area */}
           <div className="flex-1 px-4 pb-4 relative min-h-0">
               
-              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 h-full">
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-4 md:gap-6 h-full">
                 {/* Vehicle Details - Left Side */}
-                <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1 min-h-0">
+                <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1 min-h-0 xl:pr-4 xl:border-r xl:border-white/10">
                   <div>
                     <h2 className="text-xl md:text-2xl xl:text-3xl font-playfair font-bold text-black dark:text-white mb-2">
                       {currentVehicle.name}
@@ -66,26 +72,32 @@ const NewFleetGallery = () => {
                     </p>
                   </div>
 
+                  {/* Vehicle Specs Divider */}
+                  <div className="h-px bg-gradient-to-r from-gold/40 via-gold/20 to-transparent"></div>
+
                   {/* Capacity & Features */}
-                  <div className="space-y-2">
-                    <div className="flex flex-wrap gap-3">
-                      <div className="flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5 text-gold" />
-                        <span className="text-xs text-black dark:text-white font-medium">{currentVehicle.capacity}</span>
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-4">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-gold" />
+                        <span className="text-sm text-black dark:text-white font-medium">{currentVehicle.capacity}</span>
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <Briefcase className="w-3.5 h-3.5 text-gold" />
-                        <span className="text-xs text-black dark:text-white font-medium">{currentVehicle.luggage} Bags</span>
+                      <div className="flex items-center gap-2">
+                        <Briefcase className="w-4 h-4 text-gold" />
+                        <span className="text-sm text-black dark:text-white font-medium">{currentVehicle.luggage} Bags</span>
                       </div>
                     </div>
 
+                    {/* Features Divider */}
+                    <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-gold/30"></div>
+
                     {/* Features Grid */}
                     <div>
-                      <h4 className="text-base font-semibold text-gold mb-1.5">Features</h4>
-                      <div className="grid grid-cols-2 gap-0.5">
+                      <h4 className="text-base font-semibold text-gold mb-2">Features</h4>
+                      <div className="grid grid-cols-2 gap-1">
                         {currentVehicle.features.map((feature, index) => (
-                          <div key={index} className="flex items-center gap-1">
-                            <Star className="w-2 h-2 text-gold fill-gold flex-shrink-0" />
+                          <div key={index} className="flex items-center gap-1.5">
+                            <Star className="w-2.5 h-2.5 text-gold fill-gold flex-shrink-0" />
                             <span className="text-xs text-black/80 dark:text-white/80 truncate">{feature.name}</span>
                           </div>
                         ))}
@@ -95,7 +107,7 @@ const NewFleetGallery = () => {
                 </div>
 
                 {/* Main Image Display - Right Side */}
-                <div className="xl:col-span-3 flex flex-col order-1 xl:order-2 min-h-0">
+                <div className="xl:col-span-3 flex flex-col order-1 xl:order-2 min-h-0 xl:pl-4">
                   <div className="relative flex-1 w-full max-w-full min-h-0">
                     {/* Main Image */}
                     <div className="relative bg-black/10 rounded-lg overflow-hidden w-full h-full flex-1">
@@ -161,9 +173,12 @@ const NewFleetGallery = () => {
                 </div>
               </div>
 
+            {/* Bottom Divider */}
+            <div className="absolute bottom-8 left-4 right-4 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+            
             {/* Vehicle Counter */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
-              <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black/30 border border-gold/20 rounded-full text-xs text-gold font-medium">
                 Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
               </div>
             </div>

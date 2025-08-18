@@ -17,8 +17,8 @@ const NewFleetGallery = () => {
   };
 
   return (
-    <div className="h-full flex items-stretch relative py-4 md:py-6">
-      <div className="relative z-10 w-full max-w-full px-2 md:px-4">
+    <div className="h-full flex flex-col relative py-2 md:py-4">
+      <div className="relative z-10 w-full max-w-full px-1 md:px-2">
         <AnimatedSection>
           <SectionTitle
             title="Our Fleet"
@@ -27,9 +27,9 @@ const NewFleetGallery = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <div className="w-full max-w-full mt-4 md:mt-6 overflow-hidden">
+          <div className="w-full max-w-full mt-3 md:mt-4 overflow-hidden flex flex-col flex-1">
             {/* Vehicle Selection Tabs */}
-            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-4 md:mb-6 px-2">
+            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-3 md:mb-4 px-1">
               {FLEET_DATA.map((vehicle, index) => (
                 <button
                   key={index}
@@ -45,13 +45,13 @@ const NewFleetGallery = () => {
               ))}
             </div>
 
-            {/* Main Fleet Display */}
+            {/* Main Fleet Display - Full Container */}
             <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
-                          max-w-full overflow-hidden">
+                          flex-1 w-full overflow-hidden">
               
-              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 items-stretch min-h-[400px]">
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 items-stretch h-full">
                 {/* Vehicle Details - Left Side */}
                 <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1">
                   <div>

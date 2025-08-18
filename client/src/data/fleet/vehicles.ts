@@ -105,6 +105,32 @@ export const FLEET_DATA: Vehicle[] = [
     ]
   },
   {
+    id: 'cadillac-escalade',
+    name: 'Cadillac Escalade',
+    description: 'Premium luxury SUV with commanding presence',
+    capacity: '7 Passengers',
+    luggage: 6,
+    images: [
+      {
+        url: 'https://opulentts.com/Escalade%20Exterior%202.png',
+        alt: 'Cadillac Escalade Exterior',
+        type: 'exterior'
+      },
+      {
+        url: 'https://opulentts.com/Escalade%20Interior%202.png',
+        alt: 'Cadillac Escalade Interior',
+        type: 'interior'
+      }
+    ],
+    features: [
+      { name: 'Leather Seats' },
+      { name: 'Climate Control' },
+      { name: 'Premium Sound System' },
+      { name: 'Panoramic Sunroof' },
+      { name: 'Advanced Technology' }
+    ]
+  },
+  {
     id: 'chevrolet-suburban',
     name: 'Chevrolet Suburban',
     description: 'Spacious and comfortable SUV for any occasion',

@@ -68,7 +68,7 @@ const ConsoleTestimonials = () => {
             {[...Array(testimonial.rating)].map((_, i) => (
               <Star
                 key={i}
-                className="w-3 h-3 fill-gold text-gold"
+                className="w-3 h-3 fill-white text-white"
               />
             ))}
           </div>

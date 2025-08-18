@@ -15,8 +15,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-95" />
 
         {/* Console Device Container */}
-        <div className="relative z-10 flex-1 p-2 lg:p-4">
-          <div className="max-w-[95vw] mx-auto h-[calc(100vh-60px)]">
+        <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
+          <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
             <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-gold/30 
                           shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(147,113,39,0.2),0_0_40px_rgba(147,113,39,0.3)] p-1 h-full">

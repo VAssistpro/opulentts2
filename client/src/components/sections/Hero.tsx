@@ -80,11 +80,52 @@ const Hero = () => {
           </div>
         </motion.h1>
 
+        {/* Service Areas - Enhanced Pills - Right Under Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="mb-6"
+        >
+          <div className="flex flex-wrap justify-center gap-2 text-sm">
+            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
+                            before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              Manhattan
+            </span>
+            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
+                            before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              Brooklyn
+            </span>
+            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
+                            before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              Queens
+            </span>
+            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
+                            before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              JFK • LGA • EWR
+            </span>
+            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                            shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                            hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
+                            before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              Westchester • Long Island
+            </span>
+          </div>
+        </motion.div>
+
         {/* Enhanced Value Proposition */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
           className="bg-[#69656500] mt-[10px] mb-[10px] pt-[1px] pb-[1px]"
         >
           
@@ -94,41 +135,7 @@ const Hero = () => {
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>
 
-          {/* Service Areas - Enhanced Pills - Moved Above */}
-          <div className="mb-6">
-            <div className="flex flex-wrap justify-center gap-2 text-sm mt-[5px] mb-[5px]">
-              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
-                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
-                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-                Manhattan
-              </span>
-              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
-                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
-                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-                Brooklyn
-              </span>
-              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
-                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
-                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-                Queens
-              </span>
-              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
-                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
-                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-                JFK • LGA • EWR
-              </span>
-              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
-                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
-                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-                Westchester • Long Island
-              </span>
-            </div>
-          </div>
+
 
           {/* Trust Cards - Liquid Glass Effect - Moved Below */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">

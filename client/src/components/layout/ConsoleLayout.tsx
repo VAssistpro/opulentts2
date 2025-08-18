@@ -17,7 +17,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
 
         {/* Console Device Container */}
         <div className="relative z-10 flex-1 p-2 lg:p-4">
-          <div className="max-w-[95vw] mx-auto h-[calc(100vh-120px)]">
+          <div className="max-w-[95vw] mx-auto h-[calc(100vh-80px)]">
             {/* Integrated Console Interface */}
             <div className="relative bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_50px_rgba(147,113,39,0.3)] p-1 h-full">
               {/* Console Frame/Bezel */}

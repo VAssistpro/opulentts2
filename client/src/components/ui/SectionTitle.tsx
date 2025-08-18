@@ -29,7 +29,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
 
   return (
     <div className={`mb-4 ${alignmentClasses[alignment]}`}>
-      <h2 className="font-playfair md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] text-[38px]">
+      <h2 className="font-playfair md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] pt-[2px] pb-[2px] text-[38px]">
         {title}
       </h2>
       <div className={`w-20 h-0.5 my-4 ${dividerClasses[alignment]}

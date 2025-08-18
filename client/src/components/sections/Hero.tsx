@@ -68,7 +68,7 @@ const Hero = () => {
           className="mb-4"
         >
           <div
-            className="md:text-3xl lg:text-4xl xl:text-5xl text-white drop-shadow-[0_8px_20px_rgba(0,0,0,1)] [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)] tracking-tight font-extrabold mt-[4px] mb-[4px] text-[31px]"
+            className="md:text-3xl lg:text-4xl xl:text-5xl text-white drop-shadow-[0_8px_20px_rgba(0,0,0,1)] [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)] tracking-tight mt-[4px] mb-[4px] text-[29px] font-bold"
           >
             OPULENT{' '}
             <span

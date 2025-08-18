@@ -68,11 +68,11 @@ const Hero = () => {
           className="mb-4"
         >
           <div
-            className="md:text-3xl lg:text-4xl xl:text-5xl text-white drop-shadow-[0_8px_20px_rgba(0,0,0,1)] [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)] tracking-tight mt-[4px] mb-[4px] font-bold text-[34px]"
+            className="md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-[0_8px_20px_rgba(0,0,0,1)] [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)] tracking-tight mt-[4px] mb-[4px] font-bold text-[34px] text-[#c9c3c3]"
           >
             OPULENT{' '}
             <span
-              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark bg-clip-text drop-shadow-none text-[#fcfcfcf7]"
+              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark bg-clip-text drop-shadow-none text-[#dbd9d9f7]"
             >
               TRANSPORT
             </span>{' '}

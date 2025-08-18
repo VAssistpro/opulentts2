@@ -37,11 +37,11 @@ const ConsoleNavbar: React.FC = () => {
 
   return (
     <div className="relative flex items-center justify-between p-2 mt-[2px] mb-[2px]
-                   bg-white/[0.03] backdrop-blur-xl border border-white/10
-                   shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                   before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:via-white/5 before:to-transparent before:pointer-events-none
-                   after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/5 after:to-transparent after:pointer-events-none
-                   hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300">
+                   bg-black/80 backdrop-blur-xl border border-black/30
+                   shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05),0_1px_3px_rgba(0,0,0,0.5),0_8px_32px_rgba(0,0,0,0.6)]
+                   before:absolute before:inset-0 before:bg-gradient-to-br before:from-black/20 before:via-black/10 before:to-transparent before:pointer-events-none
+                   after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-white/3 after:to-transparent after:pointer-events-none
+                   hover:bg-black/70 hover:border-gold/30 transition-all duration-300">
       {/* Left Side - Expanded for Logo */}
       <div className="w-56 flex items-center">
         {/* Logo will be placed in the left panel instead */}

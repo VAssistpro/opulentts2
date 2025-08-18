@@ -23,10 +23,10 @@ const About = () => {
             {FEATURES.map((feature, index) => (
               <div key={index} className="group">
                 <div
-                  className="relative rounded-xl bg-white/[0.08] backdrop-blur-2xl border border-white/20 p-6 md:p-8 h-full
-                             text-center shadow-[inset_0_2px_0_0_rgba(255,255,255,0.2),0_2px_6px_rgba(0,0,0,0.2),0_16px_48px_rgba(0,0,0,0.3)]
-                             transition-all duration-500 group-hover:-translate-y-1 hover:bg-white/[0.12] hover:border-gold/30
-                             before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/[0.08] before:to-transparent before:pointer-events-none before:rounded-xl"
+                  className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                             text-center shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                             transition-all duration-500 group-hover:-translate-y-1 hover:bg-white/[0.05] hover:border-gold/20
+                             before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                 >
                   <div className="relative z-10 flex flex-col items-center h-full">
                     <feature.icon

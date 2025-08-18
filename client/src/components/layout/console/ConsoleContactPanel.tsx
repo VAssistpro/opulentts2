@@ -71,18 +71,7 @@ const ConsoleContactPanel = () => {
         ))}
       </div>
 
-      {/* Quick Actions */}
-      <div className="space-y-2 pt-2 border-t border-gold/10">
-        <div className="text-xs text-gold/80 font-mono text-center">QUICK</div>
-        
-        <button className="w-full p-2 bg-gradient-to-b from-gold/80 to-gold-dark/80 text-black rounded text-xs font-bold hover:from-gold hover:to-gold-dark transition-all duration-200">
-          BOOK
-        </button>
-        
-        <button className="w-full p-2 bg-black/60 border border-white/20 text-white/80 rounded text-xs font-mono hover:bg-black/80 hover:border-white/40 transition-all duration-200">
-          INFO
-        </button>
-      </div>
+      
 
       
     </div>

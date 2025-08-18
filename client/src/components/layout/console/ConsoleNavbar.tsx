@@ -37,15 +37,9 @@ const ConsoleNavbar: React.FC = () => {
 
   return (
     <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm">
-      {/* Left Side - Opulent Logo */}
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 bg-black/80 rounded px-2 py-1 border border-gold/30">
-          <img
-            src="https://opulentts.com/bgvideo/otsnobg.png"
-            alt="Opulent Transport Solutions"
-            className="h-8 w-auto object-contain"
-          />
-        </div>
+      {/* Left Side - Expanded for Logo */}
+      <div className="w-56 flex items-center">
+        {/* Logo will be placed in the left panel instead */}
       </div>
 
       {/* Center - Streamlined Navigation */}

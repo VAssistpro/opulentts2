@@ -32,17 +32,18 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
 
                 {/* Main Console Body */}
                 <div className="flex flex-1">
-                  {/* Left Control Panel - Testimonials */}
+                  {/* Left Control Panel - Logo + Testimonials */}
                   <div className="w-56 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
-                    <div className="p-3 border-b border-gold/10 bg-black/20 flex justify-center">
+                    {/* Extended Logo Area - spans navbar height + panel header */}
+                    <div className="p-4 bg-black/20 flex justify-center items-center" style={{ minHeight: '80px' }}>
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"
-                        className="h-10 w-auto object-contain opacity-80"
+                        className="h-16 w-auto object-contain opacity-90"
                       />
                     </div>
-                    <div className="flex-1 p-2">
+                    <div className="flex-1 p-2 border-t border-gold/10">
                       <ConsoleTestimonials />
                     </div>
                   </div>

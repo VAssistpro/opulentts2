@@ -1,12 +1,16 @@
 import React from 'react';
+import { Calendar } from 'lucide-react';
 import { SERVICES } from '../../../utils/constants';
 import AnimatedSection from '../../ui/AnimatedSection';
 import SectionTitle from '../../ui/SectionTitle';
+import LuxuryButton from '../../ui/design-system/LuxuryButton';
+import { useDesktopNavigation } from '../../../contexts/DesktopNavigationContext';
 
 const Services = () => {
+  const { setActiveSection } = useDesktopNavigation();
   return (
-    <div className="h-full flex items-center justify-center relative py-16 md:py-20">
-      <div className="relative z-10 container mx-auto px-6 md:px-8">
+    <div className="h-full flex items-center justify-center relative py-2">
+      <div className="relative z-10 container mx-auto px-2">
         <AnimatedSection>
           <SectionTitle
             title="Our Services"
@@ -42,6 +46,18 @@ const Services = () => {
             ))}
           </div>
         </AnimatedSection>
+        
+        <div className="flex justify-center mt-6">
+          <LuxuryButton
+            onClick={() => setActiveSection('book')}
+            icon={Calendar}
+            iconPosition="right"
+            variant="secondary"
+            size="lg"
+          >
+            Book Your Journey
+          </LuxuryButton>
+        </div>
       </div>
     </div>
   );

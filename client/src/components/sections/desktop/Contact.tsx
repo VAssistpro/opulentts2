@@ -35,8 +35,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-center relative py-16 md:py-20">
-      <div className="relative z-10 container mx-auto px-6 md:px-8">
+    <div className="h-full flex items-center justify-center relative py-2">
+      <div className="relative z-10 container mx-auto px-2">
         <AnimatedSection>
            <SectionTitle title="Contact Us" />
         </AnimatedSection>
@@ -70,7 +70,7 @@ const Contact = () => {
                         <h3 className="text-base font-semibold mb-1 text-text-primary">
                           {info.title}
                         </h3>
-                        <div className="text-sm text-text-secondary" dangerouslySetInnerHTML={{ __html: info.content }}></div>
+                        <div className="text-sm text-text-secondary">{info.content}</div>
                       </div>
                     </div>
                   ))}

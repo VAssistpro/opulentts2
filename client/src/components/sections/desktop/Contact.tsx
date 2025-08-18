@@ -29,6 +29,7 @@ const Contact = () => {
   const BUTTON_GOLD_SHADOW_COLOR = `rgba(${BUTTON_GOLD_SHADOW_RGB}, 0.5)`;
   const BUTTON_GOLD_SHADOW_HOVER_COLOR = `rgba(${BUTTON_GOLD_SHADOW_RGB}, 0.7)`;
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
@@ -74,32 +75,23 @@ const Contact = () => {
             {/* Contact Info Column */}
             <div className="group">
               <div
-                className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
-                           before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                           before:border before:border-[--border-color]
-                           before:shadow-[0_0_15px_var(--shadow-color)]
-                           before:transition-all before:duration-500
-                           group-hover:before:border-[--border-hover-color]
-                           group-hover:before:shadow-[0_0_25px_var(--shadow-hover-color)]"
-                 style={{
-                    '--border-color': SUBTLE_BORDER_COLOR,
-                    '--border-hover-color': SUBTLE_BORDER_HOVER_COLOR,
-                    '--shadow-color': GOLD_SHADOW_COLOR,
-                    '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
-                  } as React.CSSProperties}
+                className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                >
-                <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <div className="relative z-10 grid grid-cols-1 gap-4 md:gap-6">
                   {CONTACT_INFO.map((info, index) => (
-                    <div key={index} className="flex items-start gap-3 group/item">
+                    <div key={index} className="flex items-start gap-3 group/item mb-4 last:mb-0">
                       <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0
                                   group-hover/item:bg-gold/20 transition-colors duration-300">
-                        <info.icon className="w-4 h-4 text-text-secondary group-hover/item:text-gold transition-colors" />
+                        <info.icon className="w-4 h-4 text-black/60 dark:text-white/60 group-hover/item:text-gold transition-colors" />
                       </div>
-                      <div>
-                        <h3 className="text-base font-semibold mb-1 text-text-primary">
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-base font-semibold mb-1 text-black dark:text-white">
                           {info.title}
                         </h3>
-                        <div className="text-sm text-text-secondary" dangerouslySetInnerHTML={{ __html: info.content }}></div>
+                        <div className="text-sm text-black/80 dark:text-white/80 break-words" dangerouslySetInnerHTML={{ __html: info.content }}></div>
                       </div>
                     </div>
                   ))}
@@ -109,84 +101,52 @@ const Contact = () => {
 
             {/* Contact Form Column */}
             <div className="group">
-              <div
-                className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
-                           before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                           before:border before:border-[--border-color]
-                           before:shadow-[0_0_15px_var(--shadow-color)]
-                           before:transition-all before:duration-500
-                           group-hover:before:border-[--border-hover-color]
-                           group-hover:before:shadow-[0_0_25px_var(--shadow-hover-color)]"
-                 style={{
-                    '--border-color': SUBTLE_BORDER_COLOR,
-                    '--border-hover-color': SUBTLE_BORDER_HOVER_COLOR,
-                    '--shadow-color': GOLD_SHADOW_COLOR,
-                    '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
-                  } as React.CSSProperties}
+               <div
+                className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                >
                 <div className="relative z-10">
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                     <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      required
+                      type="text" name="name" placeholder="Your Name" required
                       className="w-full px-4 py-2.5 rounded-lg bg-black/50 border border-[--input-border] text-text-primary placeholder-text-secondary/70 focus:border-[--input-focus] focus:ring-0 transition-colors duration-300 outline-none"
-                      style={{
-                        '--input-border': INPUT_BORDER_COLOR,
-                        '--input-focus': INPUT_FOCUS_BORDER_COLOR
-                      } as React.CSSProperties}
+                      style={{ '--input-border': INPUT_BORDER_COLOR, '--input-focus': INPUT_FOCUS_BORDER_COLOR } as React.CSSProperties}
                     />
                     <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      required
+                      type="email" name="email" placeholder="Your Email" required
                       className="w-full px-4 py-2.5 rounded-lg bg-black/50 border border-[--input-border] text-text-primary placeholder-text-secondary/70 focus:border-[--input-focus] focus:ring-0 transition-colors duration-300 outline-none"
-                      style={{
-                        '--input-border': INPUT_BORDER_COLOR,
-                        '--input-focus': INPUT_FOCUS_BORDER_COLOR
-                      } as React.CSSProperties}
-                    />
+                       style={{ '--input-border': INPUT_BORDER_COLOR, '--input-focus': INPUT_FOCUS_BORDER_COLOR } as React.CSSProperties}
+                   />
                     <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Your Phone Number"
+                      type="tel" name="phone" placeholder="Your Phone Number" required
                       className="w-full px-4 py-2.5 rounded-lg bg-black/50 border border-[--input-border] text-text-primary placeholder-text-secondary/70 focus:border-[--input-focus] focus:ring-0 transition-colors duration-300 outline-none"
-                      style={{
-                        '--input-border': INPUT_BORDER_COLOR,
-                        '--input-focus': INPUT_FOCUS_BORDER_COLOR
-                      } as React.CSSProperties}
-                    />
+                       style={{ '--input-border': INPUT_BORDER_COLOR, '--input-focus': INPUT_FOCUS_BORDER_COLOR } as React.CSSProperties}
+                   />
                     <textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={4}
-                      required
+                      name="message" placeholder="Your Message" rows={4} required
                       className="w-full px-4 py-2.5 rounded-lg bg-black/50 border border-[--input-border] text-text-primary placeholder-text-secondary/70 focus:border-[--input-focus] focus:ring-0 transition-colors duration-300 resize-none outline-none"
-                      style={{
-                        '--input-border': INPUT_BORDER_COLOR,
-                        '--input-focus': INPUT_FOCUS_BORDER_COLOR
-                      } as React.CSSProperties}
+                      style={{ '--input-border': INPUT_BORDER_COLOR, '--input-focus': INPUT_FOCUS_BORDER_COLOR } as React.CSSProperties}
                     />
                     <div className="pt-2">
                       <button
                         type="submit"
                         disabled={isSubmitting}
                         className="w-full px-6 py-3 rounded-lg
-                                 bg-gradient-to-r from-gold to-gold-dark
-                                 hover:from-gold-lighter hover:to-gold
-                                 text-white font-semibold text-base tracking-wider
+                                 bg-gradient-to-r from-yellow-800 to-yellow-600 /* <-- Changed to gold gradient */
+                                 hover:from-yellow-900 hover:to-yellow-700 /* <-- Changed to darker gold on hover */
+                                 text-black font-semibold text-base tracking-wider /* <-- Changed text color to black for contrast */
                                  transform transition-all duration-300
                                  hover:scale-[1.02] active:scale-[0.98]
                                  border border-white/10
-                                 shadow-[0_0_12px_var(--button-shadow)]
-                                 hover:shadow-[0_0_20px_var(--button-shadow-hover)]
+                                 shadow-[0_0_12px_var(--button-shadow-color)] /* <-- Using variable for shadow */
+                                 hover:shadow-[0_0_20px_var(--button-shadow-hover-color)] /* <-- Using variable for hover shadow */
                                  disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100
                                  flex items-center justify-center gap-2"
                         style={{
-                          '--button-shadow': BUTTON_GOLD_SHADOW_COLOR,
-                          '--button-shadow-hover': BUTTON_GOLD_SHADOW_HOVER_COLOR
+                          '--button-shadow-color': BUTTON_GOLD_SHADOW_COLOR,
+                          '--button-shadow-hover-color': BUTTON_GOLD_SHADOW_HOVER_COLOR
                         } as React.CSSProperties}
                       >
                          {isSubmitting ? (
@@ -222,19 +182,10 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto mt-8">
             <div className="group">
               <div
-                className="relative rounded-xl bg-black/40 p-4 backdrop-blur-sm
-                           before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                           before:border before:border-[--border-color]
-                           before:shadow-[0_0_15px_var(--shadow-color)]
-                           before:transition-all before:duration-500
-                           group-hover:before:border-[--border-hover-color]
-                           group-hover:before:shadow-[0_0_25px_var(--shadow-hover-color)]"
-                 style={{
-                    '--border-color': SUBTLE_BORDER_COLOR,
-                    '--border-hover-color': SUBTLE_BORDER_HOVER_COLOR,
-                    '--shadow-color': GOLD_SHADOW_COLOR,
-                    '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
-                  } as React.CSSProperties}
+                className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-4
+                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                >
                 <div className="relative z-10">
                   <iframe

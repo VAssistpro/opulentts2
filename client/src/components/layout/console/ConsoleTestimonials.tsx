@@ -49,7 +49,7 @@ const ConsoleTestimonials = () => {
   return (
     <div className="space-y-3">
       {/* Console Display Header */}
-      <div className="bg-black/60 rounded-lg p-3 border border-gold/20">
+      <div className="bg-black/60 rounded-lg p-3 border border-gold/20 pt-[6px] pb-[6px]">
         <div className="flex items-center justify-between mb-2">
           <div className="text-xs text-gold/80 font-mono">CUSTOMER TESTIMONIALS</div>
           <div className="flex gap-1">
@@ -60,7 +60,6 @@ const ConsoleTestimonials = () => {
         
         
       </div>
-
       {/* Main Testimonial Display */}
       <div className="bg-gradient-to-br from-black/80 to-black/60 rounded-lg p-4 border border-gold/30 shadow-inner min-h-[280px] flex flex-col">
         {/* Rating Display */}
@@ -101,7 +100,6 @@ const ConsoleTestimonials = () => {
           </div>
         </div>
       </div>
-
       {/* Navigation Indicators */}
       <div className="flex justify-center gap-2 py-2">
         {TESTIMONIALS.map((_, index) => (
@@ -116,8 +114,6 @@ const ConsoleTestimonials = () => {
           />
         ))}
       </div>
-
-      
     </div>
   );
 };

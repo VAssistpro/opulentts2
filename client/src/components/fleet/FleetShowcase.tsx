@@ -76,9 +76,9 @@ const FleetShowcase = () => {
         )}
 
         {/* Content Area */}
-        <div className="relative z-10 flex flex-grow flex-col md:flex-row items-center gap-4 md:gap-6 p-3 md:p-6 pb-2">
+        <div className="relative z-10 flex flex-grow flex-col md:flex-row items-stretch gap-4 md:gap-8 p-4 md:p-8 pb-3">
           {/* Vehicle Info */}
-          <div className="w-full md:w-4/12 text-white space-y-3 md:space-y-4 order-2 md:order-1 self-center md:self-auto">
+          <div className="w-full md:w-5/12 text-white space-y-3 md:space-y-4 order-2 md:order-1 flex flex-col justify-center">
             <h3 className="text-3xl md:text-4xl font-bodoni font-bold transition-opacity duration-200">
               {vehicle.name}
             </h3>
@@ -115,14 +115,14 @@ const FleetShowcase = () => {
           </div>
 
           {/* Image Display Area */}
-          <div className="w-full md:w-8/12 relative aspect-video rounded-lg overflow-hidden order-1 md:order-2 flex flex-col">
+          <div className="w-full md:w-7/12 relative rounded-lg overflow-hidden order-1 md:order-2 flex flex-col min-h-[350px] md:min-h-[400px]">
             {/* Main Image */}
-            <div className="relative w-full flex-grow rounded-lg overflow-hidden">
+            <div className="relative w-full flex-grow rounded-lg overflow-hidden bg-black/20">
               <img
                 key={currentImage.url}
                 src={currentImage.url}
                 alt={currentImage.alt || `${vehicle.name} ${currentImage.type}`}
-                className="w-full h-full object-contain transition-opacity duration-200"
+                className="w-full h-full object-contain transition-opacity duration-200 scale-110"
                 loading="eager"
               />
 
@@ -162,9 +162,9 @@ const FleetShowcase = () => {
                     <button
                       key={image.url + index}
                       onClick={() => handleImageChange(index)}
-                      className={`relative w-16 h-12 rounded-lg overflow-hidden transition-all duration-200
+                      className={`relative w-20 h-14 rounded-lg overflow-hidden transition-all duration-200
                                 ${activeImageIndex === index
-                                  ? 'ring-2 ring-gold scale-105 opacity-100'
+                                  ? 'ring-2 ring-gold scale-110 opacity-100'
                                   : 'ring-1 ring-white/20 opacity-60 hover:opacity-100 hover:ring-gold/50'}`}
                       aria-label={`View ${vehicle.name} ${image.type} (${index + 1} of ${vehicle.images.length})`}
                     >

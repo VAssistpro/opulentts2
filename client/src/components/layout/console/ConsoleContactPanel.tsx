@@ -84,16 +84,7 @@ const ConsoleContactPanel = () => {
         </button>
       </div>
 
-      {/* Emergency Contact */}
-      <div className="bg-red-900/20 border border-red-500/30 rounded p-2">
-        <div className="text-xs text-red-400 font-mono text-center mb-1">EMERGENCY</div>
-        <a 
-          href="tel:911"
-          className="block w-full p-1 bg-red-600/80 text-white rounded text-xs font-bold text-center hover:bg-red-600 transition-colors duration-200"
-        >
-          911
-        </a>
-      </div>
+      
     </div>
   );
 };

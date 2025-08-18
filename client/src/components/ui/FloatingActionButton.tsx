@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Phone, MessageCircle, Calendar, Car } from 'lucide-react';
+import { Plus, Phone, MessageSquare, Mail } from 'lucide-react';
 import { useHapticFeedback } from '../../hooks/useHapticFeedback';
 
 interface FABAction {
@@ -22,22 +22,22 @@ const defaultActions: FABAction[] = [
     id: 'call',
     icon: <Phone size={20} />,
     label: 'Call Now',
-    action: () => window.open('tel:+1234567890'),
+    action: () => window.open('tel:+15163245483'),
     color: 'bg-green-600'
   },
   {
-    id: 'message',
-    icon: <MessageCircle size={20} />,
-    label: 'Message',
-    action: () => window.open('sms:+1234567890'),
+    id: 'sms',
+    icon: <MessageSquare size={20} />,
+    label: 'Send SMS',
+    action: () => window.open('sms:+15163245483'),
     color: 'bg-blue-600'
   },
   {
-    id: 'book',
-    icon: <Calendar size={20} />,
-    label: 'Book Now',
-    action: () => {},
-    color: 'bg-gold'
+    id: 'email',
+    icon: <Mail size={20} />,
+    label: 'Email Us',
+    action: () => window.open('mailto:info@opulenttransport.com'),
+    color: 'bg-purple-600'
   }
 ];
 
@@ -67,12 +67,19 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     setIsOpen(false);
   };
 
+  const getMenuPosition = () => {
+    if (position.includes('top')) {
+      return 'top-16 right-0';
+    }
+    return 'bottom-16 right-0';
+  };
+
   return (
     <div className={`fixed ${positionClasses[position]} z-50 ${className}`}>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute bottom-16 right-0 space-y-3"
+            className={`absolute ${getMenuPosition()} space-y-3`}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}

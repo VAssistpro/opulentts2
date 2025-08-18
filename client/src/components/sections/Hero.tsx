@@ -122,7 +122,46 @@ const Hero = () => {
 
 
 
-          {/* Trust Cards - Liquid Glass Effect - Moved Below */}
+          {/* Enhanced Call to Action - Moved Up */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0, duration: 0.8 }}
+            className="space-y-5"
+          >
+            <div className="space-y-2">
+              <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200]">
+                Join NYC's elite who trust Opulent Transport for their most important journeys.
+                Discretion, punctuality, and unmatched comfort guaranteed.
+              </p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+            >
+              <GlassmorphicBookButton onClick={() => handleScrollToSection("book")} />
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 0.8 }}
+              className="text-white/60 text-xs"
+            >
+              Available 24/7 • Instant confirmation • No hidden fees
+            </motion.p>
+          </motion.div>
+        </motion.div>
+
+        {/* Trust Cards - Liquid Glass Effect - Moved Down */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.8 }}
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
@@ -153,39 +192,6 @@ const Hero = () => {
               <div className="text-black/70 dark:text-white/70 text-[16px]">Satisfaction</div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Enhanced Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.8 }}
-          className="space-y-5"
-        >
-          <div className="space-y-2">
-            <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200]">
-              Join NYC's elite who trust Opulent Transport for their most important journeys.
-              Discretion, punctuality, and unmatched comfort guaranteed.
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center items-center"
-          >
-            <GlassmorphicBookButton onClick={() => handleScrollToSection("book")} />
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
-            className="text-white/60 text-xs"
-          >
-            Available 24/7 • Instant confirmation • No hidden fees
-          </motion.p>
         </motion.div>
       </div>
       {/* Scroll Indicator - Compact */}

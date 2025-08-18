@@ -100,19 +100,34 @@ const Hero = () => {
           {/* Service Areas - Enhanced Pills - Moved Above */}
           <div className="mb-6">
             <div className="flex flex-wrap justify-center gap-2 text-sm">
-              <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
+              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Manhattan
               </span>
-              <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
+              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Brooklyn
               </span>
-              <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
+              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Queens
               </span>
-              <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
+              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 JFK • LGA • EWR
               </span>
-              <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
+              <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Westchester • Long Island
               </span>
             </div>

@@ -75,19 +75,10 @@ const Contact = () => {
             {/* Contact Info Column */}
             <div className="group">
               <div
-                className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
-                           before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                           before:border before:border-[--border-color]
-                           before:shadow-[0_0_15px_var(--shadow-color)]
-                           before:transition-all before:duration-500
-                           group-hover:before:border-[--border-hover-color]
-                           group-hover:before:shadow-[0_0_25px_var(--shadow-hover-color)]"
-                 style={{
-                    '--border-color': SUBTLE_BORDER_COLOR,
-                    '--border-hover-color': SUBTLE_BORDER_HOVER_COLOR,
-                    '--shadow-color': GOLD_SHADOW_COLOR,
-                    '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
-                  } as React.CSSProperties}
+                className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                >
                 <div className="relative z-10 grid grid-cols-1 gap-4 md:gap-6">
                   {CONTACT_INFO.map((info, index) => (
@@ -111,19 +102,10 @@ const Contact = () => {
             {/* Contact Form Column */}
             <div className="group">
                <div
-                className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
-                           before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-                           before:border before:border-[--border-color]
-                           before:shadow-[0_0_15px_var(--shadow-color)]
-                           before:transition-all before:duration-500
-                           group-hover:before:border-[--border-hover-color]
-                           group-hover:before:shadow-[0_0_25px_var(--shadow-hover-color)]"
-                 style={{
-                    '--border-color': SUBTLE_BORDER_COLOR,
-                    '--border-hover-color': SUBTLE_BORDER_HOVER_COLOR,
-                    '--shadow-color': GOLD_SHADOW_COLOR,
-                    '--shadow-hover-color': GOLD_SHADOW_HOVER_COLOR,
-                  } as React.CSSProperties}
+                className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none"
                >
                 <div className="relative z-10">
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">

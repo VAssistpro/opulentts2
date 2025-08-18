@@ -26,7 +26,10 @@ const Services = () => {
                 key={index}
                 className="group"
               >
-                <div className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full glassmorphic-panel border border-gold/5 shadow-[0_0_15px_rgba(128,128,128,0.2)] transition-colors duration-200 group-hover:border-gold/20">
+                <div className="relative rounded-xl bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 h-full
+                              shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                              before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex flex-col items-center">
                       <service.icon className="w-7 h-7 text-gray-400 group-hover:text-gold transition-colors duration-200 mb-4" />

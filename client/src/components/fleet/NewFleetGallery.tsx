@@ -38,7 +38,7 @@ const NewFleetGallery = () => {
 
         <AnimatedSection delay={200}>
           {/* Vehicle Selection Tabs */}
-          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 my-4 px-4">
+          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 my-4 px-4 mt-[0px] mb-[0px] pl-[1px] pr-[1px]">
             {FLEET_DATA.map((vehicle, index) => (
               <button
                 key={index}

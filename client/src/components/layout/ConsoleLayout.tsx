@@ -82,11 +82,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
 
                   {/* Right Control Panel - Contact & System Info */}
                   <div className="w-20 border-l border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
-                    <div className="p-2 border-b border-gold/10 bg-black/20">
-                      <div className="text-xs text-gold/80 font-semibold tracking-wider uppercase text-center transform -rotate-90 origin-center whitespace-nowrap">
-                        System
-                      </div>
-                    </div>
+                    
                     <div className="flex-1 p-2">
                       <ConsoleContactPanel />
                     </div>

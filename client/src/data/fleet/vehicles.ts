@@ -112,12 +112,12 @@ export const FLEET_DATA: Vehicle[] = [
     luggage: 6,
     images: [
       {
-        url: 'https://res.cloudinary.com/dwjg0avzx/image/upload/v1733956800/escalade-exterior-2025.jpg',
+        url: 'https://res.cloudinary.com/dwjg0avzx/image/upload/v1733244000/Cadillac_Escalade_Exterior_2025_nj8ov9.png',
         alt: 'Cadillac Escalade Exterior',
         type: 'exterior'
       },
       {
-        url: 'https://res.cloudinary.com/dwjg0avzx/image/upload/v1733956801/escalade-interior-2025.jpg',
+        url: 'https://res.cloudinary.com/dwjg0avzx/image/upload/v1733244001/Cadillac_Escalade_Interior_2025_kw9mn2.png',
         alt: 'Cadillac Escalade Interior',
         type: 'interior'
       }

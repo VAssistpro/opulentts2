@@ -1,11 +1,9 @@
 import Hero from '../sections/Hero';
-import About from '../sections/desktop/About';
-import Services from '../sections/desktop/Services';
-import Contact from '../sections/desktop/Contact';
-import Booking from '../sections/desktop/Booking';
-
-// Import Fleet component with explicit path
+import About from '../sections/About';
+import Services from '../sections/Services';
 import NewFleetGallery from '../fleet/NewFleetGallery';
+import Contact from '../sections/Contact';
+import Booking from '../sections/Booking';
 
 export const SECTIONS = {
   home: Hero,

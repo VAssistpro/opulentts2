@@ -4,7 +4,7 @@ import AnimatedSection from '../ui/AnimatedSection';
 import SectionTitle from '../ui/SectionTitle';
 import { ChevronLeft, ChevronRight, Users, Briefcase, Star } from 'lucide-react';
 
-const NewFleetGallery: React.FC = () => {
+const NewFleetGallery = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   
@@ -58,7 +58,7 @@ const NewFleetGallery: React.FC = () => {
           <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-4 mb-4"></div>
 
           {/* Main Content Area */}
-          <div className="flex-1 px-4 pb-4 relative min-h-0 overflow-y-auto">
+          <div className="flex-1 px-4 pb-4 relative min-h-0">
               
               <div className="grid grid-cols-1 xl:grid-cols-5 gap-4 md:gap-6 h-full">
                 {/* Vehicle Details - Left Side */}

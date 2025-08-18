@@ -103,7 +103,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Console Info */}
                     <div className="flex items-center gap-3">
-                      <span>OPULENT TRANSPORT CONSOLE v2.0</span>
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                       <span>ONLINE</span>
                     </div>

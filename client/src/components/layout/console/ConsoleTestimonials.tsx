@@ -3,12 +3,12 @@ import { Star, Quote, User, MapPin } from 'lucide-react';
 
 const TESTIMONIALS = [
   {
-    text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.",
-    author: "Ava Richardson",
-    role: "Venture Capitalist",
+    text: "Exceptional service that truly understands the meaning of luxury. Every detail was perfect, from the vehicle to the driver's professionalism.",
+    author: "Dr. Emily Chen",
+    role: "Director of Operations",
     rating: 5,
-    location: "Manhattan Executive Travel",
-    id: "CLIENT_001"
+    location: "LaGuardia Business Trip",
+    id: "CLIENT_003"
   },
   {
     text: "The only car service I trust for my high-profile clients. Professional, punctual, and never a single issue.",
@@ -19,12 +19,12 @@ const TESTIMONIALS = [
     id: "CLIENT_002"
   },
   { 
-    text: "Exceptional service that truly understands the meaning of luxury. Every detail was perfect, from the vehicle to the driver's professionalism.", 
-    author: "Dr. Emily Chen", 
-    role: "Director of Operations", 
+    text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.", 
+    author: "Ava Richardson", 
+    role: "Venture Capitalist", 
     rating: 5,
-    location: "LaGuardia Business Trip",
-    id: "CLIENT_003"
+    location: "Manhattan Executive Travel",
+    id: "CLIENT_001"
   }
 ];
 

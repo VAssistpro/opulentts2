@@ -36,7 +36,7 @@ const ConsoleNavbar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm">
+    <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm mt-[2px] mb-[2px]">
       {/* Left Side - Expanded for Logo */}
       <div className="w-56 flex items-center">
         {/* Logo will be placed in the left panel instead */}

@@ -17,43 +17,44 @@ const NewFleetGallery = () => {
   };
 
   return (
-    <div className="h-full w-full flex flex-col relative">
-      <div className="relative z-10 w-full h-full flex flex-col">
+    <div className="absolute inset-0 flex flex-col">
+      {/* Header Section */}
+      <div className="flex-shrink-0 px-4 pt-4 pb-2">
         <AnimatedSection>
-          <div className="px-2 pt-2">
-            <SectionTitle
-              title="Our Fleet"
-              description="Discover our collection of meticulously maintained luxury vehicles"
-            />
-          </div>
+          <SectionTitle
+            title="Our Fleet"
+            description="Discover our collection of meticulously maintained luxury vehicles"
+          />
         </AnimatedSection>
+      </div>
 
+      {/* Content Section */}
+      <div className="flex-1 flex flex-col px-4 pb-4 min-h-0">
         <AnimatedSection delay={200}>
-          <div className="flex-1 flex flex-col px-2 pb-2">
-            {/* Vehicle Selection Tabs */}
-            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-2 px-1">
-              {FLEET_DATA.map((vehicle, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleVehicleChange(index)}
-                  className={`px-2 md:px-3 py-1.5 md:py-2 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap
-                    ${selectedVehicle === index
-                      ? 'bg-gold text-black shadow-lg'
-                      : 'bg-white/[0.05] backdrop-blur-xl border border-white/10 text-black dark:text-white hover:bg-white/[0.08] hover:border-gold/30'
-                    }`}
-                >
-                  {vehicle.name}
-                </button>
-              ))}
-            </div>
+          {/* Vehicle Selection Tabs */}
+          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 mb-3">
+            {FLEET_DATA.map((vehicle, index) => (
+              <button
+                key={index}
+                onClick={() => handleVehicleChange(index)}
+                className={`px-2 md:px-3 py-1.5 md:py-2 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap
+                  ${selectedVehicle === index
+                    ? 'bg-gold text-black shadow-lg'
+                    : 'bg-white/[0.05] backdrop-blur-xl border border-white/10 text-black dark:text-white hover:bg-white/[0.08] hover:border-gold/30'
+                  }`}
+              >
+                {vehicle.name}
+              </button>
+            ))}
+          </div>
 
-            {/* Main Fleet Display - Full Container */}
-            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
-                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
-                          flex-1 w-full overflow-hidden min-h-0">
+          {/* Main Fleet Display - Absolute Fill */}
+          <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
+                        shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
+                        flex-1 min-h-0">
               
-              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 h-full min-h-0">
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 h-full">
                 {/* Vehicle Details - Left Side */}
                 <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1 min-h-0">
                   <div>
@@ -161,13 +162,12 @@ const NewFleetGallery = () => {
               </div>
 
               {/* Vehicle Counter */}
-              <div className="text-center mt-2 flex-shrink-0">
+              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
                 <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
                   Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
                 </div>
               </div>
             </div>
-          </div>
         </AnimatedSection>
       </div>
     </div>

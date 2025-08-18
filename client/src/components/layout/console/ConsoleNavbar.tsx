@@ -36,7 +36,7 @@ const ConsoleNavbar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-3">
+    <div className="flex items-center justify-between p-3 pt-[7px] pb-[7px]">
       {/* Left Side - Logo/Brand */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
@@ -48,7 +48,6 @@ const ConsoleNavbar: React.FC = () => {
         
         
       </div>
-
       {/* Center - Navigation Controls */}
       <div className="flex items-center gap-1 bg-black/50 rounded-lg p-1">
         {NAV_ITEMS.map(({ icon: Icon, label, section }) => {
@@ -71,7 +70,6 @@ const ConsoleNavbar: React.FC = () => {
           );
         })}
       </div>
-
       {/* Right Side - System Controls */}
       <div className="flex items-center gap-2">
         <button
@@ -92,7 +90,6 @@ const ConsoleNavbar: React.FC = () => {
 
 
       </div>
-
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
     </div>
   );

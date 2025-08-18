@@ -36,59 +36,56 @@ const ConsoleNavbar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-3 pt-[7px] pb-[7px]">
-      {/* Left Side - Logo/Brand */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
-            <span className="text-black font-bold text-sm">OT</span>
+    <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm">
+      {/* Left Side - Console Brand */}
+      <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 bg-black/80 rounded px-2 py-1 border border-gold/30">
+          <div className="w-6 h-6 bg-gold rounded flex items-center justify-center">
+            <span className="text-black font-bold text-xs">OT</span>
           </div>
-          <div className="text-gold font-semibold text-sm">CONSOLE</div>
+          <div className="text-gold font-mono text-xs font-semibold">CONSOLE</div>
         </div>
-        
-        
       </div>
-      {/* Center - Navigation Controls */}
-      <div className="flex items-center gap-1 bg-black/50 rounded-lg p-1">
+
+      {/* Center - Streamlined Navigation */}
+      <div className="flex items-center gap-1">
         {NAV_ITEMS.map(({ icon: Icon, label, section }) => {
           const isActive = activeSection === section;
           return (
             <button
               key={section}
               onClick={() => handleNavItemClick(section)}
-              className={`flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 text-xs font-medium
+              className={`flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-150 
                        ${isActive
-                         ? 'bg-gold/20 text-gold border border-gold/30 shadow-[0_0_10px_rgba(147,113,39,0.5)]'
-                         : 'text-white/70 hover:text-gold hover:bg-white/5 border border-transparent'
+                         ? 'bg-gold/20 text-gold border border-gold/40'
+                         : 'text-white/60 hover:text-gold/80 hover:bg-white/5'
                        }`}
               title={label}
-              aria-current={isActive ? 'page' : undefined}
             >
-              <Icon className="w-4 h-4" />
-              <span className="hidden xl:inline">{label}</span>
+              <Icon className="w-3 h-3" />
+              <span className="hidden lg:inline ml-1">{label}</span>
             </button>
           );
         })}
       </div>
-      {/* Right Side - System Controls */}
+
+      {/* Right Side - Action Controls */}
       <div className="flex items-center gap-2">
         <button
           onClick={handleBookNowClick}
-          className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-gold/80 to-gold-dark/80 text-black rounded-lg text-xs font-semibold hover:from-gold to-gold-dark transition-all duration-200 shadow-[0_0_15px_rgba(147,113,39,0.4)]"
+          className="flex items-center gap-1 px-2 py-1 bg-gold/90 text-black rounded text-xs font-mono font-semibold hover:bg-gold transition-all duration-150"
         >
-          <Calendar className="w-4 h-4" />
-          <span className="hidden lg:inline">BOOK</span>
+          <Calendar className="w-3 h-3" />
+          <span>BOOK</span>
         </button>
 
         <button
           onClick={() => setShowLoginModal(true)}
-          className="flex items-center gap-2 px-3 py-2 bg-black/60 border border-white/20 text-white/90 rounded-lg text-xs font-medium hover:bg-black/80 hover:border-white/40 transition-all duration-200"
+          className="flex items-center gap-1 px-2 py-1 bg-black/80 border border-white/20 text-white/90 rounded text-xs font-mono hover:border-gold/40 transition-all duration-150"
         >
-          <User className="w-4 h-4" />
-          <span className="hidden lg:inline">USER</span>
+          <User className="w-3 h-3" />
+          <span>USER</span>
         </button>
-
-
       </div>
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
     </div>

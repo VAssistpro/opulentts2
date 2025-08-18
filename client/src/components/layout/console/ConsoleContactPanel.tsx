@@ -42,10 +42,10 @@ const ConsoleContactPanel = () => {
               href={href}
               onMouseEnter={() => setActiveContact(index)}
               onMouseLeave={() => setActiveContact(null)}
-              className={`block p-2 rounded transition-all duration-150 border ${
+              className={`block p-2 rounded transition-all duration-100 border ${
                 activeContact === index
-                  ? 'bg-gold/15 border-gold/40 shadow-[0_0_6px_rgba(147,113,39,0.3)]'
-                  : 'bg-black/40 border-gold/20 hover:border-gold/30'
+                  ? 'bg-gold/10 border-gold/30'
+                  : 'bg-black/40 border-gold/20 hover:border-gold/25'
               }`}
               title={href}
             >

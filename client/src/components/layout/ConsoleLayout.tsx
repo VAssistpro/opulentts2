@@ -11,15 +11,14 @@ import ShimmerBackground from '../effects/ShimmerBackground';
 const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <ErrorBoundary>
-      <div className="relative min-h-screen bg-transparent text-text-primary flex flex-col">
-        <ShimmerBackground />
-        <BackgroundEffects />
+      <div className="relative min-h-screen bg-black text-text-primary flex flex-col">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-95" />
 
         {/* Console Device Container */}
         <div className="relative z-10 flex-1 p-2 lg:p-4">
           <div className="max-w-[95vw] mx-auto h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
-            <div className="relative bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_50px_rgba(147,113,39,0.3)] p-1 h-full">
+            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_30px_rgba(147,113,39,0.2)] p-1 h-full">
               {/* Console Frame/Bezel */}
               <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20 h-full flex flex-col">
                 
@@ -46,11 +45,11 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   <div className="flex-1 relative">
                     {/* Screen Bezel */}
                     <div className="absolute inset-2 bg-black/80 rounded-lg border border-gold/40 shadow-inner">
-                      {/* Enhanced dramatic border lighting for screen */}
-                      <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6)] pointer-events-none" />
-                      <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6)] pointer-events-none" />
-                      <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6)] pointer-events-none" />
-                      <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6)] pointer-events-none" />
+                      {/* Simplified border lighting */}
+                      <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
                       
                       {/* Screen Content */}
                       <div className="relative h-full rounded-lg overflow-hidden">
@@ -61,8 +60,9 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                             muted
                             loop
                             playsInline
-                            preload="metadata"
-                            className="w-full h-full object-cover"
+                            preload="none"
+                            className="w-full h-full object-cover opacity-90"
+                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
                           >
                             <source
                               src="http://opulentts.com/bgvideo/otsbgvido2.mp4"

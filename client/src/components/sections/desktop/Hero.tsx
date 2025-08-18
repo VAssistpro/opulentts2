@@ -106,7 +106,7 @@ const Hero = () => {
             </p>
 
             {/* Service Highlights */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 max-w-4xl mx-auto">
               <div className="text-center p-4 bg-black/40 backdrop-blur-sm rounded-xl border border-gold/30">
                 <div className="text-gold text-2xl font-bold mb-1">24/7</div>
                 <div className="text-white/80 text-sm">Availability</div>

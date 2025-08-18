@@ -87,14 +87,7 @@ const Hero = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="bg-[#69656500] mt-[6px] mb-[6px]"
         >
-          <h2
-            className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold
-                       drop-shadow-[0_4px_12px_rgba(0,0,0,1)]
-                       [text-shadow:0_0_30px_rgba(0,0,0,0.9),_0_4px_12px_rgba(0,0,0,1)]
-                       tracking-wide mt-[1px] mb-[4px]"
-          >
-            Where Excellence Meets Luxury
-          </h2>
+          
 
           <p className="text-base md:text-lg text-white/95 max-w-2xl mx-auto leading-relaxed 
                  drop-shadow-[0_3px_10px_rgba(0,0,0,1)]

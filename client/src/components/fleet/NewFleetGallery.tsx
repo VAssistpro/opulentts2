@@ -4,7 +4,7 @@ import AnimatedSection from '../ui/AnimatedSection';
 import SectionTitle from '../ui/SectionTitle';
 import { ChevronLeft, ChevronRight, Users, Briefcase, Star } from 'lucide-react';
 
-const NewFleetGallery = () => {
+const NewFleetGallery: React.FC = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   

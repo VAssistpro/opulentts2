@@ -7,6 +7,8 @@ const MainContent = () => {
   const { activeSection } = useDesktopNavigation();
   const ActiveComponent = SECTIONS[activeSection];
 
+
+
   return (
     <div className={`w-full h-full ${
       activeSection === 'home' ? 'overflow-hidden' : 'overflow-y-auto custom-scrollbar'

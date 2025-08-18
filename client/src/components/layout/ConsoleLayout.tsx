@@ -45,7 +45,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     </div>
                     {/* Spacer for logo */}
                     <div className="h-24 bg-black/20"></div>
-                    <div className="flex-1 p-2 border-t border-gold/20 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
+                    <div className="flex-1 p-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                       <ConsoleTestimonials />
                     </div>
                   </div>

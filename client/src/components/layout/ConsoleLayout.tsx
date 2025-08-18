@@ -23,10 +23,10 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                  style={{
                    position: 'relative'
                  }}>
-              {/* White-Magenta-Gold Backlight */}
+              {/* White-Magenta Backlight */}
               <div className="absolute -inset-4 rounded-3xl pointer-events-none -z-10"
                    style={{
-                     background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(219,39,119,0.12) 40%, rgba(147,113,39,0.08) 70%, transparent 100%)'
+                     background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(219,39,119,0.12) 50%, transparent 80%)'
                    }}></div>
               {/* Magenta Atmospheric Haze */}
               <div className="absolute -inset-6 rounded-3xl pointer-events-none -z-20"

@@ -41,7 +41,6 @@ const ConsoleNavbar: React.FC = () => {
       <div className="w-56 flex items-center">
         {/* Logo will be placed in the left panel instead */}
       </div>
-
       {/* Center - Streamlined Navigation */}
       <div className="flex items-center gap-1">
         {NAV_ITEMS.map(({ icon: Icon, label, section }) => {
@@ -63,7 +62,6 @@ const ConsoleNavbar: React.FC = () => {
           );
         })}
       </div>
-
       {/* Right Side - Action Controls */}
       <div className="flex items-center gap-2">
         <button
@@ -71,7 +69,7 @@ const ConsoleNavbar: React.FC = () => {
           className="flex items-center gap-1 px-2 py-1 bg-gold/90 text-black rounded text-xs font-mono font-semibold hover:bg-gold transition-all duration-150"
         >
           <Calendar className="w-3 h-3" />
-          <span>BOOK</span>
+          <span className="text-[#ede8e8]">BOOK NOW</span>
         </button>
 
         <button

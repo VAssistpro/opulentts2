@@ -18,19 +18,23 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4">
           <div className="max-w-[95vw] mx-auto h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
-            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_30px_rgba(147,113,39,0.2)] p-1 h-full">
+            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-gold/30 
+                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(147,113,39,0.2),0_0_40px_rgba(147,113,39,0.3)] p-1 h-full">
               {/* Console Frame/Bezel */}
-              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden 
+                            border border-gold/20 shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(147,113,39,0.1)] h-full flex flex-col">
                 
                 {/* Top Control Panel - Navbar */}
-                <div className="border-b border-gold/20 bg-black/50 backdrop-blur-sm">
+                <div className="border-b border-gold/20 bg-black/50 backdrop-blur-sm 
+                              shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_1px_2px_rgba(147,113,39,0.1)]">
                   <ConsoleNavbar />
                 </div>
 
                 {/* Main Console Body */}
                 <div className="flex flex-1">
                   {/* Left Control Panel - Testimonials */}
-                  <div className="w-56 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
+                  <div className="w-56 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col
+                                shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
                     <div className="p-4 border-b border-gold/10 bg-black/20">
                       <div className="text-xs text-gold/80 font-semibold tracking-wider uppercase text-center">
                         Client Panel
@@ -43,8 +47,9 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
 
                   {/* Center Screen - Main Content */}
                   <div className="flex-1 relative">
-                    {/* Screen Bezel */}
-                    <div className="absolute inset-2 bg-black/80 rounded-lg border border-gold/40 shadow-inner">
+                    {/* Screen Bezel with Engraved Effect */}
+                    <div className="absolute inset-2 bg-black/80 rounded-xl border-2 border-gold/40 
+                                  shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(147,113,39,0.3),0_4px_8px_rgba(0,0,0,0.6)]">
                       {/* Simplified border lighting */}
                       <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
                       <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
@@ -52,7 +57,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                       <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
                       
                       {/* Screen Content */}
-                      <div className="relative h-full rounded-lg overflow-hidden">
+                      <div className="relative h-full rounded-xl overflow-hidden">
                         {/* Background Video for Screen */}
                         <div className="absolute inset-0">
                           <video
@@ -81,7 +86,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   </div>
 
                   {/* Right Control Panel - Contact & System Info */}
-                  <div className="w-20 border-l border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
+                  <div className="w-20 border-l border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col
+                                shadow-[inset_-1px_0_2px_rgba(0,0,0,0.6),-1px_0_2px_rgba(147,113,39,0.1)]">
                     
                     <div className="flex-1 p-2">
                       <ConsoleContactPanel />
@@ -99,7 +105,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Enhanced Bottom Status Bar with Footer Info */}
-                <div className="border-t border-gold/20 bg-black/60 backdrop-blur-sm p-2">
+                <div className="border-t border-gold/20 bg-black/60 backdrop-blur-sm p-2
+                              shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Console Info */}
                     <div className="flex items-center gap-3">

@@ -17,22 +17,25 @@ const NewFleetGallery = () => {
   };
 
   return (
-    <div className="absolute inset-0 flex flex-col">
-      {/* Header Section */}
-      <div className="flex-shrink-0 px-4 pt-4 pb-2">
+    <div className="absolute inset-0 p-2">
+      <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl 
+                    shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                    before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
+                    h-full w-full flex flex-col">
+        
         <AnimatedSection>
-          <SectionTitle
-            title="Our Fleet"
-            description="Discover our collection of meticulously maintained luxury vehicles"
-          />
+          {/* Header Section */}
+          <div className="flex-shrink-0 px-4 pt-4 pb-2">
+            <SectionTitle
+              title="Our Fleet"
+              description="Discover our collection of meticulously maintained luxury vehicles"
+            />
+          </div>
         </AnimatedSection>
-      </div>
 
-      {/* Content Section */}
-      <div className="flex-1 flex flex-col px-4 pb-4 min-h-0">
         <AnimatedSection delay={200}>
           {/* Vehicle Selection Tabs */}
-          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 mb-3">
+          <div className="flex-shrink-0 flex flex-wrap justify-center gap-1 md:gap-2 mb-3 px-4">
             {FLEET_DATA.map((vehicle, index) => (
               <button
                 key={index}
@@ -48,11 +51,8 @@ const NewFleetGallery = () => {
             ))}
           </div>
 
-          {/* Main Fleet Display - Absolute Fill */}
-          <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
-                        shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
-                        flex-1 min-h-0">
+          {/* Main Content Area */}
+          <div className="flex-1 px-4 pb-4 relative min-h-0">
               
               <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 h-full">
                 {/* Vehicle Details - Left Side */}
@@ -161,13 +161,13 @@ const NewFleetGallery = () => {
                 </div>
               </div>
 
-              {/* Vehicle Counter */}
-              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
-                <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
-                  Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
-                </div>
+            {/* Vehicle Counter */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+              <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
+                Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
               </div>
             </div>
+          </div>
         </AnimatedSection>
       </div>
     </div>

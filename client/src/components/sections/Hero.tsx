@@ -97,30 +97,9 @@ const Hero = () => {
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>
 
-          {/* Stats Grid - Compact */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
-              <div className="text-gold text-lg font-bold">24/7</div>
-              <div className="text-white/70 text-xs">Available</div>
-            </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
-              <div className="text-gold text-lg font-bold">5 ⭐</div>
-              <div className="text-white/70 text-xs">Rating</div>
-            </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
-              <div className="text-gold text-lg font-bold">10+</div>
-              <div className="text-white/70 text-xs">Years</div>
-            </div>
-            <div className="text-center p-3 bg-black/40 backdrop-blur-sm border border-gold/30 rounded-sm overflow-hidden">
-              <div className="text-gold text-lg font-bold">100%</div>
-              <div className="text-white/70 text-xs">Satisfaction</div>
-            </div>
-          </div>
-
-          {/* Service Areas - Enhanced Pills */}
-          <div className="mb-4">
-            
-            <div className="flex flex-wrap justify-center gap-2 text-sm bg-[#96929200]">
+          {/* Service Areas - Enhanced Pills - Moved Above */}
+          <div className="mb-6">
+            <div className="flex flex-wrap justify-center gap-2 text-sm">
               <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
                 Manhattan
               </span>
@@ -136,6 +115,38 @@ const Hero = () => {
               <span className="px-3 py-1.5 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/40 text-white/95 font-medium">
                 Westchester • Long Island
               </span>
+            </div>
+          </div>
+
+          {/* Trust Cards - Liquid Glass Effect - Moved Below */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2.5 max-w-2xl mx-auto">
+            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
+                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
+                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              <div className="text-gold text-lg font-bold">24/7</div>
+              <div className="text-white/70 text-xs">Available</div>
+            </div>
+            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
+                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
+                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              <div className="text-gold text-lg font-bold">5 ⭐</div>
+              <div className="text-white/70 text-xs">Rating</div>
+            </div>
+            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
+                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
+                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              <div className="text-gold text-lg font-bold">10+</div>
+              <div className="text-white/70 text-xs">Years</div>
+            </div>
+            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
+                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
+                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
+              <div className="text-gold text-lg font-bold">100%</div>
+              <div className="text-white/70 text-xs">Satisfaction</div>
             </div>
           </div>
         </motion.div>

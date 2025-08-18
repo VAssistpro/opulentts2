@@ -46,10 +46,7 @@ const ConsoleNavbar: React.FC = () => {
           <div className="text-gold font-semibold text-sm">CONSOLE</div>
         </div>
         
-        {/* System Time */}
-        <div className="text-xs text-gold/60 font-mono bg-black/50 px-2 py-1 rounded">
-          {currentTime.toLocaleTimeString()}
-        </div>
+        
       </div>
 
       {/* Center - Navigation Controls */}

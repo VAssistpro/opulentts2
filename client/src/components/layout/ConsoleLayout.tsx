@@ -104,7 +104,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     {/* Left - Console Info */}
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                      <span>ONLINE</span>
                     </div>
 
                     {/* Center - Footer Info */}

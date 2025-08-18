@@ -17,8 +17,8 @@ const NewFleetGallery = () => {
   };
 
   return (
-    <div className="h-full flex items-stretch relative py-8 md:py-12">
-      <div className="relative z-10 w-full px-4 md:px-6">
+    <div className="h-full flex items-stretch relative py-4 md:py-6">
+      <div className="relative z-10 w-full max-w-full px-2 md:px-4">
         <AnimatedSection>
           <SectionTitle
             title="Our Fleet"
@@ -27,14 +27,14 @@ const NewFleetGallery = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <div className="w-full max-w-none mt-6 md:mt-8">
+          <div className="w-full max-w-full mt-4 md:mt-6 overflow-hidden">
             {/* Vehicle Selection Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mb-6">
+            <div className="flex flex-wrap justify-center gap-1 md:gap-2 mb-4 md:mb-6 px-2">
               {FLEET_DATA.map((vehicle, index) => (
                 <button
                   key={index}
                   onClick={() => handleVehicleChange(index)}
-                  className={`px-3 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300
+                  className={`px-2 md:px-3 py-1.5 md:py-2 rounded-full text-xs font-medium transition-all duration-300 whitespace-nowrap
                     ${selectedVehicle === index
                       ? 'bg-gold text-black shadow-lg'
                       : 'bg-white/[0.05] backdrop-blur-xl border border-white/10 text-black dark:text-white hover:bg-white/[0.08] hover:border-gold/30'
@@ -46,43 +46,44 @@ const NewFleetGallery = () => {
             </div>
 
             {/* Main Fleet Display */}
-            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-4 md:p-6 
+            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-3 md:p-4 
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none h-full max-h-[calc(100vh-200px)]">
+                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none 
+                          max-w-full overflow-hidden">
               
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 items-stretch h-full">
+              <div className="grid grid-cols-1 xl:grid-cols-5 gap-3 md:gap-4 items-stretch min-h-[400px]">
                 {/* Vehicle Details - Left Side */}
-                <div className="lg:col-span-2 space-y-4 flex flex-col justify-center">
+                <div className="xl:col-span-2 space-y-3 flex flex-col justify-center order-2 xl:order-1">
                   <div>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-black dark:text-white mb-2">
+                    <h2 className="text-xl md:text-2xl xl:text-3xl font-playfair font-bold text-black dark:text-white mb-2">
                       {currentVehicle.name}
                     </h2>
-                    <p className="text-sm md:text-base text-black/80 dark:text-white/80 leading-relaxed">
+                    <p className="text-sm text-black/80 dark:text-white/80 leading-relaxed">
                       {currentVehicle.description}
                     </p>
                   </div>
 
                   {/* Capacity & Features */}
-                  <div className="space-y-3">
-                    <div className="flex flex-wrap gap-4">
-                      <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-gold" />
-                        <span className="text-sm text-black dark:text-white font-medium">{currentVehicle.capacity}</span>
+                  <div className="space-y-2">
+                    <div className="flex flex-wrap gap-3">
+                      <div className="flex items-center gap-1.5">
+                        <Users className="w-3.5 h-3.5 text-gold" />
+                        <span className="text-xs text-black dark:text-white font-medium">{currentVehicle.capacity}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Briefcase className="w-4 h-4 text-gold" />
-                        <span className="text-sm text-black dark:text-white font-medium">{currentVehicle.luggage} Bags</span>
+                      <div className="flex items-center gap-1.5">
+                        <Briefcase className="w-3.5 h-3.5 text-gold" />
+                        <span className="text-xs text-black dark:text-white font-medium">{currentVehicle.luggage} Bags</span>
                       </div>
                     </div>
 
                     {/* Features Grid */}
                     <div>
-                      <h4 className="text-lg font-semibold text-gold mb-2">Features</h4>
-                      <div className="grid grid-cols-2 gap-1">
+                      <h4 className="text-base font-semibold text-gold mb-1.5">Features</h4>
+                      <div className="grid grid-cols-2 gap-0.5">
                         {currentVehicle.features.map((feature, index) => (
-                          <div key={index} className="flex items-center gap-1.5">
-                            <Star className="w-2.5 h-2.5 text-gold fill-gold" />
-                            <span className="text-xs text-black/80 dark:text-white/80">{feature.name}</span>
+                          <div key={index} className="flex items-center gap-1">
+                            <Star className="w-2 h-2 text-gold fill-gold flex-shrink-0" />
+                            <span className="text-xs text-black/80 dark:text-white/80 truncate">{feature.name}</span>
                           </div>
                         ))}
                       </div>
@@ -91,10 +92,10 @@ const NewFleetGallery = () => {
                 </div>
 
                 {/* Main Image Display - Right Side */}
-                <div className="lg:col-span-3 flex flex-col">
-                  <div className="relative flex-1">
+                <div className="xl:col-span-3 flex flex-col order-1 xl:order-2">
+                  <div className="relative flex-1 w-full max-w-full">
                     {/* Main Image */}
-                    <div className="relative aspect-video bg-black/10 rounded-xl overflow-hidden h-full min-h-[280px] md:min-h-[320px]">
+                    <div className="relative aspect-video bg-black/10 rounded-lg overflow-hidden min-h-[250px] md:min-h-[300px] w-full">
                       <img
                         src={currentImage.url}
                         alt={currentImage.alt}
@@ -112,17 +113,17 @@ const NewFleetGallery = () => {
                         <>
                           <button
                             onClick={() => setSelectedImageIndex(selectedImageIndex === 0 ? currentVehicle.images.length - 1 : selectedImageIndex - 1)}
-                            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-gold hover:text-black 
+                            className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-gold hover:text-black 
                                      text-white rounded-full flex items-center justify-center transition-colors duration-200"
                           >
-                            <ChevronLeft className="w-5 h-5" />
+                            <ChevronLeft className="w-4 h-4" />
                           </button>
                           <button
                             onClick={() => setSelectedImageIndex(selectedImageIndex === currentVehicle.images.length - 1 ? 0 : selectedImageIndex + 1)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-gold hover:text-black 
+                            className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-gold hover:text-black 
                                      text-white rounded-full flex items-center justify-center transition-colors duration-200"
                           >
-                            <ChevronRight className="w-5 h-5" />
+                            <ChevronRight className="w-4 h-4" />
                           </button>
                         </>
                       )}
@@ -130,12 +131,12 @@ const NewFleetGallery = () => {
 
                     {/* Image Thumbnails */}
                     {currentVehicle.images.length > 1 && (
-                      <div className="flex justify-center gap-2 mt-3">
+                      <div className="flex justify-center gap-1.5 mt-2 overflow-x-auto px-2">
                         {currentVehicle.images.map((image, index) => (
                           <button
                             key={index}
                             onClick={() => setSelectedImageIndex(index)}
-                            className={`relative w-16 h-12 rounded-lg overflow-hidden transition-all duration-200
+                            className={`relative w-12 h-9 rounded overflow-hidden transition-all duration-200 flex-shrink-0
                               ${selectedImageIndex === index
                                 ? 'ring-2 ring-gold scale-105'
                                 : 'ring-1 ring-white/20 opacity-60 hover:opacity-100 hover:ring-gold/50'
@@ -146,7 +147,7 @@ const NewFleetGallery = () => {
                               alt={`Thumbnail ${index + 1}`}
                               className="w-full h-full object-cover"
                             />
-                            <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 text-[9px] bg-black/80 text-white px-1 py-0.5 rounded">
+                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[8px] bg-black/80 text-white px-1 py-0.5 rounded">
                               {image.type === 'exterior' ? 'Ext' : 'Int'}
                             </div>
                           </button>
@@ -158,8 +159,8 @@ const NewFleetGallery = () => {
               </div>
 
               {/* Vehicle Counter */}
-              <div className="text-center mt-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
+              <div className="text-center mt-3">
+                <div className="inline-flex items-center gap-2 px-2 py-1 bg-black/20 rounded-full text-xs text-black/80 dark:text-white/80">
                   Vehicle {selectedVehicle + 1} of {FLEET_DATA.length}
                 </div>
               </div>

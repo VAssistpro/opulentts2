@@ -16,12 +16,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <BackgroundEffects />
 
         {/* Console Device Container */}
-        <div className="relative z-10 flex-1 p-4 lg:p-8">
-          <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 flex-1 p-2 lg:p-4">
+          <div className="max-w-[95vw] mx-auto h-[calc(100vh-120px)]">
             {/* Integrated Console Interface */}
-            <div className="relative bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_50px_rgba(147,113,39,0.3)] p-1">
+            <div className="relative bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_50px_rgba(147,113,39,0.3)] p-1 h-full">
               {/* Console Frame/Bezel */}
-              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20">
+              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20 h-full flex flex-col">
                 
                 {/* Top Control Panel - Navbar */}
                 <div className="border-b border-gold/20 bg-black/50 backdrop-blur-sm">
@@ -29,9 +29,9 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Main Console Body */}
-                <div className="flex">
+                <div className="flex flex-1">
                   {/* Left Control Panel - Testimonials */}
-                  <div className="w-72 xl:w-80 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
+                  <div className="w-64 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
                     <div className="p-4 border-b border-gold/10 bg-black/20">
                       <div className="text-xs text-gold/80 font-semibold tracking-wider uppercase text-center">
                         Client Panel
@@ -53,7 +53,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                       <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent shadow-[0_0_15px_rgba(147,113,39,0.6)] pointer-events-none" />
                       
                       {/* Screen Content */}
-                      <div className="relative h-[calc(100vh-220px)] rounded-lg overflow-hidden">
+                      <div className="relative h-full rounded-lg overflow-hidden">
                         {/* Background Video for Screen */}
                         <div className="absolute inset-0">
                           <video

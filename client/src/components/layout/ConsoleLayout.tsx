@@ -126,12 +126,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-white/60 hover:text-gold/80 transition-colors duration-150"
                       >
+                        <span>POWERED BY V ASSIST PRO</span>
                         <img
                           src="https://opulentts.com/00.%20Logo%20V%20Assist%20Pro%20-Black.png"
                           alt="V Assist Pro Inc"
                           className="h-4 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                         />
-                        <span>POWERED BY V ASSIST PRO</span>
                       </a>
                     </div>
 

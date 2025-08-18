@@ -31,7 +31,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 {/* Main Console Body */}
                 <div className="flex flex-1">
                   {/* Left Control Panel - Testimonials */}
-                  <div className="w-64 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
+                  <div className="w-56 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col">
                     <div className="p-4 border-b border-gold/10 bg-black/20">
                       <div className="text-xs text-gold/80 font-semibold tracking-wider uppercase text-center">
                         Client Panel
@@ -116,7 +116,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        <div className="mt-auto pt-4">
+        <div className="mt-auto">
           <Footer className="" />
         </div>
       </div>

@@ -38,8 +38,8 @@ const ConsoleTestimonials = () => {
       setTimeout(() => {
         setActiveIndex((prev) => (prev + 1) % TESTIMONIALS.length);
         setIsTransitioning(false);
-      }, 150);
-    }, 5000);
+      }, 100);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -81,7 +81,7 @@ const ConsoleTestimonials = () => {
         </div>
 
         {/* Quote */}
-        <div className={`flex-1 flex flex-col transition-opacity duration-300 ${isTransitioning ? 'opacity-30' : 'opacity-100'}`}>
+        <div className={`flex-1 flex flex-col transition-opacity duration-200 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
           <Quote className="w-4 h-4 text-gold/40 mb-2" />
           <div className="flex-1 flex items-start">
             <p className="text-xs text-white/90 leading-relaxed font-light min-h-[100px]">
@@ -112,8 +112,8 @@ const ConsoleTestimonials = () => {
             onClick={() => setActiveIndex(index)}
             className={`w-2 h-2 rounded-full transition-all duration-200 ${
               index === activeIndex 
-                ? 'bg-gold shadow-[0_0_8px_rgba(147,113,39,0.6)]' 
-                : 'bg-white/20 hover:bg-white/40'
+                ? 'bg-gold shadow-[0_0_6px_rgba(147,113,39,0.4)]' 
+                : 'bg-white/15 hover:bg-white/30'
             }`}
           />
         ))}

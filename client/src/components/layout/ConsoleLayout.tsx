@@ -19,8 +19,9 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
             <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/40
-                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_40px_rgba(147,113,39,0.3),0_0_80px_rgba(147,113,39,0.15),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full
-                          before:absolute before:-inset-4 before:bg-gradient-radial before:from-gold/10 before:via-gold/5 before:to-transparent before:rounded-3xl before:pointer-events-none before:-z-10">
+                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_40px_rgba(147,113,39,0.3),0_0_80px_rgba(147,113,39,0.15),0_0_120px_rgba(219,39,119,0.1),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full
+                          before:absolute before:-inset-4 before:bg-gradient-radial before:from-gold/10 before:via-gold/5 before:to-transparent before:rounded-3xl before:pointer-events-none before:-z-10
+                          after:absolute after:-inset-6 after:bg-gradient-radial after:from-transparent after:via-pink-500/8 after:to-transparent after:rounded-3xl after:pointer-events-none after:-z-20">
               {/* Console Frame/Bezel */}
               <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20
                             shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(147,113,39,0.1)] h-full flex flex-col">

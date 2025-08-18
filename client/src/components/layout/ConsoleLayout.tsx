@@ -35,10 +35,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Left Control Panel - Testimonials */}
                   <div className="w-56 border-r border-gold/20 bg-black/30 backdrop-blur-sm flex flex-col
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
-                    <div className="p-4 border-b border-gold/10 bg-black/20">
-                      <div className="text-xs text-gold/80 font-semibold tracking-wider uppercase text-center">
-                        Client Panel
-                      </div>
+                    <div className="p-3 border-b border-gold/10 bg-black/20 flex justify-center">
+                      <img
+                        src="https://opulentts.com/bgvideo/otsnobg.png"
+                        alt="Opulent Transport Solutions"
+                        className="h-10 w-auto object-contain opacity-80"
+                      />
                     </div>
                     <div className="flex-1 p-2">
                       <ConsoleTestimonials />

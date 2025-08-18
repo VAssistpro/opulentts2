@@ -89,10 +89,7 @@ const Hero = () => {
         >
           
 
-          <p className="text-base md:text-lg text-white/95 max-w-2xl mx-auto leading-relaxed 
-                 drop-shadow-[0_3px_10px_rgba(0,0,0,1)]
-                 [text-shadow:0_0_20px_rgba(0,0,0,0.8),_0_3px_10px_rgba(0,0,0,1)]
-                 font-medium mt-[2px] mb-[2px]">
+          <p className="md:text-lg text-white/95 max-w-2xl mx-auto drop-shadow-[0_3px_10px_rgba(0,0,0,1)] [text-shadow:0_0_20px_rgba(0,0,0,0.8),_0_3px_10px_rgba(0,0,0,1)] mt-[2px] mb-[2px] ml-[50.5px] mr-[50.5px] font-normal text-[17px]">
             Experience unparalleled sophistication with our fleet of premium vehicles,
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>

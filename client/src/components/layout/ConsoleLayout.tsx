@@ -18,9 +18,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
-            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-gold/60
-                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),inset_0_0_0_2px_rgba(147,113,39,0.4),0_0_80px_rgba(147,113,39,0.6),0_0_120px_rgba(147,113,39,0.4),0_0_200px_rgba(147,113,39,0.2),0_20px_40px_rgba(0,0,0,0.8)] p-1 h-full
-                          before:absolute before:inset-0 before:rounded-2xl before:border-2 before:border-gold/30 before:pointer-events-none before:shadow-[0_0_60px_rgba(147,113,39,0.8)]">
+            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/40
+                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_30px_rgba(147,113,39,0.2),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full">
               {/* Console Frame/Bezel */}
               <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20
                             shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(147,113,39,0.1)] h-full flex flex-col">

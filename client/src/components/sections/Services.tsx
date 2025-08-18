@@ -32,13 +32,13 @@ const Services = () => {
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex flex-col items-center">
-                      <service.icon className="w-7 h-7 text-gray-400 group-hover:text-gold transition-colors duration-200 mb-4" />
+                      <service.icon className="w-7 h-7 text-black/60 dark:text-gray-400 group-hover:text-gold transition-colors duration-200 mb-4" />
                       <div className="h-0.5 w-16 bg-gradient-to-r from-transparent via-gold to-transparent transition-all duration-300 ease-out mb-4" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">
+                    <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">
                       {service.title}
                     </h3>
-                    <p className="text-white/80 leading-relaxed">
+                    <p className="text-black/80 dark:text-white/80 leading-relaxed">
                       {service.description}
                     </p>
                   </div>

@@ -102,31 +102,31 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center gap-2 text-sm">
               <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Manhattan
               </span>
               <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Brooklyn
               </span>
               <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Queens
               </span>
               <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 JFK • LGA • EWR
               </span>
               <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full
                               shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-white/95 font-medium
+                              hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 text-black dark:text-white font-medium
                               before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
                 Westchester • Long Island
               </span>
@@ -140,28 +140,28 @@ const Hero = () => {
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
               <div className="text-gold text-lg font-bold">24/7</div>
-              <div className="text-white/70 text-xs">Available</div>
+              <div className="text-black/70 dark:text-white/70 text-xs">Available</div>
             </div>
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
               <div className="text-gold text-lg font-bold">5 ⭐</div>
-              <div className="text-white/70 text-xs">Rating</div>
+              <div className="text-black/70 dark:text-white/70 text-xs">Rating</div>
             </div>
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
               <div className="text-gold text-lg font-bold">10+</div>
-              <div className="text-white/70 text-xs">Years</div>
+              <div className="text-black/70 dark:text-white/70 text-xs">Years</div>
             </div>
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
                           before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
               <div className="text-gold text-lg font-bold">100%</div>
-              <div className="text-white/70 text-xs">Satisfaction</div>
+              <div className="text-black/70 dark:text-white/70 text-xs">Satisfaction</div>
             </div>
           </div>
         </motion.div>

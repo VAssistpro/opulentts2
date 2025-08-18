@@ -85,13 +85,13 @@ const Contact = () => {
                     <div key={index} className="flex items-start gap-3 group/item mb-4 last:mb-0">
                       <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0
                                   group-hover/item:bg-gold/20 transition-colors duration-300">
-                        <info.icon className="w-4 h-4 text-text-secondary group-hover/item:text-gold transition-colors" />
+                        <info.icon className="w-4 h-4 text-black/60 dark:text-white/60 group-hover/item:text-gold transition-colors" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <h3 className="text-base font-semibold mb-1 text-text-primary">
+                        <h3 className="text-base font-semibold mb-1 text-black dark:text-white">
                           {info.title}
                         </h3>
-                        <div className="text-sm text-text-secondary break-words" dangerouslySetInnerHTML={{ __html: info.content }}></div>
+                        <div className="text-sm text-black/80 dark:text-white/80 break-words" dangerouslySetInnerHTML={{ __html: info.content }}></div>
                       </div>
                     </div>
                   ))}

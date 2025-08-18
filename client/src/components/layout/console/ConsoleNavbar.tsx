@@ -74,7 +74,7 @@ const ConsoleNavbar: React.FC = () => {
 
         <button
           onClick={() => setShowLoginModal(true)}
-          className="flex items-center gap-1 px-2 py-1 bg-black/80 border border-white/20 text-white/90 rounded text-xs font-mono hover:border-gold/40 transition-all duration-150"
+          className="flex items-center gap-1 px-2 py-1 bg-black/80 border border-white/20 text-white/90 rounded text-xs font-mono hover:border-gold/40 transition-all duration-150 pt-[6px] pb-[6px]"
         >
           <User className="w-3 h-3" />
           <span>Account Login</span>

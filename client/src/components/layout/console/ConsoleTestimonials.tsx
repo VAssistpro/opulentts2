@@ -63,7 +63,7 @@ const ConsoleTestimonials = () => {
       {/* Main Testimonial Display */}
       <div className="bg-gradient-to-br from-black/80 to-black/60 rounded-lg p-4 border border-gold/30 shadow-inner min-h-[280px] flex flex-col">
         {/* Rating Display */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-3 bg-[#ede6e600]">
           <div className="flex gap-1 bg-[#3d3d3d00]">
             {[...Array(testimonial.rating)].map((_, i) => (
               <Star

@@ -36,11 +36,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
                     bg-gradient-to-r from-transparent via-gold to-transparent
                     shadow-[0_0_15px_rgba(147,113,39,0.4)]`} />
       {description && (
-        <p className={`font-montserrat text-lg md:text-xl max-w-3xl mt-4
-                    text-white/90 font-light tracking-wide leading-relaxed
-                    ${alignment === 'center' ? 'mx-auto' : 
-                      alignment === 'right' ? 'ml-auto' : ''}
-                    ${descriptionClassName}`}>
+        <p className="font-montserrat text-lg md:text-xl max-w-3xl text-white/90 font-light tracking-wide leading-relaxed mx-auto mt-[0px] mb-[0px]">
           {description}
         </p>
       )}

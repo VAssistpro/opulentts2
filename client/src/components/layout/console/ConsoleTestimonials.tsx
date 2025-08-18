@@ -64,7 +64,7 @@ const ConsoleTestimonials = () => {
       </div>
 
       {/* Main Testimonial Display */}
-      <div className="bg-gradient-to-br from-black/80 to-black/60 rounded-lg p-4 border border-gold/30 shadow-inner">
+      <div className="bg-gradient-to-br from-black/80 to-black/60 rounded-lg p-4 border border-gold/30 shadow-inner min-h-[280px] flex flex-col">
         {/* Rating Display */}
         <div className="flex items-center gap-2 mb-3">
           <div className="flex gap-1">
@@ -81,15 +81,17 @@ const ConsoleTestimonials = () => {
         </div>
 
         {/* Quote */}
-        <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-30' : 'opacity-100'}`}>
+        <div className={`flex-1 flex flex-col transition-opacity duration-300 ${isTransitioning ? 'opacity-30' : 'opacity-100'}`}>
           <Quote className="w-4 h-4 text-gold/40 mb-2" />
-          <p className="text-xs text-white/90 leading-relaxed mb-4 font-light">
-            {testimonial.text}
-          </p>
+          <div className="flex-1 flex items-start">
+            <p className="text-xs text-white/90 leading-relaxed font-light min-h-[100px]">
+              {testimonial.text}
+            </p>
+          </div>
         </div>
 
         {/* Client Info */}
-        <div className="space-y-2 pt-3 border-t border-gold/20">
+        <div className="space-y-2 pt-3 border-t border-gold/20 mt-auto">
           <div className="flex items-center gap-2">
             <User className="w-3 h-3 text-gold/60" />
             <span className="text-xs text-white font-medium">{testimonial.author}</span>

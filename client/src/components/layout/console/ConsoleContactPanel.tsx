@@ -63,7 +63,6 @@ const ConsoleContactPanel = () => {
             
             {/* Status Indicator */}
             <div className="text-center">
-              <div className="text-xs text-gold/50 font-mono">{code}</div>
               <div className="flex justify-center">
                 <div className="w-1 h-1 bg-green-400 rounded-full animate-pulse" />
               </div>

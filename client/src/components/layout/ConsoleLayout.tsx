@@ -108,30 +108,32 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 <div className="border-t border-gold/20 bg-black/60 backdrop-blur-sm p-2
                               shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
-                    {/* Left - Console Info */}
-                    <div className="flex items-center gap-3">
+                    {/* Left - Copyright */}
+                    <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                      <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT</span>
                     </div>
 
-                    {/* Center - Footer Info */}
-                    <div className="hidden lg:flex items-center gap-4 text-xs">
-                      <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT</span>
-                      <span className="text-white/40">•</span>
-                      <span className="text-white/60">(516) 324-5483</span>
-                      <span className="text-white/40">•</span>
+                    {/* Center - Powered by V Assist Pro */}
+                    <div className="flex items-center gap-2">
                       <a
                         href="https://www.virtualassistancepro.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/60 hover:text-gold/80 transition-colors duration-150"
+                        className="flex items-center gap-2 text-white/60 hover:text-gold/80 transition-colors duration-150"
                       >
-                        POWERED BY V ASSIST PRO
+                        <img
+                          src="https://opulentts.com/00.%20Logo%20V%20Assist%20Pro%20-Black.png"
+                          alt="V Assist Pro Inc"
+                          className="h-4 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <span>POWERED BY V ASSIST PRO</span>
                       </a>
                     </div>
 
-                    {/* Right - Time & Status */}
+                    {/* Right - Phone & Status */}
                     <div className="flex items-center gap-2">
-                      <span>{new Date().toLocaleTimeString()}</span>
+                      <span className="text-white/60">(516) 324-5483</span>
                       <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
                     </div>
                   </div>

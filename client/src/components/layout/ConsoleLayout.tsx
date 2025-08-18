@@ -115,7 +115,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     {/* Left - Copyright */}
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                      <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT</span>
+                      <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
                     </div>
 
                     {/* Center - Powered by V Assist Pro */}
@@ -145,7 +145,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Mobile Footer Info */}
                   <div className="lg:hidden mt-2 pt-2 flex flex-col gap-1 text-xs text-white/60 border-t border-gold/20 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                     <div className="flex items-center justify-between">
-                      <span>© {new Date().getFullYear()} OPULENT TRANSPORT</span>
+                      <span>© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
                       <span>(516) 324-5483</span>
                     </div>
                     <div className="text-center">

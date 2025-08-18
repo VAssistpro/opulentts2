@@ -36,7 +36,7 @@ const defaultActions: FABAction[] = [
     id: 'email',
     icon: <Mail size={20} />,
     label: 'Email Us',
-    action: () => window.open('mailto:info@opulenttransport.com'),
+    action: () => window.open('mailto:reservations@opulentts.com'),
     color: 'bg-purple-600'
   }
 ];

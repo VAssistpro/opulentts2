@@ -49,11 +49,7 @@ const ConsoleNavbar: React.FC = () => {
             <button
               key={section}
               onClick={() => handleNavItemClick(section)}
-              className={`flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-150 
-                       ${isActive
-                         ? 'bg-gold/20 text-gold border border-gold/40'
-                         : 'text-white/60 hover:text-gold/80 hover:bg-white/5'
-                       }`}
+              className="flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-150 text-white/60 hover:text-gold/80 hover:bg-white/5 pt-[6px] pb-[6px] pl-[9px] pr-[9px]"
               title={label}
             >
               <Icon className="w-3 h-3" />

@@ -1,4 +1,4 @@
-import Hero from '../sections/desktop/Hero';
+import Hero from '../sections/Hero';
 import About from '../sections/desktop/About';
 import Services from '../sections/desktop/Services';
 import Contact from '../sections/desktop/Contact';

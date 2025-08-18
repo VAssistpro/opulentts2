@@ -98,16 +98,54 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   </div>
                 </div>
 
-                {/* Bottom Status Bar */}
-                <div className="border-t border-gold/20 bg-black/50 backdrop-blur-sm p-2">
-                  <div className="flex items-center justify-between text-xs text-gold/60">
-                    <div className="flex items-center gap-4">
+                {/* Enhanced Bottom Status Bar with Footer Info */}
+                <div className="border-t border-gold/20 bg-black/60 backdrop-blur-sm p-2">
+                  <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
+                    {/* Left - Console Info */}
+                    <div className="flex items-center gap-3">
                       <span>OPULENT TRANSPORT CONSOLE v2.0</span>
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                       <span>ONLINE</span>
                     </div>
+
+                    {/* Center - Footer Info */}
+                    <div className="hidden lg:flex items-center gap-4 text-xs">
+                      <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT</span>
+                      <span className="text-white/40">•</span>
+                      <span className="text-white/60">(516) 324-5483</span>
+                      <span className="text-white/40">•</span>
+                      <a
+                        href="https://www.virtualassistancepro.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/60 hover:text-gold/80 transition-colors duration-150"
+                      >
+                        POWERED BY V ASSIST PRO
+                      </a>
+                    </div>
+
+                    {/* Right - Time & Status */}
                     <div className="flex items-center gap-2">
                       <span>{new Date().toLocaleTimeString()}</span>
+                      <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                    </div>
+                  </div>
+
+                  {/* Mobile Footer Info */}
+                  <div className="lg:hidden mt-2 pt-2 border-t border-gold/10 flex flex-col gap-1 text-xs text-white/60">
+                    <div className="flex items-center justify-between">
+                      <span>© {new Date().getFullYear()} OPULENT TRANSPORT</span>
+                      <span>(516) 324-5483</span>
+                    </div>
+                    <div className="text-center">
+                      <a
+                        href="https://www.virtualassistancepro.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gold/80 transition-colors duration-150"
+                      >
+                        POWERED BY V ASSIST PRO
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -116,9 +154,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        <div className="mt-auto">
-          <Footer className="" />
-        </div>
+
       </div>
     </ErrorBoundary>
   );

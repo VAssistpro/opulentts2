@@ -32,7 +32,7 @@ const GlassmorphicBookButton: React.FC<GlassmorphicBookButtonProps> = ({ onClick
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
                     animate-pulse">
         <div className="absolute inset-0 bg-gold/30 blur-xl" />
-        <div className="absolute inset-0 from-gold/20 via-gold-lighter/30 to-gold/20 bg-[#15e65ad4]" />
+        <div className="absolute inset-0 from-gold/20 via-gold-lighter/30 to-gold/20 bg-[#a5e5ba80]" />
       </div>
       {/* Content */}
       <div className="relative z-10 flex items-center gap-2">

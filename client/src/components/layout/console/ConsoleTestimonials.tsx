@@ -58,9 +58,7 @@ const ConsoleTestimonials = () => {
           </div>
         </div>
         
-        <div className="text-xs text-white/60 font-mono">
-          REVIEW ID: {testimonial.id}
-        </div>
+        
       </div>
 
       {/* Main Testimonial Display */}

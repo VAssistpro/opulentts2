@@ -14,86 +14,14 @@
   }
 }
 
-/* Shiny liquid glass animations */
-@keyframes glass-shine {
-  0% { 
-    transform: translateX(-100%) translateY(-100%) rotate(30deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% { 
-    transform: translateX(200%) translateY(200%) rotate(30deg);
-    opacity: 0;
-  }
-}
-
-@keyframes glass-shimmer {
-  0%, 100% { 
-    background-position: -200% 0;
-  }
-  50% { 
-    background-position: 200% 0;
-  }
-}
-
-@keyframes liquid-flow {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.glass-shine {
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-shine::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  animation: glass-shine 4s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.glass-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  background-size: 200% 100%;
-  animation: glass-shimmer 3s ease-in-out infinite;
-}
-
+/* Subtle liquid glass effects */
 .liquid-glass-surface {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.025) 0%,
-    rgba(255, 255, 255, 0.015) 25%,
-    rgba(255, 255, 255, 0.005) 50%,
-    rgba(255, 255, 255, 0.015) 75%,
+    rgba(255, 255, 255, 0.015) 50%,
     rgba(255, 255, 255, 0.025) 100%
   );
-  background-size: 200% 200%;
-  animation: liquid-flow 6s ease-in-out infinite;
 }
 
 /* Custom dramatic animations */

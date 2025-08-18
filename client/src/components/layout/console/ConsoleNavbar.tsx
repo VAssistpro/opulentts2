@@ -93,11 +93,7 @@ const ConsoleNavbar: React.FC = () => {
           <span className="hidden lg:inline">USER</span>
         </button>
 
-        {/* Power/Status Indicator */}
-        <div className="flex items-center gap-1 px-2 py-2">
-          <Power className="w-4 h-4 text-green-400" />
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-        </div>
+
       </div>
 
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />

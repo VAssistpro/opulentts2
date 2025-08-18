@@ -30,24 +30,7 @@ const ConsoleContactPanel = () => {
 
   return (
     <div className="space-y-3 h-full flex flex-col">
-      {/* System Status */}
-      <div className="bg-black/60 rounded p-2 border border-gold/20">
-        <div className="text-xs text-gold/80 font-mono text-center mb-2">SYS</div>
-        <div className="space-y-1">
-          <div className="flex items-center justify-center gap-1">
-            <Wifi className="w-3 h-3 text-green-400" />
-            <div className="w-1 h-1 bg-green-400 rounded-full" />
-          </div>
-          <div className="flex items-center justify-center gap-1">
-            <Signal className="w-3 h-3 text-green-400" />
-            <div className="w-1 h-1 bg-green-400 rounded-full" />
-          </div>
-          <div className="flex items-center justify-center gap-1">
-            <Battery className="w-3 h-3 text-green-400" />
-            <div className="w-1 h-1 bg-green-400 rounded-full" />
-          </div>
-        </div>
-      </div>
+
 
       {/* Contact Controls */}
       <div className="flex-1 space-y-2">

@@ -21,7 +21,7 @@ const ConsoleNavbar: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleNavItemClick = (section: string) => {
+  const handleNavItemClick = (section: 'home' | 'about' | 'services' | 'fleet' | 'contact') => {
     setActiveSection(section);
     setTimeout(() => {
       document.getElementById(section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });

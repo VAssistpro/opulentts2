@@ -9,36 +9,17 @@ const GlassmorphicBookButton: React.FC<GlassmorphicBookButtonProps> = ({ onClick
   return (
     <button
       onClick={onClick}
-      className="group relative flex items-center gap-2 px-8 py-3 rounded-xl
-                 overflow-hidden transform transition-all duration-500
-                 hover:scale-105 active:scale-100"
+      className="group relative flex items-center gap-3 px-6 py-3 rounded-full
+                 bg-white/[0.03] backdrop-blur-xl border border-white/10
+                 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
+                 hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
+                 transform hover:scale-[1.03] active:scale-[0.97]
+                 before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-full"
     >
-      {/* Base layer with gradient and blur */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gold/40 via-gold-lighter/50 to-gold/40
-                    backdrop-blur-xl" />
-      {/* Animated border glow */}
-      <div className="absolute inset-0 border border-gold/50 rounded-xl
-                    shadow-[0_0_30px_rgba(147,113,39,0.4),inset_0_0_20px_rgba(147,113,39,0.4)]
-                    group-hover:shadow-[0_0_50px_rgba(147,113,39,0.6),inset_0_0_30px_rgba(147,113,39,0.6)]
-                    transition-all duration-500" />
-      {/* Inner light effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gold/20 via-gold-lighter/30 to-gold/20
-                    opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                    blur-md" />
-      {/* Animated shimmer effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent
-                    -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-      {/* Pulsing glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                    animate-pulse">
-        <div className="absolute inset-0 bg-gold/30 blur-xl" />
-        <div className="absolute inset-0 from-gold/20 via-gold-lighter/30 to-gold/20 bg-[#a5e5ba80]" />
-      </div>
       {/* Content */}
-      <div className="relative z-10 flex items-center gap-2">
-        <Calendar className="w-5 h-5 text-white" />
-        <span className="text-white font-semibold tracking-wide
-                      drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+      <div className="relative z-10 flex items-center gap-3">
+        <Calendar className="w-4 h-4 text-black dark:text-white" />
+        <span className="text-black dark:text-white font-medium text-sm tracking-wide">
           Book Now
         </span>
       </div>

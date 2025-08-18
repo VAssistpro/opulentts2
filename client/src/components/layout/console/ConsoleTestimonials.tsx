@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     role: "Director of Operations",
     rating: 5,
     location: "LaGuardia Business Trip",
-    id: "CLIENT_003"
+    id: "REV_003"
   },
   {
     text: "The only car service I trust for my high-profile clients. Professional, punctual, and never a single issue.",
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     role: "Investment Director",
     rating: 5,
     location: "Newark Airport Transfer",
-    id: "CLIENT_002"
+    id: "REV_002"
   },
   { 
     text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.", 
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
     role: "Venture Capitalist", 
     rating: 5,
     location: "Manhattan Executive Travel",
-    id: "CLIENT_001"
+    id: "REV_001"
   }
 ];
 
@@ -51,7 +51,7 @@ const ConsoleTestimonials = () => {
       {/* Console Display Header */}
       <div className="bg-black/60 rounded-lg p-3 border border-gold/20">
         <div className="flex items-center justify-between mb-2">
-          <div className="text-xs text-gold/80 font-mono">CLIENT_FEED</div>
+          <div className="text-xs text-gold/80 font-mono">CUSTOMER TESTIMONIALS</div>
           <div className="flex gap-1">
             <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
             <div className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
@@ -59,7 +59,7 @@ const ConsoleTestimonials = () => {
         </div>
         
         <div className="text-xs text-white/60 font-mono">
-          RECORD: {testimonial.id}
+          REVIEW ID: {testimonial.id}
         </div>
       </div>
 

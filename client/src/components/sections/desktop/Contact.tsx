@@ -29,7 +29,6 @@ const Contact = () => {
   const BUTTON_GOLD_SHADOW_COLOR = `rgba(${BUTTON_GOLD_SHADOW_RGB}, 0.5)`;
   const BUTTON_GOLD_SHADOW_HOVER_COLOR = `rgba(${BUTTON_GOLD_SHADOW_RGB}, 0.7)`;
 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
@@ -63,8 +62,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full flex flex-col items-center relative py-2">
-      <div className="relative z-10 container mx-auto px-2">
+    <div className="h-full flex flex-col items-center relative py-1 md:py-2">
+      <div className="relative z-10 container mx-auto px-2 md:px-4">
         <AnimatedSection>
            <SectionTitle title="Contact Us" />
         </AnimatedSection>
@@ -100,7 +99,7 @@ const Contact = () => {
                         <h3 className="text-base font-semibold mb-1 text-text-primary">
                           {info.title}
                         </h3>
-                        <div className="text-sm text-text-secondary">{info.content}</div>
+                        <div className="text-sm text-text-secondary" dangerouslySetInnerHTML={{ __html: info.content }}></div>
                       </div>
                     </div>
                   ))}
@@ -110,7 +109,7 @@ const Contact = () => {
 
             {/* Contact Form Column */}
             <div className="group">
-               <div
+              <div
                 className="relative rounded-xl bg-black/40 p-6 md:p-8 backdrop-blur-sm h-full
                            before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
                            before:border before:border-[--border-color]

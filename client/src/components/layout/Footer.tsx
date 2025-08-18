@@ -3,58 +3,56 @@ import { ArrowUp } from 'lucide-react';
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className="relative z-[50] w-full flex-shrink-0 mt-4 mx-auto max-w-full overflow-hidden">
-      {/* Burgundy divider line with glow effect */}
-      <div className="h-px bg-gradient-to-r from-transparent via-burgundy/60 to-transparent
-                    shadow-[0_0_9px_rgba(128,0,32,0.4)] mx-4"></div>
-      <div className="w-full px-4 py-3 max-w-screen-xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
-          {/* Left aligned text with glow effect */}
-          <div className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)] flex-shrink-0">
-            © {new Date().getFullYear()} Opulent Transport Solutions
-          </div>
-
-          {/* Center aligned text with logo and glow effect */}
-          <div className="order-first lg:order-none mb-1 lg:mb-0 flex-shrink-0">
-            <div className="flex items-center justify-center gap-1">
-              <span className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-                Website made with
-              </span>
-              <span className="text-red-500 animate-pulse">❤️</span>
-              <span className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
-                by
-              </span>
-              <a
-                href="https://www.virtualassistancepro.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center hover:opacity-80 transition-opacity"
-              >
-                <img
-                  src="https://opulentts.com/00.%20Logo%20V%20Assist%20Pro%20-Black.png"
-                  alt="V Assist Pro Inc"
-                  className="h-6 w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
-                />
-              </a>
+    <footer className="relative z-[50] w-full flex-shrink-0 mt-2 mx-auto max-w-full overflow-hidden">
+      {/* Console-style footer with golden accent */}
+      <div className="max-w-[95vw] mx-auto px-2">
+        <div className="bg-black/80 backdrop-blur-xl rounded-lg border border-gold/30 shadow-[0_0_20px_rgba(147,113,39,0.2)] p-3">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
+            {/* Left - Copyright with console styling */}
+            <div className="text-xs text-gold/80 font-mono flex-shrink-0 flex items-center gap-2">
+              <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+              <span>© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
             </div>
-          </div>
 
-          {/* Right aligned text with glow effect */}
-          <div className="text-xs text-gray-300 drop-shadow-[0_0_8px_rgba(128,0,32,0.3)] flex-shrink-0">
-            (516) 324-5483 Available 24/7
+            {/* Center - Developer credits with console aesthetic */}
+            <div className="order-first lg:order-none mb-1 lg:mb-0 flex-shrink-0">
+              <div className="flex items-center justify-center gap-2 bg-black/60 rounded px-3 py-1 border border-gold/20">
+                <span className="text-xs text-white/70 font-mono">POWERED BY</span>
+                <a
+                  href="https://www.virtualassistancepro.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:opacity-80 transition-opacity"
+                >
+                  <img
+                    src="https://opulentts.com/00.%20Logo%20V%20Assist%20Pro%20-Black.png"
+                    alt="V Assist Pro Inc"
+                    className="h-5 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+                <div className="w-1 h-1 bg-green-400 rounded-full animate-pulse" />
+              </div>
+            </div>
+
+            {/* Right - Contact with console styling */}
+            <div className="text-xs text-gold/80 font-mono flex-shrink-0 flex items-center gap-2">
+              <span>(516) 324-5483 • 24/7 AVAILABLE</span>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            </div>
           </div>
         </div>
       </div>
-      {/* Back to top button with glow effect */}
+      
+      {/* Console-style back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="lg:hidden absolute right-4 top-0 -translate-y-1/2 p-2 rounded-full 
-                 bg-black border border-burgundy/30 text-burgundy
-                 hover:bg-burgundy hover:text-black
+        className="lg:hidden absolute right-4 top-0 -translate-y-1/2 p-2 rounded-lg 
+                 bg-black/80 border border-gold/30 text-gold
+                 hover:bg-gold/20 hover:border-gold/50
                  transition-all duration-300 group
-                 shadow-[0_0_15px_rgba(128,0,32,0.3)]
-                 hover:shadow-[0_0_25px_rgba(128,0,32,0.5)]
-                 focus:outline-none focus:ring-2 focus:ring-burgundy/50"
+                 shadow-[0_0_15px_rgba(147,113,39,0.3)]
+                 hover:shadow-[0_0_25px_rgba(147,113,39,0.5)]
+                 focus:outline-none focus:ring-2 focus:ring-gold/50 backdrop-blur-sm"
         aria-label="Back to top"
       >
         <ArrowUp className="w-4 h-4 group-hover:animate-bounce" />

@@ -18,15 +18,15 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface */}
-            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/40
-                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_40px_rgba(255,255,255,0.2),0_0_80px_rgba(219,39,119,0.15),0_0_120px_rgba(219,39,119,0.2),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full"
+            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/40
+                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_40px_rgba(147,113,39,0.3),0_0_80px_rgba(147,113,39,0.15),0_0_120px_rgba(219,39,119,0.2),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full"
                  style={{
                    position: 'relative'
                  }}>
-              {/* White-Magenta Backlight */}
+              {/* Blue-Purple-Magenta Backlight */}
               <div className="absolute -inset-4 rounded-3xl pointer-events-none -z-10"
                    style={{
-                     background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(219,39,119,0.12) 50%, transparent 80%)'
+                     background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(147,51,234,0.12) 40%, rgba(219,39,119,0.08) 70%, transparent 90%)'
                    }}></div>
               {/* Magenta Atmospheric Haze */}
               <div className="absolute -inset-6 rounded-3xl pointer-events-none -z-20"
@@ -34,20 +34,20 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                      background: 'radial-gradient(circle, transparent 0%, rgba(219,39,119,0.1) 50%, transparent 80%)'
                    }}></div>
               {/* Console Frame/Bezel */}
-              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-white/20
-                            shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(255,255,255,0.1)] h-full flex flex-col">
+              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20
+                            shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(147,113,39,0.1)] h-full flex flex-col">
                 
                 {/* Top Control Panel - Navbar */}
-                <div className="bg-black/50 backdrop-blur-sm border-b border-white/30
-                              shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_1px_2px_rgba(255,255,255,0.1)]">
+                <div className="bg-black/50 backdrop-blur-sm border-b border-gold/30
+                              shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_1px_2px_rgba(147,113,39,0.1)]">
                   <ConsoleNavbar />
                 </div>
 
                 {/* Main Console Body */}
                 <div className="flex flex-1">
                   {/* Left Control Panel - Logo + Testimonials */}
-                  <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-white/30
-                                shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(255,255,255,0.1)]">
+                  <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/30
+                                shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
                     {/* Extended Logo Area - positioned to extend upward */}
                     <div className="absolute -top-4 left-0 right-0 h-32 bg-black/20 flex justify-center items-center z-10 rounded-t-lg mt-[9px] mb-[9px] pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[6px] mr-[6px]">
                       <img
@@ -58,7 +58,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     </div>
                     {/* Spacer for logo */}
                     <div className="h-32 bg-black/20"></div>
-                    <div className="flex-1 p-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(255,255,255,0.1)]">
+                    <div className="flex-1 p-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                       <ConsoleTestimonials />
                     </div>
                   </div>
@@ -66,13 +66,13 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Center Screen - Main Content */}
                   <div className="flex-1 relative">
                     {/* Screen Bezel with Deep Engraved Effect */}
-                    <div className="absolute inset-2 bg-black/80 rounded-xl border-2 border-white/40
-                                  shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(255,255,255,0.3),0_4px_8px_rgba(0,0,0,0.6)]">
+                    <div className="absolute inset-2 bg-black/80 rounded-xl border-2 border-gold/40
+                                  shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(147,113,39,0.3),0_4px_8px_rgba(0,0,0,0.6)]">
                       {/* Simplified border lighting */}
-                      <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
-                      <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-white/60 to-transparent pointer-events-none" />
-                      <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-white/60 to-transparent pointer-events-none" />
-                      <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
+                      <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
                       
                       {/* Screen Content */}
                       <div className="relative h-full rounded-xl overflow-hidden">

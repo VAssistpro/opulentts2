@@ -119,13 +119,7 @@ const ConsoleTestimonials = () => {
         ))}
       </div>
 
-      {/* Status Bar */}
-      <div className="bg-black/40 rounded p-2 border border-gold/10">
-        <div className="flex justify-between items-center text-xs text-gold/60 font-mono">
-          <span>CLIENTS: {TESTIMONIALS.length}</span>
-          <span>AVG: 5.0★</span>
-        </div>
-      </div>
+      
     </div>
   );
 };

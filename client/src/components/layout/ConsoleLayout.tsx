@@ -15,8 +15,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-95" />
 
         {/* Console Device Container */}
-        <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
-          <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
+        <div className="relative z-10 flex-1 p-1 lg:p-2 flex items-center justify-center">
+          <div className="w-full max-w-[95vw] h-[calc(100vh-40px)]">
             {/* Integrated Console Interface with Liquid Glass Effect */}
             <div className="liquid-glass-border overflow-hidden p-1 h-full relative"
                  style={{
@@ -47,7 +47,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                    style={{
                      background: 'rgba(0, 0, 0, 0.85)',
                      backdropFilter: 'blur(30px) saturate(1.8)',
-                     border: '1px solid rgba(255, 255, 255, 0.03)'
+                     border: 'none'
                    }}>
                 
                 {/* Top Control Panel - Navbar with Subtle Glass Effect */}

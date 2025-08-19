@@ -216,10 +216,10 @@
 /* Liquid Glass Effect Classes */
 .liquid-glass-border {
   position: relative;
-  border-radius: 18px;
+  border-radius: 20px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(25px) saturate(1.8);
-  border: 9px solid transparent;
+  border: 12px solid transparent;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     radial-gradient(circle at 50% 50%, 
@@ -239,11 +239,11 @@
 .liquid-glass-border::before {
   content: '';
   position: absolute;
-  top: -12px;
-  left: -12px;
-  right: -12px;
-  bottom: -12px;
-  border-radius: 30px;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  border-radius: 36px;
   background: radial-gradient(
     circle at 50% 50%,
     rgba(255, 255, 255, 0.08) 0%,
@@ -261,11 +261,11 @@
 .liquid-glass-border::after {
   content: '';
   position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  border-radius: 12px;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 14px;
   background: radial-gradient(
     circle at 30% 30%,
     rgba(255, 255, 255, 0.15) 0%,

@@ -83,7 +83,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Center Screen - Main Content */}
                   <div className="flex-1 relative">
                     {/* Screen Bezel with Deep Engraved Effect */}
-                    <div className="absolute inset-2 bg-black/80 rounded-xl border-2 border-gold/40
+                    <div className="absolute inset-2 bg-black/80 rounded-xl border border-gold/20
                                   shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(147,113,39,0.3),0_4px_8px_rgba(0,0,0,0.6)]">
                       {/* Simplified border lighting */}
                       <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />

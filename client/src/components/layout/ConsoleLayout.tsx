@@ -52,7 +52,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                    }}>
                 
                 {/* Top Control Panel - Navbar with Subtle Glass Effect */}
-                <div className="bg-black/50 backdrop-blur-sm border-b border-gold/10 rounded-t-xl"
+                <div className="bg-black/50 backdrop-blur-sm border-b border-gold/30 rounded-t-xl"
                      style={{
                        background: 'rgba(0, 0, 0, 0.6)',
                        backdropFilter: 'blur(20px)',
@@ -64,7 +64,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 {/* Main Console Body */}
                 <div className="flex flex-1">
                   {/* Left Control Panel - Logo + Testimonials */}
-                  <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/10
+                  <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/30
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
                     {/* Extended Logo Area - positioned to extend upward */}
                     <div className="absolute -top-4 left-0 right-0 h-32 bg-black/20 flex justify-center items-center z-10 rounded-t-lg mt-[9px] mb-[9px] pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[6px] mr-[6px]">
@@ -84,8 +84,13 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Center Screen - Main Content */}
                   <div className="flex-1 relative">
                     {/* Screen Bezel with Deep Engraved Effect */}
-                    <div className="absolute inset-2 bg-black/80 rounded-xl
+                    <div className="absolute inset-2 bg-black/80 rounded-xl border-2 border-gold/40
                                   shadow-[inset_0_2px_4px_rgba(0,0,0,0.8),inset_0_-2px_4px_rgba(147,113,39,0.3),0_4px_8px_rgba(0,0,0,0.6)]">
+                      {/* Border lighting effects */}
+                      <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -left-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute top-2 bottom-2 -right-px w-px bg-gradient-to-b from-transparent via-gold/60 to-transparent pointer-events-none" />
+                      <div className="absolute -bottom-px left-2 right-2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
 
                       
                       {/* Screen Content */}
@@ -118,7 +123,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   </div>
 
                   {/* Right Control Panel - Contact & System Info */}
-                  <div className="w-20 bg-black/30 backdrop-blur-sm flex flex-col border-l border-gold/10
+                  <div className="w-20 bg-black/30 backdrop-blur-sm flex flex-col border-l border-gold/30
                                 shadow-[inset_-1px_0_2px_rgba(0,0,0,0.6),-1px_0_2px_rgba(147,113,39,0.1)]">
                     
                     <div className="flex-1 p-2">
@@ -126,7 +131,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     </div>
                     
                     {/* System Status Indicators */}
-                    <div className="p-2 space-y-2 border-t border-gold/20 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
+                    <div className="p-2 space-y-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                       <div className="flex flex-col gap-1">
                         <div className="w-2 h-2 bg-green-400 rounded-full mx-auto animate-pulse" title="System Online" />
                         <div className="w-2 h-2 bg-gold rounded-full mx-auto animate-pulse" title="Ready" />
@@ -137,7 +142,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Enhanced Bottom Status Bar with Footer Info */}
-                <div className="bg-black/60 backdrop-blur-sm p-2 border-t border-gold/10 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[10px] pb-[10px]">
+                <div className="bg-black/60 backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[10px] pb-[10px]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Copyright */}
                     <div className="flex items-center gap-2">
@@ -170,7 +175,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   </div>
 
                   {/* Mobile Footer Info */}
-                  <div className="lg:hidden mt-2 pt-2 flex flex-col gap-1 text-xs text-white/60 border-t border-gold/20 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
+                  <div className="lg:hidden mt-2 pt-2 flex flex-col gap-1 text-xs text-white/60 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                     <div className="flex items-center justify-between">
                       <span>© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
                       <span>(516) 324-5483</span>

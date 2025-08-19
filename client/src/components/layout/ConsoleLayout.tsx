@@ -18,7 +18,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface with Leonardo.AI Glass Effect */}
-            <div className="console-glass-container animate-leonardo-glow overflow-hidden p-1 h-full relative rounded-2xl"
+            <div className="console-glass-container overflow-hidden p-1 h-full relative rounded-2xl"
                  style={{
                    background: 'rgba(0, 0, 0, 0.4)',
                    backdropFilter: 'blur(20px)',
@@ -43,17 +43,17 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                      0 0 20px rgba(147, 113, 39, 0.2)
                    `
                  }}>
-              {/* Enhanced Leonardo-style Backlight */}
+              {/* Enhanced Leonardo-style Backlight - Static */}
               <div className="absolute -inset-6 rounded-3xl pointer-events-none -z-10"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(147, 113, 39, 0.4) 0%, rgba(59, 130, 246, 0.3) 25%, rgba(147, 51, 234, 0.3) 50%, rgba(219, 39, 119, 0.3) 75%, rgba(147, 113, 39, 0.4) 100%)',
-                     filter: 'blur(3px)',
-                     opacity: '0.8'
+                     background: 'linear-gradient(135deg, rgba(147, 113, 39, 0.2) 0%, rgba(59, 130, 246, 0.15) 25%, rgba(147, 51, 234, 0.15) 50%, rgba(219, 39, 119, 0.15) 75%, rgba(147, 113, 39, 0.2) 100%)',
+                     filter: 'blur(2px)',
+                     opacity: '0.6'
                    }}></div>
-              {/* Atmospheric Glow */}
+              {/* Stable Atmospheric Glow */}
               <div className="absolute -inset-4 rounded-3xl pointer-events-none -z-5"
                    style={{
-                     background: 'radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(147,113,39,0.1) 40%, rgba(219,39,119,0.08) 70%, transparent 90%)',
+                     background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(147,113,39,0.05) 40%, rgba(219,39,119,0.04) 70%, transparent 90%)',
                      filter: 'blur(1px)'
                    }}></div>
               {/* Console Frame/Bezel with Enhanced Glass Effect */}

@@ -18,7 +18,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface with Leonardo.AI Glass Effect */}
-            <div className="console-glass-container overflow-hidden p-1 h-full relative rounded-2xl"
+            <div className="console-glass-container overflow-hidden p-1 h-full relative rounded-2xl pl-[14px] pr-[14px] pt-[14px] pb-[14px] mt-[0px] mb-[0px] ml-[0px] mr-[0px]"
                  style={{
                    background: 'rgba(0, 0, 0, 0.4)',
                    backdropFilter: 'blur(20px)',

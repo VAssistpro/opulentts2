@@ -17,9 +17,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         {/* Console Device Container */}
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
-            {/* Integrated Console Interface */}
-            <div className="relative bg-black/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gold/40
-                          shadow-[inset_0_2px_6px_rgba(0,0,0,0.9),inset_0_-2px_6px_rgba(0,0,0,0.7),0_0_40px_rgba(147,113,39,0.3),0_0_80px_rgba(147,113,39,0.15),0_0_120px_rgba(219,39,119,0.2),0_8px_16px_rgba(0,0,0,0.6)] p-1 h-full"
+            {/* Integrated Console Interface with Leonardo.AI Glass Effect */}
+            <div className="leonardo-glass-border console-glass-container animate-leonardo-glow overflow-hidden p-1 h-full"
                  style={{
                    position: 'relative'
                  }}>
@@ -33,13 +32,24 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                    style={{
                      background: 'radial-gradient(circle, transparent 0%, rgba(219,39,119,0.1) 50%, transparent 80%)'
                    }}></div>
-              {/* Console Frame/Bezel */}
-              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden border border-gold/20
-                            shadow-[inset_0_1px_3px_rgba(0,0,0,0.8),inset_0_-1px_3px_rgba(147,113,39,0.1)] h-full flex flex-col">
+              {/* Console Frame/Bezel with Enhanced Glass Effect */}
+              <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden 
+                            leonardo-glass-border h-full flex flex-col"
+                   style={{
+                     background: 'rgba(0, 0, 0, 0.85)',
+                     backdropFilter: 'blur(30px) saturate(1.8)',
+                     border: '1px solid rgba(255, 255, 255, 0.08)'
+                   }}>
                 
-                {/* Top Control Panel - Navbar */}
-                <div className="bg-black/50 backdrop-blur-sm border-b border-gold/30
-                              shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_1px_2px_rgba(147,113,39,0.1)]">
+                {/* Top Control Panel - Navbar with Glass Effect */}
+                <div className="leonardo-glass-border border-b border-white/10"
+                     style={{
+                       background: 'rgba(0, 0, 0, 0.6)',
+                       backdropFilter: 'blur(20px)',
+                       borderRadius: '0px',
+                       borderBottomLeftRadius: '0px',
+                       borderBottomRightRadius: '0px'
+                     }}>
                   <ConsoleNavbar />
                 </div>
 

@@ -59,10 +59,111 @@
   pointer-events: none;
 }
 
+/* Leonardo.AI Style Glassmorphic Border Effect */
+.leonardo-glass-border {
+  position: relative;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.leonardo-glass-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.leonardo-glass-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(147, 113, 39, 0.4) 0%,
+    rgba(59, 130, 246, 0.3) 25%,
+    rgba(147, 51, 234, 0.3) 50%,
+    rgba(219, 39, 119, 0.3) 75%,
+    rgba(147, 113, 39, 0.4) 100%
+  );
+  opacity: 0.6;
+  filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Enhanced Console Glass Effect */
+.console-glass-container {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(40px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.08),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+  position: relative;
+}
+
+.console-glass-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
 /* Animation Keyframes */
 @keyframes shine {
   from {
     background-position: 200% center;
+  }
+}
+
+@keyframes leonardo-glow {
+  0%, 100% {
+    opacity: 0.6;
+    filter: blur(2px) brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(1px) brightness(1.2);
   }
 }
 
@@ -75,4 +176,8 @@
   );
   background-size: 200% 100%;
   animation: shine 2s linear infinite;
+}
+
+.animate-leonardo-glow {
+  animation: leonardo-glow 3s ease-in-out infinite;
 }

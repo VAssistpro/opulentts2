@@ -50,14 +50,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                      border: '1px solid rgba(255, 255, 255, 0.08)'
                    }}>
                 
-                {/* Top Control Panel - Navbar with Liquid Glass Effect */}
-                <div className="liquid-glass-border border-b border-white/10"
+                {/* Top Control Panel - Navbar with Subtle Glass Effect */}
+                <div className="bg-black/50 backdrop-blur-sm border-b border-gold/30 rounded-t-xl"
                      style={{
                        background: 'rgba(0, 0, 0, 0.6)',
                        backdropFilter: 'blur(20px)',
-                       borderRadius: '16px 16px 0px 0px',
-                       borderBottomLeftRadius: '0px',
-                       borderBottomRightRadius: '0px'
+                       boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.6), 0 1px 2px rgba(147,113,39,0.1)'
                      }}>
                   <ConsoleNavbar />
                 </div>

@@ -18,19 +18,43 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
             {/* Integrated Console Interface with Leonardo.AI Glass Effect */}
-            <div className="leonardo-glass-border console-glass-container animate-leonardo-glow overflow-hidden p-1 h-full"
+            <div className="console-glass-container animate-leonardo-glow overflow-hidden p-1 h-full relative rounded-2xl"
                  style={{
-                   position: 'relative'
+                   background: 'rgba(0, 0, 0, 0.4)',
+                   backdropFilter: 'blur(20px)',
+                   border: '2px solid transparent',
+                   backgroundImage: `
+                     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                     linear-gradient(135deg, 
+                       rgba(255, 255, 255, 0.3) 0%,
+                       rgba(255, 255, 255, 0.1) 25%,
+                       transparent 50%,
+                       rgba(255, 255, 255, 0.1) 75%,
+                       rgba(255, 255, 255, 0.3) 100%
+                     )
+                   `,
+                   backgroundOrigin: 'border-box',
+                   backgroundClip: 'content-box, border-box',
+                   boxShadow: `
+                     0 8px 32px rgba(0, 0, 0, 0.3),
+                     inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+                     0 0 0 1px rgba(255, 255, 255, 0.05),
+                     0 0 20px rgba(147, 113, 39, 0.2)
+                   `
                  }}>
-              {/* Blue-Purple-Magenta Backlight */}
-              <div className="absolute -inset-4 rounded-3xl pointer-events-none -z-10"
+              {/* Enhanced Leonardo-style Backlight */}
+              <div className="absolute -inset-6 rounded-3xl pointer-events-none -z-10"
                    style={{
-                     background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(147,51,234,0.12) 40%, rgba(219,39,119,0.08) 70%, transparent 90%)'
+                     background: 'linear-gradient(135deg, rgba(147, 113, 39, 0.4) 0%, rgba(59, 130, 246, 0.3) 25%, rgba(147, 51, 234, 0.3) 50%, rgba(219, 39, 119, 0.3) 75%, rgba(147, 113, 39, 0.4) 100%)',
+                     filter: 'blur(3px)',
+                     opacity: '0.8'
                    }}></div>
-              {/* Magenta Atmospheric Haze */}
-              <div className="absolute -inset-6 rounded-3xl pointer-events-none -z-20"
+              {/* Atmospheric Glow */}
+              <div className="absolute -inset-4 rounded-3xl pointer-events-none -z-5"
                    style={{
-                     background: 'radial-gradient(circle, transparent 0%, rgba(219,39,119,0.1) 50%, transparent 80%)'
+                     background: 'radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(147,113,39,0.1) 40%, rgba(219,39,119,0.08) 70%, transparent 90%)',
+                     filter: 'blur(1px)'
                    }}></div>
               {/* Console Frame/Bezel with Enhanced Glass Effect */}
               <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden 

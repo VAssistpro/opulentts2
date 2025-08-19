@@ -17,30 +17,15 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         {/* Console Device Container */}
         <div className="relative z-10 flex-1 p-2 lg:p-4 flex items-center justify-center">
           <div className="w-full max-w-7xl h-[calc(100vh-60px)]">
-            {/* Integrated Console Interface with Leonardo.AI Glass Effect */}
-            <div className="console-glass-container overflow-hidden p-1 h-full relative rounded-2xl pl-[14px] pr-[14px] pt-[14px] pb-[14px] mt-[0px] mb-[0px] ml-[0px] mr-[0px]"
+            {/* Integrated Console Interface with Liquid Glass Effect */}
+            <div className="liquid-glass-border overflow-hidden p-1 h-full relative"
                  style={{
-                   background: 'rgba(0, 0, 0, 0.4)',
-                   backdropFilter: 'blur(20px)',
-                   border: '2px solid transparent',
-                   backgroundImage: `
-                     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                     linear-gradient(135deg, 
-                       rgba(255, 255, 255, 0.3) 0%,
-                       rgba(255, 255, 255, 0.1) 25%,
-                       transparent 50%,
-                       rgba(255, 255, 255, 0.1) 75%,
-                       rgba(255, 255, 255, 0.3) 100%
-                     )
-                   `,
-                   backgroundOrigin: 'border-box',
-                   backgroundClip: 'content-box, border-box',
                    boxShadow: `
-                     0 8px 32px rgba(0, 0, 0, 0.3),
-                     inset 0 1px 0 rgba(255, 255, 255, 0.2),
-                     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-                     0 0 0 1px rgba(255, 255, 255, 0.05),
-                     0 0 20px rgba(147, 113, 39, 0.2)
+                     0 8px 32px rgba(0, 0, 0, 0.4),
+                     inset 0 2px 4px rgba(255, 255, 255, 0.1),
+                     inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+                     0 0 40px rgba(147, 113, 39, 0.3),
+                     0 0 80px rgba(59, 130, 246, 0.2)
                    `
                  }}>
               {/* Enhanced Leonardo-style Backlight - Static */}
@@ -65,12 +50,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                      border: '1px solid rgba(255, 255, 255, 0.08)'
                    }}>
                 
-                {/* Top Control Panel - Navbar with Glass Effect */}
-                <div className="leonardo-glass-border border-b border-white/10"
+                {/* Top Control Panel - Navbar with Liquid Glass Effect */}
+                <div className="liquid-glass-border border-b border-white/10"
                      style={{
                        background: 'rgba(0, 0, 0, 0.6)',
                        backdropFilter: 'blur(20px)',
-                       borderRadius: '0px',
+                       borderRadius: '16px 16px 0px 0px',
                        borderBottomLeftRadius: '0px',
                        borderBottomRightRadius: '0px'
                      }}>

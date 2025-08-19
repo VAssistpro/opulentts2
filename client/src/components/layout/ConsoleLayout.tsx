@@ -43,11 +43,11 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                    }}></div>
               {/* Console Frame/Bezel with Enhanced Glass Effect */}
               <div className="bg-gradient-to-br from-black/90 via-black/70 to-black/90 rounded-xl overflow-hidden 
-                            leonardo-glass-border h-full flex flex-col"
+                            h-full flex flex-col"
                    style={{
                      background: 'rgba(0, 0, 0, 0.85)',
                      backdropFilter: 'blur(30px) saturate(1.8)',
-                     border: '1px solid rgba(255, 255, 255, 0.08)'
+                     border: '1px solid rgba(255, 255, 255, 0.03)'
                    }}>
                 
                 {/* Top Control Panel - Navbar with Subtle Glass Effect */}

@@ -73,8 +73,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                         alt="Opulent Transport Solutions"
                         className="h-20 w-auto object-contain opacity-90 mb-3"
                       />
-                      {/* Vertical divider line below logo */}
-                      <div className="w-px h-6 bg-gradient-to-b from-gold/60 via-gold/40 to-transparent"></div>
                     </div>
                     {/* Spacer for logo */}
                     <div className="h-32 bg-black/20"></div>

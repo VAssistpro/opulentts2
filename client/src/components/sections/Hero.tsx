@@ -130,7 +130,7 @@ const Hero = () => {
             className="space-y-5"
           >
             <div className="space-y-2">
-              <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200] font-semibold ml-[91.375px] mr-[91.375px] pl-[0px] pr-[0px] text-center">
+              <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200] font-semibold pl-[0px] pr-[0px] text-center ml-[67.375px] mr-[67.375px]">
                 Join NYC's elite who trust Opulent Transport for their most important journeys.
                 Discretion, punctuality, and unmatched comfort guaranteed.
               </p>

@@ -48,17 +48,22 @@ const Hero = () => {
       </div>
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center px-3 py-2 w-full max-w-[906px] mx-auto mt-[8px] mb-[8px]">
-        {/* Premium Badge - Enhanced */}
+        {/* Premium Badge - Luxurious */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="px-6 backdrop-blur-xl border border-gold/40 rounded-full mb-1.5 inline-block shadow-[0_8px_32px_rgba(0,0,0,0.8)] hover:bg-black/80 transition-all duration-300 bg-[#ebebe4a6] text-[#0d0b0b] pt-[7px] pb-[7px]"
-          style={{paddingTop: "7px", paddingBottom: "7px"}}
+          className="relative mb-6"
         >
-          <span className="text-sm tracking-wider uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-[#0f0e0e] font-bold">
-            ★ NEW YORK'S PREMIER LUXURY SERVICE ★
-          </span>
+          <div className="absolute -inset-1 bg-gradient-to-r from-gold/40 via-yellow-300/20 to-gold/40 rounded-full blur-sm animate-pulse" />
+          <div className="relative px-8 py-3 bg-gradient-to-r from-gold/90 via-gold to-gold/90 
+                        backdrop-blur-xl border border-gold/50 rounded-full shadow-xl
+                        hover:shadow-[0_0_30px_rgba(147,113,39,0.5)] transition-all duration-300">
+            <span className="text-sm tracking-[0.2em] uppercase font-bold text-black/90 
+                           drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)]">
+              ✦ NEW YORK'S PREMIER LUXURY SERVICE ✦
+            </span>
+          </div>
         </motion.div>
 
         {/* Main Title - Properly Sized */}
@@ -68,34 +73,42 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-4"
         >
-          <div
-            className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight text-white font-extrabold text-[50px]"
-          >OPULENT TRANSPORT SOLUTIONS</div>
+          <div className="relative">
+            <div className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight font-extrabold text-[50px]">
+              <span className="text-white">OPULENT </span>
+              <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-pulse">
+                LUXURY
+              </span>
+              <span className="text-white"> TRANSPORT</span>
+            </div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 via-transparent to-gold/20 blur-xl opacity-50 animate-pulse" />
+          </div>
         </motion.h1>
 
-        {/* Service Areas - Enhanced Pills - Right Under Title */}
+        {/* Service Areas - Premium Glass Pills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-6"
+          className="mb-8"
         >
-          <div className="flex flex-wrap justify-center gap-2 text-sm">
-            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 dark:text-white before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none font-bold text-[#f2ebeb]">
-              Manhattan
-            </span>
-            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 dark:text-white before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none text-[#f2ebeb] font-bold">
-              Brooklyn
-            </span>
-            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 dark:text-white before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none text-[#f2ebeb] font-bold">
-              Queens
-            </span>
-            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 dark:text-white before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none text-[#f2ebeb] font-bold">
-              JFK • LGA • EWR
-            </span>
-            <span className="px-3 py-1.5 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)] hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 dark:text-white before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none text-[#f2ebeb] font-bold">
-              Westchester • Long Island
-            </span>
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            {['Manhattan', 'Brooklyn', 'Queens', 'JFK • LGA • EWR', 'Westchester • Long Island'].map((location, index) => (
+              <motion.span
+                key={location}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
+                className="relative px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl 
+                         border border-gold/30 rounded-full shadow-lg
+                         hover:from-gold/20 hover:to-gold/10 hover:border-gold/50 hover:shadow-gold/20
+                         transition-all duration-300 font-medium text-white cursor-pointer
+                         shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_rgba(147,113,39,0.2)]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-gold/5 to-transparent rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <span className="relative z-10">{location}</span>
+              </motion.span>
+            ))}
           </div>
         </motion.div>
 
@@ -108,18 +121,23 @@ const Hero = () => {
         >
           
 
-          <div className="md:text-lg text-white max-w-2xl mx-auto drop-shadow-[0_4px_15px_rgba(0,0,0,1)] [text-shadow:0_0_30px_rgba(0,0,0,1),_0_4px_15px_rgba(0,0,0,1)] text-center text-[18px] font-medium leading-relaxed bg-black/20 backdrop-blur-sm rounded-xl border border-white/10" style={{padding: "6px 5px 6px 4px"}}>
-            <p>
-              Experience unparalleled sophistication with our fleet of premium vehicles,
-              professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
-            </p>
-            <div>
-              <br />
+          <div className="relative max-w-3xl mx-auto">
+            <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-blue-400/10 to-gold/20 rounded-2xl blur-lg opacity-60" />
+            <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl 
+                          border border-gold/20 rounded-2xl p-8 shadow-[0_8px_40px_rgba(0,0,0,0.4)]">
+              <div className="text-lg text-white/90 text-center leading-relaxed space-y-4">
+                <p className="font-light">
+                  Experience unparalleled sophistication with our fleet of <span className="text-gold font-medium">premium vehicles</span>,
+                  professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+                </p>
+                <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mx-auto" />
+                <p className="font-light">
+                  Join NYC's elite who trust <span className="text-gold font-medium">Opulent Transport</span> for their most important journeys.
+                  <br />
+                  <span className="text-gold/80 text-base">Discretion, punctuality, and unmatched comfort guaranteed.</span>
+                </p>
+              </div>
             </div>
-            <p>
-              Join NYC's elite who trust Opulent Transport for their most important journeys.
-              Discretion, punctuality, and unmatched comfort guaranteed.
-            </p>
           </div>
 
 
@@ -155,41 +173,38 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Trust Cards - Liquid Glass Effect - Moved Down */}
+        {/* Premium Stats Cards */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
+          className="mt-12"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
-            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
-                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-              <div className="text-gold text-lg font-bold">24/7</div>
-              <div className="text-black/70 dark:text-white/70 text-[16px]">Available</div>
-            </div>
-            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
-                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-              <div className="text-gold text-lg font-bold">5 ⭐</div>
-              <div className="text-black/70 dark:text-white/70 text-[16px]">Rating</div>
-            </div>
-            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
-                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-              <div className="text-gold text-lg font-bold">10+</div>
-              <div className="text-black/70 dark:text-white/70 text-[16px]">Years</div>
-            </div>
-            <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
-                          shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                          hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden
-                          before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none">
-              <div className="text-gold text-lg font-bold">100%</div>
-              <div className="text-black/70 dark:text-white/70 text-[16px]">Satisfaction</div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { value: '24/7', label: 'Available', icon: '🕐' },
+              { value: '5.0★', label: 'Rating', icon: '⭐' },
+              { value: '10+', label: 'Years', icon: '🏆' },
+              { value: '100%', label: 'Satisfaction', icon: '✨' }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 1.1 + index * 0.1, duration: 0.6 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-gold/30 via-gold/10 to-gold/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-transparent 
+                              backdrop-blur-xl border border-gold/20 rounded-xl
+                              shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(147,113,39,0.15)]
+                              transition-all duration-300 hover:scale-105">
+                  <div className="text-3xl mb-2 opacity-60">{stat.icon}</div>
+                  <div className="text-gold text-2xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-white/70 text-sm font-medium">{stat.label}</div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

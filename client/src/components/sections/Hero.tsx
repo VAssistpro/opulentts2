@@ -157,6 +157,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 0.8 }}
               className="text-white/60 text-xs"
+              style={{marginTop: "8px"}}
             >
               Available 24/7 • Instant confirmation • No hidden fees
             </motion.p>

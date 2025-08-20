@@ -11,18 +11,18 @@ const TESTIMONIALS = [
     location: "LaGuardia Business Trip"
   },
   {
-    text: "The only car service I trust for my high-profile clients. Professional, punctual, and never a single issue.",
-    author: "Jonathan Miles",
-    role: "Investment Director",
-    rating: 5,
-    location: "Newark Airport Transfer"
-  },
-  { 
-    text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.", 
-    author: "Ava Richardson", 
-    role: "Venture Capitalist", 
+    text: "Opulent has completely changed my perception of private transport. Impeccable attention to detail, courteous drivers, and truly luxurious vehicles.",
+    author: "Ava Richardson",
+    role: "Venture Capitalist",
     rating: 5,
     location: "Manhattan Executive Travel"
+  },
+  { 
+    text: "Outstanding luxury transportation with attention to every detail. Their service exceeded all expectations for our corporate events.", 
+    author: "Michael Torres", 
+    role: "Event Coordinator", 
+    rating: 5,
+    location: "JFK Airport Service"
   }
 ];
 

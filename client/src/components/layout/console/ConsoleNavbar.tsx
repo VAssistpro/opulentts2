@@ -45,7 +45,8 @@ const ConsoleNavbar: React.FC = () => {
                         hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
                         transform hover:scale-[1.02] active:scale-[0.98]
                         before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
-                        text-xs font-mono text-white/90 hover:text-white">
+                        text-xs font-mono text-white/90 hover:text-white"
+             style={{ borderRadius: '4px', overflow: 'hidden' }}>
           <Phone className="w-3 h-3" />
           <span className="font-semibold">(516) 324-5483</span>
         </div>
@@ -58,7 +59,11 @@ const ConsoleNavbar: React.FC = () => {
             <button
               key={section}
               onClick={() => handleNavItemClick(section)}
-              className="relative flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-150 text-white/90 hover:text-white hover:bg-white/10 pt-[6px] pb-[6px] pl-[9px] pr-[9px] z-10"
+              className={`relative flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-300 pt-[6px] pb-[6px] pl-[9px] pr-[9px] z-10 ${
+                isActive
+                  ? 'bg-gold/20 border border-gold/40 text-gold shadow-[0_0_8px_rgba(147,113,39,0.3)] scale-105'
+                  : 'text-white/90 hover:text-white hover:bg-white/10 hover:scale-102'
+              }`}
               title={label}
             >
               <Icon className="w-3 h-3" />
@@ -78,6 +83,7 @@ const ConsoleNavbar: React.FC = () => {
                      transform hover:scale-[1.02] active:scale-[0.98]
                      before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none before:rounded-lg
                      text-xs font-mono font-semibold"
+          style={{ borderRadius: '4px', overflow: 'hidden' }}
         >
           <Calendar className="w-3 h-3 text-black" />
           <span className="text-black">BOOK NOW</span>
@@ -92,6 +98,7 @@ const ConsoleNavbar: React.FC = () => {
                      transform hover:scale-[1.02] active:scale-[0.98]
                      before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
                      text-xs font-mono text-white/90 hover:text-white"
+          style={{ borderRadius: '4px', overflow: 'hidden' }}
         >
           <User className="w-3 h-3" />
           <span>Account Login</span>

@@ -48,18 +48,16 @@ const Hero = () => {
       </div>
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center px-3 py-2 w-full max-w-[906px] mx-auto mt-[8px] mb-[8px]">
-        {/* Elegant Badge */}
+        {/* Refined Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-8"
+          className="mb-6"
         >
-          <div className="inline-flex items-center px-6 py-2 bg-white/5 backdrop-blur-md 
-                        border border-white/20 rounded-full text-white/80 text-sm font-light tracking-wider">
-            <div className="w-2 h-2 bg-gold rounded-full mr-3 opacity-80" />
+          <div className="inline-flex items-center px-4 py-1.5 bg-black/40 backdrop-blur-lg 
+                        border border-gold/40 rounded-full text-white text-xs font-medium tracking-[0.15em] uppercase">
             NEW YORK'S PREMIER LUXURY SERVICE
-            <div className="w-2 h-2 bg-gold rounded-full ml-3 opacity-80" />
           </div>
         </motion.div>
 
@@ -70,13 +68,13 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-4"
         >
-          <div className="space-y-2">
-            <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin tracking-wide text-white 
-                          drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+          <div className="space-y-3">
+            <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-white 
+                          drop-shadow-[0_8px_30px_rgba(0,0,0,0.9)]">
               OPULENT
             </div>
-            <div className="text-lg md:text-xl lg:text-2xl font-light tracking-[0.3em] text-gold/90 
-                          drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+            <div className="text-xl md:text-2xl lg:text-3xl font-extralight tracking-[0.4em] text-gold 
+                          drop-shadow-[0_4px_15px_rgba(0,0,0,0.8)]">
               TRANSPORT SOLUTIONS
             </div>
           </div>
@@ -87,7 +85,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-12"
+          className="mb-10"
         >
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {['Manhattan', 'Brooklyn', 'Queens', 'JFK • LGA • EWR', 'Westchester • Long Island'].map((location, index) => (
@@ -165,7 +163,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
-          className="mt-16"
+          className="mt-12"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             {[

@@ -36,31 +36,29 @@ const ConsoleNavbar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-2 backdrop-blur-sm ml-[13px] mr-[13px] pt-[7px] pb-[7px] pl-[5px] pr-[5px] mt-[1px] mb-[1px]"
-         style={{ background: 'rgba(10, 15, 26, 0.6)' }}>
+    <div className="flex items-center justify-between p-3 backdrop-blur-xl border-b border-gold/20 
+                    bg-gradient-to-r from-black/80 via-black/60 to-black/80 shadow-lg"
+         style={{ borderRadius: '0 0 8px 8px' }}>
       {/* Left Side - Phone Number */}
-      <div className="w-56 flex items-center">
-        <div className="relative flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg
-                        bg-white/[0.03] backdrop-blur-xl border border-white/10
-                        shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                        hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
-                        transform hover:scale-[1.02] active:scale-[0.98]
-                        before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
-                        text-xs font-mono text-white/90 hover:text-white"
-             style={{ borderRadius: '4px', overflow: 'hidden' }}>
-          <Phone className="w-3 h-3" />
-          <span className="font-medium">(516) 324-5483</span>
+      <div className="flex items-center">
+        <div className="flex items-center gap-2 px-3 py-2 text-white/70 text-sm font-medium">
+          <Phone className="w-4 h-4" />
+          <span>(516) 324-5483</span>
         </div>
       </div>
       {/* Center - Streamlined Navigation */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-2">
         {NAV_ITEMS.map(({ icon: Icon, label, section }) => {
           const isActive = activeSection === section;
           return (
             <button
               key={section}
               onClick={() => handleNavItemClick(section)}
-              className="relative flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-300 pt-[6px] pb-[6px] z-10 border border-gold/40 shadow-[0_0_8px_rgba(147,113,39,0.3)] scale-105 ml-[6px] mr-[6px] pl-[19px] pr-[19px] text-[#a27822] bg-[#0c111d]"
+              className={`relative flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
+                         ${isActive 
+                           ? 'bg-gold/20 text-gold border border-gold/40 shadow-lg' 
+                           : 'text-white/70 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20'
+                         }`}
               title={label}
             >
               <Icon className="w-3 h-3" />
@@ -73,32 +71,24 @@ const ConsoleNavbar: React.FC = () => {
       <div className="flex items-center gap-2">
         <button
           onClick={handleBookNowClick}
-          className="relative flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg
-                     bg-gradient-to-r from-gold/90 via-gold to-gold/90 backdrop-blur-xl border border-gold/30
-                     shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(147,113,39,0.4)]
-                     hover:from-gold hover:via-gold-lighter hover:to-gold hover:border-gold/50 transition-all duration-300
-                     transform hover:scale-[1.02] active:scale-[0.98]
-                     before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none before:rounded-lg
-                     text-xs font-mono font-semibold"
-          style={{ borderRadius: '4px', overflow: 'hidden' }}
+          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gold to-gold/90
+                     text-black font-medium text-sm rounded-lg
+                     hover:from-gold/90 hover:to-gold hover:shadow-lg hover:scale-105
+                     transition-all duration-300 shadow-md"
         >
-          <Calendar className="w-3 h-3 text-black" />
-          <span className="text-black">BOOK NOW</span>
+          <Calendar className="w-4 h-4" />
+          <span>BOOK NOW</span>
         </button>
 
         <button
           onClick={() => setShowLoginModal(true)}
-          className="relative flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg
-                     bg-white/[0.03] backdrop-blur-xl border border-white/10
-                     shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
-                     hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300
-                     transform hover:scale-[1.02] active:scale-[0.98]
-                     before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
-                     text-xs font-mono text-white/90 hover:text-white"
-          style={{ borderRadius: '4px', overflow: 'hidden' }}
+          className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20
+                     text-white/80 font-medium text-sm rounded-lg
+                     hover:bg-white/20 hover:text-white hover:border-white/30
+                     transition-all duration-300"
         >
-          <User className="w-3 h-3" />
-          <span>Account Login</span>
+          <User className="w-4 h-4" />
+          <span className="hidden lg:inline">Account Login</span>
         </button>
       </div>
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />

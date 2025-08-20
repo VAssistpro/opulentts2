@@ -11,7 +11,7 @@ import ShimmerBackground from '../effects/ShimmerBackground';
 const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <ErrorBoundary>
-      <div className="relative min-h-screen bg-black text-text-primary flex flex-col">
+      <div className="relative h-screen bg-black text-text-primary flex flex-col">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-98" />
 
         {/* Console Device Container */}

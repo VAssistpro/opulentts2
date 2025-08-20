@@ -15,8 +15,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-98" />
 
         {/* Console Device Container */}
-        <div className="relative z-10 flex-1 p-1 lg:p-2 flex items-center justify-center">
-          <div className="w-full max-w-[95vw] h-[calc(100vh-40px)]">
+        <div className="relative z-10 flex-1 p-0 flex items-center justify-center">
+          <div className="w-full h-full max-w-none max-h-none">
             {/* Integrated Console Interface with Liquid Glass Effect */}
             <div className="liquid-glass-border overflow-hidden p-0 h-full relative pt-[0px] pb-[0px] pl-[0px] pr-[0px] mt-[0px] mb-[0px] ml-[0px] mr-[0px] text-[18px]"
                  style={{
@@ -103,7 +103,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                             loop
                             playsInline
                             preload="none"
-                            loading="lazy"
                             className="w-full h-full object-cover opacity-90"
                             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
                           >

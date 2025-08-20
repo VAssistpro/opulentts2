@@ -162,7 +162,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                         <img
                           src="https://opulentts.com/00.%20Logo%20V%20Assist%20Pro%20-Black.png"
                           alt="V Assist Pro Inc"
-                          className="h-4 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                          className="h-6 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                         />
                       </a>
                     </div>

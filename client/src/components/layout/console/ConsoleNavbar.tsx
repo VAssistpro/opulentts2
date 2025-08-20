@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDesktopNavigation } from '../../../contexts/DesktopNavigationContext';
-import { Home, Info, Briefcase, Car, Mail, User, Calendar, Power } from 'lucide-react';
+import { Home, Info, Briefcase, Car, Mail, User, Calendar, Power, Phone } from 'lucide-react';
 import LoginModal from '../LoginModal';
 
 const NAV_ITEMS = [

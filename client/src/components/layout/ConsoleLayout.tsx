@@ -18,7 +18,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
         <div className="relative z-10 flex-1 p-1 lg:p-2 flex items-center justify-center">
           <div className="w-full max-w-[95vw] h-[calc(100vh-40px)]">
             {/* Integrated Console Interface with Liquid Glass Effect */}
-            <div className="liquid-glass-border overflow-hidden p-0 h-full relative"
+            <div className="liquid-glass-border overflow-hidden p-0 h-full relative pt-[0px] pb-[0px] pl-[0px] pr-[0px] mt-[0px] mb-[0px] ml-[0px] mr-[0px] text-[18px]"
                  style={{
                    boxShadow: `
                      0 8px 32px rgba(0, 0, 0, 0.4),

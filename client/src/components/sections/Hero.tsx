@@ -48,21 +48,18 @@ const Hero = () => {
       </div>
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center px-3 py-2 w-full max-w-[906px] mx-auto mt-[8px] mb-[8px]">
-        {/* Premium Badge - Luxurious */}
+        {/* Elegant Badge */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="relative mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="mb-8"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-gold/40 via-yellow-300/20 to-gold/40 rounded-full blur-sm animate-pulse" />
-          <div className="relative px-8 py-3 bg-gradient-to-r from-gold/90 via-gold to-gold/90 
-                        backdrop-blur-xl border border-gold/50 rounded-full shadow-xl
-                        hover:shadow-[0_0_30px_rgba(147,113,39,0.5)] transition-all duration-300">
-            <span className="text-sm tracking-[0.2em] uppercase font-bold text-black/90 
-                           drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)]">
-              ✦ NEW YORK'S PREMIER LUXURY SERVICE ✦
-            </span>
+          <div className="inline-flex items-center px-6 py-2 bg-white/5 backdrop-blur-md 
+                        border border-white/20 rounded-full text-white/80 text-sm font-light tracking-wider">
+            <div className="w-2 h-2 bg-gold rounded-full mr-3 opacity-80" />
+            NEW YORK'S PREMIER LUXURY SERVICE
+            <div className="w-2 h-2 bg-gold rounded-full ml-3 opacity-80" />
           </div>
         </motion.div>
 
@@ -73,41 +70,35 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-4"
         >
-          <div className="relative">
-            <div className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight font-extrabold text-[50px]">
-              <span className="text-white">OPULENT </span>
-              <span className="bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent animate-pulse">
-                LUXURY
-              </span>
-              <span className="text-white"> TRANSPORT</span>
+          <div className="space-y-2">
+            <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-thin tracking-wide text-white 
+                          drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+              OPULENT
             </div>
-            <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 via-transparent to-gold/20 blur-xl opacity-50 animate-pulse" />
+            <div className="text-lg md:text-xl lg:text-2xl font-light tracking-[0.3em] text-gold/90 
+                          drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+              TRANSPORT SOLUTIONS
+            </div>
           </div>
         </motion.h1>
 
-        {/* Service Areas - Premium Glass Pills */}
+        {/* Service Areas - Minimal Pills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-8"
+          className="mb-12"
         >
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
             {['Manhattan', 'Brooklyn', 'Queens', 'JFK • LGA • EWR', 'Westchester • Long Island'].map((location, index) => (
-              <motion.span
+              <span
                 key={location}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-                className="relative px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl 
-                         border border-gold/30 rounded-full shadow-lg
-                         hover:from-gold/20 hover:to-gold/10 hover:border-gold/50 hover:shadow-gold/20
-                         transition-all duration-300 font-medium text-white cursor-pointer
-                         shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_rgba(147,113,39,0.2)]"
+                className="px-4 py-1.5 bg-white/5 border border-white/20 rounded-full 
+                         text-white/70 font-light tracking-wide
+                         hover:bg-white/10 hover:text-white transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-gold/5 to-transparent rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative z-10">{location}</span>
-              </motion.span>
+                {location}
+              </span>
             ))}
           </div>
         </motion.div>
@@ -121,22 +112,18 @@ const Hero = () => {
         >
           
 
-          <div className="relative max-w-3xl mx-auto">
-            <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-blue-400/10 to-gold/20 rounded-2xl blur-lg opacity-60" />
-            <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl 
-                          border border-gold/20 rounded-2xl p-8 shadow-[0_8px_40px_rgba(0,0,0,0.4)]">
-              <div className="text-lg text-white/90 text-center leading-relaxed space-y-4">
-                <p className="font-light">
-                  Experience unparalleled sophistication with our fleet of <span className="text-gold font-medium">premium vehicles</span>,
-                  professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
-                </p>
-                <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mx-auto" />
-                <p className="font-light">
-                  Join NYC's elite who trust <span className="text-gold font-medium">Opulent Transport</span> for their most important journeys.
-                  <br />
-                  <span className="text-gold/80 text-base">Discretion, punctuality, and unmatched comfort guaranteed.</span>
-                </p>
-              </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center text-white/80 text-lg font-light leading-relaxed space-y-6">
+              <p>
+                Experience unparalleled sophistication with our fleet of premium vehicles,
+                professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+              </p>
+              <div className="w-20 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent mx-auto" />
+              <p>
+                Join NYC's elite who trust Opulent Transport for their most important journeys.
+                <br />
+                <span className="text-gold/70 text-base">Discretion, punctuality, and unmatched comfort guaranteed.</span>
+              </p>
             </div>
           </div>
 
@@ -173,37 +160,24 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Premium Stats Cards */}
+        {/* Clean Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
-          className="mt-12"
+          className="mt-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             {[
-              { value: '24/7', label: 'Available', icon: '🕐' },
-              { value: '5.0★', label: 'Rating', icon: '⭐' },
-              { value: '10+', label: 'Years', icon: '🏆' },
-              { value: '100%', label: 'Satisfaction', icon: '✨' }
+              { value: '24/7', label: 'Available' },
+              { value: '5.0★', label: 'Rating' },
+              { value: '10+', label: 'Years' },
+              { value: '100%', label: 'Satisfaction' }
             ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: 1.1 + index * 0.1, duration: 0.6 }}
-                className="relative group"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-gold/30 via-gold/10 to-gold/30 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative text-center p-6 bg-gradient-to-br from-white/10 via-white/5 to-transparent 
-                              backdrop-blur-xl border border-gold/20 rounded-xl
-                              shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(147,113,39,0.15)]
-                              transition-all duration-300 hover:scale-105">
-                  <div className="text-3xl mb-2 opacity-60">{stat.icon}</div>
-                  <div className="text-gold text-2xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-white/70 text-sm font-medium">{stat.label}</div>
-                </div>
-              </motion.div>
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-thin text-white mb-2">{stat.value}</div>
+                <div className="text-sm text-white/60 font-light tracking-wider uppercase">{stat.label}</div>
+              </div>
             ))}
           </div>
         </motion.div>

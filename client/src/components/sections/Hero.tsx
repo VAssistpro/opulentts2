@@ -56,7 +56,7 @@ const Hero = () => {
           className="px-6 backdrop-blur-xl border border-gold/40 rounded-full mb-1.5 inline-block shadow-[0_8px_32px_rgba(0,0,0,0.8)] hover:bg-black/80 transition-all duration-300 bg-[#ebebe4a6] text-[#0d0b0b] pt-[7px] pb-[7px]"
           style={{paddingTop: "7px", paddingBottom: "7px"}}
         >
-          <span className="text-sm font-semibold tracking-wider uppercase text-gold drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
+          <span className="text-sm tracking-wider uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,1)] text-[#0f0e0e] font-bold">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★
           </span>
         </motion.div>

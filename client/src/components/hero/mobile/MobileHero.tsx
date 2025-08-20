@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Crown, Sparkles } from 'lucide-react';
+import { ArrowRight, Star, Crown, Sparkles, Phone } from 'lucide-react';
 import MobileHeroBackground from './MobileHeroBackground';
 import { useNavigationContext } from '../../../hooks/useNavigationContext';
 import LuxuryText from '../../ui/LuxuryText';
+import PremiumButton from '../../ui/PremiumButton';
 
 const MobileHero = () => {
   const { setActiveSection } = useNavigationContext();
@@ -152,47 +153,32 @@ const MobileHero = () => {
             </span>
           </LuxuryText>
 
-          {/* Call to Action Buttons */}
+          {/* Enhanced Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="mt-8 flex flex-col xs:flex-row gap-4 justify-center items-center"
+            className="mt-10 flex flex-col xs:flex-row gap-5 justify-center items-center"
           >
-            <button
+            <PremiumButton
+              variant="primary"
+              size="lg"
               onClick={handleBookNow}
-              className="group relative overflow-hidden bg-gradient-to-r from-gold to-gold-dark
-                       text-black font-bold py-4 px-8 rounded-xl
-                       shadow-[0_8px_32px_rgba(147,113,39,0.4)]
-                       hover:shadow-[0_12px_40px_rgba(147,113,39,0.6)]
-                       transform transition-all duration-300 ease-out
-                       min-w-[180px] border border-gold/30 will-change-transform
-                       hover:scale-[1.02] active:scale-[0.98]"
+              icon={<ArrowRight className="w-5 h-5" />}
+              className="transform hover:scale-[1.03] transition-all duration-300"
             >
-              <span className="relative z-10 flex items-center justify-center gap-2 will-change-transform">
-                Book Now
-                <ArrowRight className="w-5 h-5 transition-transform duration-300 ease-out group-hover:translate-x-1" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold
-                            opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out" />
-            </button>
+              Book Now
+            </PremiumButton>
 
-            <a
+            <PremiumButton
+              variant="secondary"
+              size="lg"
               href="tel:+15163245483"
-              className="group relative overflow-hidden bg-transparent border-2 border-white/30
-                       text-white font-bold py-4 px-8 rounded-xl
-                       backdrop-blur-md hover:border-gold/50
-                       transform hover:scale-[1.02] transition-all duration-300 ease-out
-                       min-w-[180px] hover:bg-white/10 will-change-transform"
+              icon={<Phone className="w-5 h-5" />}
+              className="transform hover:scale-[1.03] transition-all duration-300"
             >
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                Call Now
-                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" 
-                     fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-              </span>
-            </a>
+              Call Now
+            </PremiumButton>
           </motion.div>
 
           {/* Service Areas */}
@@ -210,19 +196,38 @@ const MobileHero = () => {
             >
               ✦ Premium Chauffeur Services ✦
             </LuxuryText>
-            <div className="flex flex-wrap justify-center gap-3 text-sm text-white/90">
-              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
-                Manhattan
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
-                Brooklyn
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
-                Queens
-              </span>
-              <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
-                JFK • LGA • EWR
-              </span>
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              {['Manhattan', 'Brooklyn', 'Queens', 'JFK • LGA • EWR'].map((area, index) => (
+                <motion.span
+                  key={area}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.7 + index * 0.1, duration: 0.5 }}
+                  className="relative px-5 py-2.5 rounded-full font-medium text-white/95
+                           bg-gradient-to-r from-gold/25 via-gold/20 to-gold/15
+                           border border-gold/40 backdrop-blur-sm
+                           shadow-[0_4px_16px_rgba(147,113,39,0.2)]
+                           hover:border-gold/60 hover:bg-gradient-to-r hover:from-gold/35 hover:to-gold/25
+                           transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  {area}
+
+                  {/* Subtle glow effect */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full bg-gold/20 opacity-0 hover:opacity-100"
+                    animate={{
+                      opacity: [0, 0.3, 0],
+                      scale: [0.95, 1.05, 0.95],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: index * 0.5,
+                    }}
+                  />
+                </motion.span>
+              ))}
             </div>
           </motion.div>
         </motion.div>

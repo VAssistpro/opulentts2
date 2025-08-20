@@ -118,8 +118,17 @@ const Hero = () => {
           
 
           <p className="md:text-lg text-white max-w-2xl mx-auto drop-shadow-[0_4px_15px_rgba(0,0,0,1)] [text-shadow:0_0_30px_rgba(0,0,0,1),_0_4px_15px_rgba(0,0,0,1)] text-center text-[18px] font-medium leading-relaxed bg-black/20 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/10">
-            Experience unparalleled sophistication with our fleet of premium vehicles,
-            professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+            <p>
+              Experience unparalleled sophistication with our fleet of premium vehicles,
+              professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              Join NYC's elite who trust Opulent Transport for their most important journeys.
+              Discretion, punctuality, and unmatched comfort guaranteed.
+            </p>
           </p>
 
 
@@ -131,12 +140,7 @@ const Hero = () => {
             transition={{ delay: 1.0, duration: 0.8 }}
             className="space-y-5"
           >
-            <div className="space-y-2">
-              <p className="text-white text-sm md:text-base max-w-xl mx-auto leading-relaxed font-semibold text-center bg-black/30 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10 drop-shadow-[0_4px_12px_rgba(0,0,0,1)]">
-                Join NYC's elite who trust Opulent Transport for their most important journeys.
-                Discretion, punctuality, and unmatched comfort guaranteed.
-              </p>
-            </div>
+            <div />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

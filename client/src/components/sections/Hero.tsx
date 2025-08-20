@@ -53,7 +53,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="px-6 py-3 bg-black/70 backdrop-blur-xl border border-gold/40 rounded-full text-white mb-6 inline-block
+          className="px-6 py-1.5 bg-black/70 backdrop-blur-xl border border-gold/40 rounded-full text-white mb-3.5 inline-block
                      shadow-[0_8px_32px_rgba(0,0,0,0.8)] hover:bg-black/80 transition-all duration-300"
         >
           <span className="text-sm font-semibold tracking-wider uppercase text-gold drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">

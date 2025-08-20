@@ -49,7 +49,7 @@ const ConsoleNavbar: React.FC = () => {
                         text-xs font-mono text-white/90 hover:text-white"
              style={{ borderRadius: '4px', overflow: 'hidden' }}>
           <Phone className="w-3 h-3" />
-          <span className="font-semibold">(516) 324-5483</span>
+          <span className="font-medium">(516) 324-5483</span>
         </div>
       </div>
       {/* Center - Streamlined Navigation */}

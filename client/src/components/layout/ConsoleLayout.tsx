@@ -66,8 +66,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Left Control Panel - Logo + Testimonials */}
                   <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/30
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
-                    {/* Extended Logo Area - positioned to extend upward */}
-                    <div className="absolute -top-4 left-0 right-0 h-32 bg-black/20 flex flex-col justify-center items-center z-10 rounded-t-lg mt-[9px] mb-[9px] pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[6px] mr-[6px]">
+                    {/* Extended Logo Area - positioned to extend to top edge */}
+                    <div className="absolute top-0 left-0 right-0 h-32 bg-black/20 flex flex-col justify-center items-center z-10 rounded-t-lg">
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"

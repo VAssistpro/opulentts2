@@ -151,7 +151,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                       <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
                     </div>
 
-                    {/* Center - Powered by V Assist Pro */}
+                    {/* Center - Empty or other content */}
+                    <div className="flex items-center gap-2">
+                      {/* Center space for future content */}
+                    </div>
+
+                    {/* Right - Powered by V Assist Pro */}
                     <div className="flex items-center gap-2">
                       <a
                         href="https://www.virtualassistancepro.com"
@@ -166,11 +171,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                           className="h-6 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                         />
                       </a>
-                    </div>
-
-                    {/* Right - Phone & Status */}
-                    <div className="flex items-center gap-2">
-                      <span className="text-white/60">(516) 324-5483</span>
                       <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
                     </div>
                   </div>

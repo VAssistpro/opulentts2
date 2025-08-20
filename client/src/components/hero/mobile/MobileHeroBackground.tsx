@@ -16,6 +16,9 @@ const MobileHeroBackground = () => {
           muted
           loop
           playsInline
+          preload="none"
+          loading="lazy"
+          poster="https://opulentts.com/mobbgimg/ts1656.jpg"
           className="w-full h-full object-cover scale-110"
           style={{
             width: '100%',
@@ -25,7 +28,7 @@ const MobileHeroBackground = () => {
             transform: 'scale(1.1)'
           }}
         >
-          <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
+          <source src="https://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
           {/* Fallback image for devices that can't play video */}
           <img 
             src="https://opulentts.com/mobbgimg/ts1656.jpg"

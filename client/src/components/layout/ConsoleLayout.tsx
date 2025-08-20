@@ -66,8 +66,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Left Control Panel - Logo + Testimonials */}
                   <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/30
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
-                    {/* Extended Logo Area - positioned to extend upward */}
-                    <div className="absolute -top-4 left-0 right-0 h-32 bg-black/20 flex flex-col justify-center items-center z-10 rounded-t-lg mt-[9px] mb-[9px] pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[6px] mr-[6px]">
+                    {/* Extended Logo Area - positioned to extend to top edge */}
+                    <div className="absolute top-0 left-0 right-0 h-32 bg-black/20 flex flex-col justify-center items-center z-10 rounded-t-lg">
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"
@@ -103,11 +103,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                             loop
                             playsInline
                             preload="none"
+                            loading="lazy"
                             className="w-full h-full object-cover opacity-90"
                             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
                           >
                             <source
-                              src="http://opulentts.com/bgvideo/otsbgvido2.mp4"
+                              src="https://opulentts.com/bgvideo/otsbgvido2.mp4"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -150,7 +151,12 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                       <span className="text-white/60">© {new Date().getFullYear()} OPULENT TRANSPORT SOLUTIONS</span>
                     </div>
 
-                    {/* Center - Powered by V Assist Pro */}
+                    {/* Center - Empty or other content */}
+                    <div className="flex items-center gap-2">
+                      {/* Center space for future content */}
+                    </div>
+
+                    {/* Right - Powered by V Assist Pro */}
                     <div className="flex items-center gap-2">
                       <a
                         href="https://www.virtualassistancepro.com"
@@ -165,11 +171,6 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                           className="h-6 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                         />
                       </a>
-                    </div>
-
-                    {/* Right - Phone & Status */}
-                    <div className="flex items-center gap-2">
-                      <span className="text-white/60">(516) 324-5483</span>
                       <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
                     </div>
                   </div>

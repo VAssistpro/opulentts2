@@ -53,7 +53,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                    }}>
                 
                 {/* Top Control Panel - Navbar with Subtle Glass Effect */}
-                <div className="backdrop-blur-sm border-b border-gold/30 rounded-t-xl"
+                <div className="backdrop-blur-sm border-b border-gold/30 rounded-t-xl pt-[2px] pb-[2px]"
                      style={{
                        background: 'rgba(10, 15, 26, 0.6)',
                        backdropFilter: 'blur(20px)',

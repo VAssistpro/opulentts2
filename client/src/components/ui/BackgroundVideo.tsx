@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { VIDEO_CONFIG } from '../../config/video';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const BackgroundVideo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const isIntersecting = useIntersectionObserver(containerRef, {
+    threshold: 0.1,
+    rootMargin: '50px'
+  });
 
   const handleLoadedData = () => {
     setIsLoading(false);
@@ -14,8 +23,20 @@ const BackgroundVideo = () => {
     setHasError(true);
   };
 
+  useEffect(() => {
+    if (isIntersecting && !shouldLoad) {
+      setShouldLoad(true);
+    }
+  }, [isIntersecting, shouldLoad]);
+
+  useEffect(() => {
+    if (shouldLoad && videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [shouldLoad]);
+
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
+    <div ref={containerRef} className="absolute inset-0 w-full h-full overflow-hidden">
       <div className="relative w-full h-full">
         {/* Loading placeholder */}
         {isLoading && (
@@ -33,11 +54,13 @@ const BackgroundVideo = () => {
         )}
 
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
+          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
           onLoadedData={handleLoadedData}
           onError={handleError}
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
@@ -49,7 +72,7 @@ const BackgroundVideo = () => {
             opacity: isLoading ? 0 : 1
           }}
         >
-          <source src={VIDEO_CONFIG.videoUrl} type="video/mp4" />
+          {shouldLoad && <source src={VIDEO_CONFIG.videoUrl} type="video/mp4" />}
           Your browser does not support the video tag.
         </video>
         

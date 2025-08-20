@@ -153,7 +153,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Enhanced Bottom Status Bar with Footer Info */}
-                <div className="bg-black/60 backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px]">
+                <div className="backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px] bg-[#0d121e]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Copyright */}
                     <div className="flex items-center gap-2">

@@ -69,10 +69,8 @@ const Hero = () => {
           className="mb-4"
         >
           <div
-            className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight font-bold text-[38px] text-white"
-          >
-            OPULENT SOLUTIONS
-          </div>
+            className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight text-white font-extrabold text-[50px]"
+          >OPULENT TRANSPORT SOLUTIONS</div>
         </motion.h1>
 
         {/* Service Areas - Enhanced Pills - Right Under Title */}

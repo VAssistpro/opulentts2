@@ -47,14 +47,15 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-black/60 blur-2xl z-10 pointer-events-none" />
       </div>
       {/* Professional Hero Content - Properly Scaled */}
-      <div className="relative z-20 text-center p-4 pb-12 w-full max-w-[906px] mx-auto mt-[38px] mb-[38px]">
+      <div className="relative z-20 text-center px-3 py-2 w-full max-w-[906px] mx-auto mt-[8px] mb-[8px]">
         {/* Premium Badge - Enhanced */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="px-6 py-3 bg-black/70 backdrop-blur-xl border border-gold/40 rounded-full text-white mb-6 inline-block
+          className="px-6 bg-black/70 backdrop-blur-xl border border-gold/40 rounded-full text-white mb-1.5 inline-block
                      shadow-[0_8px_32px_rgba(0,0,0,0.8)] hover:bg-black/80 transition-all duration-300"
+          style={{paddingTop: "7px", paddingBottom: "7px"}}
         >
           <span className="text-sm font-semibold tracking-wider uppercase text-gold drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★
@@ -113,13 +114,22 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="bg-[#69656500] mt-[10px] mb-[10px] pt-[1px] pb-[1px]"
+          className="bg-[#69656500] mt-[6px] mb-[6px] pt-[1px] pb-[1px]"
         >
           
 
-          <p className="md:text-lg text-white max-w-2xl mx-auto drop-shadow-[0_4px_15px_rgba(0,0,0,1)] [text-shadow:0_0_30px_rgba(0,0,0,1),_0_4px_15px_rgba(0,0,0,1)] text-center text-[18px] font-medium leading-relaxed bg-black/20 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/10">
-            Experience unparalleled sophistication with our fleet of premium vehicles,
-            professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+          <p className="md:text-lg text-white max-w-2xl mx-auto drop-shadow-[0_4px_15px_rgba(0,0,0,1)] [text-shadow:0_0_30px_rgba(0,0,0,1),_0_4px_15px_rgba(0,0,0,1)] text-center text-[18px] font-medium leading-relaxed bg-black/20 backdrop-blur-sm rounded-xl border border-white/10" style={{padding: "6px 5px 6px 4px"}}>
+            <p>
+              Experience unparalleled sophistication with our fleet of premium vehicles,
+              professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              Join NYC's elite who trust Opulent Transport for their most important journeys.
+              Discretion, punctuality, and unmatched comfort guaranteed.
+            </p>
           </p>
 
 
@@ -131,18 +141,14 @@ const Hero = () => {
             transition={{ delay: 1.0, duration: 0.8 }}
             className="space-y-5"
           >
-            <div className="space-y-2">
-              <p className="text-white text-sm md:text-base max-w-xl mx-auto leading-relaxed font-semibold text-center bg-black/30 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10 drop-shadow-[0_4px_12px_rgba(0,0,0,1)]">
-                Join NYC's elite who trust Opulent Transport for their most important journeys.
-                Discretion, punctuality, and unmatched comfort guaranteed.
-              </p>
-            </div>
+            <div />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+              style={{marginTop: "8px"}}
             >
               <GlassmorphicBookButton onClick={() => handleScrollToSection("book")} />
             </motion.div>
@@ -152,6 +158,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 0.8 }}
               className="text-white/60 text-xs"
+              style={{marginTop: "8px"}}
             >
               Available 24/7 • Instant confirmation • No hidden fees
             </motion.p>
@@ -164,7 +171,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden

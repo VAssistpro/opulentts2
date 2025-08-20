@@ -36,7 +36,8 @@ const ConsoleNavbar: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm ml-[13px] mr-[13px] pt-[7px] pb-[7px] pl-[5px] pr-[5px] mt-[1px] mb-[1px]">
+    <div className="flex items-center justify-between p-2 backdrop-blur-sm ml-[13px] mr-[13px] pt-[7px] pb-[7px] pl-[5px] pr-[5px] mt-[1px] mb-[1px]"
+         style={{ background: 'rgba(10, 15, 26, 0.6)' }}>
       {/* Left Side - Phone Number */}
       <div className="w-56 flex items-center">
         <div className="relative flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg

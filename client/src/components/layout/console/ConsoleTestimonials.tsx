@@ -49,7 +49,7 @@ const ConsoleTestimonials = () => {
   return (
     <div className="space-y-3">
       {/* Console Display Header */}
-      <div className="bg-black/60 rounded-lg p-3 border border-gold/20 pt-[6px] pb-[6px]">
+      <div className="rounded-lg p-3 border border-gold/20 pt-[6px] pb-[6px]" style={{ background: 'rgba(10, 15, 26, 0.6)' }}>
         <div className="flex items-center justify-between mb-2">
           <div className="text-xs text-gold/80 font-mono">CUSTOMER TESTIMONIALS</div>
           <div className="flex gap-1">
@@ -61,7 +61,8 @@ const ConsoleTestimonials = () => {
         
       </div>
       {/* Main Testimonial Display */}
-      <div className="bg-gradient-to-br from-black/80 to-black/60 rounded-lg p-4 border border-gold/30 shadow-inner min-h-[280px] flex flex-col">
+      <div className="rounded-lg p-4 border border-gold/30 shadow-inner min-h-[280px] flex flex-col"
+           style={{ background: 'linear-gradient(to bottom right, rgba(10, 15, 26, 0.8) 0%, rgba(10, 15, 26, 0.6) 100%)' }}>
         {/* Rating Display */}
         <div className="flex items-center gap-2 mb-3 bg-[#ede6e600]">
           <div className="flex gap-1 bg-[#ede4e400]">

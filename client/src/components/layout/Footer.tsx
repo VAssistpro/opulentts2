@@ -6,7 +6,8 @@ const Footer = ({ className }: { className?: string }) => {
     <footer className="relative z-[50] w-full flex-shrink-0 mt-1 mx-auto max-w-full overflow-hidden">
       {/* Console-style footer with golden accent */}
       <div className="max-w-[95vw] mx-auto px-2">
-        <div className="bg-black/80 backdrop-blur-xl rounded-lg border border-gold/30 shadow-[0_0_20px_rgba(147,113,39,0.2)] p-3 pt-[0px] pb-[0px]">
+        <div className="backdrop-blur-xl rounded-lg border border-gold/30 shadow-[0_0_20px_rgba(147,113,39,0.2)] p-3 pt-[0px] pb-[0px]"
+             style={{ background: 'rgba(10, 15, 26, 0.8)' }}>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-2 text-center lg:text-left">
             {/* Left - Copyright with console styling */}
             <div className="text-xs text-gold/80 font-mono flex-shrink-0 flex items-center gap-2">
@@ -16,7 +17,8 @@ const Footer = ({ className }: { className?: string }) => {
 
             {/* Center - Developer credits with console aesthetic */}
             <div className="order-first lg:order-none mb-1 lg:mb-0 flex-shrink-0">
-              <div className="flex items-center justify-center gap-2 bg-black/60 rounded px-3 py-1 border border-gold/20">
+              <div className="flex items-center justify-center gap-2 rounded px-3 py-1 border border-gold/20"
+                   style={{ background: 'rgba(10, 15, 26, 0.6)' }}>
                 <span className="text-xs text-white/70 font-mono">POWERED BY</span>
                 <a
                   href="https://www.virtualassistancepro.com"
@@ -46,12 +48,13 @@ const Footer = ({ className }: { className?: string }) => {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="lg:hidden absolute right-4 top-0 -translate-y-1/2 p-2 rounded-lg 
-                 bg-black/80 border border-gold/30 text-gold
+                 border border-gold/30 text-gold
                  hover:bg-gold/20 hover:border-gold/50
                  transition-all duration-300 group
                  shadow-[0_0_15px_rgba(147,113,39,0.3)]
                  hover:shadow-[0_0_25px_rgba(147,113,39,0.5)]
                  focus:outline-none focus:ring-2 focus:ring-gold/50 backdrop-blur-sm"
+        style={{ background: 'rgba(10, 15, 26, 0.8)' }}
         aria-label="Back to top"
       >
         <ArrowUp className="w-4 h-4 group-hover:animate-bounce" />

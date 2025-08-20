@@ -37,9 +37,12 @@ const ConsoleNavbar: React.FC = () => {
 
   return (
     <div className="flex items-center justify-between p-2 bg-black/60 backdrop-blur-sm ml-[13px] mr-[13px] pt-[7px] pb-[7px] pl-[5px] pr-[5px] mt-[1px] mb-[1px]">
-      {/* Left Side - Expanded for Logo */}
+      {/* Left Side - Phone Number */}
       <div className="w-56 flex items-center">
-        {/* Logo will be placed in the left panel instead */}
+        <div className="flex items-center gap-2 text-xs font-mono">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <span className="text-white/90 font-semibold">(516) 324-5483</span>
+        </div>
       </div>
       {/* Center - Streamlined Navigation */}
       <div className="flex items-center gap-1">

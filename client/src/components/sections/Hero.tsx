@@ -171,7 +171,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] max-w-2xl mx-auto mt-[7px] mb-[7px] ml-[114.5px] mr-[114.5px]">
             <div className="text-center p-3 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-lg
                           shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_1px_3px_rgba(0,0,0,0.3),0_8px_32px_rgba(0,0,0,0.37)]
                           hover:bg-white/[0.05] hover:border-gold/20 transition-all duration-300 overflow-hidden

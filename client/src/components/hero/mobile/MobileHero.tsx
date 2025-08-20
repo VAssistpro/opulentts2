@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star, Crown, Sparkles } from 'lucide-react';
 import MobileHeroBackground from './MobileHeroBackground';
 import { useNavigationContext } from '../../../hooks/useNavigationContext';
+import LuxuryText from '../../ui/LuxuryText';
 
 const MobileHero = () => {
   const { setActiveSection } = useNavigationContext();
@@ -25,47 +26,131 @@ const MobileHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-[90vw] sm:max-w-lg mx-auto"
         >
-          <h1 className="font-playfair text-white">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="block text-2xl xs:text-3xl sm:text-4xl font-bold tracking-wide leading-tight
-                       drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
+          {/* Enhanced Brand Title */}
+          <div className="relative">
+            {/* Decorative crown icon */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
+              className="absolute -top-8 left-1/2 transform -translate-x-1/2"
             >
-              OPULENT{' '}
-              <span className="text-gold">TRANSPORT</span>{' '}
-              SOLUTIONS
-            </motion.span>
-          </h1>
+              <Crown className="w-8 h-8 text-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.6)]" />
+            </motion.div>
 
+            <LuxuryText
+              variant="hero"
+              delay={0.3}
+              className="text-2xl xs:text-3xl sm:text-4xl text-center leading-[1.1]"
+            >
+              <span className="block mb-1">
+                OPULENT{' '}
+                <span className="relative inline-block">
+                  <span className="text-gold bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
+                               drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]">
+                    TRANSPORT
+                  </span>
+                  <motion.div
+                    className="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-lg blur-lg"
+                    animate={{
+                      opacity: [0.3, 0.6, 0.3],
+                      scale: [0.95, 1.05, 0.95],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                </span>
+              </span>
+              <span className="block text-xl xs:text-2xl sm:text-3xl font-semibold tracking-[0.2em] mt-2">
+                SOLUTIONS
+              </span>
+            </LuxuryText>
+          </div>
+
+          {/* Enhanced Decorative Divider */}
           <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="w-24 h-0.5 mx-auto my-8 bg-gradient-to-r from-transparent via-gold to-transparent
-                     shadow-[0_0_10px_rgba(147,113,39,0.5)]"
-          />
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 0.7, duration: 1.2, ease: "easeOut" }}
+            className="relative mx-auto my-8 flex items-center justify-center"
+          >
+            <div className="flex items-center space-x-3">
+              <Sparkles className="w-4 h-4 text-gold/80" />
+              <div className="relative">
+                <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent
+                             shadow-[0_0_15px_rgba(147,113,39,0.7)]" />
+                <motion.div
+                  className="absolute inset-0 w-32 h-0.5 bg-gradient-to-r from-transparent via-gold-lighter to-transparent"
+                  animate={{
+                    opacity: [0.3, 0.8, 0.3],
+                    scaleX: [0.8, 1.1, 0.8],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              </div>
+              <Sparkles className="w-4 h-4 text-gold/80" />
+            </div>
+          </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          {/* Premium Service Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 1.0, duration: 0.8 }}
-            className="mt-6 text-lg xs:text-xl sm:text-2xl text-white/95 font-medium leading-relaxed
-                     tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+            className="mt-6 relative"
           >
-            <span className="text-gold font-semibold">★ NEW YORK'S PREMIER LUXURY SERVICE ★</span>
-          </motion.p>
+            <div className="relative px-6 py-3 mx-auto max-w-fit rounded-2xl
+                          bg-gradient-to-r from-gold/20 via-gold/30 to-gold/20
+                          border border-gold/40 backdrop-blur-md
+                          shadow-[0_8px_32px_rgba(147,113,39,0.3)]"
+            >
+              <div className="flex items-center justify-center space-x-2">
+                <Star className="w-5 h-5 text-gold fill-gold" />
+                <LuxuryText
+                  variant="subtitle"
+                  animated={false}
+                  className="text-lg xs:text-xl font-bold tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent"
+                >
+                  NEW YORK'S PREMIER LUXURY SERVICE
+                </LuxuryText>
+                <Star className="w-5 h-5 text-gold fill-gold" />
+              </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
-            className="mt-4 text-base xs:text-lg text-white/90 font-normal leading-relaxed
-                     tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              {/* Animated border glow */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl border border-gold/60"
+                animate={{
+                  opacity: [0.4, 0.8, 0.4],
+                  scale: [0.98, 1.02, 0.98],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            </div>
+          </motion.div>
+
+          <LuxuryText
+            variant="body"
+            delay={1.1}
+            className="mt-6 text-base xs:text-lg leading-relaxed text-center max-w-md mx-auto"
           >
-            Experience luxury, arrive in style.
-          </motion.p>
+            <span className="block mb-2 text-white/95 font-medium">
+              Experience unparalleled sophistication
+            </span>
+            <span className="text-gold/90 font-light italic">
+              — where luxury meets excellence —
+            </span>
+          </LuxuryText>
 
           {/* Call to Action Buttons */}
           <motion.div
@@ -117,9 +202,14 @@ const MobileHero = () => {
             transition={{ delay: 1.5, duration: 0.8 }}
             className="mt-12 text-center"
           >
-            <p className="text-white/80 text-sm font-semibold mb-3 tracking-wider uppercase">
-              Premium Chauffeur Services
-            </p>
+            <LuxuryText
+              variant="caption"
+              animated={false}
+              className="text-sm font-bold mb-4 tracking-[0.15em] uppercase text-center
+                       bg-gradient-to-r from-white/70 via-white/90 to-white/70 bg-clip-text text-transparent"
+            >
+              ✦ Premium Chauffeur Services ✦
+            </LuxuryText>
             <div className="flex flex-wrap justify-center gap-3 text-sm text-white/90">
               <span className="px-4 py-2 bg-gradient-to-r from-gold/20 to-gold/10 rounded-full backdrop-blur-sm border border-gold/30 font-medium">
                 Manhattan

@@ -40,22 +40,23 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         {/* Enhanced overlay for optimal text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_5%,rgba(0,0,0,0.6)_30%,rgba(0,0,0,0.8)_70%)] z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />
-        {/* Additional text backdrop for central content area */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-black/40 blur-xl z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/90 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_5%,rgba(0,0,0,0.7)_30%,rgba(0,0,0,0.9)_70%)] z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" />
+        {/* Strong text backdrop for central content area */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-black/60 blur-2xl z-10 pointer-events-none" />
       </div>
       {/* Professional Hero Content - Properly Scaled */}
       <div className="relative z-20 text-center p-4 pb-12 w-full max-w-[906px] mx-auto mt-[38px] mb-[38px]">
-        {/* Premium Badge - Compact */}
+        {/* Premium Badge - Enhanced */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 text-white/90 mb-4 inline-block"
+          className="px-6 py-3 bg-black/70 backdrop-blur-xl border border-gold/40 rounded-full text-white mb-6 inline-block
+                     shadow-[0_8px_32px_rgba(0,0,0,0.8)] hover:bg-black/80 transition-all duration-300"
         >
-          <span className="text-xs font-medium tracking-wider uppercase">
+          <span className="text-sm font-semibold tracking-wider uppercase text-gold drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
             ★ NEW YORK'S PREMIER LUXURY SERVICE ★
           </span>
         </motion.div>
@@ -68,11 +69,12 @@ const Hero = () => {
           className="mb-4"
         >
           <div
-            className="md:text-3xl lg:text-4xl xl:text-5xl drop-shadow-[0_8px_20px_rgba(0,0,0,1)] [text-shadow:0_0_40px_rgba(0,0,0,0.8),_0_8px_20px_rgba(0,0,0,1)] tracking-tight mt-[4px] mb-[4px] font-bold text-[34px] text-[#c9c3c3]"
+            className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight font-bold text-[38px] text-white"
           >
             OPULENT{' '}
             <span
-              className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark bg-clip-text drop-shadow-none text-[#dbd9d9f7]"
+              className="bg-gradient-to-r from-gold via-gold to-gold bg-clip-text text-transparent drop-shadow-[0_8px_25px_rgba(0,0,0,1)]"
+              style={{ textShadow: '0 0 40px rgba(147,113,39,0.8), 0 8px 25px rgba(0,0,0,1)' }}
             >
               TRANSPORT
             </span>{' '}
@@ -115,7 +117,7 @@ const Hero = () => {
         >
           
 
-          <p className="md:text-lg text-white/95 max-w-2xl mx-auto drop-shadow-[0_3px_10px_rgba(0,0,0,1)] [text-shadow:0_0_20px_rgba(0,0,0,0.8),_0_3px_10px_rgba(0,0,0,1)] text-center pt-[2px] pb-[2px] text-[16px] mt-[2px] mb-[2px] ml-[67.5px] mr-[67.5px] pl-[5px] pr-[5px] font-medium">
+          <p className="md:text-lg text-white max-w-2xl mx-auto drop-shadow-[0_4px_15px_rgba(0,0,0,1)] [text-shadow:0_0_30px_rgba(0,0,0,1),_0_4px_15px_rgba(0,0,0,1)] text-center text-[18px] font-medium leading-relaxed bg-black/20 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/10">
             Experience unparalleled sophistication with our fleet of premium vehicles,
             professional chauffeurs, and white-glove service that sets the standard for luxury transportation.
           </p>
@@ -130,7 +132,7 @@ const Hero = () => {
             className="space-y-5"
           >
             <div className="space-y-2">
-              <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-[2px] mb-[2px] bg-[#a6a2a200] font-semibold pl-[0px] pr-[0px] text-center ml-[67.375px] mr-[67.375px]">
+              <p className="text-white text-sm md:text-base max-w-xl mx-auto leading-relaxed font-semibold text-center bg-black/30 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10 drop-shadow-[0_4px_12px_rgba(0,0,0,1)]">
                 Join NYC's elite who trust Opulent Transport for their most important journeys.
                 Discretion, punctuality, and unmatched comfort guaranteed.
               </p>

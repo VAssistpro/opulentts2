@@ -71,7 +71,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"
-                        className="h-20 w-auto object-contain opacity-90 mb-3"
+                        className="h-24 w-auto object-contain opacity-90"
                       />
                     </div>
                     {/* Spacer for logo */}

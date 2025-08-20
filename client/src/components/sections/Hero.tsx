@@ -147,6 +147,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+              style={{marginTop: "8px"}}
             >
               <GlassmorphicBookButton onClick={() => handleScrollToSection("book")} />
             </motion.div>

@@ -113,7 +113,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="bg-[#69656500] mt-[10px] mb-[10px] pt-[1px] pb-[1px]"
+          className="bg-[#69656500] mt-[6px] mb-[6px] pt-[1px] pb-[1px]"
         >
           
 

@@ -4,7 +4,7 @@ const ShimmerBackground = () => {
   return (
     <div className="fixed inset-0 z-10 pointer-events-none overflow-hidden">
       {/* Simplified foundation layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#000512] via-[#001224] to-[#000512]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#000205] via-[#000814] to-[#000205]" />
       
       {/* Blue light beams - MUCH MORE PROMINENT - vertical on left and right, horizontal on top */}
       

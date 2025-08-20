@@ -12,7 +12,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <ErrorBoundary>
       <div className="relative min-h-screen bg-black text-text-primary flex flex-col">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-98" />
 
         {/* Console Device Container */}
         <div className="relative z-10 flex-1 p-1 lg:p-2 flex items-center justify-center">

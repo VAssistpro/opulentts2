@@ -71,14 +71,7 @@ const Hero = () => {
           <div
             className="md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_10px_30px_rgba(0,0,0,1)] [text-shadow:0_0_60px_rgba(0,0,0,1),_0_10px_30px_rgba(0,0,0,1)] tracking-tight font-bold text-[38px] text-white"
           >
-            OPULENT{' '}
-            <span
-              className="bg-gradient-to-r from-gold via-gold to-gold bg-clip-text text-transparent drop-shadow-[0_8px_25px_rgba(0,0,0,1)]"
-              style={{ textShadow: '0 0 40px rgba(147,113,39,0.8), 0 8px 25px rgba(0,0,0,1)' }}
-            >
-              TRANSPORT
-            </span>{' '}
-            SOLUTIONS
+            OPULENT SOLUTIONS
           </div>
         </motion.h1>
 

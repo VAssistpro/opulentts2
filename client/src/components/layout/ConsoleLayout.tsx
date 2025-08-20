@@ -64,21 +64,21 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 {/* Main Console Body */}
                 <div className="flex flex-1">
                   {/* Left Control Panel - Logo + Testimonials */}
-                  <div className="w-56 bg-black/30 backdrop-blur-sm flex relative border-r border-gold/30
+                  <div className="w-56 bg-black/30 backdrop-blur-sm flex flex-col relative border-r border-gold/30
                                 shadow-[inset_1px_0_2px_rgba(0,0,0,0.6),1px_0_2px_rgba(147,113,39,0.1)]">
-                    {/* Logo Section */}
-                    <div className="w-20 flex flex-col items-center justify-start bg-black/20 pt-4 pb-2 border-r border-gold/20">
+                    {/* Extended Logo Area - positioned to extend upward */}
+                    <div className="absolute -top-4 left-0 right-0 h-32 bg-black/20 flex flex-col justify-center items-center z-10 rounded-t-lg mt-[9px] mb-[9px] pt-[0px] pb-[0px] pl-[0px] pr-[0px] ml-[6px] mr-[6px]">
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"
-                        className="h-16 w-auto object-contain opacity-90 mb-2"
+                        className="h-20 w-auto object-contain opacity-90 mb-3"
                       />
-                      {/* Vertical divider line */}
-                      <div className="w-px h-8 bg-gradient-to-b from-gold/60 via-gold/40 to-transparent"></div>
+                      {/* Vertical divider line below logo */}
+                      <div className="w-px h-6 bg-gradient-to-b from-gold/60 via-gold/40 to-transparent"></div>
                     </div>
-                    
-                    {/* Testimonials Section */}
-                    <div className="flex-1 flex flex-col p-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
+                    {/* Spacer for logo */}
+                    <div className="h-32 bg-black/20"></div>
+                    <div className="flex-1 p-2 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)]">
                       <ConsoleTestimonials />
                     </div>
                   </div>

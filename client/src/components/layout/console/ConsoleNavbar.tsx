@@ -60,7 +60,7 @@ const ConsoleNavbar: React.FC = () => {
             <button
               key={section}
               onClick={() => handleNavItemClick(section)}
-              className="relative flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-300 pt-[6px] pb-[6px] z-10 bg-gold/20 border border-gold/40 text-gold shadow-[0_0_8px_rgba(147,113,39,0.3)] scale-105 pl-[13px] pr-[13px]"
+              className="relative flex items-center px-2 py-1 rounded text-xs font-mono transition-all duration-300 pt-[6px] pb-[6px] z-10 border border-gold/40 shadow-[0_0_8px_rgba(147,113,39,0.3)] scale-105 ml-[6px] mr-[6px] pl-[19px] pr-[19px] text-[#a27822] bg-[#0c111d]"
               title={label}
             >
               <Icon className="w-3 h-3" />

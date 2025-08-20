@@ -46,7 +46,7 @@ const ConsoleNavbar: React.FC = () => {
                         transform hover:scale-[1.02] active:scale-[0.98]
                         before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:pointer-events-none before:rounded-lg
                         text-xs font-mono text-white/90 hover:text-white">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <Phone className="w-3 h-3" />
           <span className="font-semibold">(516) 324-5483</span>
         </div>
       </div>

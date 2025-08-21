@@ -81,7 +81,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     </div>
                     {/* Spacer for logo */}
                     <div className="h-32" style={{ background: 'rgba(10, 15, 26, 0.2)' }}></div>
-                    <div className="flex-1 p-2" style={{ boxShadow: 'inset 0 1px 2px rgba(10,15,26,0.6), 0 -1px 2px rgba(147,113,39,0.1)' }}>
+                    <div className="flex-1 p-2" style={{ boxShadow: 'inset 0 1px 2px rgba(10,15,26,0.6), 0 -1px 2px rgba(147,113,39,0.1)', backgroundColor: '#030407' }}>
                       <ConsoleTestimonials />
                     </div>
                   </div>
@@ -153,7 +153,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Enhanced Bottom Status Bar with Footer Info */}
-                <div className="backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px] bg-[#0d121e]">
+                <div className="backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px] bg-[#030407]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Copyright */}
                     <div className="flex items-center gap-2">

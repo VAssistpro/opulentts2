@@ -97,6 +97,8 @@ const getSectionStyles = (section: string): string => {
       return `${baseStyles} h-screen`;
     case 'fleet':
       return `${baseStyles} h-screen`;
+    case 'testimonials':
+      return `${baseStyles} h-screen`;
     case 'contact':
       return `${baseStyles} h-screen`;
     case 'book':

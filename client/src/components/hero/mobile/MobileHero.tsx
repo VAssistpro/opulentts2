@@ -42,20 +42,26 @@ const MobileHero = () => {
             <LuxuryText
               variant="hero"
               delay={0.3}
-              className="text-2xl xs:text-3xl sm:text-4xl text-center leading-[1.1]"
+              className="text-3xl xs:text-4xl sm:text-5xl text-center leading-[1.05]"
             >
-              <span className="block mb-1">
-                OPULENT{' '}
+              <span className="block mb-2">
+                <span className="text-white font-black tracking-[0.1em]
+                               drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]
+                               [text-shadow:_2px_2px_4px_rgba(0,0,0,0.8),_0_0_20px_rgba(255,255,255,0.1)]">
+                  OPULENT
+                </span>{' '}
                 <span className="relative inline-block">
                   <span className="text-gold bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
-                               drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]">
+                               font-black tracking-[0.1em]
+                               drop-shadow-[0_4px_16px_rgba(147,113,39,1.0)]
+                               [text-shadow:_3px_3px_6px_rgba(0,0,0,0.9),_0_0_30px_rgba(147,113,39,0.8)]">
                     TRANSPORT
                   </span>
                   <motion.div
-                    className="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-lg blur-lg"
+                    className="absolute -inset-2 bg-gradient-to-r from-gold/30 via-gold-lighter/40 to-gold/30 rounded-xl blur-xl"
                     animate={{
-                      opacity: [0.3, 0.6, 0.3],
-                      scale: [0.95, 1.05, 0.95],
+                      opacity: [0.4, 0.8, 0.4],
+                      scale: [0.9, 1.1, 0.9],
                     }}
                     transition={{
                       duration: 3,
@@ -63,9 +69,24 @@ const MobileHero = () => {
                       ease: "easeInOut",
                     }}
                   />
+                  <motion.div
+                    className="absolute -inset-1 bg-gradient-to-r from-white/10 via-white/20 to-white/10 rounded-lg blur-sm"
+                    animate={{
+                      opacity: [0.2, 0.5, 0.2],
+                      scale: [0.95, 1.05, 0.95],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5,
+                    }}
+                  />
                 </span>
               </span>
-              <span className="block text-xl xs:text-2xl sm:text-3xl font-semibold tracking-[0.2em] mt-2">
+              <span className="block text-2xl xs:text-3xl sm:text-4xl font-bold tracking-[0.25em] mt-3
+                             text-white/95 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]
+                             [text-shadow:_2px_2px_4px_rgba(0,0,0,0.7),_0_0_15px_rgba(255,255,255,0.1)]">
                 SOLUTIONS
               </span>
             </LuxuryText>
@@ -117,7 +138,9 @@ const MobileHero = () => {
                 <LuxuryText
                   variant="subtitle"
                   animated={false}
-                  className="text-lg xs:text-xl font-bold tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent"
+                  className="text-lg xs:text-xl font-black tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
+                           drop-shadow-[0_2px_8px_rgba(147,113,39,0.9)]
+                           [text-shadow:_1px_1px_3px_rgba(0,0,0,0.8)]"
                 >
                   NEW YORK'S PREMIER LUXURY SERVICE
                 </LuxuryText>
@@ -145,10 +168,14 @@ const MobileHero = () => {
             delay={1.1}
             className="mt-6 text-base xs:text-lg leading-relaxed text-center max-w-md mx-auto"
           >
-            <span className="block mb-2 text-white/95 font-medium">
+            <span className="block mb-3 text-white font-semibold text-lg xs:text-xl
+                           drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]
+                           [text-shadow:_1px_1px_3px_rgba(0,0,0,0.7)]">
               Experience unparalleled sophistication
             </span>
-            <span className="text-gold/90 font-light italic">
+            <span className="text-gold font-medium italic text-base xs:text-lg
+                           drop-shadow-[0_2px_6px_rgba(147,113,39,0.7)]
+                           [text-shadow:_1px_1px_2px_rgba(0,0,0,0.6)]">
               — where luxury meets excellence —
             </span>
           </LuxuryText>

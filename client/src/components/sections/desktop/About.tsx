@@ -21,11 +21,11 @@ const About = () => {
   ];
 
   return (
-    <div id="about" className="relative min-h-screen flex items-center justify-center py-20">
+    <div id="about" className="relative w-full py-20 px-4">
 
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(147,113,39,0.1)_0%,transparent_50%)]" />
+      <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90 -z-10" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(147,113,39,0.1)_0%,transparent_50%)] -z-10" />
 
       <div className="relative z-10 container mx-auto px-6 lg:px-8 max-w-7xl">
 

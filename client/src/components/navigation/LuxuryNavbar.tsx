@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
-import { Home, Info, Briefcase, Car, Mail, User, Calendar, Menu } from 'lucide-react';
+import { Home, Info, Briefcase, Car, Star, Mail, User, Calendar, Menu } from 'lucide-react';
 import LoginModal from '../layout/LoginModal';
 
 const NAV_ITEMS = [
@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { icon: Info, label: 'About', section: 'about' },
   { icon: Briefcase, label: 'Services', section: 'services' },
   { icon: Car, label: 'Fleet', section: 'fleet' },
+  { icon: Star, label: 'Reviews', section: 'testimonials' },
   { icon: Mail, label: 'Contact', section: 'contact' }
 ] as const;
 

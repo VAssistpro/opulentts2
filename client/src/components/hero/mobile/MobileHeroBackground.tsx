@@ -8,9 +8,9 @@ const MobileHeroBackground = () => {
     <div className="absolute inset-0">
       {/* Background Video - Same as desktop */}
       <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
+        initial={{ scale: 1.15, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 1.8, ease: "easeOut" }}
         className="absolute inset-0"
       >
         <video

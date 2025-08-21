@@ -17,7 +17,7 @@ const Fleet = () => {
   };
 
   return (
-    <div className="w-full relative py-20 px-4">
+    <div className="w-full relative py-8 px-4 min-h-screen bg-gradient-to-br from-black via-gray-800 to-black">
       <div className="relative z-10 container mx-auto px-6 md:px-8">
         <AnimatedSection>
           <SectionTitle

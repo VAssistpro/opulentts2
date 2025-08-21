@@ -87,22 +87,22 @@ const LuxuryDesktopLayout = ({ children }: { children?: React.ReactNode }) => {
 // Helper function to get section-specific styling
 const getSectionStyles = (section: string): string => {
   const baseStyles = "relative";
-  
+
   switch (section) {
     case 'home':
       return `${baseStyles} min-h-screen`;
     case 'about':
-      return `${baseStyles} min-h-screen bg-gradient-to-br from-black via-gray-900 to-black`;
+      return `${baseStyles} h-screen`;
     case 'services':
-      return `${baseStyles} min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900`;
+      return `${baseStyles} h-screen`;
     case 'fleet':
-      return `${baseStyles} min-h-screen bg-gradient-to-br from-black via-gray-800 to-black`;
+      return `${baseStyles} h-screen`;
     case 'contact':
-      return `${baseStyles} min-h-screen bg-gradient-to-br from-gray-800 via-black to-gray-900`;
+      return `${baseStyles} h-screen`;
     case 'book':
-      return `${baseStyles} min-h-screen bg-gradient-to-br from-black via-gray-900 to-black`;
+      return `${baseStyles} h-screen`;
     default:
-      return `${baseStyles} min-h-screen`;
+      return `${baseStyles} h-screen`;
   }
 };
 

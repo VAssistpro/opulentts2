@@ -71,17 +71,21 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  {/* Features List */}
-                  {service.features && (
-                    <div className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                          <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
+                  {/* Service Benefits */}
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-white/70">
+                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <span>Professional chauffeurs</span>
                     </div>
-                  )}
+                    <div className="flex items-center gap-2 text-sm text-white/70">
+                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <span>Luxury vehicles</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-white/70">
+                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <span>24/7 availability</span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Hover Effect Arrow */}

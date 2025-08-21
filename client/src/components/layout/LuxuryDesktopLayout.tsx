@@ -28,15 +28,21 @@ const LuxuryDesktopLayout = ({ children }: { children?: React.ReactNode }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 ease: [0.22, 1, 0.36, 1] // Custom easing for luxury feel
               }}
               className="w-full"
             >
               {/* Section-specific backgrounds and styling */}
               <div className={`${getSectionStyles(activeSection)}`}>
-                <ActiveComponent />
+                {activeSection === 'home' ? (
+                  <ActiveComponent />
+                ) : (
+                  <div className="h-screen overflow-y-auto overflow-x-hidden custom-scrollbar">
+                    <ActiveComponent />
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>

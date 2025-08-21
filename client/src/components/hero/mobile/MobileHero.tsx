@@ -109,43 +109,29 @@ const MobileHero = () => {
               className="text-3xl xs:text-4xl sm:text-5xl text-center leading-[1.05]"
             >
               <span className="block mb-2">
+                <span className="relative inline-block">
+                  <span className="text-gold font-black tracking-[0.1em]
+                               drop-shadow-[0_2px_6px_rgba(147,113,39,0.6)]
+                               [text-shadow:_1px_1px_2px_rgba(0,0,0,0.8)]">
+                    OPULENT
+                  </span>
+                  <motion.div
+                    className="absolute -inset-1 bg-gradient-to-r from-gold/15 via-gold/20 to-gold/15 rounded-lg blur-sm"
+                    animate={{
+                      opacity: [0.2, 0.4, 0.2],
+                      scale: [0.98, 1.02, 0.98],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                </span>{' '}
                 <span className="text-white font-black tracking-[0.1em]
                                drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]
                                [text-shadow:_2px_2px_4px_rgba(0,0,0,0.8),_0_0_20px_rgba(255,255,255,0.1)]">
-                  OPULENT
-                </span>{' '}
-                <span className="relative inline-block">
-                  <span className="text-gold bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
-                               font-black tracking-[0.1em]
-                               drop-shadow-[0_4px_16px_rgba(147,113,39,1.0)]
-                               [text-shadow:_3px_3px_6px_rgba(0,0,0,0.9),_0_0_30px_rgba(147,113,39,0.8)]">
-                    TRANSPORT
-                  </span>
-                  <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-gold/30 via-gold-lighter/40 to-gold/30 rounded-xl blur-xl"
-                    animate={{
-                      opacity: [0.4, 0.8, 0.4],
-                      scale: [0.9, 1.1, 0.9],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-                  <motion.div
-                    className="absolute -inset-1 bg-gradient-to-r from-white/10 via-white/20 to-white/10 rounded-lg blur-sm"
-                    animate={{
-                      opacity: [0.2, 0.5, 0.2],
-                      scale: [0.95, 1.05, 0.95],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 0.5,
-                    }}
-                  />
+                  TRANSPORT
                 </span>
               </span>
               <span className="block text-2xl xs:text-3xl sm:text-4xl font-bold tracking-[0.25em] mt-3

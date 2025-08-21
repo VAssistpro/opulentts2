@@ -121,46 +121,171 @@ const MobileHero = () => {
             </div>
           </motion.div>
 
-          {/* Premium Service Badge */}
+          {/* Enhanced Premium Service Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
-            className="mt-6 relative"
+            initial={{ opacity: 0, y: 30, scale: 0.8, rotateX: 45 }}
+            animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+            transition={{ delay: 1.0, duration: 1.2, ease: "easeOut" }}
+            className="mt-8 relative"
           >
-            <div className="relative px-6 py-3 mx-auto max-w-fit rounded-2xl
-                          bg-gradient-to-r from-gold/20 via-gold/30 to-gold/20
-                          border border-gold/40 backdrop-blur-md
-                          shadow-[0_8px_32px_rgba(147,113,39,0.3)]"
+            {/* Outer glow ring */}
+            <motion.div
+              className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-gold/20 via-gold-lighter/30 to-gold/20 blur-2xl"
+              animate={{
+                opacity: [0.3, 0.7, 0.3],
+                scale: [0.9, 1.1, 0.9],
+                rotate: [0, 5, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+            {/* Main badge container */}
+            <motion.div
+              className="relative px-8 py-4 mx-auto max-w-fit rounded-3xl
+                        bg-gradient-to-r from-gold/30 via-gold-lighter/40 to-gold/30
+                        border-2 border-gold/60 backdrop-blur-lg
+                        shadow-[0_12px_48px_rgba(147,113,39,0.5),inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(0,0,0,0.2)]"
+              whileHover={{
+                scale: 1.05,
+                y: -2,
+                boxShadow: "0_16px_64px_rgba(147,113,39,0.7), inset_0_3px_6px_rgba(255,255,255,0.4), inset_0_-3px_6px_rgba(0,0,0,0.3)"
+              }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <div className="flex items-center justify-center space-x-2">
-                <Star className="w-5 h-5 text-gold fill-gold" />
+              <div className="flex items-center justify-center space-x-3">
+                <motion.div
+                  animate={{
+                    rotate: [0, 360],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Star className="w-6 h-6 text-gold fill-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]" />
+                </motion.div>
+
                 <LuxuryText
                   variant="subtitle"
                   animated={false}
-                  className="text-lg xs:text-xl font-black tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
-                           drop-shadow-[0_2px_8px_rgba(147,113,39,0.9)]
-                           [text-shadow:_1px_1px_3px_rgba(0,0,0,0.8)]"
+                  className="text-xl xs:text-2xl font-black tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
+                           drop-shadow-[0_3px_12px_rgba(147,113,39,1.0)]
+                           [text-shadow:_2px_2px_4px_rgba(0,0,0,0.9)]"
                 >
                   NEW YORK'S PREMIER LUXURY SERVICE
                 </LuxuryText>
-                <Star className="w-5 h-5 text-gold fill-gold" />
+
+                <motion.div
+                  animate={{
+                    rotate: [360, 0],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                >
+                  <Star className="w-6 h-6 text-gold fill-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]" />
+                </motion.div>
               </div>
 
-              {/* Animated border glow */}
+              {/* Multiple animated border effects */}
               <motion.div
-                className="absolute inset-0 rounded-2xl border border-gold/60"
+                className="absolute inset-0 rounded-3xl border-2 border-gold/80"
                 animate={{
-                  opacity: [0.4, 0.8, 0.4],
+                  opacity: [0.5, 1, 0.5],
                   scale: [0.98, 1.02, 0.98],
                 }}
                 transition={{
-                  duration: 2,
+                  duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
               />
-            </div>
+
+              <motion.div
+                className="absolute inset-0 rounded-3xl border border-white/40"
+                animate={{
+                  opacity: [0.2, 0.6, 0.2],
+                  scale: [0.96, 1.04, 0.96],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+              />
+
+              {/* Shine effect */}
+              <motion.div
+                className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                animate={{
+                  x: ["-100%", "100%"],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  repeatDelay: 2,
+                }}
+              />
+            </motion.div>
+
+            {/* Additional floating sparkles */}
+            <motion.div
+              className="absolute -top-2 -left-2 w-2 h-2 bg-gold rounded-full"
+              animate={{
+                scale: [0, 1.5, 0],
+                opacity: [0, 1, 0],
+                rotate: [0, 180],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2,
+              }}
+            />
+
+            <motion.div
+              className="absolute -top-1 -right-3 w-1.5 h-1.5 bg-gold-lighter rounded-full"
+              animate={{
+                scale: [0, 1.8, 0],
+                opacity: [0, 1, 0],
+                rotate: [0, -180],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 3,
+              }}
+            />
+
+            <motion.div
+              className="absolute -bottom-2 right-4 w-1 h-1 bg-gold rounded-full"
+              animate={{
+                scale: [0, 2, 0],
+                opacity: [0, 1, 0],
+                rotate: [0, 360],
+              }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 4,
+              }}
+            />
           </motion.div>
 
           <LuxuryText

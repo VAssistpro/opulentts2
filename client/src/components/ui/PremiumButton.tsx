@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
+import { useEnhancedHapticFeedback } from '../../hooks/useEnhancedHapticFeedback';
 
 interface PremiumButtonProps {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
   icon,
   disabled = false,
 }) => {
+  const { hapticClick, hapticHover } = useEnhancedHapticFeedback();
   const baseClasses = "group relative overflow-hidden font-black rounded-2xl transition-all duration-500 ease-out will-change-transform flex items-center justify-center gap-3 min-w-[180px] touch-manipulation active:transition-none";
   
   const variants = {
@@ -59,16 +61,50 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
     lg: "py-5 px-12 text-lg min-w-[240px] h-16",
   };
 
-  const Component = href ? 'a' : motion.button;
-  const props = href ? { href } : { onClick, disabled };
+  const handleClick = (e: React.MouseEvent) => {
+    if (disabled) return;
+    hapticClick();
+    if (onClick) onClick();
+  };
 
-  const motionProps = href ? {
-    whileHover: { scale: 1.05, y: -2 },
-    whileTap: { scale: 0.95, y: 1 },
-    transition: { duration: 0.3, ease: "easeOut" }
-  } : {
-    whileHover: { scale: 1.05, y: -2 },
-    whileTap: { scale: 0.95, y: 1 },
+  const handleMouseEnter = () => {
+    if (disabled) return;
+    hapticHover();
+  };
+
+  const Component = href ? 'a' : motion.button;
+  const props = href
+    ? {
+        href,
+        onMouseEnter: handleMouseEnter,
+        onTouchStart: hapticHover,
+      }
+    : {
+        onClick: handleClick,
+        disabled,
+        onMouseEnter: handleMouseEnter,
+        onTouchStart: hapticHover,
+      };
+
+  const motionProps = {
+    whileHover: {
+      scale: 1.05,
+      y: -3,
+      boxShadow: variant === 'primary'
+        ? "0_20px_80px_rgba(147,113,39,0.8), 0_8px_32px_rgba(147,113,39,0.4)"
+        : "0_16px_64px_rgba(147,113,39,0.3), 0_6px_24px_rgba(0,0,0,0.2)"
+    },
+    whileTap: {
+      scale: 0.92,
+      y: 2,
+      transition: { duration: 0.1, ease: "easeOut" }
+    },
+    whileFocus: {
+      scale: 1.02,
+      boxShadow: variant === 'primary'
+        ? "0_0_0_4px_rgba(147,113,39,0.3), 0_16px_64px_rgba(147,113,39,0.6)"
+        : "0_0_0_4px_rgba(255,255,255,0.2), 0_12px_48px_rgba(147,113,39,0.2)"
+    },
     transition: { duration: 0.3, ease: "easeOut" }
   };
 

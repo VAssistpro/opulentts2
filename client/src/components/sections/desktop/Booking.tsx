@@ -6,7 +6,7 @@ import GlassmorphicCard from '../../ui/GlassmorphicCard';
 
 const Booking = () => {
   return (
-    <div className="w-full relative py-20 px-4">
+    <div className="w-full relative py-8 px-4 min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
       {/* Glassmorphic Background */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
 

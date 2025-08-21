@@ -1,8 +1,8 @@
 import React from 'react';
-import ConsoleLayout from './ConsoleLayout';
+import LuxuryDesktopLayout from './LuxuryDesktopLayout';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
-  return <ConsoleLayout>{children}</ConsoleLayout>;
+  return <LuxuryDesktopLayout>{children}</LuxuryDesktopLayout>;
 };
 
 export default DesktopLayout;

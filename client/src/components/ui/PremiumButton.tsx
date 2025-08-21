@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '../../utils/constants';
+import { cn } from '../../lib/utils';
 
 interface PremiumButtonProps {
   children: React.ReactNode;

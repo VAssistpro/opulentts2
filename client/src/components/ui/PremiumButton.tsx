@@ -23,24 +23,28 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
   icon,
   disabled = false,
 }) => {
-  const baseClasses = "group relative overflow-hidden font-bold rounded-xl transition-all duration-300 ease-out will-change-transform flex items-center justify-center gap-2 min-w-[180px]";
+  const baseClasses = "group relative overflow-hidden font-black rounded-2xl transition-all duration-500 ease-out will-change-transform flex items-center justify-center gap-3 min-w-[180px] touch-manipulation active:transition-none";
   
   const variants = {
     primary: `
-      bg-gradient-to-r from-gold via-gold-lighter to-gold-dark text-black
-      shadow-[0_8px_32px_rgba(147,113,39,0.4),inset_0_1px_0_rgba(255,255,255,0.3)]
-      hover:shadow-[0_12px_40px_rgba(147,113,39,0.6),inset_0_1px_0_rgba(255,255,255,0.4)]
-      hover:scale-[1.02] active:scale-[0.98]
-      border border-gold/30 backdrop-blur-sm
-      before:absolute before:inset-0 before:bg-gradient-to-r before:from-gold-dark before:to-gold 
-      before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
+      bg-gradient-to-r from-gold via-gold-lighter to-gold text-black font-black
+      shadow-[0_12px_48px_rgba(147,113,39,0.6),0_4px_16px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(255,255,255,0.4),inset_0_-2px_4px_rgba(0,0,0,0.2)]
+      hover:shadow-[0_16px_64px_rgba(147,113,39,0.8),0_8px_32px_rgba(147,113,39,0.4),inset_0_2px_6px_rgba(255,255,255,0.5),inset_0_-2px_6px_rgba(0,0,0,0.3)]
+      hover:scale-[1.05] active:scale-[0.95]
+      border-2 border-gold-lighter/50 backdrop-blur-sm
+      before:absolute before:inset-0 before:bg-gradient-to-r before:from-gold-lighter before:via-gold before:to-gold-dark
+      before:opacity-0 before:transition-all before:duration-500 hover:before:opacity-100
+      after:absolute after:inset-0 after:bg-gradient-to-t after:from-transparent after:via-white/10 after:to-white/20
+      after:opacity-60 hover:after:opacity-80 after:transition-opacity after:duration-300
     `,
     secondary: `
-      bg-transparent border-2 border-white/30 text-white backdrop-blur-md
-      hover:border-gold/50 hover:bg-white/10 hover:scale-[1.02] active:scale-[0.98]
-      shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_32px_rgba(147,113,39,0.2)]
-      before:absolute before:inset-0 before:bg-gradient-to-r before:from-gold/10 before:to-gold/5
-      before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100
+      bg-gradient-to-r from-white/5 via-white/10 to-white/5 border-2 border-white/40 text-white backdrop-blur-lg font-black
+      hover:border-gold/70 hover:bg-gradient-to-r hover:from-gold/15 hover:via-gold/20 hover:to-gold/15 hover:scale-[1.05] active:scale-[0.95]
+      shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.2)] hover:shadow-[0_12px_48px_rgba(147,113,39,0.3),0_4px_16px_rgba(0,0,0,0.2),inset_0_2px_4px_rgba(255,255,255,0.3)]
+      before:absolute before:inset-0 before:bg-gradient-to-r before:from-gold/20 before:via-gold-lighter/15 before:to-gold/20
+      before:opacity-0 before:transition-all before:duration-500 hover:before:opacity-100
+      after:absolute after:inset-0 after:bg-gradient-to-t after:from-transparent after:via-white/5 after:to-white/10
+      after:opacity-40 hover:after:opacity-70 after:transition-opacity after:duration-300
     `,
     ghost: `
       bg-white/5 border border-white/20 text-white backdrop-blur-md
@@ -50,22 +54,22 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
   };
 
   const sizes = {
-    sm: "py-2 px-4 text-sm min-w-[120px]",
-    md: "py-4 px-8 text-base min-w-[180px]",
-    lg: "py-5 px-10 text-lg min-w-[220px]",
+    sm: "py-3 px-6 text-sm min-w-[140px] h-12",
+    md: "py-4 px-8 text-base min-w-[200px] h-14",
+    lg: "py-5 px-12 text-lg min-w-[240px] h-16",
   };
 
   const Component = href ? 'a' : motion.button;
   const props = href ? { href } : { onClick, disabled };
 
   const motionProps = href ? {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    transition: { duration: 0.2, ease: "easeOut" }
+    whileHover: { scale: 1.05, y: -2 },
+    whileTap: { scale: 0.95, y: 1 },
+    transition: { duration: 0.3, ease: "easeOut" }
   } : {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    transition: { duration: 0.2, ease: "easeOut" }
+    whileHover: { scale: 1.05, y: -2 },
+    whileTap: { scale: 0.95, y: 1 },
+    transition: { duration: 0.3, ease: "easeOut" }
   };
 
   return (
@@ -90,31 +94,64 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
         )}
       </span>
 
-      {/* Shine effect */}
+      {/* Enhanced Shine effect */}
       <motion.div
-        className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-12 group-hover:translate-x-full"
-        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 group-hover:translate-x-full"
+        transition={{ duration: 0.8, ease: "easeInOut" }}
       />
 
-      {/* Ripple effect */}
+      {/* Secondary shine */}
       <motion.div
-        className="absolute inset-0 rounded-xl border border-white/20 opacity-0 group-hover:opacity-100"
+        className="absolute inset-0 translate-x-full bg-gradient-to-r from-transparent via-gold-lighter/30 to-transparent -skew-x-12 group-hover:-translate-x-full"
+        transition={{ duration: 1.2, ease: "easeInOut", delay: 0.1 }}
+      />
+
+      {/* Enhanced Ripple effects */}
+      <motion.div
+        className="absolute inset-0 rounded-2xl border-2 border-white/30 opacity-0 group-hover:opacity-100"
         animate={{
-          scale: [1, 1.05, 1],
-          opacity: [0, 0.3, 0],
+          scale: [1, 1.1, 1],
+          opacity: [0, 0.4, 0],
         }}
         transition={{
-          duration: 2,
+          duration: 2.5,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
 
-      {/* Glow effect for primary variant */}
+      <motion.div
+        className="absolute inset-0 rounded-2xl border border-gold/40 opacity-0 group-hover:opacity-100"
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0, 0.3, 0],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
+      />
+
+      {/* Enhanced Glow effects */}
       {variant === 'primary' && (
+        <>
+          <motion.div
+            className="absolute -inset-2 rounded-3xl bg-gold/40 blur-2xl opacity-0 group-hover:opacity-60"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+          <motion.div
+            className="absolute -inset-1 rounded-2xl bg-gold-lighter/30 blur-lg opacity-0 group-hover:opacity-80"
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          />
+        </>
+      )}
+
+      {variant === 'secondary' && (
         <motion.div
-          className="absolute inset-0 rounded-xl bg-gold/30 blur-xl opacity-0 group-hover:opacity-50"
-          transition={{ duration: 0.3 }}
+          className="absolute -inset-1 rounded-2xl bg-white/20 blur-lg opacity-0 group-hover:opacity-40"
+          transition={{ duration: 0.4, ease: "easeOut" }}
         />
       )}
     </Component>

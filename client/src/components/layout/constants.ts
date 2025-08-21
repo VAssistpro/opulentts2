@@ -6,10 +6,10 @@ import Contact from '../sections/desktop/Contact';
 import Booking from '../sections/desktop/Booking';
 
 export const SECTIONS = {
-  home: Hero,
+  home: EnhancedHero,
   about: About,
   services: Services,
-  fleet: NewFleetGallery,
+  fleet: Fleet,
   contact: Contact,
   book: Booking,
 } as const;

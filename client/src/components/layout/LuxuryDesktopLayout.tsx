@@ -39,8 +39,10 @@ const LuxuryDesktopLayout = ({ children }: { children?: React.ReactNode }) => {
                 {activeSection === 'home' ? (
                   <ActiveComponent />
                 ) : (
-                  <div className="h-screen overflow-y-auto overflow-x-hidden custom-scrollbar">
-                    <ActiveComponent />
+                  <div className="h-screen overflow-y-auto overflow-x-hidden custom-scrollbar pt-20">
+                    <div className="min-h-full">
+                      <ActiveComponent />
+                    </div>
                   </div>
                 )}
               </div>

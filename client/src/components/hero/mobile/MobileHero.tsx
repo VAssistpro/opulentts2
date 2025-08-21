@@ -394,54 +394,109 @@ const MobileHero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Service Areas */}
+          {/* Enhanced Service Areas - Mobile Optimized */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.8 }}
-            className="mt-12 text-center"
+            transition={{ delay: 1.5, duration: 1.0, ease: "easeOut" }}
+            className="mt-16 text-center px-4"
           >
             <LuxuryText
               variant="caption"
               animated={false}
-              className="text-sm font-bold mb-4 tracking-[0.15em] uppercase text-center
-                       bg-gradient-to-r from-white/70 via-white/90 to-white/70 bg-clip-text text-transparent"
+              className="text-lg font-black mb-8 tracking-[0.2em] uppercase text-center
+                       bg-gradient-to-r from-white/80 via-white/100 to-white/80 bg-clip-text text-transparent
+                       drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
             >
-              ✦ Premium Chauffeur Services ✦
+              ✦ PREMIUM CHAUFFEUR SERVICES ✦
             </LuxuryText>
-            <div className="flex flex-wrap justify-center gap-3 text-sm">
-              {['Manhattan', 'Brooklyn', 'Queens', 'JFK • LGA • EWR'].map((area, index) => (
-                <motion.span
-                  key={area}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.7 + index * 0.1, duration: 0.5 }}
-                  className="relative px-5 py-2.5 rounded-full font-medium text-white/95
-                           bg-gradient-to-r from-gold/25 via-gold/20 to-gold/15
-                           border border-gold/40 backdrop-blur-sm
-                           shadow-[0_4px_16px_rgba(147,113,39,0.2)]
-                           hover:border-gold/60 hover:bg-gradient-to-r hover:from-gold/35 hover:to-gold/25
-                           transform hover:scale-105 transition-all duration-300 cursor-pointer"
-                >
-                  {area}
 
-                  {/* Subtle glow effect */}
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 max-w-md mx-auto">
+              {[
+                { name: 'Manhattan', icon: '🏙️' },
+                { name: 'Brooklyn', icon: '🌉' },
+                { name: 'Queens', icon: '🏘️' },
+                { name: 'JFK • LGA • EWR', icon: '✈️' }
+              ].map((area, index) => (
+                <motion.div
+                  key={area.name}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: 1.7 + index * 0.15, duration: 0.6, ease: "easeOut" }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative p-4 rounded-2xl font-bold text-white/95
+                           bg-gradient-to-r from-gold/30 via-gold/25 to-gold/20
+                           border-2 border-gold/50 backdrop-blur-lg
+                           shadow-[0_6px_24px_rgba(147,113,39,0.3)]
+                           hover:border-gold/70 hover:bg-gradient-to-r hover:from-gold/40 hover:to-gold/30
+                           hover:shadow-[0_8px_32px_rgba(147,113,39,0.4)]
+                           transform transition-all duration-300 cursor-pointer
+                           touch-manipulation select-none
+                           min-h-[70px] flex items-center justify-center
+                           focus:outline-none focus:ring-4 focus:ring-gold/40"
+                >
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="text-2xl">{area.icon}</span>
+                    <span className="text-base font-black tracking-wide">
+                      {area.name}
+                    </span>
+                  </div>
+
+                  {/* Enhanced glow effect */}
                   <motion.div
-                    className="absolute inset-0 rounded-full bg-gold/20 opacity-0 hover:opacity-100"
+                    className="absolute inset-0 rounded-2xl bg-gold/30 opacity-0"
+                    whileHover={{ opacity: 0.4 }}
                     animate={{
-                      opacity: [0, 0.3, 0],
+                      opacity: [0, 0.2, 0],
                       scale: [0.95, 1.05, 0.95],
                     }}
                     transition={{
-                      duration: 2,
+                      duration: 3,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: index * 0.5,
+                      delay: index * 0.8,
                     }}
                   />
-                </motion.span>
+
+                  {/* Shine effect */}
+                  <motion.div
+                    className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0"
+                    whileHover={{ opacity: 1 }}
+                    animate={{
+                      x: ["-100%", "100%"],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      repeatDelay: 3,
+                      delay: index * 0.3,
+                    }}
+                  />
+                </motion.div>
               ))}
             </div>
+
+            {/* Additional service info */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.5, duration: 0.8 }}
+              className="mt-8 space-y-3"
+            >
+              <div className="flex items-center justify-center gap-2 text-gold/90">
+                <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                <span className="text-sm font-semibold tracking-wide">
+                  Real-time GPS tracking & Flight monitoring
+                </span>
+                <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+              </div>
+
+              <div className="text-white/80 text-sm font-medium">
+                Professional chauffeurs • Luxury fleet • 24/7 availability
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

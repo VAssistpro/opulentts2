@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-center relative py-16 md:py-20">
+    <div className="w-full relative py-20 px-4">
       <div className="relative z-10 container mx-auto px-6 md:px-8">
         <AnimatedSection>
            <SectionTitle title="Contact Us" />

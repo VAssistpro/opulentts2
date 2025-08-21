@@ -192,16 +192,15 @@ const MobileHero = () => {
             transition={{ delay: 1.0, duration: 1.2, ease: "easeOut" }}
             className="mt-8 relative"
           >
-            {/* Outer glow ring */}
+            {/* Subtle outer glow */}
             <motion.div
-              className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-gold/20 via-gold-lighter/30 to-gold/20 blur-2xl"
+              className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-gold/10 via-gold/15 to-gold/10 blur-xl"
               animate={{
-                opacity: [0.3, 0.7, 0.3],
-                scale: [0.9, 1.1, 0.9],
-                rotate: [0, 5, 0],
+                opacity: [0.2, 0.4, 0.2],
+                scale: [0.95, 1.05, 0.95],
               }}
               transition={{
-                duration: 4,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -209,14 +208,14 @@ const MobileHero = () => {
 
             {/* Main badge container */}
             <motion.div
-              className="relative px-8 py-4 mx-auto max-w-fit rounded-3xl
-                        bg-gradient-to-r from-gold/30 via-gold-lighter/40 to-gold/30
-                        border-2 border-gold/60 backdrop-blur-lg
-                        shadow-[0_12px_48px_rgba(147,113,39,0.5),inset_0_2px_4px_rgba(255,255,255,0.3),inset_0_-2px_4px_rgba(0,0,0,0.2)]"
+              className="relative px-8 py-4 mx-auto max-w-fit rounded-2xl
+                        bg-gradient-to-r from-black/60 via-black/70 to-black/60
+                        border border-gold/40 backdrop-blur-lg
+                        shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_2px_rgba(255,255,255,0.1)]"
               whileHover={{
-                scale: 1.05,
-                y: -2,
-                boxShadow: "0_16px_64px_rgba(147,113,39,0.7), inset_0_3px_6px_rgba(255,255,255,0.4), inset_0_-3px_6px_rgba(0,0,0,0.3)"
+                scale: 1.02,
+                y: -1,
+                boxShadow: "0_12px_40px_rgba(147,113,39,0.3), inset_0_2px_4px_rgba(255,255,255,0.15)"
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
@@ -232,15 +231,15 @@ const MobileHero = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <Star className="w-6 h-6 text-gold fill-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]" />
+                  <Star className="w-5 h-5 text-gold fill-gold drop-shadow-[0_2px_6px_rgba(147,113,39,0.6)]" />
                 </motion.div>
 
                 <LuxuryText
                   variant="subtitle"
                   animated={false}
-                  className="text-xl xs:text-2xl font-black tracking-wider bg-gradient-to-r from-gold via-gold-lighter to-gold bg-clip-text text-transparent
-                           drop-shadow-[0_3px_12px_rgba(147,113,39,1.0)]
-                           [text-shadow:_2px_2px_4px_rgba(0,0,0,0.9)]"
+                  className="text-lg xs:text-xl font-bold tracking-wider text-white
+                           drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]
+                           [text-shadow:_1px_1px_3px_rgba(0,0,0,0.8)]"
                 >
                   NEW YORK'S PREMIER LUXURY SERVICE
                 </LuxuryText>
@@ -257,50 +256,36 @@ const MobileHero = () => {
                     delay: 1,
                   }}
                 >
-                  <Star className="w-6 h-6 text-gold fill-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.8)]" />
+                  <Star className="w-5 h-5 text-gold fill-gold drop-shadow-[0_2px_6px_rgba(147,113,39,0.6)]" />
                 </motion.div>
               </div>
 
-              {/* Multiple animated border effects */}
+              {/* Subtle animated border effect */}
               <motion.div
-                className="absolute inset-0 rounded-3xl border-2 border-gold/80"
+                className="absolute inset-0 rounded-2xl border border-gold/30"
                 animate={{
-                  opacity: [0.5, 1, 0.5],
-                  scale: [0.98, 1.02, 0.98],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-
-              <motion.div
-                className="absolute inset-0 rounded-3xl border border-white/40"
-                animate={{
-                  opacity: [0.2, 0.6, 0.2],
-                  scale: [0.96, 1.04, 0.96],
+                  opacity: [0.3, 0.6, 0.3],
+                  scale: [0.99, 1.01, 0.99],
                 }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: 1,
                 }}
               />
 
-              {/* Shine effect */}
+              {/* Subtle shine effect */}
               <motion.div
-                className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12"
                 animate={{
                   x: ["-100%", "100%"],
-                  opacity: [0, 1, 0],
+                  opacity: [0, 0.5, 0],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  repeatDelay: 2,
+                  repeatDelay: 3,
                 }}
               />
             </motion.div>
@@ -433,35 +418,6 @@ const MobileHero = () => {
               </span>
             </PremiumButton>
 
-            <PremiumButton
-              variant="secondary"
-              size="lg"
-              href="tel:+15163245483"
-              icon={<Phone className="w-6 h-6" />}
-              className="w-full max-w-sm min-h-[60px] text-xl font-black
-                       transform hover:scale-[1.02] active:scale-[0.98]
-                       transition-all duration-300 ease-out
-                       touch-manipulation select-none
-                       focus:outline-none focus:ring-4 focus:ring-white/30
-                       shadow-[0_6px_24px_rgba(0,0,0,0.3)]
-                       hover:shadow-[0_10px_40px_rgba(147,113,39,0.2)]"
-            >
-              <span className="flex items-center justify-center gap-3">
-                <motion.span
-                  animate={{
-                    rotate: [0, 15, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <Phone className="w-6 h-6" />
-                </motion.span>
-                Call Immediately
-              </span>
-            </PremiumButton>
 
             {/* Quick contact info for mobile */}
             <motion.div

@@ -38,7 +38,7 @@ const MobileLayout = () => {
           </div>
         ) : (
           <div className="h-full overflow-y-auto overflow-x-hidden">
-            <div className="min-h-screen pt-24 pb-32 px-4">
+            <div className="min-h-screen pt-4 pb-32 px-4">
               <div className="container mx-auto max-w-4xl space-y-8">
                 {activeSection === 'about' && <About />}
                 {activeSection === 'services' && <Services />}

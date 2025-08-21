@@ -11,9 +11,9 @@ import ShimmerBackground from '../effects/ShimmerBackground';
 const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
   return (
     <ErrorBoundary>
-      <div className="relative h-screen text-text-primary flex flex-col" style={{ backgroundColor: '#0a0f1a' }}>
-        <div className="absolute inset-0 opacity-98" style={{ 
-          background: 'linear-gradient(to bottom right, #0a0f1a 0%, #0d1526 50%, #0a0f1a 100%)' 
+      <div className="relative h-screen text-text-primary flex flex-col" style={{ backgroundColor: '#030407' }}>
+        <div className="absolute inset-0 opacity-98" style={{
+          background: 'linear-gradient(to bottom right, #030407 0%, #030407 50%, #030407 100%)'
         }} />
 
         {/* Console Device Container */}
@@ -46,7 +46,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
               {/* Console Frame/Bezel with Enhanced Glass Effect */}
               <div className="rounded-[20px] overflow-hidden h-full flex flex-col"
                    style={{
-                     background: 'rgba(10, 15, 26, 0.85)',
+                     background: '#030407',
                      backdropFilter: 'blur(30px) saturate(1.8)',
                      border: 'none',
                      boxShadow: 'none'
@@ -55,9 +55,9 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 {/* Top Control Panel - Navbar with Subtle Glass Effect */}
                 <div className="backdrop-blur-sm border-b border-gold/30 rounded-t-xl pt-[2px] pb-[2px]"
                      style={{
-                       background: 'rgba(10, 15, 26, 0.6)',
+                       background: '#030407',
                        backdropFilter: 'blur(20px)',
-                       boxShadow: 'inset 0 1px 2px rgba(10,15,26,0.6), 0 1px 2px rgba(147,113,39,0.1)'
+                       boxShadow: 'inset 0 1px 2px rgba(3,4,7,0.6), 0 1px 2px rgba(147,113,39,0.1)'
                      }}>
                   <ConsoleNavbar />
                 </div>
@@ -66,22 +66,23 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 <div className="flex flex-1">
                   {/* Left Control Panel - Logo + Testimonials */}
                   <div className="w-56 backdrop-blur-sm flex flex-col relative border-r border-gold/30"
-                       style={{ 
-                         background: 'rgba(10, 15, 26, 0.3)',
-                         boxShadow: 'inset 1px 0 2px rgba(10,15,26,0.6), 1px 0 2px rgba(147,113,39,0.1)'
+                       style={{
+                         background: '#030407',
+                         boxShadow: 'inset 1px 0 2px rgba(3,4,7,0.6), 1px 0 2px rgba(147,113,39,0.1)'
                        }}>
                     {/* Extended Logo Area - positioned to extend to top edge */}
                     <div className="absolute top-0 left-0 right-0 h-32 flex flex-col justify-center items-center z-10 rounded-t-lg"
-                         style={{ background: 'rgba(10, 15, 26, 0.2)' }}>
+                         style={{ background: '#030407' }}>
                       <img
                         src="https://opulentts.com/bgvideo/otsnobg.png"
                         alt="Opulent Transport Solutions"
-                        className="h-24 w-auto object-contain opacity-90"
+                        className="w-auto object-contain opacity-90"
+                        style={{ height: '118px' }}
                       />
                     </div>
                     {/* Spacer for logo */}
-                    <div className="h-32" style={{ background: 'rgba(10, 15, 26, 0.2)' }}></div>
-                    <div className="flex-1 p-2" style={{ boxShadow: 'inset 0 1px 2px rgba(10,15,26,0.6), 0 -1px 2px rgba(147,113,39,0.1)' }}>
+                    <div className="h-32" style={{ background: '#030407' }}></div>
+                    <div className="flex-1 p-2" style={{ boxShadow: 'inset 0 1px 2px rgba(10,15,26,0.6), 0 -1px 2px rgba(147,113,39,0.1)', backgroundColor: '#030407' }}>
                       <ConsoleTestimonials />
                     </div>
                   </div>
@@ -91,8 +92,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                     {/* Screen Bezel with Deep Engraved Effect */}
                     <div className="absolute inset-2 rounded-xl border-2 border-gold/40"
                          style={{
-                           background: 'rgba(10, 15, 26, 0.8)',
-                           boxShadow: 'inset 0 2px 4px rgba(10,15,26,0.8), inset 0 -2px 4px rgba(147,113,39,0.3), 0 4px 8px rgba(10,15,26,0.6)'
+                           background: '#030407',
+                           boxShadow: 'inset 0 2px 4px rgba(3,4,7,0.8), inset 0 -2px 4px rgba(147,113,39,0.3), 0 4px 8px rgba(3,4,7,0.6)'
                          }}>
                       {/* Border lighting effects */}
                       <div className="absolute -top-px left-1 right-1 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent pointer-events-none" />
@@ -123,7 +124,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                         </div>
                         
                         {/* Content overlay */}
-                        <div className="relative h-full w-full rounded-lg overflow-hidden" style={{ background: 'rgba(10, 15, 26, 0.4)' }}>
+                        <div className="relative h-full w-full rounded-lg overflow-hidden" style={{ background: 'rgba(3, 4, 7, 0.4)' }}>
                           <MainContent />
                         </div>
                       </div>
@@ -133,8 +134,8 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                   {/* Right Control Panel - Contact & System Info */}
                   <div className="w-20 backdrop-blur-sm flex flex-col border-l border-gold/30"
                        style={{
-                         background: 'rgba(10, 15, 26, 0.3)',
-                         boxShadow: 'inset -1px 0 2px rgba(10,15,26,0.6), -1px 0 2px rgba(147,113,39,0.1)'
+                         background: '#030407',
+                         boxShadow: 'inset -1px 0 2px rgba(3,4,7,0.6), -1px 0 2px rgba(147,113,39,0.1)'
                        }}>
                     
                     <div className="flex-1 p-2">
@@ -153,7 +154,7 @@ const ConsoleLayout = ({ children }: { children?: React.ReactNode }) => {
                 </div>
 
                 {/* Enhanced Bottom Status Bar with Footer Info */}
-                <div className="backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px] bg-[#0d121e]">
+                <div className="backdrop-blur-sm p-2 border-t border-gold/30 shadow-[inset_0_1px_2px_rgba(0,0,0,0.6),0_-1px_2px_rgba(147,113,39,0.1)] mt-[3px] mb-[3px] pt-[11px] pb-[11px] bg-[#030407]">
                   <div className="flex items-center justify-between text-xs text-gold/60 font-mono">
                     {/* Left - Copyright */}
                     <div className="flex items-center gap-2">

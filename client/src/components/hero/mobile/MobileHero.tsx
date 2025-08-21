@@ -3,11 +3,17 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Star, Crown, Sparkles, Phone } from 'lucide-react';
 import MobileHeroBackground from './MobileHeroBackground';
 import { useNavigationContext } from '../../../hooks/useNavigationContext';
+import { useEnhancedParallax } from '../../../hooks/useEnhancedParallax';
 import LuxuryText from '../../ui/LuxuryText';
 import PremiumButton from '../../ui/PremiumButton';
 
 const MobileHero = () => {
   const { setActiveSection } = useNavigationContext();
+  const { getParallaxStyle } = useEnhancedParallax({
+    factor: 0.03,
+    smooth: true,
+    enabled: true
+  });
 
   const handleBookNow = () => {
     setActiveSection('book');
@@ -19,13 +25,70 @@ const MobileHero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <MobileHeroBackground />
-      
+
+      {/* Enhanced texture overlays */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Premium leather texture */}
+        <motion.div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            ...getParallaxStyle(0.5),
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23937127' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px',
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '60px 60px'],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Luxury fabric weave pattern */}
+        <motion.div
+          className="absolute inset-0 opacity-[0.015]"
+          style={{
+            ...getParallaxStyle(0.3),
+            backgroundImage: `repeating-linear-gradient(45deg, rgba(147,113,39,0.1) 0px, transparent 2px, transparent 4px, rgba(147,113,39,0.1) 6px)`,
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '8px 8px'],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Diamond plate texture */}
+        <motion.div
+          className="absolute inset-0 opacity-[0.01]"
+          style={{
+            ...getParallaxStyle(0.7),
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23937127' fill-opacity='0.05'%3E%3Cpath d='M20 20L10 10h20l-10 10zm0 0L30 30H10l10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '40px 40px',
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '40px 40px'],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
+
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center max-w-[90vw] sm:max-w-lg mx-auto"
+          style={getParallaxStyle(1)}
         >
           {/* Enhanced Brand Title */}
           <div className="relative">
@@ -35,6 +98,7 @@ const MobileHero = () => {
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               className="absolute -top-8 left-1/2 transform -translate-x-1/2"
+              style={getParallaxStyle(1.5)}
             >
               <Crown className="w-8 h-8 text-gold drop-shadow-[0_2px_8px_rgba(147,113,39,0.6)]" />
             </motion.div>
@@ -241,9 +305,10 @@ const MobileHero = () => {
               />
             </motion.div>
 
-            {/* Additional floating sparkles */}
+            {/* Enhanced floating sparkles with parallax */}
             <motion.div
               className="absolute -top-2 -left-2 w-2 h-2 bg-gold rounded-full"
+              style={getParallaxStyle(2)}
               animate={{
                 scale: [0, 1.5, 0],
                 opacity: [0, 1, 0],
@@ -259,6 +324,7 @@ const MobileHero = () => {
 
             <motion.div
               className="absolute -top-1 -right-3 w-1.5 h-1.5 bg-gold-lighter rounded-full"
+              style={getParallaxStyle(1.8)}
               animate={{
                 scale: [0, 1.8, 0],
                 opacity: [0, 1, 0],
@@ -274,6 +340,7 @@ const MobileHero = () => {
 
             <motion.div
               className="absolute -bottom-2 right-4 w-1 h-1 bg-gold rounded-full"
+              style={getParallaxStyle(2.2)}
               animate={{
                 scale: [0, 2, 0],
                 opacity: [0, 1, 0],
@@ -286,6 +353,30 @@ const MobileHero = () => {
                 delay: 4,
               }}
             />
+
+            {/* Additional depth sparkles */}
+            {Array.from({ length: 4 }).map((_, i) => (
+              <motion.div
+                key={`depth-sparkle-${i}`}
+                className="absolute w-0.5 h-0.5 bg-white rounded-full"
+                style={{
+                  ...getParallaxStyle(1.5 + i * 0.3),
+                  left: `${10 + i * 20}%`,
+                  top: `${5 + i * 15}%`,
+                }}
+                animate={{
+                  opacity: [0, 0.8, 0],
+                  scale: [0, 1.5, 0],
+                  rotate: [0, 180],
+                }}
+                transition={{
+                  duration: 3 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 5 + i * 0.8,
+                }}
+              />
+            ))}
           </motion.div>
 
           <LuxuryText

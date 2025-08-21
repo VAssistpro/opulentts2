@@ -69,17 +69,17 @@ const EnhancedHero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.85]"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.85] max-w-full overflow-visible"
             >
-              <span className="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+              <span className="block text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] whitespace-nowrap">
                 OPULENT
               </span>
-              <span className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
-                               bg-clip-text text-transparent drop-shadow-none">
+              <span className="block bg-gradient-to-r from-gold-lighter via-gold to-gold-dark
+                               bg-clip-text text-transparent drop-shadow-none whitespace-nowrap">
                 TRANSPORT
               </span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light 
-                               text-white/90 mt-4 tracking-[0.2em]">
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light
+                               text-white/90 mt-4 tracking-[0.15em] whitespace-nowrap">
                 SOLUTIONS
               </span>
             </motion.h1>

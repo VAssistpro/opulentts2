@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMobileNavigation } from '../../contexts/MobileNavigationContext';
-import MobileHeader from '../hero/mobile/MobileHeader';
 import MobileNavigation from '../hero/mobile/MobileNavigation';
 import About from '../sections/About';
 import Services from '../sections/Services';
@@ -29,7 +28,6 @@ const MobileLayout = () => {
     <div className="lg:hidden min-h-screen relative overflow-hidden" key={refreshKey}>
       <ShimmerBackground />
       <OfflineIndicator />
-      <MobileHeader />
 
       <main className="relative z-10 h-screen">
         {activeSection === 'home' ? (
@@ -38,7 +36,7 @@ const MobileLayout = () => {
           </div>
         ) : (
           <div className="h-full overflow-y-auto overflow-x-hidden">
-            <div className="min-h-screen pt-24 pb-32 px-4">
+            <div className="min-h-screen pt-4 pb-32 px-4">
               <div className="container mx-auto max-w-4xl space-y-8">
                 {activeSection === 'about' && <About />}
                 {activeSection === 'services' && <Services />}

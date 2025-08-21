@@ -305,32 +305,93 @@ const MobileHero = () => {
             </span>
           </LuxuryText>
 
-          {/* Enhanced Call to Action Buttons */}
+          {/* Enhanced Call to Action Buttons - Mobile Optimized */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3, duration: 0.8 }}
-            className="mt-10 flex flex-col xs:flex-row gap-5 justify-center items-center"
+            transition={{ delay: 1.3, duration: 1.0, ease: "easeOut" }}
+            className="mt-12 flex flex-col gap-6 justify-center items-center px-4"
           >
             <PremiumButton
               variant="primary"
               size="lg"
               onClick={handleBookNow}
-              icon={<ArrowRight className="w-5 h-5" />}
-              className="transform hover:scale-[1.03] transition-all duration-300"
+              icon={<ArrowRight className="w-6 h-6" />}
+              className="w-full max-w-sm min-h-[60px] text-xl font-black
+                       transform hover:scale-[1.02] active:scale-[0.98]
+                       transition-all duration-300 ease-out
+                       touch-manipulation select-none
+                       focus:outline-none focus:ring-4 focus:ring-gold/50
+                       shadow-[0_8px_32px_rgba(147,113,39,0.4)]
+                       hover:shadow-[0_12px_48px_rgba(147,113,39,0.6)]"
             >
-              Book Now
+              <span className="flex items-center justify-center gap-3">
+                Reserve Now
+                <motion.span
+                  animate={{
+                    x: [0, 5, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <ArrowRight className="w-6 h-6" />
+                </motion.span>
+              </span>
             </PremiumButton>
 
             <PremiumButton
               variant="secondary"
               size="lg"
               href="tel:+15163245483"
-              icon={<Phone className="w-5 h-5" />}
-              className="transform hover:scale-[1.03] transition-all duration-300"
+              icon={<Phone className="w-6 h-6" />}
+              className="w-full max-w-sm min-h-[60px] text-xl font-black
+                       transform hover:scale-[1.02] active:scale-[0.98]
+                       transition-all duration-300 ease-out
+                       touch-manipulation select-none
+                       focus:outline-none focus:ring-4 focus:ring-white/30
+                       shadow-[0_6px_24px_rgba(0,0,0,0.3)]
+                       hover:shadow-[0_10px_40px_rgba(147,113,39,0.2)]"
             >
-              Call Now
+              <span className="flex items-center justify-center gap-3">
+                <motion.span
+                  animate={{
+                    rotate: [0, 15, 0],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <Phone className="w-6 h-6" />
+                </motion.span>
+                Call Immediately
+              </span>
             </PremiumButton>
+
+            {/* Quick contact info for mobile */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+              className="mt-4 text-center"
+            >
+              <p className="text-white/80 text-sm font-medium mb-2">
+                24/7 Premium Service Available
+              </p>
+              <a
+                href="tel:+15163245483"
+                className="inline-flex items-center gap-2 text-gold font-bold text-lg
+                         hover:text-gold-lighter transition-colors duration-300
+                         touch-manipulation active:scale-95"
+              >
+                <Phone className="w-5 h-5" />
+                (516) 324-5483
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Service Areas */}

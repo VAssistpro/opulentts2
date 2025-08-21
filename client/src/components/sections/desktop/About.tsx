@@ -126,7 +126,12 @@ const About = () => {
             <div className="space-y-6">
               <h4 className="text-2xl font-semibold text-gold">Our Core Values</h4>
               <div className="grid grid-cols-1 gap-4">
-                {FEATURES.slice(0, 4).map((feature, index) => (
+                {(FEATURES && FEATURES.length > 0 ? FEATURES : [
+                  { icon: Shield, title: 'Safety First', description: 'Professional chauffeurs with extensive safety training and background checks' },
+                  { icon: Clock, title: 'Punctuality', description: 'Guaranteed on-time service with real-time flight tracking' },
+                  { icon: Award, title: 'Excellence', description: 'Committed to delivering the highest standards of luxury service' },
+                  { icon: Star, title: '24/7 Support', description: 'Round-the-clock customer support and meticulous attention to every detail' }
+                ]).slice(0, 4).map((feature, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}

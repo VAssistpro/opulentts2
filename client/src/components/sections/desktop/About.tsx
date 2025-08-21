@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FEATURES } from '../../../data/fleet';
+import { FEATURES } from '../../../data/fleet/features';
 import { Award, Users, Clock, Shield, Star, CheckCircle } from 'lucide-react';
 
 const About = () => {

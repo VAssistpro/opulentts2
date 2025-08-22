@@ -56,6 +56,49 @@ const HomePage = () => {
             <Star className="w-4 h-4 text-yellow-400 ml-2 animate-pulse" />
           </motion.div>
         </motion.div>
+
+        {/* Main Title under badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="fixed top-52 w-full z-30 flex justify-center"
+        >
+          <motion.h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
+                       tracking-tight leading-[0.9] text-center"
+          >
+            <motion.span 
+              className="block bg-gradient-to-r from-white via-gray-100 to-white 
+                         bg-clip-text text-transparent font-playfair mb-2"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              OPULENT
+            </motion.span>
+            <motion.span 
+              className="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
+                         bg-clip-text text-transparent font-playfair relative mb-2"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              TRANSPORT
+              <motion.div
+                className="absolute -inset-1 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 blur-xl -z-10"
+                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
+            </motion.span>
+            <motion.span 
+              className="block bg-gradient-to-r from-white via-gray-100 to-white 
+                         bg-clip-text text-transparent font-playfair"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              SOLUTIONS
+            </motion.span>
+          </motion.h1>
+        </motion.div>
         
         {activeSection === 'home' && <HeroSection />}
         {activeSection === 'about' && <StatsSection />}

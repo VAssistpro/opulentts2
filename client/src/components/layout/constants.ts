@@ -1,4 +1,4 @@
-import EnhancedHero from '../sections/desktop/EnhancedHero';
+import ImpressiveHero from '../sections/desktop/ImpressiveHero';
 import About from '../sections/desktop/About';
 import Services from '../sections/desktop/Services';
 import Fleet from '../sections/desktop/Fleet';
@@ -7,7 +7,7 @@ import Contact from '../sections/desktop/Contact';
 import Booking from '../sections/desktop/Booking';
 
 export const SECTIONS = {
-  home: EnhancedHero,
+  home: ImpressiveHero,
   about: About,
   services: Services,
   fleet: Fleet,

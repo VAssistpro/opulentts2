@@ -234,7 +234,7 @@ const ResponsiveHero = () => {
                     <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-3"></div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-6 leading-4">
                     {[
                       { value: "10+", label: "Years of\nExcellence", icon: Crown },
                       { value: "5.0★", label: "Perfect\nRating", icon: Star },

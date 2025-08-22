@@ -23,7 +23,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-64">
       {/* Dynamic Background Elements */}
       <motion.div 
         className="absolute inset-0 opacity-20"
@@ -50,51 +50,12 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative"
         >
-          {/* Enhanced Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8
-                       tracking-tight leading-[0.9]"
-          >
-            <motion.span 
-              className="block bg-gradient-to-r from-white via-gray-100 to-white 
-                         bg-clip-text text-transparent font-playfair"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              OPULENT
-            </motion.span>
-            <motion.span 
-              className="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                         bg-clip-text text-transparent font-playfair relative"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              TRANSPORT
-              <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 blur-xl -z-10"
-                animate={{ opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-            </motion.span>
-            <motion.span 
-              className="block bg-gradient-to-r from-white via-gray-100 to-white 
-                         bg-clip-text text-transparent font-playfair"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              SOLUTIONS
-            </motion.span>
-          </motion.h1>
-
           {/* Elegant Divider with Animation */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="flex items-center justify-center my-10"
+            transition={{ delay: 0.3, duration: 1 }}
+            className="flex items-center justify-center mb-12"
           >
             <motion.div 
               className="h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent w-24"
@@ -119,9 +80,9 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl sm:text-2xl md:text-3xl text-white/90 
-                       max-w-5xl mx-auto leading-relaxed font-light mb-10"
+                       max-w-5xl mx-auto leading-relaxed font-light mb-12"
           >
             Experience unparalleled luxury with{' '}
             <motion.span 
@@ -133,7 +94,7 @@ const HeroSection = () => {
                 className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ delay: 2, duration: 0.8 }}
+                transition={{ delay: 1, duration: 0.8 }}
               />
             </motion.span>
             {' – '}where sophistication meets reliability across Manhattan, Brooklyn, Queens, 

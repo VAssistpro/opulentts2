@@ -74,7 +74,7 @@ const ResponsiveNavbar: React.FC = () => {
                        hover:shadow-[0_20px_50px_rgba(147,113,39,0.2)]
                        transition-all duration-500 mx-2 lg:mx-4 mt-3 lg:mt-4 xl:mt-6">
           
-          <div className="flex items-center justify-between h-14 lg:h-16 xl:h-20">
+          <div className="flex items-center justify-between h-12 lg:h-13 xl:h-14">
             
             {/* Left Navigation */}
             <motion.div 

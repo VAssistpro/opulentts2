@@ -45,7 +45,7 @@ const EnhancedHero = () => {
 
       {/* Main Hero Content */}
       <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen max-w-[1400px] mx-auto" style={{ padding: '35px 0' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen max-w-[1400px] mx-auto" style={{ paddingBottom: '26px' }}>
 
           {/* Left Content - Main Hero Text */}
           <div className="lg:col-span-7 text-left w-full overflow-hidden">
@@ -112,7 +112,7 @@ const EnhancedHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-6"
-              style={{ marginBottom: '43px' }}
+              style={{ marginBottom: '33px' }}
             >
               <GlassmorphicBookButton 
                 onClick={handleBookNow}

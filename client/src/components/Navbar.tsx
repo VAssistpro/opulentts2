@@ -78,23 +78,23 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
               backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
             }}
           >
-            <div className="relative z-10 flex items-center justify-between gap-6">
+            <div className="relative z-10 flex items-center justify-center">
               
               {/* Left Navigation */}
-              <div className="flex items-center space-x-2">
-                {navItems.slice(0, 4).map((item) => (
+              <div className="flex items-center space-x-2 mr-8">
+                {navItems.slice(0, 3).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
                   </div>
                 ))}
               </div>
 
-              {/* Spacer for center logo */}
-              <div className="w-24"></div>
+              {/* Center spacer for logo */}
+              <div className="w-24 flex-shrink-0"></div>
 
               {/* Right Navigation */}
-              <div className="flex items-center space-x-2">
-                {navItems.slice(4).map((item) => (
+              <div className="flex items-center space-x-2 ml-8">
+                {navItems.slice(3).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
                   </div>

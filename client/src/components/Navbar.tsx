@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
               backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
             }}
           >
-            <div className="relative z-10 flex items-center gap-[13px] leading-[14px]">
+            <div className="relative z-10 flex items-center gap-[13px] leading-[14px] -mt-[2px]">
               
               {/* Left Navigation - 4 buttons */}
               <div className="flex items-center space-x-2">
@@ -97,19 +97,20 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
               >
                 <button
                   onClick={() => setActiveSection('home')}
-                  className="relative flex items-center justify-center w-28 h-28 rounded-2xl 
-                         bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl 
+                  className="relative flex items-center justify-center w-28 h-28 rounded-2xl
+                         bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl
                          border-2 border-white/30 shadow-[0_12px_40px_rgba(0,0,0,0.5)]
                          hover:border-yellow-500/50 transition-all duration-300
-                         before:absolute before:inset-0 before:rounded-2xl 
+                         before:absolute before:inset-0 before:rounded-2xl
                          before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
-                         after:absolute after:inset-0 after:rounded-2xl 
-                         after:border after:border-yellow-500/40 transform -translate-y-2"
+                         after:absolute after:inset-0 after:rounded-2xl
+                         after:border after:border-yellow-500/40 transform -translate-y-2
+                         bg-black/[0.58] -my-[21px] -mx-[1px]"
                 >
                   <motion.img
                     src="https://opulentts.com/bgvideo/otsnobg.png"
                     alt="Opulent Transport Solutions"
-                    className="relative z-10 w-16 h-16 object-contain"
+                    className="relative z-10 w-[95px] h-24 object-contain"
                     animate={{ rotate: [0, 5, -5, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   />

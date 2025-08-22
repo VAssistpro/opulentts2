@@ -5,7 +5,7 @@ import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
 import { SECTIONS } from './constants';
 
 const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
-  const { activeSection } = useDesktopNavigation();
+  const { activeSection, setActiveSection } = useDesktopNavigation();
   const ActiveComponent = SECTIONS[activeSection];
 
   return (

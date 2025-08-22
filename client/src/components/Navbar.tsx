@@ -60,28 +60,28 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     <>
       {/* Desktop Navbar */}
       <motion.nav 
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block"
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block max-w-7xl"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="relative">
+        <div className="relative flex items-center justify-center">
           {/* Enhanced Navbar with Dynamic Glass Effect */}
           <motion.div 
-            className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-8 py-3 
+            className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-6 py-3 
                        shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20
                        before:absolute before:inset-0 before:rounded-2xl 
                        before:bg-gradient-to-r before:from-white/10 before:via-white/5 before:to-transparent 
-                       before:border-t before:border-white/30"
+                       before:border-t before:border-white/30 flex items-center justify-center"
             animate={{
               backdropFilter: `blur(${Math.min(scrollY / 10 + 20, 40)}px)`,
               backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
             }}
           >
-            <div className="relative z-10 flex items-center justify-center">
+            <div className="relative z-10 flex items-center justify-center gap-4">
               
               {/* Left Navigation */}
-              <div className="flex items-center space-x-2 mr-8">
+              <div className="flex items-center space-x-2">
                 {navItems.slice(0, 3).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
@@ -89,11 +89,35 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                 ))}
               </div>
 
-              {/* Center spacer for logo */}
-              <div className="w-24 flex-shrink-0"></div>
+              {/* Center Logo */}
+              <motion.div 
+                className="mx-6 z-20"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button
+                  onClick={() => setActiveSection('home')}
+                  className="relative flex items-center justify-center w-20 h-20 rounded-2xl 
+                         bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl 
+                         border-2 border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+                         hover:border-yellow-500/50 transition-all duration-300
+                         before:absolute before:inset-0 before:rounded-2xl 
+                         before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
+                         after:absolute after:inset-0 after:rounded-2xl 
+                         after:border after:border-yellow-500/40"
+                >
+                  <motion.img
+                    src="https://opulentts.com/bgvideo/otsnobg.png"
+                    alt="Opulent Transport Solutions"
+                    className="relative z-10 w-12 h-12 object-contain"
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </button>
+              </motion.div>
 
               {/* Right Navigation */}
-              <div className="flex items-center space-x-2 ml-8">
+              <div className="flex items-center space-x-2">
                 {navItems.slice(3).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
@@ -112,33 +136,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                 </motion.button>
               </div>
             </div>
-          </motion.div>
-
-          {/* Enhanced Center Logo */}
-          <motion.div 
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <button
-              onClick={() => setActiveSection('home')}
-              className="relative flex items-center justify-center w-24 h-24 rounded-2xl 
-                       bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl 
-                       border-2 border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-                       hover:border-yellow-500/50 transition-all duration-300
-                       before:absolute before:inset-0 before:rounded-2xl 
-                       before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
-                       after:absolute after:inset-0 after:rounded-2xl 
-                       after:border after:border-yellow-500/40"
-            >
-              <motion.img
-                src="https://opulentts.com/bgvideo/otsnobg.png"
-                alt="Opulent Transport Solutions"
-                className="relative z-10 w-14 h-14 object-contain"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </button>
           </motion.div>
         </div>
       </motion.nav>

@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
         <div className="flex justify-center">
           {/* Enhanced Navbar with Dynamic Glass Effect */}
           <motion.div 
-            className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-6 py-1 
+            className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-6 py-0 
                        shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20
                        before:absolute before:inset-0 before:rounded-2xl 
                        before:bg-gradient-to-r before:from-white/10 before:via-white/5 before:to-transparent 

@@ -251,10 +251,6 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
       `}</style>
     </ErrorBoundary>
   );
-
-  function setActiveSection(section: string) {
-    // This function will be handled by the navigation context
-  }
 };
 
 export default EnhancedVideoLayout;

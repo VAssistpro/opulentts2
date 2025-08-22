@@ -135,6 +135,9 @@ export default {
       animation: {
         "float": "float 20s ease-in-out infinite",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "cinematic-float": "cinematic-float 25s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease infinite",
+        "luxury-glow": "luxury-glow 3s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

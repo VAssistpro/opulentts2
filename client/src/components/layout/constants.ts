@@ -1,15 +1,17 @@
-import Hero from '../sections/Hero';
-import About from '../sections/About';
-import Services from '../sections/Services';
-import NewFleetGallery from '../fleet/NewFleetGallery';
-import Contact from '../sections/Contact';
-import Booking from '../sections/Booking';
+import EnhancedHero from '../sections/desktop/EnhancedHero';
+import About from '../sections/desktop/About';
+import Services from '../sections/desktop/Services';
+import Fleet from '../sections/desktop/Fleet';
+import LuxuryTestimonials from '../sections/desktop/LuxuryTestimonials';
+import Contact from '../sections/desktop/Contact';
+import Booking from '../sections/desktop/Booking';
 
 export const SECTIONS = {
-  home: Hero,
+  home: EnhancedHero,
   about: About,
   services: Services,
-  fleet: NewFleetGallery,
+  fleet: Fleet,
+  testimonials: LuxuryTestimonials,
   contact: Contact,
   book: Booking,
 } as const;

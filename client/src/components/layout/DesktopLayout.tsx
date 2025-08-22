@@ -1,8 +1,8 @@
 import React from 'react';
-import ConsoleLayout from './ConsoleLayout';
+import EnhancedVideoLayout from './EnhancedVideoLayout';
 
 const DesktopLayout = ({ children }: { children?: React.ReactNode }) => {
-  return <ConsoleLayout>{children}</ConsoleLayout>;
+  return <EnhancedVideoLayout>{children}</EnhancedVideoLayout>;
 };
 
 export default DesktopLayout;

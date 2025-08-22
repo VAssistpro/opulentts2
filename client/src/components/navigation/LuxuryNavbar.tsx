@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
-import { Home, Info, Briefcase, Car, Mail, User, Calendar, Menu } from 'lucide-react';
+import { Home, Info, Briefcase, Car, Star, Mail, User, Calendar, Menu } from 'lucide-react';
 import LoginModal from '../layout/LoginModal';
+import Logo from '../layout/Logo';
 
 const NAV_ITEMS = [
   { icon: Home, label: 'Home', section: 'home' },
   { icon: Info, label: 'About', section: 'about' },
   { icon: Briefcase, label: 'Services', section: 'services' },
   { icon: Car, label: 'Fleet', section: 'fleet' },
+  { icon: Star, label: 'Reviews', section: 'testimonials' },
   { icon: Mail, label: 'Contact', section: 'contact' }
 ] as const;
 
@@ -46,8 +48,18 @@ const LuxuryNavbar: React.FC = () => {
           ? 'py-2 bg-black/80 backdrop-blur-lg shadow-lg border-b border-white/10'
           : 'py-3 lg:py-4 bg-gradient-to-b from-black/70 via-black/40 to-transparent'
         }`}>
-      <div className="container mx-auto max-w-4xl pl-2 w-full">
-        <div className="flex items-center justify-end h-12 md:h-14">
+      <div className="container mx-auto max-w-7xl px-4 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-16 md:h-18">
+
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="#home" onClick={() => handleNavItemClick('home')} className="flex items-center">
+              <Logo className="h-12 md:h-14 w-auto hover:scale-105 transition-transform duration-300" />
+            </a>
+          </div>
+
+          {/* Right Side Navigation */}
+          <div className="flex items-center">
            <div className="hidden lg:flex items-center gap-x-4">
              {NAV_ITEMS.map(({ icon: Icon, label, section }) => {
                const isActive = activeSection === section;
@@ -111,6 +123,7 @@ const LuxuryNavbar: React.FC = () => {
                <Menu className="w-6 h-6" />
              </button>
            </div>
+          </div>
         </div>
       </div>
       <div className={`lg:hidden absolute top-full left-0 w-full bg-black/95 shadow-lg border-t border-gold/20 backdrop-blur-xl overflow-y-auto transition-all duration-300 ease-in-out ${ isMobileMenuOpen ? 'max-h-[80vh] opacity-100 visible py-4' : 'max-h-0 opacity-0 invisible py-0' }`}>

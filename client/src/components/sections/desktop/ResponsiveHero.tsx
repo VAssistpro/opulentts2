@@ -158,7 +158,7 @@ const ResponsiveHero = () => {
               >
                 <button
                   onClick={handleBookNow}
-                  className="group relative overflow-hidden px-10 py-5 rounded-2xl 
+                  className="group relative overflow-hidden px-8 py-5 rounded-2xl 
                             bg-gradient-to-r from-gold via-gold-lighter to-gold
                             hover:from-gold-lighter hover:via-gold hover:to-gold-dark
                             text-black font-bold text-xl tracking-wide

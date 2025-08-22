@@ -50,29 +50,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative"
         >
-          {/* Premium Badge with Animation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center px-6 py-3 mb-8 rounded-full 
-                       bg-gradient-to-r from-yellow-500/20 via-yellow-400/15 to-yellow-500/20 
-                       border border-yellow-500/40 backdrop-blur-lg shadow-2xl
-                       hover:border-yellow-400/60 transition-all duration-300"
-          >
-            <Star className="w-4 h-4 text-yellow-400 mr-2 animate-pulse" />
-            <span className="text-yellow-400 text-sm font-semibold tracking-wider uppercase">
-              New York's Premier Luxury Service
-            </span>
-            <Star className="w-4 h-4 text-yellow-400 ml-2 animate-pulse" />
-          </motion.div>
-
           {/* Enhanced Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8
                        tracking-tight leading-[0.9]"
           >

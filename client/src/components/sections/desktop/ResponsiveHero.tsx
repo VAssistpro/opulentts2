@@ -140,7 +140,7 @@ const ResponsiveHero = () => {
                   <div className="w-24 h-1 bg-gradient-to-r from-gold via-gold-lighter to-gold-dark rounded-full"></div>
                 </div>
                 
-                <p className="text-lg sm:text-xl lg:text-2xl text-white font-light leading-relaxed max-w-3xl
+                <p className="text-base sm:text-lg lg:text-xl text-white font-light leading-relaxed max-w-3xl mt-1
                              drop-shadow-[0_4px_15px_rgba(0,0,0,0.9)]
                              [text-shadow:_0_0_20px_rgba(255,255,255,0.1)]">
                   Experience unparalleled sophistication with our curated fleet of ultra-premium vehicles,

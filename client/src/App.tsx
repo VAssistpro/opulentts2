@@ -22,7 +22,7 @@ const App = () => {
                 <DesktopNavigationProvider>
                   <SEOHead />
                   <StatusBar />
-                  <div className="sm:hidden">
+                  <div className="block sm:hidden">
                     <MobileLayout />
                   </div>
                   <div className="hidden sm:block">

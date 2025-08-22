@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
   const navButton = (icon: React.ReactNode, label: string, section: string, isSpecial = false) => (
     <button
       onClick={() => setActiveSection(section)}
-      className={`flex flex-col items-center space-y-1 px-4 py-3 rounded-xl transition-all duration-300 ${
+      className={`flex flex-col items-center space-y-1 px-3 py-2 rounded-lg transition-all duration-300 ${
         isSpecial
           ? 'bg-yellow-500 text-black hover:bg-yellow-400'
           : activeSection === section
@@ -21,55 +21,61 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
       }`}
     >
       {icon}
-      <span className="text-sm font-medium">{label}</span>
+      <span className="text-xs font-medium">{label}</span>
     </button>
   );
 
   return (
     <>
-      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="bg-black/80 backdrop-blur-xl border border-white/20 rounded-full px-8 py-4 shadow-2xl">
-          <div className="flex items-center gap-6">
-            
-            {/* Left Navigation */}
-            <div className="flex items-center space-x-6">
-              {navButton(<Home className="w-5 h-5" />, 'Home', 'home')}
-              {navButton(<Info className="w-5 h-5" />, 'About Us', 'about')}
-              {navButton(<Briefcase className="w-5 h-5" />, 'Services', 'services')}
-              {navButton(<Car className="w-5 h-5" />, 'Fleet', 'fleet')}
-            </div>
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="relative">
+          {/* Main Navbar */}
+          <div className="bg-black/80 backdrop-blur-xl border border-white/20 rounded-full px-6 py-2 shadow-2xl">
+            <div className="flex items-center justify-between gap-4">
+              
+              {/* Left Navigation */}
+              <div className="flex items-center space-x-4">
+                {navButton(<Home className="w-4 h-4" />, 'Home', 'home')}
+                {navButton(<Info className="w-4 h-4" />, 'About Us', 'about')}
+                {navButton(<Briefcase className="w-4 h-4" />, 'Services', 'services')}
+                {navButton(<Car className="w-4 h-4" />, 'Fleet', 'fleet')}
+              </div>
 
-            {/* Center Logo */}
-            <div className="mx-8">
-              <button
-                onClick={() => setActiveSection('home')}
-                className="flex items-center justify-center w-20 h-20 rounded-full 
-                         bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 
-                         border-2 border-yellow-500/40 hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://opulentts.com/bgvideo/otsnobg.png"
-                  alt="Opulent Transport Solutions"
-                  className="w-12 h-12 object-contain"
-                />
-              </button>
-            </div>
+              {/* Spacer for center logo */}
+              <div className="w-24"></div>
 
-            {/* Right Navigation */}
-            <div className="flex items-center space-x-6">
-              {navButton(<Star className="w-5 h-5" />, 'Reviews', 'testimonials')}
-              {navButton(<Mail className="w-5 h-5" />, 'Contact Us', 'contact')}
-              {navButton(<Calendar className="w-5 h-5" />, 'Book Now', 'book', true)}
-              <button
-                onClick={() => setShowLoginModal(true)}
-                className="flex flex-col items-center space-y-1 px-4 py-3 rounded-xl
-                         text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
-              >
-                <User className="w-5 h-5" />
-                <span className="text-sm font-medium">Account</span>
-              </button>
+              {/* Right Navigation */}
+              <div className="flex items-center space-x-4">
+                {navButton(<Star className="w-4 h-4" />, 'Reviews', 'testimonials')}
+                {navButton(<Mail className="w-4 h-4" />, 'Contact Us', 'contact')}
+                {navButton(<Calendar className="w-4 h-4" />, 'Book Now', 'book', true)}
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="flex flex-col items-center space-y-1 px-3 py-2 rounded-lg
+                           text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+                >
+                  <User className="w-4 h-4" />
+                  <span className="text-xs font-medium">Account</span>
+                </button>
+              </div>
             </div>
+          </div>
 
+          {/* Center Logo - Positioned absolutely to extend beyond navbar */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <button
+              onClick={() => setActiveSection('home')}
+              className="flex items-center justify-center w-20 h-20 rounded-full 
+                       bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 
+                       border-2 border-yellow-500/40 hover:scale-105 transition-all duration-300
+                       shadow-2xl backdrop-blur-xl bg-black/80"
+            >
+              <img
+                src="https://opulentts.com/bgvideo/otsnobg.png"
+                alt="Opulent Transport Solutions"
+                className="w-12 h-12 object-contain"
+              />
+            </button>
           </div>
         </div>
       </nav>

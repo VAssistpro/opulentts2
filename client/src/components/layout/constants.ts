@@ -7,7 +7,7 @@ import Contact from '../sections/desktop/Contact';
 import Booking from '../sections/desktop/Booking';
 
 export const SECTIONS = {
-  home: ImpressiveHero,
+  home: CinematicHero,
   about: About,
   services: Services,
   fleet: Fleet,

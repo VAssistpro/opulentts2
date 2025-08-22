@@ -43,22 +43,22 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        {/* Enhanced Luxury Navigation Bar */}
-        <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10"
-             style={{
-               background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(10,15,26,0.6) 50%, rgba(0,0,0,0.7) 100%)',
-               boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)'
-             }}>
-          
+        {/* Restructured Header with Separate Logo and Navigation */}
+        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/10"
+               style={{
+                 background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(10,15,26,0.6) 50%, rgba(0,0,0,0.7) 100%)',
+                 boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)'
+               }}>
+
           <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-            <div className="flex items-center justify-between h-20">
-              
-              {/* Large Prominent Logo */}
+
+            {/* Large Logo Section */}
+            <div className="flex justify-center py-4 border-b border-white/10">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex-shrink-0 group cursor-pointer"
+                className="group cursor-pointer"
                 onClick={() => {
                   setActiveSection('home');
                   document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
@@ -70,13 +70,17 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
                     src="https://opulentts.com/bgvideo/otsnobg.png"
                     alt="Opulent Transport Solutions"
                     className="relative w-auto object-contain group-hover:scale-105 transition-all duration-500
-                             filter drop-shadow-[0_0_20px_rgba(147,113,39,0.4)] group-hover:drop-shadow-[0_0_30px_rgba(147,113,39,0.6)]"
-                    style={{ height: '67px' }}
+                             filter drop-shadow-[0_0_25px_rgba(147,113,39,0.5)] group-hover:drop-shadow-[0_0_35px_rgba(147,113,39,0.7)]"
+                    style={{ height: '85px' }}
                   />
                 </div>
               </motion.div>
+            </div>
 
-              {/* Enhanced Navigation Items */}
+            {/* Navigation Menu Row */}
+            <div className="flex items-center justify-between h-16">
+
+              {/* Navigation Items */}
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -115,7 +119,7 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
                 })}
               </motion.div>
 
-              {/* Enhanced Action Buttons */}
+              {/* Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -142,19 +146,18 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </button>
 
-                <a
-                  href="tel:+15163245483"
+                <button
                   className="group flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-white
                            bg-white/10 backdrop-blur-xl border border-white/20
                            hover:bg-white/20 hover:border-gold/40 transition-all duration-300"
                 >
-                  <span>📞</span>
-                  <span className="hidden md:inline">Call Now</span>
-                </a>
+                  <span>👤</span>
+                  <span>Account</span>
+                </button>
               </motion.div>
             </div>
           </div>
-        </nav>
+        </header>
 
         {/* Main Content Area with Glass Effects */}
         <main className="relative z-10 pt-20">

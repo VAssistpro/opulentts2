@@ -105,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                          before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
                          after:absolute after:inset-0 after:rounded-2xl
                          after:border after:border-yellow-500/40 transform -translate-y-2
-                         bg-black/[0.58] -my-[21px] -mx-[1px]"
+                         bg-black/[0.69] -my-[21px] -mx-[1px]"
                 >
                   <motion.img
                     src="https://opulentts.com/bgvideo/otsnobg.png"

@@ -157,10 +157,11 @@ const ResponsiveNavbar: React.FC = () => {
                       key={section}
                       onClick={() => handleNavItemClick(section)}
                       className={navButtonClass(isActive)}
+                      style={{gap: '10px', padding: '9px 10px', lineHeight: '16px'}}
                       aria-current={isActive ? 'page' : undefined}
                     >
                       <Icon className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 shrink-0" />
-                      <span className="text-xs lg:text-sm xl:text-base font-semibold whitespace-nowrap hidden md:inline">
+                      <span className="text-xs font-semibold whitespace-nowrap hidden md:inline" style={{fontSize: '12px', lineHeight: '10px'}}>
                         {label}
                       </span>
                     </button>

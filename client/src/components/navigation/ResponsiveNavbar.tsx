@@ -83,8 +83,8 @@ const ResponsiveNavbar: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <div className="flex items-center gap-1 lg:gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20 
-                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-2 lg:px-3 xl:px-4 py-1 lg:py-2 xl:py-3">
+              <div className="flex items-center gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20
+                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-3 py-0 text-xs leading-tight">
                 <Crown className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-gold animate-pulse" />
                 {leftNavItems.map(({ icon: Icon, label, section }) => {
                   const isActive = activeSection === section;

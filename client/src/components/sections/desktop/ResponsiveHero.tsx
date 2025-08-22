@@ -95,9 +95,9 @@ const ResponsiveHero = () => {
                   </motion.div>
                   
                   <motion.div 
-                    className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark 
+                    className="bg-gradient-to-r from-gold-lighter via-gold to-gold-dark
                                bg-clip-text text-transparent font-bold
-                               text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+                               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
                                drop-shadow-[0_0_50px_rgba(147,113,39,0.8)]"
                     style={{ 
                       filter: 'drop-shadow(0 0 20px rgba(147,113,39,0.6))'

@@ -45,7 +45,7 @@ const EnhancedHero = () => {
 
       {/* Main Hero Content */}
       <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen max-w-[1400px] mx-auto" style={{ paddingBottom: '26px' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen max-w-[1400px] mx-auto" style={{ paddingTop: '2rem', paddingBottom: '26px' }}>
 
           {/* Left Content - Main Hero Text */}
           <div className="lg:col-span-7 text-left w-full overflow-hidden">

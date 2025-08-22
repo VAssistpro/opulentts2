@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';

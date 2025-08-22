@@ -137,8 +137,8 @@ const HeroSection = () => {
             <motion.button 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-yellow-600 
-                         text-black px-10 py-5 rounded-xl font-bold text-lg 
+              className="group flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-yellow-600
+                         text-black px-[35px] py-[15px] rounded-xl font-bold text-lg 
                          shadow-[0_10px_40px_rgba(147,113,39,0.3)] hover:shadow-[0_20px_60px_rgba(147,113,39,0.4)]
                          transition-all duration-300 relative overflow-hidden"
             >
@@ -160,8 +160,8 @@ const HeroSection = () => {
             <motion.button 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group flex items-center space-x-3 bg-white/10 backdrop-blur-xl text-white 
-                         px-10 py-5 rounded-xl font-bold text-lg border-2 border-white/20 
+              className="group flex items-center space-x-3 bg-white/10 backdrop-blur-xl text-white
+                         px-[35px] py-[15px] rounded-xl font-bold text-lg border-2 border-white/20 
                          hover:bg-white/20 hover:border-white/40 transition-all duration-300
                          shadow-[0_10px_40px_rgba(255,255,255,0.1)]"
             >
@@ -212,7 +212,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="bg-black/60 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl py-12 mt-20"
+          className="bg-black/60 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl py-[35px] mt-[35px]"
         >
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">

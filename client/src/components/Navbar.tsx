@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
       }}
       whileHover={{ scale: 1.05, y: -1 }}
       whileTap={{ scale: 0.98 }}
-      className={`flex flex-col items-center space-y-1 px-4 py-3 rounded-xl transition-all duration-300 relative group ${
+      className={`flex flex-col items-center space-y-1 px-[14px] py-[9px] rounded-xl transition-all duration-300 relative group ${
         isSpecial
           ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 shadow-lg hover:shadow-xl'
           : activeSection === section
@@ -129,7 +129,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                   onClick={() => setShowLoginModal(true)}
                   whileHover={{ scale: 1.05, y: -1 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex flex-col items-center space-y-1 px-4 py-3 rounded-xl
+                  className="flex flex-col items-center space-y-1 px-[14px] py-[9px] rounded-xl
                            text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 group"
                 >
                   <User className="w-4 h-4" />

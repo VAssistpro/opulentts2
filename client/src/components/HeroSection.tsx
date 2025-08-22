@@ -191,8 +191,8 @@ const HeroSection = () => {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="flex items-center justify-center space-x-2 p-3 rounded-lg bg-white/5 
-                           backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                className="flex items-center justify-center space-x-2 p-3 rounded-[5px] bg-white/5
+                           backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden"
               >
                 <motion.span 
                   className="text-yellow-500"

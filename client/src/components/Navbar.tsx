@@ -97,15 +97,16 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
               >
                 <button
                   onClick={() => setActiveSection('home')}
-                  className="relative flex items-center justify-center w-28 h-28 rounded-2xl
+                  className="relative flex items-center justify-center w-28 h-28 rounded-[19px]
                          bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl
-                         border-2 border-white/30 shadow-[0_12px_40px_rgba(0,0,0,0.5)]
-                         hover:border-yellow-500/50 transition-all duration-300
+                         shadow-[0_12px_40px_rgba(0,0,0,0.5)]
+                         transition-all duration-300
                          before:absolute before:inset-0 before:rounded-2xl
                          before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
                          after:absolute after:inset-0 after:rounded-2xl
                          after:border after:border-yellow-500/40 transform -translate-y-2
-                         bg-black/[0.92] -my-[21px] -mx-[1px]"
+                         bg-black/[0.92] -my-[21px] -mx-[1px] overflow-hidden
+                         border-2 border-[rgba(155,155,155,1)]"
                 >
                   <motion.img
                     src="https://opulentts.com/bgvideo/otsnobg.png"

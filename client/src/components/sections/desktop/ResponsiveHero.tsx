@@ -83,8 +83,8 @@ const ResponsiveHero = () => {
               >
                 <h1 className="leading-[0.85]">
                   <motion.div 
-                    className="text-white font-bold 
-                               text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl
+                    className="text-white font-bold
+                               text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
                                drop-shadow-[0_8px_30px_rgba(0,0,0,0.9)]
                                [text-shadow:_0_0_40px_rgba(255,255,255,0.3)]"
                     initial={{ opacity: 0, x: -30 }}

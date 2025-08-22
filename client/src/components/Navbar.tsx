@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
               backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
             }}
           >
-            <div className="relative z-10 flex items-center gap-4">
+            <div className="relative z-10 flex items-center gap-[13px] leading-[14px]">
               
               {/* Left Navigation - 4 buttons */}
               <div className="flex items-center space-x-2">

@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
             <div className="relative z-10 flex items-center gap-[13px] leading-[14px] -mt-[2px]">
               
               {/* Left Navigation - 4 buttons */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 text-black">
                 {navItems.slice(0, 4).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}

@@ -55,7 +55,7 @@ const HeroSection = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="flex items-center justify-center my-5"
+            className="flex items-center justify-center my-[10px]"
           >
             <motion.div 
               className="h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent w-24"
@@ -106,7 +106,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-8 mb-5"
+            className="flex flex-wrap justify-center gap-8 mb-[15px]"
           >
             {quickStats.map((stat, index) => (
               <motion.div
@@ -180,7 +180,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70"
+            className="mt-[10px] grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70"
           >
             {[
               "24/7 Availability",

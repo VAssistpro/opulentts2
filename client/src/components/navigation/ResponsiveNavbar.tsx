@@ -188,13 +188,13 @@ const ResponsiveNavbar: React.FC = () => {
                 {/* Account Login Button */}
                 <button
                   onClick={handleAccountClick}
-                  className="group flex items-center gap-1 lg:gap-2 px-2 lg:px-4 xl:px-6 py-1 lg:py-2 xl:py-3 rounded-lg lg:rounded-xl
-                           bg-transparent border border-white/30 text-white font-semibold text-xs lg:text-sm xl:text-base
-                           backdrop-blur-xl hover:border-gold/50 hover:bg-gold/10 
+                  className="group flex items-center gap-2 px-2 py-2 rounded-lg
+                           bg-transparent border border-white/30 text-white font-medium text-xs
+                           backdrop-blur-xl hover:border-gold/50 hover:bg-gold/10
                            transition-all duration-300 hover:scale-105"
                 >
                   <User className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
-                  <span className="hidden lg:inline">Account</span>
+                  <span className="hidden lg:inline" style={{fontWeight: '500', fontSize: '12px', lineHeight: '10px'}}>Account</span>
                 </button>
 
                 <Diamond className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-gold animate-spin-slow" />

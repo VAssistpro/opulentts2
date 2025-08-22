@@ -176,18 +176,18 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
               {activeSection === 'home' ? (
                 <ActiveComponent />
               ) : (
-                <div className="min-h-screen">
+                <div className="min-h-screen pb-8">
                   {/* Content Container with Glass Effect */}
-                  <div className="container mx-auto px-6 lg:px-8 py-12 max-w-7xl">
-                    <div className="backdrop-blur-2xl bg-black/20 rounded-3xl border border-white/10 
+                  <div className="container mx-auto px-6 lg:px-8 py-8 max-w-7xl">
+                    <div className="backdrop-blur-2xl bg-black/20 rounded-3xl border border-white/10
                                   shadow-[0_0_60px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]
-                                  overflow-hidden"
+                                  overflow-hidden min-h-[calc(100vh-12rem)]"
                          style={{
                            background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(10,15,26,0.2) 50%, rgba(0,0,0,0.3) 100%)'
                          }}>
-                      
-                      {/* Content with Scrolling */}
-                      <div className="max-h-[80vh] overflow-y-auto custom-scrollbar p-8">
+
+                      {/* Content with Better Scrolling */}
+                      <div className="h-full overflow-y-auto custom-scrollbar p-8">
                         <ActiveComponent />
                       </div>
                     </div>

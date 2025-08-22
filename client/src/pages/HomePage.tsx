@@ -62,15 +62,15 @@ const HomePage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="fixed top-52 w-full z-30 flex justify-center"
+          className="fixed top-44 w-full z-30 flex justify-center"
         >
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
-                       tracking-tight leading-[0.9] text-center"
+                       tracking-tight leading-[0.85] text-center"
           >
             <motion.span 
               className="block bg-gradient-to-r from-white via-gray-100 to-white 
-                         bg-clip-text text-transparent font-playfair mb-2"
+                         bg-clip-text text-transparent font-playfair mb-1"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -78,7 +78,7 @@ const HomePage = () => {
             </motion.span>
             <motion.span 
               className="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                         bg-clip-text text-transparent font-playfair relative mb-2"
+                         bg-clip-text text-transparent font-playfair relative mb-1"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >

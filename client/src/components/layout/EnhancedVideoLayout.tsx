@@ -44,8 +44,8 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
           </div>
         </div>
 
-        {/* Cinematic Navbar */}
-        <CinematicNavbar />
+        {/* Responsive Navbar */}
+        <ResponsiveNavbar />
 
         {/* Main Content Area with Glass Effects */}
         <main className="relative z-10 pt-20">

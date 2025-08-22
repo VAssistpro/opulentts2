@@ -124,18 +124,18 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                     {navButton(item.icon, item.label, item.section)}
                   </div>
                 ))}
-                {navButton(<Calendar className="w-4 h-4" />, 'Book Now', 'book', true)}
-                <motion.button
-                  onClick={() => setShowLoginModal(true)}
-                  whileHover={{ scale: 1.05, y: -1 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex flex-col items-center space-y-1 px-[14px] py-[9px] rounded-xl
-                           text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <User className="w-4 h-4" />
-                  <span className="text-xs font-semibold">Account</span>
-                </motion.button>
               </div>
+              {navButton(<Calendar className="w-4 h-4" />, 'Book Now', 'book', true)}
+              <motion.button
+                onClick={() => setShowLoginModal(true)}
+                whileHover={{ scale: 1.05, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                className="flex flex-col items-center space-y-1 px-[14px] py-[9px] rounded-xl
+                         text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 group"
+              >
+                <User className="w-4 h-4" />
+                <span className="text-xs font-semibold">Account</span>
+              </motion.button>
             </div>
           </motion.div>
         </div>

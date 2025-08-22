@@ -215,7 +215,7 @@ const HeroSection = () => {
           className="bg-black/60 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl py-[22px] mt-4"
         >
           <div className="max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 leading-[13px]">
               <motion.div 
                 className="text-white/60"
                 whileHover={{ scale: 1.02 }}

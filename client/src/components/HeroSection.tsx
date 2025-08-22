@@ -48,7 +48,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative"
+          className="relative leading-[15px]"
         >
           {/* Elegant Divider with Animation */}
           <motion.div
@@ -97,8 +97,8 @@ const HeroSection = () => {
                 transition={{ delay: 1, duration: 0.8 }}
               />
             </motion.span>
-            {' – '}where sophistication meets reliability across Manhattan, Brooklyn, Queens, 
-            and all major airports including JFK, LGA, and Newark.
+            {' – '}<span style={{lineHeight: "25px"}}>where sophistication meets reliability across Manhattan, Brooklyn, Queens,
+            and all major airports including JFK, LGA, and Newark.</span>
           </motion.p>
 
           {/* Quick Stats */}
@@ -222,16 +222,11 @@ const HeroSection = () => {
               >
                 © 2024 Opulent Transport Solutions. All rights reserved.
               </motion.div>
-              <motion.div 
-                className="flex items-center space-x-3"
+              <motion.div
+                className="text-white/70 text-lg pl-3"
                 whileHover={{ scale: 1.05 }}
               >
-                <img
-                  src="https://opulentts.com/bgvideo/otsnobg.png"
-                  alt="Opulent"
-                  className="w-10 h-10 object-contain"
-                />
-                <span className="text-yellow-500 font-bold text-lg">Opulent Transport</span>
+                <p>Powered by V Assist Pro</p>
               </motion.div>
               <motion.div 
                 className="text-white/60 font-semibold"

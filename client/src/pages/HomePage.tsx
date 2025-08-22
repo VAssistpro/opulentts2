@@ -35,6 +35,28 @@ const HomePage = () => {
       <div className="relative z-10">
         <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
         
+        {/* Premium Badge under navbar */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="fixed top-24 left-1/2 transform -translate-x-1/2 z-40"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center px-6 py-3 rounded-full 
+                       bg-gradient-to-r from-yellow-500/20 via-yellow-400/15 to-yellow-500/20 
+                       border border-yellow-500/40 backdrop-blur-lg shadow-2xl
+                       hover:border-yellow-400/60 transition-all duration-300"
+          >
+            <Star className="w-4 h-4 text-yellow-400 mr-2 animate-pulse" />
+            <span className="text-yellow-400 text-sm font-semibold tracking-wider uppercase">
+              NEW YORK'S PREMIER LUXURY SERVICE
+            </span>
+            <Star className="w-4 h-4 text-yellow-400 ml-2 animate-pulse" />
+          </motion.div>
+        </motion.div>
+        
         {activeSection === 'home' && <HeroSection />}
         {activeSection === 'about' && <StatsSection />}
         {activeSection === 'services' && <ServicesSection />}

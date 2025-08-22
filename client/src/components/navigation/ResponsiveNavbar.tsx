@@ -93,6 +93,7 @@ const ResponsiveNavbar: React.FC = () => {
                       key={section}
                       onClick={() => handleNavItemClick(section)}
                       className={navButtonClass(isActive)}
+                      style={section === 'fleet' ? {padding: '0 12px'} : undefined}
                       aria-current={isActive ? 'page' : undefined}
                     >
                       <Icon className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 shrink-0" />

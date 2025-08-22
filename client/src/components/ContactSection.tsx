@@ -23,6 +23,29 @@ const ContactSection = () => {
     }));
   };
 
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6 text-yellow-500" />,
+      title: "Phone",
+      content: "(516) 324-5483"
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-yellow-500" />,
+      title: "Email", 
+      content: "reservations@opulentts.com"
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-yellow-500" />,
+      title: "Address",
+      content: "59 John St Plainview, NY 11803"
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-yellow-500" />,
+      title: "Hours",
+      content: "24/7 Service Available"
+    }
+  ];
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-6xl w-full">
@@ -41,37 +64,15 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-6 h-6 text-yellow-500 mt-1" />
-                  <div>
-                    <h4 className="text-white font-semibold">Phone</h4>
-                    <p className="text-white/70">(516) 324-5483</p>
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    {info.icon}
+                    <div>
+                      <h4 className="text-white font-semibold">{info.title}</h4>
+                      <p className="text-white/70">{info.content}</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-6 h-6 text-yellow-500 mt-1" />
-                  <div>
-                    <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-white/70">info@opulentts.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-6 h-6 text-yellow-500 mt-1" />
-                  <div>
-                    <h4 className="text-white font-semibold">Service Area</h4>
-                    <p className="text-white/70">New York City & Tri-State Area</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-yellow-500 mt-1" />
-                  <div>
-                    <h4 className="text-white font-semibold">Availability</h4>
-                    <p className="text-white/70">24/7 Service Available</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -119,9 +120,11 @@ const ContactSection = () => {
                   required
                 >
                   <option value="">Select Service</option>
-                  <option value="executive">Executive Transportation</option>
-                  <option value="airport">Airport Transfer</option>
-                  <option value="event">Special Event</option>
+                  <option value="airport">Airport Transfers</option>
+                  <option value="corporate">Corporate Travel</option>
+                  <option value="tours">City Tours</option>
+                  <option value="events">Special Events</option>
+                  <option value="group">Group Transportation</option>
                   <option value="hourly">Hourly Service</option>
                 </select>
               </div>

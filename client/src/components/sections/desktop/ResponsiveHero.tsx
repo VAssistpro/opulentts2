@@ -111,7 +111,7 @@ const ResponsiveHero = () => {
                   
                   <motion.div 
                     className="text-white/95 font-light tracking-[0.15em]
-                               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                               text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
                                drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

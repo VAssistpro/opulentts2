@@ -1,4 +1,4 @@
-import ImpressiveHero from '../sections/desktop/ImpressiveHero';
+import CinematicHero from '../sections/desktop/CinematicHero';
 import About from '../sections/desktop/About';
 import Services from '../sections/desktop/Services';
 import Fleet from '../sections/desktop/Fleet';

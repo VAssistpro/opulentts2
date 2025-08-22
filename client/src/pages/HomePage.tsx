@@ -50,7 +50,7 @@ const HomePage = () => {
                        hover:border-yellow-400/60 transition-all duration-300"
           >
             <Star className="w-4 h-4 text-yellow-400 mr-2 animate-pulse" />
-            <span className="text-sm font-semibold tracking-wider uppercase" style={{color: "rgba(74, 74, 74, 1)"}}>
+            <span className="text-sm font-semibold tracking-wider uppercase" style={{color: "rgba(155, 155, 155, 1)"}}>
               NEW YORK'S PREMIER LUXURY SERVICE
             </span>
             <Star className="w-4 h-4 text-yellow-400 ml-2 animate-pulse" />

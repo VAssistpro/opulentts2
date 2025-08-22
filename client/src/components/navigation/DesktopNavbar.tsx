@@ -61,10 +61,11 @@ const DesktopNavbar: React.FC = () => {
         : 'py-3 bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md'
     }`}>
       <div className="container mx-auto max-w-7xl px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="bg-black/40 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl mx-4 mt-4">
+          <div className="flex items-center justify-between h-16 px-6">
           
-          {/* Left Navigation */}
-          <div className="flex items-center gap-2 mt-4">
+            {/* Left Navigation */}
+            <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 py-2">
             {leftNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (
@@ -81,8 +82,8 @@ const DesktopNavbar: React.FC = () => {
             })}
           </div>
 
-          {/* Center Logo */}
-          <div className="flex-shrink-0">
+            {/* Center Logo */}
+            <div className="flex-shrink-0 rounded-xl border border-white/10 bg-black/20 p-2">
             <a 
               href="#home" 
               onClick={() => handleNavItemClick('home')} 
@@ -91,14 +92,14 @@ const DesktopNavbar: React.FC = () => {
               <img
                 src="https://opulentts.com/bgvideo/otsnobg.png"
                 alt="Opulent Logo"
-                className="w-auto mt-[37px]"
+                className="w-auto"
                 style={{ height: '125px' }}
               />
             </a>
           </div>
 
-          {/* Right Navigation */}
-          <div className="flex items-center gap-2 mt-4">
+            {/* Right Navigation */}
+            <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 py-2">
             {rightNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (
@@ -140,8 +141,9 @@ const DesktopNavbar: React.FC = () => {
               <User className="w-4 h-4" />
               <span className="text-sm whitespace-nowrap">Account Login</span>
             </button>
-          </div>
+            </div>
         </div>
+      </div>
       </div>
 
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />

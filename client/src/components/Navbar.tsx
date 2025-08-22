@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
                          after:absolute after:inset-0 after:rounded-2xl
                          after:border after:border-yellow-500/40 transform -translate-y-2
                          bg-black/[0.92] -my-[21px] -mx-[1px] overflow-hidden
-                         border-2 border-[rgba(155,155,155,1)]"
+                         border border-[rgb(155,155,155)]"
                 >
                   <motion.img
                     src="https://opulentts.com/bgvideo/otsnobg.png"

@@ -212,7 +212,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="bg-black/60 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl py-[35px] mt-[35px]"
+          className="bg-black/60 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl py-[22px] mt-4"
         >
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">

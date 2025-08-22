@@ -80,45 +80,45 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
           >
             <div className="relative z-10 flex items-center gap-4">
               
-              {/* Left Navigation */}
+              {/* Left Navigation - 4 buttons */}
               <div className="flex items-center space-x-2">
-                {navItems.slice(0, 3).map((item) => (
+                {navItems.slice(0, 4).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
                   </div>
                 ))}
               </div>
 
-              {/* Center Logo */}
+              {/* Center Logo - Bigger and extending beyond borders */}
               <motion.div 
-                className="mx-4 z-20"
+                className="mx-4 z-30 relative"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <button
                   onClick={() => setActiveSection('home')}
-                  className="relative flex items-center justify-center w-20 h-20 rounded-2xl 
+                  className="relative flex items-center justify-center w-28 h-28 rounded-2xl 
                          bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl 
-                         border-2 border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+                         border-2 border-white/30 shadow-[0_12px_40px_rgba(0,0,0,0.5)]
                          hover:border-yellow-500/50 transition-all duration-300
                          before:absolute before:inset-0 before:rounded-2xl 
                          before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
                          after:absolute after:inset-0 after:rounded-2xl 
-                         after:border after:border-yellow-500/40"
+                         after:border after:border-yellow-500/40 transform -translate-y-2"
                 >
                   <motion.img
                     src="https://opulentts.com/bgvideo/otsnobg.png"
                     alt="Opulent Transport Solutions"
-                    className="relative z-10 w-12 h-12 object-contain"
+                    className="relative z-10 w-16 h-16 object-contain"
                     animate={{ rotate: [0, 5, -5, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   />
                 </button>
               </motion.div>
 
-              {/* Right Navigation */}
+              {/* Right Navigation - 4 buttons */}
               <div className="flex items-center space-x-2">
-                {navItems.slice(3).map((item) => (
+                {navItems.slice(4).map((item) => (
                   <div key={item.section}>
                     {navButton(item.icon, item.label, item.section)}
                   </div>

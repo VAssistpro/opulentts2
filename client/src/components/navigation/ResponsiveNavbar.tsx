@@ -207,7 +207,7 @@ const ResponsiveNavbar: React.FC = () => {
 
       <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
 
-      <style jsx>{`
+      <style>{`
         @keyframes animate-spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

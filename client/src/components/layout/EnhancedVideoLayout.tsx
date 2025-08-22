@@ -124,7 +124,7 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
       </div>
       
       {/* Enhanced CSS for luxury animations */}
-      <style jsx>{`
+      <style>{`
         .animate-pulse-slow {
           animation: pulse 4s ease-in-out infinite;
         }

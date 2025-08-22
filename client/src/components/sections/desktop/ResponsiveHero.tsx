@@ -326,7 +326,7 @@ const ResponsiveHero = () => {
       </motion.button>
 
       {/* Custom Styles for Animations */}
-      <style jsx>{`
+      <style>{`
         .animate-pulse-slow {
           animation: pulse 4s ease-in-out infinite;
         }

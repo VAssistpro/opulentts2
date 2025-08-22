@@ -171,16 +171,17 @@ const ResponsiveNavbar: React.FC = () => {
                 {/* Book Now Button */}
                 <button
                   onClick={handleBookNowClick}
-                  className="group relative overflow-hidden flex items-center gap-1 lg:gap-2 px-2 lg:px-4 xl:px-6 py-1 lg:py-2 xl:py-3 rounded-lg lg:rounded-xl
+                  className="group relative overflow-hidden flex items-center gap-2 px-2 py-2 rounded-lg
                            bg-gradient-to-r from-gold via-gold-lighter to-gold
                            hover:from-gold-lighter hover:via-gold hover:to-gold-dark
-                           text-black font-bold text-xs lg:text-sm xl:text-base tracking-wide
+                           text-black font-medium text-xs tracking-wide
                            transform hover:scale-105 transition-all duration-300
                            shadow-[0_8px_20px_rgba(147,113,39,0.4)] hover:shadow-[0_12px_30px_rgba(147,113,39,0.6)]
                            border border-gold-lighter"
+                  style={{fontSize: '12px', fontWeight: '500', gap: '10px', lineHeight: '12px', padding: '9px 10px'}}
                 >
                   <Calendar className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
-                  <span className="hidden sm:inline">Book Now</span>
+                  <span className="hidden sm:inline" style={{fontWeight: '500', textAlign: 'left', letterSpacing: 'normal'}}>Book Now</span>
                   <span className="sm:hidden">Book</span>
                 </button>
 

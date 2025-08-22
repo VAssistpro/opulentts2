@@ -67,14 +67,14 @@ const ResponsiveNavbar: React.FC = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto max-w-7xl px-4 lg:px-6 xl:px-8">
+      <div className="container mx-auto max-w-7xl">
         <div className="bg-gradient-to-r from-black/70 via-black/50 to-black/70 
                        backdrop-blur-2xl rounded-xl lg:rounded-2xl xl:rounded-3xl border-2 border-gold/30 
                        shadow-[0_15px_40px_rgba(0,0,0,0.4),0_0_60px_rgba(147,113,39,0.1)]
                        hover:shadow-[0_20px_50px_rgba(147,113,39,0.2)]
                        transition-all duration-500 mx-2 lg:mx-4 mt-3 lg:mt-4 xl:mt-6">
           
-          <div className="flex items-center justify-between h-14 lg:h-16 xl:h-20 px-3 lg:px-6 xl:px-8">
+          <div className="flex items-center justify-between h-14 lg:h-16 xl:h-20">
             
             {/* Left Navigation */}
             <motion.div 

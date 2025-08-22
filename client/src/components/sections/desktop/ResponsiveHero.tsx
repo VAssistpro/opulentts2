@@ -51,7 +51,7 @@ const ResponsiveHero = () => {
       {/* Main Content Container */}
       <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center min-h-screen py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center min-h-screen py-12">
 
             {/* Left Content - Main Hero (3/5 width) */}
             <div className="lg:col-span-3 text-left space-y-6 lg:space-y-8">

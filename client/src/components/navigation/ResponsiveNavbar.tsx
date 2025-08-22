@@ -67,7 +67,7 @@ const ResponsiveNavbar: React.FC = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl mt-9">
         <div className="bg-gradient-to-r from-black/70 via-black/50 to-black/70 
                        backdrop-blur-2xl rounded-xl lg:rounded-2xl xl:rounded-3xl border-2 border-gold/30 
                        shadow-[0_15px_40px_rgba(0,0,0,0.4),0_0_60px_rgba(147,113,39,0.1)]

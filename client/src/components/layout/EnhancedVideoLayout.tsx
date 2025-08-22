@@ -69,8 +69,9 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
                   <img
                     src="https://opulentts.com/bgvideo/otsnobg.png"
                     alt="Opulent Transport Solutions"
-                    className="relative h-16 md:h-18 w-auto object-contain group-hover:scale-105 transition-all duration-500
+                    className="relative w-auto object-contain group-hover:scale-105 transition-all duration-500
                              filter drop-shadow-[0_0_20px_rgba(147,113,39,0.4)] group-hover:drop-shadow-[0_0_30px_rgba(147,113,39,0.6)]"
+                    style={{ height: '67px' }}
                   />
                 </div>
               </motion.div>

@@ -67,14 +67,14 @@ const ResponsiveNavbar: React.FC = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-7xl mt-9">
         <div className="bg-gradient-to-r from-black/70 via-black/50 to-black/70 
                        backdrop-blur-2xl rounded-xl lg:rounded-2xl xl:rounded-3xl border-2 border-gold/30 
                        shadow-[0_15px_40px_rgba(0,0,0,0.4),0_0_60px_rgba(147,113,39,0.1)]
                        hover:shadow-[0_20px_50px_rgba(147,113,39,0.2)]
                        transition-all duration-500 mx-2 lg:mx-4 mt-3 lg:mt-4 xl:mt-6">
           
-          <div className="flex items-center justify-between h-14 lg:h-16 xl:h-20">
+          <div className="flex items-center justify-between h-12 lg:h-13 xl:h-14">
             
             {/* Left Navigation */}
             <motion.div 
@@ -83,8 +83,8 @@ const ResponsiveNavbar: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <div className="flex items-center gap-1 lg:gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20 
-                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-2 lg:px-3 xl:px-4 py-1 lg:py-2 xl:py-3">
+              <div className="flex items-center gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20
+                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-3 py-0 text-xs leading-tight">
                 <Crown className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-gold animate-pulse" />
                 {leftNavItems.map(({ icon: Icon, label, section }) => {
                   const isActive = activeSection === section;
@@ -93,6 +93,7 @@ const ResponsiveNavbar: React.FC = () => {
                       key={section}
                       onClick={() => handleNavItemClick(section)}
                       className={navButtonClass(isActive)}
+                      style={section === 'fleet' ? {padding: '0 12px'} : undefined}
                       aria-current={isActive ? 'page' : undefined}
                     >
                       <Icon className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 shrink-0" />
@@ -142,14 +143,14 @@ const ResponsiveNavbar: React.FC = () => {
             </motion.div>
 
             {/* Right Navigation */}
-            <motion.div 
+            <motion.div
               className="flex items-center gap-1 lg:gap-2"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              <div className="flex items-center gap-1 lg:gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20 
-                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-2 lg:px-3 xl:px-4 py-1 lg:py-2 xl:py-3">
+              <div className="flex items-center gap-2 rounded-lg lg:rounded-xl xl:rounded-2xl border border-gold/20
+                             bg-gradient-to-r from-black/50 to-black/30 backdrop-blur-xl px-3 py-0 text-xs leading-tight">
                 {rightNavItems.map(({ icon: Icon, label, section }) => {
                   const isActive = activeSection === section;
                   return (
@@ -157,10 +158,11 @@ const ResponsiveNavbar: React.FC = () => {
                       key={section}
                       onClick={() => handleNavItemClick(section)}
                       className={navButtonClass(isActive)}
+                      style={{gap: '10px', padding: '9px 10px', lineHeight: '16px'}}
                       aria-current={isActive ? 'page' : undefined}
                     >
                       <Icon className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 shrink-0" />
-                      <span className="text-xs lg:text-sm xl:text-base font-semibold whitespace-nowrap hidden md:inline">
+                      <span className="text-xs font-semibold whitespace-nowrap hidden md:inline" style={{fontSize: '12px', lineHeight: '10px'}}>
                         {label}
                       </span>
                     </button>
@@ -170,29 +172,30 @@ const ResponsiveNavbar: React.FC = () => {
                 {/* Book Now Button */}
                 <button
                   onClick={handleBookNowClick}
-                  className="group relative overflow-hidden flex items-center gap-1 lg:gap-2 px-2 lg:px-4 xl:px-6 py-1 lg:py-2 xl:py-3 rounded-lg lg:rounded-xl
+                  className="group relative overflow-hidden flex items-center gap-2 px-2 py-2 rounded-lg
                            bg-gradient-to-r from-gold via-gold-lighter to-gold
                            hover:from-gold-lighter hover:via-gold hover:to-gold-dark
-                           text-black font-bold text-xs lg:text-sm xl:text-base tracking-wide
+                           text-black font-medium text-xs tracking-wide
                            transform hover:scale-105 transition-all duration-300
                            shadow-[0_8px_20px_rgba(147,113,39,0.4)] hover:shadow-[0_12px_30px_rgba(147,113,39,0.6)]
                            border border-gold-lighter"
+                  style={{fontSize: '12px', fontWeight: '500', gap: '10px', lineHeight: '12px', padding: '9px 10px'}}
                 >
                   <Calendar className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
-                  <span className="hidden sm:inline">Book Now</span>
+                  <span className="hidden sm:inline" style={{fontWeight: '500', textAlign: 'left', letterSpacing: 'normal'}}>Book Now</span>
                   <span className="sm:hidden">Book</span>
                 </button>
 
                 {/* Account Login Button */}
                 <button
                   onClick={handleAccountClick}
-                  className="group flex items-center gap-1 lg:gap-2 px-2 lg:px-4 xl:px-6 py-1 lg:py-2 xl:py-3 rounded-lg lg:rounded-xl
-                           bg-transparent border border-white/30 text-white font-semibold text-xs lg:text-sm xl:text-base
-                           backdrop-blur-xl hover:border-gold/50 hover:bg-gold/10 
+                  className="group flex items-center gap-2 px-2 py-2 rounded-lg
+                           bg-transparent border border-white/30 text-white font-medium text-xs
+                           backdrop-blur-xl hover:border-gold/50 hover:bg-gold/10
                            transition-all duration-300 hover:scale-105"
                 >
                   <User className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
-                  <span className="hidden lg:inline">Account</span>
+                  <span className="hidden lg:inline" style={{fontWeight: '500', fontSize: '12px', lineHeight: '10px'}}>Account</span>
                 </button>
 
                 <Diamond className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 text-gold animate-spin-slow" />

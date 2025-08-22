@@ -175,7 +175,7 @@ const ResponsiveHero = () => {
 
                 <a
                   href="tel:+15163245483"
-                  className="group flex items-center justify-center gap-3 px-10 py-5 
+                  className="group flex items-center justify-center gap-3 px-8 py-5 
                             bg-black/40 border-3 border-white/50 text-white font-bold text-xl
                             rounded-2xl backdrop-blur-xl hover:border-gold/70 hover:bg-white/10 
                             transition-all duration-300 hover:scale-105

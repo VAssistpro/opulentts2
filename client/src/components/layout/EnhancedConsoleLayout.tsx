@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ErrorBoundary from '../error/ErrorBoundary';
-import LuxuryNavbar from '../navigation/LuxuryNavbar';
+import ConsoleNavbar from '../navigation/ConsoleNavbar';
 import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
 import { SECTIONS } from './constants';
 

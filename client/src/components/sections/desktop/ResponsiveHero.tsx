@@ -223,10 +223,10 @@ const ResponsiveHero = () => {
               >
                 
                 {/* Excellence Statistics */}
-                <div className="bg-gradient-to-br from-black/70 to-black/50 backdrop-blur-2xl 
-                               rounded-3xl border-2 border-gold/40 p-8
+                <div className="bg-gradient-to-br from-black/70 to-black/50 backdrop-blur-2xl
+                               rounded-3xl border-2 border-gold/40 p-5
                                shadow-[0_25px_50px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.1)]">
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-5">
                     <h3 className="text-gold text-2xl font-bold tracking-wide flex items-center justify-center gap-2">
                       <Diamond className="w-6 h-6" />
                       Excellence by Numbers

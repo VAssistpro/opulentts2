@@ -113,7 +113,7 @@ const HeroSection = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.4 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 className="flex items-center space-x-3 bg-white/5 backdrop-blur-xl border border-white/10 
                            rounded-xl px-6 py-4 hover:bg-white/10 transition-all duration-300"

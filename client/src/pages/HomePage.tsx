@@ -40,8 +40,6 @@ const HomePage = () => {
         {activeSection === 'testimonials' && <TestimonialsSection />}
         {activeSection === 'contact' && <ContactSection />}
         {activeSection === 'book' && <ContactSection />}
-        
-        <Footer />
       </div>
     </div>
   );

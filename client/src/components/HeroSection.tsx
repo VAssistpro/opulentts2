@@ -179,7 +179,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.8 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70"
           >
             {[

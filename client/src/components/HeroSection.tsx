@@ -223,7 +223,7 @@ const HeroSection = () => {
                 © 2024 Opulent Transport Solutions. All rights reserved.
               </motion.div>
               <motion.div
-                className="text-white/70 text-lg pl-3"
+                className="leading-7 text-lg text-white/70 pl-3"
                 whileHover={{ scale: 1.05 }}
               >
                 <p>Powered by V Assist Pro</p>

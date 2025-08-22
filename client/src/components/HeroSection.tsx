@@ -97,7 +97,7 @@ const HeroSection = () => {
                 transition={{ delay: 1, duration: 0.8 }}
               />
             </motion.span>
-            {' – '}<span style={{lineHeight: "25px"}}>where sophistication meets reliability across Manhattan, Brooklyn, Queens,
+            {' – '}<span style={{lineHeight: "21px"}}>where sophistication meets reliability across Manhattan, Brooklyn, Queens,
             and all major airports including JFK, LGA, and Newark.</span>
           </motion.p>
 

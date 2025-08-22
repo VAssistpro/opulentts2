@@ -77,7 +77,7 @@ const EnhancedConsoleLayout = ({ children }: { children?: React.ReactNode }) => 
                        background: 'linear-gradient(135deg, rgba(3,4,7,0.9) 0%, rgba(10,15,26,0.8) 100%)',
                        boxShadow: 'inset 0 1px 3px rgba(147,113,39,0.2), 0 1px 3px rgba(0,0,0,0.4)'
                      }}>
-                  <LuxuryNavbar />
+                  <ConsoleNavbar />
                   
                   {/* Control Panel Lights */}
                   <div className="absolute top-2 right-4 flex gap-2">

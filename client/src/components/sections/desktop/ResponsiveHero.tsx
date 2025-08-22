@@ -261,12 +261,12 @@ const ResponsiveHero = () => {
 
                 {/* Service Coverage */}
                 <div className="bg-gradient-to-br from-black/70 to-black/50 backdrop-blur-2xl
-                               rounded-3xl border-2 border-gold/40 p-5
+                               rounded-3xl border border-gold/40 p-5
                                shadow-[0_25px_50px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.1)]">
                   <div className="text-center mb-6">
                     <h3 className="text-gold text-xl font-bold tracking-wide flex items-center justify-center gap-2">
                       <MapPin className="w-5 h-5" />
-                      Service Areas
+                      <span className="text-white/90">Service Areas</span>
                     </h3>
                     <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-2"></div>
                   </div>

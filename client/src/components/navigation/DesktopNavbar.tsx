@@ -91,7 +91,7 @@ const DesktopNavbar: React.FC = () => {
               <img
                 src="https://opulentts.com/bgvideo/otsnobg.png"
                 alt="Opulent Logo"
-                className="w-auto mt-[52px]"
+                className="w-auto mt-[37px]"
                 style={{ height: '125px' }}
               />
             </a>

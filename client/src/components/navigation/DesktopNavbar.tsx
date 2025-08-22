@@ -83,7 +83,7 @@ const DesktopNavbar: React.FC = () => {
           </div>
 
             {/* Center Logo */}
-            <div className="flex-shrink-0 rounded-xl border border-white/10 bg-black/20 p-2">
+            <div className="flex-shrink-0 rounded-xl border border-white/10 bg-black/[0.92] mt-2 px-2 pt-1 pb-[5px]">
             <a 
               href="#home" 
               onClick={() => handleNavItemClick('home')} 

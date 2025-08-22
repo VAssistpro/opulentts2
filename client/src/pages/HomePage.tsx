@@ -22,7 +22,19 @@ const HomePage = () => {
         preload="auto"
         className="fixed inset-0 w-full h-full object-cover z-0"
         style={{ objectFit: 'cover' }}
+        onError={(e) => {
+          console.log('Video failed to load:', e);
+          // Try alternative sources
+          const video = e.target as HTMLVideoElement;
+          if (video.children.length === 1) {
+            const source = document.createElement('source');
+            source.src = 'https://opulentts.com/bgvideo/otsnobg.mp4';
+            source.type = 'video/mp4';
+            video.appendChild(source);
+          }
+        }}
       >
+        <source src="https://opulentts.com/bgvideo/otsnobg.mp4" type="video/mp4" />
         <source src="https://opulentts.com/bgvideo/NYC-bg.mp4" type="video/mp4" />
       </video>
       

@@ -16,11 +16,16 @@ const ResponsiveNavbar: React.FC = () => {
     setActiveSection('book');
   };
 
-  const navItems = [
+  // Left navigation items
+  const leftNavItems = [
     { icon: Home, label: 'Home', section: 'home' },
     { icon: Info, label: 'About Us', section: 'about' },
     { icon: Briefcase, label: 'Services', section: 'services' },
-    { icon: Car, label: 'Fleet', section: 'fleet' },
+    { icon: Car, label: 'Fleet', section: 'fleet' }
+  ];
+
+  // Right navigation items  
+  const rightNavItems = [
     { icon: Star, label: 'Reviews', section: 'testimonials' },
     { icon: Mail, label: 'Contact Us', section: 'contact' }
   ];
@@ -33,53 +38,89 @@ const ResponsiveNavbar: React.FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-black/80 backdrop-blur-xl border border-white/20 rounded-full px-8 py-4 
-                       shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_48px_rgba(0,0,0,0.6)]
-                       transition-all duration-300">
-          <div className="flex items-center space-x-8">
+        <div className="bg-black/80 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 
+                       shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          
+          <div className="flex items-center justify-between gap-8">
             
-            {/* Navigation Items */}
-            {navItems.map(({ icon: Icon, label, section }) => {
-              const isActive = activeSection === section;
-              return (
-                <button
-                  key={section}
-                  onClick={() => handleNavItemClick(section)}
-                  className={`flex flex-col items-center space-y-1 px-3 py-2 rounded-xl transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-white/20 text-gold shadow-lg' 
-                      : 'text-white/70 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span className="text-xs font-medium">{label}</span>
-                </button>
-              );
-            })}
+            {/* Left Navigation - 4 items */}
+            <div className="flex items-center space-x-6">
+              {leftNavItems.map(({ icon: Icon, label, section }) => {
+                const isActive = activeSection === section;
+                return (
+                  <button
+                    key={section}
+                    onClick={() => handleNavItemClick(section)}
+                    className={`flex flex-col items-center space-y-1 px-3 py-2 rounded-xl transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-white/20 text-gold' 
+                        : 'text-white/70 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="text-xs font-medium">{label}</span>
+                  </button>
+                );
+              })}
+            </div>
 
-            {/* Divider */}
-            <div className="w-px h-8 bg-white/20"></div>
+            {/* Center Logo */}
+            <div className="flex-shrink-0">
+              <button
+                onClick={() => handleNavItemClick('home')}
+                className="flex items-center justify-center w-16 h-16 rounded-full
+                         bg-gradient-to-br from-gold/20 to-gold/10 border-2 border-gold/40
+                         hover:scale-105 transition-all duration-300"
+              >
+                <img
+                  src="https://opulentts.com/bgvideo/otsnobg.png"
+                  alt="Opulent Logo"
+                  className="w-10 h-10 object-contain"
+                />
+              </button>
+            </div>
 
-            {/* Book Now */}
-            <button
-              onClick={handleBookNowClick}
-              className="flex flex-col items-center space-y-1 px-3 py-2 rounded-xl
-                       bg-gold text-black hover:bg-gold/90 transition-all duration-300
-                       shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <Calendar className="w-5 h-5" />
-              <span className="text-xs font-medium">Book Now</span>
-            </button>
+            {/* Right Navigation - 4 items */}
+            <div className="flex items-center space-x-6">
+              {rightNavItems.map(({ icon: Icon, label, section }) => {
+                const isActive = activeSection === section;
+                return (
+                  <button
+                    key={section}
+                    onClick={() => handleNavItemClick(section)}
+                    className={`flex flex-col items-center space-y-1 px-3 py-2 rounded-xl transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-white/20 text-gold' 
+                        : 'text-white/70 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="text-xs font-medium">{label}</span>
+                  </button>
+                );
+              })}
 
-            {/* Account */}
-            <button
-              onClick={() => setShowLoginModal(true)}
-              className="flex flex-col items-center space-y-1 px-3 py-2 rounded-xl
-                       text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
-            >
-              <User className="w-5 h-5" />
-              <span className="text-xs font-medium">Account</span>
-            </button>
+              {/* Book Now Button */}
+              <button
+                onClick={handleBookNowClick}
+                className="flex flex-col items-center space-y-1 px-3 py-2 rounded-xl
+                         bg-gold text-black hover:bg-gold/90 transition-all duration-300
+                         transform hover:scale-105"
+              >
+                <Calendar className="w-5 h-5" />
+                <span className="text-xs font-medium">Book Now</span>
+              </button>
+
+              {/* Account Login Button */}
+              <button
+                onClick={() => setShowLoginModal(true)}
+                className="flex flex-col items-center space-y-1 px-3 py-2 rounded-xl
+                         text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+              >
+                <User className="w-5 h-5" />
+                <span className="text-xs font-medium">Account</span>
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>

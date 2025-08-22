@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
 import { Home, Info, Briefcase, Car, Star, Mail, User, Calendar, Menu } from 'lucide-react';
 import LoginModal from '../layout/LoginModal';
+import Logo from '../layout/Logo';
 
 const NAV_ITEMS = [
   { icon: Home, label: 'Home', section: 'home' },

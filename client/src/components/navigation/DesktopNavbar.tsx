@@ -65,7 +65,7 @@ const DesktopNavbar: React.FC = () => {
           <div className="flex items-center justify-between h-16 px-6">
           
             {/* Left Navigation */}
-            <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 py-2">
+            <div className="flex items-center gap-2 rounded-2xl border-2 border-gold/20 bg-black/40 backdrop-blur-xl px-4 py-3 shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
             {leftNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (
@@ -99,7 +99,7 @@ const DesktopNavbar: React.FC = () => {
           </div>
 
             {/* Right Navigation */}
-            <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-3 py-2">
+            <div className="flex items-center gap-2 rounded-2xl border-2 border-gold/20 bg-black/40 backdrop-blur-xl px-4 py-3 shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
             {rightNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (

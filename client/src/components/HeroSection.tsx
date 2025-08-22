@@ -23,7 +23,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-64">
+    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-80">
       {/* Dynamic Background Elements */}
       <motion.div 
         className="absolute inset-0 opacity-20"

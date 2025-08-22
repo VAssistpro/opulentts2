@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type Section = 'home' | 'about' | 'services' | 'fleet' | 'contact' | 'book';
+type Section = 'home' | 'about' | 'services' | 'fleet' | 'testimonials' | 'contact' | 'book';
 
 interface DesktopNavigationContextType {
   activeSection: Section;

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ErrorBoundary from '../error/ErrorBoundary';
 import { useDesktopNavigation } from '../../contexts/DesktopNavigationContext';
 import { SECTIONS } from './constants';
-import DesktopNavbar from '../navigation/DesktopNavbar';
+import CinematicNavbar from '../navigation/CinematicNavbar';
 
 const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
   const { activeSection, setActiveSection } = useDesktopNavigation();

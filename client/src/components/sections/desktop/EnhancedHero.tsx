@@ -45,7 +45,7 @@ const EnhancedHero = () => {
 
       {/* Main Hero Content */}
       <div className="relative z-20 w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen py-20 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-screen max-w-[1400px] mx-auto" style={{ padding: '35px 0' }}>
 
           {/* Left Content - Main Hero Text */}
           <div className="lg:col-span-7 text-left w-full overflow-hidden">
@@ -55,8 +55,9 @@ const EnhancedHero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-3 mb-6 lg:mb-8 rounded-full
+              className="inline-flex items-center px-4 lg:px-6 py-2 lg:py-3 rounded-full
                          bg-gradient-to-r from-gold/20 to-gold/10 backdrop-blur-xl border border-gold/40"
+              style={{ marginBottom: '9px' }}
             >
               <Award className="w-3 h-3 lg:w-4 lg:h-4 mr-2 text-gold" />
               <span className="text-gold text-xs lg:text-sm font-semibold tracking-wider uppercase">
@@ -93,7 +94,8 @@ const EnhancedHero = () => {
               className="mb-12"
             >
               <p className="text-2xl sm:text-3xl lg:text-4xl text-gold font-semibold
-                           drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] mb-6 tracking-wide">
+                           drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] tracking-wide"
+                 style={{ marginBottom: '16px' }}>
                 Where Excellence Meets Luxury
               </p>
               <p className="text-lg sm:text-xl lg:text-2xl text-white/95 font-light
@@ -109,7 +111,8 @@ const EnhancedHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6 mb-12"
+              className="flex flex-col sm:flex-row gap-6"
+              style={{ marginBottom: '43px' }}
             >
               <GlassmorphicBookButton 
                 onClick={handleBookNow}

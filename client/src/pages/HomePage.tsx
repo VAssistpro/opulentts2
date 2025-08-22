@@ -50,7 +50,7 @@ const HomePage = () => {
                        hover:border-yellow-400/60 transition-all duration-300"
           >
             <Star className="w-4 h-4 text-yellow-400 mr-2 animate-pulse" />
-            <span className="text-yellow-400 text-sm font-semibold tracking-wider uppercase">
+            <span className="text-sm font-semibold tracking-wider uppercase" style={{color: "rgba(155, 155, 155, 1)"}}>
               NEW YORK'S PREMIER LUXURY SERVICE
             </span>
             <Star className="w-4 h-4 text-yellow-400 ml-2 animate-pulse" />
@@ -68,26 +68,16 @@ const HomePage = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold
                        tracking-tight leading-[0.85] text-center"
           >
-            <motion.span 
-              className="block bg-gradient-to-r from-white via-gray-100 to-white 
+            <motion.span
+              className="block bg-gradient-to-r from-white via-gray-100 to-white
                          bg-clip-text text-transparent font-playfair mb-1"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              OPULENT
-            </motion.span>
-            <motion.span 
-              className="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                         bg-clip-text text-transparent font-playfair relative mb-1"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              TRANSPORT
-              <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 blur-xl -z-10"
-                animate={{ opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
+              <p>
+                OPULENT{" "}
+                <span style={{color: "rgb(251, 205, 19)"}}>TRANSPORT</span>
+              </p>
             </motion.span>
             <motion.span 
               className="block bg-gradient-to-r from-white via-gray-100 to-white 

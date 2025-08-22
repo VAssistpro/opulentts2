@@ -19,7 +19,9 @@ const Fleet = () => {
           />
         </AnimatedSection>
 
-        <FleetShowcase />
+        <AnimatedSection delay={200}>
+          <FleetShowcase />
+        </AnimatedSection>
 
         <div className="flex justify-center mt-4">
           <LuxuryButton

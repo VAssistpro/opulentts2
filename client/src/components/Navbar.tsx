@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Home, Info, Briefcase, Car, Star, Mail, Calendar, User } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Home, Info, Briefcase, Car, Star, Mail, Calendar, User, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   activeSection: string;
@@ -8,122 +9,322 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { icon: <Home className="w-4 h-4" />, label: 'Home', section: 'home' },
+    { icon: <Info className="w-4 h-4" />, label: 'About Us', section: 'about' },
+    { icon: <Briefcase className="w-4 h-4" />, label: 'Services', section: 'services' },
+    { icon: <Car className="w-4 h-4" />, label: 'Fleet', section: 'fleet' },
+    { icon: <Star className="w-4 h-4" />, label: 'Reviews', section: 'testimonials' },
+    { icon: <Mail className="w-4 h-4" />, label: 'Contact Us', section: 'contact' },
+  ];
 
   const navButton = (icon: React.ReactNode, label: string, section: string, isSpecial = false) => (
-    <button
-      onClick={() => setActiveSection(section)}
-      className={`flex flex-col items-center space-y-1 px-3 py-2 rounded-lg transition-all duration-300 ${
+    <motion.button
+      onClick={() => {
+        setActiveSection(section);
+        setIsMobileMenuOpen(false);
+      }}
+      whileHover={{ scale: 1.05, y: -1 }}
+      whileTap={{ scale: 0.98 }}
+      className={`flex flex-col items-center space-y-1 px-4 py-3 rounded-xl transition-all duration-300 relative group ${
         isSpecial
-          ? 'bg-yellow-500 text-black hover:bg-yellow-400'
+          ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 shadow-lg hover:shadow-xl'
           : activeSection === section
-          ? 'bg-white/20 text-yellow-400'
+          ? 'bg-white/20 text-yellow-400 shadow-lg'
           : 'text-white/70 hover:text-white hover:bg-white/10'
       }`}
     >
-      {icon}
-      <span className="text-xs font-medium">{label}</span>
-    </button>
+      {!isSpecial && (
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 rounded-xl opacity-0 group-hover:opacity-100"
+          initial={false}
+          animate={{ opacity: activeSection === section ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+        />
+      )}
+      <div className="relative z-10">{icon}</div>
+      <span className="text-xs font-semibold relative z-10">{label}</span>
+    </motion.button>
   );
 
   return (
     <>
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+      {/* Desktop Navbar */}
+      <motion.nav 
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="relative">
-          {/* Main Navbar with Liquid Glass Effect */}
-          <div className="relative bg-white/10 backdrop-blur-2xl rounded-full px-6 py-2 
-                         shadow-[0_8px_32px_rgba(0,0,0,0.3)] 
-                         border border-white/20
-                         before:absolute before:inset-0 before:rounded-full 
-                         before:bg-gradient-to-r before:from-white/5 before:to-transparent 
-                         before:border-t before:border-white/30
-                         after:absolute after:inset-0 after:rounded-full 
-                         after:bg-gradient-to-b after:from-transparent after:to-black/10">
-            
-            <div className="relative z-10 flex items-center justify-between gap-4">
+          {/* Enhanced Navbar with Dynamic Glass Effect */}
+          <motion.div 
+            className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-8 py-3 
+                       shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20
+                       before:absolute before:inset-0 before:rounded-2xl 
+                       before:bg-gradient-to-r before:from-white/10 before:via-white/5 before:to-transparent 
+                       before:border-t before:border-white/30"
+            animate={{
+              backdropFilter: `blur(${Math.min(scrollY / 10 + 20, 40)}px)`,
+              backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
+            }}
+          >
+            <div className="relative z-10 flex items-center justify-between gap-6">
               
               {/* Left Navigation */}
-              <div className="flex items-center space-x-4">
-                {navButton(<Home className="w-4 h-4" />, 'Home', 'home')}
-                {navButton(<Info className="w-4 h-4" />, 'About Us', 'about')}
-                {navButton(<Briefcase className="w-4 h-4" />, 'Services', 'services')}
-                {navButton(<Car className="w-4 h-4" />, 'Fleet', 'fleet')}
+              <div className="flex items-center space-x-2">
+                {navItems.slice(0, 4).map((item) => (
+                  <div key={item.section}>
+                    {navButton(item.icon, item.label, item.section)}
+                  </div>
+                ))}
               </div>
 
               {/* Spacer for center logo */}
               <div className="w-24"></div>
 
               {/* Right Navigation */}
-              <div className="flex items-center space-x-4">
-                {navButton(<Star className="w-4 h-4" />, 'Reviews', 'testimonials')}
-                {navButton(<Mail className="w-4 h-4" />, 'Contact Us', 'contact')}
+              <div className="flex items-center space-x-2">
+                {navItems.slice(4).map((item) => (
+                  <div key={item.section}>
+                    {navButton(item.icon, item.label, item.section)}
+                  </div>
+                ))}
                 {navButton(<Calendar className="w-4 h-4" />, 'Book Now', 'book', true)}
-                <button
+                <motion.button
                   onClick={() => setShowLoginModal(true)}
-                  className="flex flex-col items-center space-y-1 px-3 py-2 rounded-lg
-                           text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex flex-col items-center space-y-1 px-4 py-3 rounded-xl
+                           text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 group"
                 >
                   <User className="w-4 h-4" />
-                  <span className="text-xs font-medium">Account</span>
-                </button>
+                  <span className="text-xs font-semibold">Account</span>
+                </motion.button>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Center Logo with Enhanced Glass Effect */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+          {/* Enhanced Center Logo */}
+          <motion.div 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <button
               onClick={() => setActiveSection('home')}
-              className="relative flex items-center justify-center w-20 h-20 rounded-full 
-                       bg-white/15 backdrop-blur-2xl 
-                       border-2 border-white/30
-                       shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-                       hover:scale-105 transition-all duration-300
-                       before:absolute before:inset-0 before:rounded-full 
-                       before:bg-gradient-to-r before:from-yellow-500/20 before:to-yellow-600/10
-                       after:absolute after:inset-0 after:rounded-full 
-                       after:border after:border-yellow-500/40
-                       after:bg-gradient-to-b after:from-white/10 after:to-transparent"
+              className="relative flex items-center justify-center w-24 h-24 rounded-2xl 
+                       bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-3xl 
+                       border-2 border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+                       hover:border-yellow-500/50 transition-all duration-300
+                       before:absolute before:inset-0 before:rounded-2xl 
+                       before:bg-gradient-to-br before:from-yellow-500/20 before:to-yellow-600/10
+                       after:absolute after:inset-0 after:rounded-2xl 
+                       after:border after:border-yellow-500/40"
+            >
+              <motion.img
+                src="https://opulentts.com/bgvideo/otsnobg.png"
+                alt="Opulent Transport Solutions"
+                className="relative z-10 w-14 h-14 object-contain"
+                animate={{ rotate: [0, 5, -5, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </button>
+          </motion.div>
+        </div>
+      </motion.nav>
+
+      {/* Mobile Navbar */}
+      <motion.nav 
+        className="fixed top-4 left-4 right-4 z-50 lg:hidden"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-6 py-4 
+                       shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <motion.button
+              onClick={() => setActiveSection('home')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-3"
             >
               <img
                 src="https://opulentts.com/bgvideo/otsnobg.png"
-                alt="Opulent Transport Solutions"
-                className="relative z-10 w-12 h-12 object-contain"
+                alt="Opulent"
+                className="w-10 h-10 object-contain"
               />
-            </button>
-          </div>
-        </div>
-      </nav>
+              <span className="text-yellow-500 font-bold text-lg">Opulent</span>
+            </motion.button>
 
-      {/* Login Modal with Glass Effect */}
-      {showLoginModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-          <div className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-xl p-8 max-w-md w-full mx-4
-                         shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-            <h2 className="text-2xl font-bold text-white mb-6">Account Login</h2>
-            <div className="space-y-4">
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-yellow-500"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-yellow-500"
-              />
-              <button className="w-full bg-yellow-500 text-black py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">
-                Login
-              </button>
-              <button
-                onClick={() => setShowLoginModal(false)}
-                className="w-full border border-white/20 text-white py-3 rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Cancel
-              </button>
-            </div>
+            {/* Mobile Menu Button */}
+            <motion.button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
+            >
+              <AnimatePresence mode="wait">
+                {isMobileMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="w-6 h-6" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="w-6 h-6" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
-      )}
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="absolute top-full left-0 right-0 mt-2 bg-white/10 backdrop-blur-3xl rounded-2xl 
+                         shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20 p-4"
+            >
+              <div className="grid grid-cols-2 gap-3">
+                {navItems.map((item, index) => (
+                  <motion.div
+                    key={item.section}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                  >
+                    {navButton(item.icon, item.label, item.section)}
+                  </motion.div>
+                ))}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: navItems.length * 0.1, duration: 0.3 }}
+                >
+                  {navButton(<Calendar className="w-4 h-4" />, 'Book Now', 'book', true)}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: (navItems.length + 1) * 0.1, duration: 0.3 }}
+                >
+                  <motion.button
+                    onClick={() => {
+                      setShowLoginModal(true);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    whileHover={{ scale: 1.05, y: -1 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex flex-col items-center space-y-1 px-4 py-3 rounded-xl w-full
+                             text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
+                  >
+                    <User className="w-4 h-4" />
+                    <span className="text-xs font-semibold">Account</span>
+                  </motion.button>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+
+      {/* Enhanced Login Modal */}
+      <AnimatePresence>
+        {showLoginModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-2xl p-8 max-w-md w-full
+                         shadow-[0_8px_32px_rgba(0,0,0,0.3)] relative"
+            >
+              {/* Close button */}
+              <motion.button
+                onClick={() => setShowLoginModal(false)}
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 
+                           text-white/70 hover:text-white transition-all duration-300"
+              >
+                <X className="w-5 h-5" />
+              </motion.button>
+
+              <h2 className="text-3xl font-bold text-white mb-8 font-playfair">Account Login</h2>
+              <div className="space-y-6">
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-6 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl 
+                           text-white placeholder-white/50 focus:outline-none focus:border-yellow-500 
+                           focus:bg-white/15 transition-all duration-300"
+                />
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="password"
+                  placeholder="Password"
+                  className="w-full px-6 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl 
+                           text-white placeholder-white/50 focus:outline-none focus:border-yellow-500 
+                           focus:bg-white/15 transition-all duration-300"
+                />
+                <motion.button 
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-4 rounded-xl 
+                           font-bold text-lg hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300
+                           shadow-[0_10px_30px_rgba(147,113,39,0.3)]"
+                >
+                  Sign In
+                </motion.button>
+                <motion.button
+                  onClick={() => setShowLoginModal(false)}
+                  whileHover={{ scale: 1.02, y: -1 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full border border-white/20 text-white py-4 rounded-xl font-semibold
+                           hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                >
+                  Cancel
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

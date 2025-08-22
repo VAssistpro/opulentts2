@@ -20,13 +20,12 @@ const HomePage = () => {
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
-          onError={(e) => console.log('Video error:', e)}
         >
           <source src="https://opulentts.com/bgvideo/NYC-bg.mp4" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}

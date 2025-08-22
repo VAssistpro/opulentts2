@@ -29,9 +29,17 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     <>
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
         <div className="relative">
-          {/* Main Navbar */}
-          <div className="bg-black/80 backdrop-blur-xl border border-white/20 rounded-full px-6 py-2 shadow-2xl">
-            <div className="flex items-center justify-between gap-4">
+          {/* Main Navbar with Liquid Glass Effect */}
+          <div className="relative bg-white/10 backdrop-blur-2xl rounded-full px-6 py-2 
+                         shadow-[0_8px_32px_rgba(0,0,0,0.3)] 
+                         border border-white/20
+                         before:absolute before:inset-0 before:rounded-full 
+                         before:bg-gradient-to-r before:from-white/5 before:to-transparent 
+                         before:border-t before:border-white/30
+                         after:absolute after:inset-0 after:rounded-full 
+                         after:bg-gradient-to-b after:from-transparent after:to-black/10">
+            
+            <div className="relative z-10 flex items-center justify-between gap-4">
               
               {/* Left Navigation */}
               <div className="flex items-center space-x-4">
@@ -61,40 +69,47 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
             </div>
           </div>
 
-          {/* Center Logo - Positioned absolutely to extend beyond navbar */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          {/* Center Logo with Enhanced Glass Effect */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
             <button
               onClick={() => setActiveSection('home')}
-              className="flex items-center justify-center w-20 h-20 rounded-full 
-                       bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 
-                       border-2 border-yellow-500/40 hover:scale-105 transition-all duration-300
-                       shadow-2xl backdrop-blur-xl bg-black/80"
+              className="relative flex items-center justify-center w-20 h-20 rounded-full 
+                       bg-white/15 backdrop-blur-2xl 
+                       border-2 border-white/30
+                       shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+                       hover:scale-105 transition-all duration-300
+                       before:absolute before:inset-0 before:rounded-full 
+                       before:bg-gradient-to-r before:from-yellow-500/20 before:to-yellow-600/10
+                       after:absolute after:inset-0 after:rounded-full 
+                       after:border after:border-yellow-500/40
+                       after:bg-gradient-to-b after:from-white/10 after:to-transparent"
             >
               <img
                 src="https://opulentts.com/bgvideo/otsnobg.png"
                 alt="Opulent Transport Solutions"
-                className="w-12 h-12 object-contain"
+                className="relative z-10 w-12 h-12 object-contain"
               />
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Simple Login Modal */}
+      {/* Login Modal with Glass Effect */}
       {showLoginModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-          <div className="bg-black/90 border border-white/20 rounded-xl p-8 max-w-md w-full mx-4">
+          <div className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-xl p-8 max-w-md w-full mx-4
+                         shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <h2 className="text-2xl font-bold text-white mb-6">Account Login</h2>
             <div className="space-y-4">
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-yellow-500"
               />
               <input
                 type="password"
                 placeholder="Password"
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-yellow-500"
               />
               <button className="w-full bg-yellow-500 text-black py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors">
                 Login

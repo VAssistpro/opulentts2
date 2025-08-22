@@ -160,7 +160,7 @@ const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
         </header>
 
         {/* Main Content Area with Glass Effects */}
-        <main className="relative z-10 pt-20">
+        <main className="relative z-10 pt-32">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection}

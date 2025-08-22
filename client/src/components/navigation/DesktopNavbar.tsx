@@ -64,7 +64,7 @@ const DesktopNavbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           
           {/* Left Navigation */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mt-4">
             {leftNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (
@@ -98,7 +98,7 @@ const DesktopNavbar: React.FC = () => {
           </div>
 
           {/* Right Navigation */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 mt-4">
             {rightNavItems.map(({ icon: Icon, label, section }) => {
               const isActive = activeSection === section;
               return (

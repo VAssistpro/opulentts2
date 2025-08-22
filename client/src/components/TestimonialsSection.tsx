@@ -30,35 +30,39 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-6xl w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">Client Reviews</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our valued clients say about 
-            their experiences with Opulent Transport Solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8">
-              <div className="flex space-x-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              
-              <p className="text-white/80 mb-6 leading-relaxed italic">
-                "{testimonial.content}"
+    <div className="fixed inset-0 pt-24 pb-8">
+      <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-500/50 scrollbar-track-transparent">
+        <div className="min-h-full flex items-start justify-center px-4 py-8">
+          <div className="max-w-6xl w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-white mb-6">Client Reviews</h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what our valued clients say about 
+                their experiences with Opulent Transport Solutions.
               </p>
-              
-              <div>
-                <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                <p className="text-white/60">{testimonial.role}</p>
-              </div>
             </div>
-          ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8">
+                  <div className="flex space-x-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-white/80 mb-6 leading-relaxed italic">
+                    "{testimonial.content}"
+                  </p>
+                  
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-white/60">{testimonial.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

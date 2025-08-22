@@ -49,51 +49,56 @@ const StatsSection = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-6xl w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">About Us</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Opulent Transport Solutions has been New York's premier luxury transportation service, 
-            setting the standard for excellence in chauffeur services.
-          </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center hover:bg-white/5 transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                {stat.icon}
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">{stat.title}</h3>
-              <p className="text-white/70">{stat.subtitle}</p>
+    <div className="fixed inset-0 pt-24 pb-8">
+      {/* Scrollable Content Container */}
+      <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-500/50 scrollbar-track-transparent">
+        <div className="min-h-full flex items-start justify-center px-4 py-8">
+          <div className="max-w-6xl w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-white mb-6">About Us</h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Opulent Transport Solutions has been New York's premier luxury transportation service, 
+                setting the standard for excellence in chauffeur services.
+              </p>
             </div>
-          ))}
-        </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center hover:bg-white/5 transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-white/70 leading-relaxed">{feature.description}</p>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {stats.map((stat, index) => (
+                <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center hover:bg-white/5 transition-all duration-300">
+                  <div className="flex justify-center mb-4">
+                    {stat.icon}
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-2">{stat.title}</h3>
+                  <p className="text-white/70">{stat.subtitle}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {/* Service Areas */}
-        <div className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-yellow-500 mb-6">Service Areas</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {serviceAreas.map((area, index) => (
-              <div key={index} className="text-white/80 font-medium">
-                • {area}
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center hover:bg-white/5 transition-all duration-300">
+                  <div className="flex justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-white/70 leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Service Areas */}
+            <div className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center mb-8">
+              <h3 className="text-2xl font-bold text-yellow-500 mb-6">Service Areas</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {serviceAreas.map((area, index) => (
+                  <div key={index} className="text-white/80 font-medium">
+                    • {area}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

@@ -36,28 +36,32 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-6xl w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6">Our Services</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Comprehensive luxury transportation solutions tailored to your needs, 
-            delivered with unmatched professionalism and attention to detail.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover:bg-white/5 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-white/70 leading-relaxed">{service.description}</p>
-              </div>
+    <div className="fixed inset-0 pt-24 pb-8">
+      <div className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-500/50 scrollbar-track-transparent">
+        <div className="min-h-full flex items-start justify-center px-4 py-8">
+          <div className="max-w-6xl w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-white mb-6">Our Services</h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Comprehensive luxury transportation solutions tailored to your needs, 
+                delivered with unmatched professionalism and attention to detail.
+              </p>
             </div>
-          ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 hover:bg-white/5 transition-all duration-300">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="mb-6">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                    <p className="text-white/70 leading-relaxed">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

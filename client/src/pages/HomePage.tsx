@@ -14,19 +14,21 @@ const HomePage = () => {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
       {/* Background Video */}
-      <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
-        >
-          <source src="https://opulentts.com/bgvideo/NYC-bg.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="fixed inset-0 w-full h-full object-cover z-0"
+        style={{ objectFit: 'cover' }}
+      >
+        <source src="https://opulentts.com/bgvideo/NYC-bg.mp4" type="video/mp4" />
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Video Overlay */}
+      <div className="fixed inset-0 bg-black/40 z-[1]"></div>
 
       {/* Content */}
       <div className="relative z-10">

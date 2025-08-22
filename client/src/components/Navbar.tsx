@@ -60,25 +60,25 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     <>
       {/* Desktop Navbar */}
       <motion.nav 
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block max-w-7xl"
+        className="fixed top-4 w-full z-50 hidden lg:block"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="relative flex items-center justify-center">
+        <div className="flex justify-center">
           {/* Enhanced Navbar with Dynamic Glass Effect */}
           <motion.div 
             className="relative bg-white/10 backdrop-blur-3xl rounded-2xl px-6 py-3 
                        shadow-[0_8px_32px_rgba(0,0,0,0.3)] border border-white/20
                        before:absolute before:inset-0 before:rounded-2xl 
                        before:bg-gradient-to-r before:from-white/10 before:via-white/5 before:to-transparent 
-                       before:border-t before:border-white/30 flex items-center justify-center"
+                       before:border-t before:border-white/30"
             animate={{
               backdropFilter: `blur(${Math.min(scrollY / 10 + 20, 40)}px)`,
               backgroundColor: `rgba(255, 255, 255, ${Math.min(scrollY / 1000 + 0.1, 0.2)})`
             }}
           >
-            <div className="relative z-10 flex items-center justify-center gap-4">
+            <div className="relative z-10 flex items-center gap-4">
               
               {/* Left Navigation */}
               <div className="flex items-center space-x-2">
@@ -91,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
 
               {/* Center Logo */}
               <motion.div 
-                className="mx-6 z-20"
+                className="mx-4 z-20"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >

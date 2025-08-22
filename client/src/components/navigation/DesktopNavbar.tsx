@@ -61,7 +61,7 @@ const DesktopNavbar: React.FC = () => {
         : 'py-3 bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md'
     }`}>
       <div className="container mx-auto max-w-7xl px-6">
-        <div className="bg-black/40 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl mx-4 mt-4">
+        <div className="bg-black/60 backdrop-blur-2xl rounded-3xl border-2 border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.4),0_0_100px_rgba(147,113,39,0.1)] mx-4 mt-6">
           <div className="flex items-center justify-between h-16 px-6">
           
             {/* Left Navigation */}

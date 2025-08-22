@@ -40,7 +40,7 @@ const HomePage = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="fixed top-24 left-1/2 transform -translate-x-1/2 z-40"
+          className="fixed top-32 w-full z-40 flex justify-center"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}

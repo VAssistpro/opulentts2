@@ -6,141 +6,75 @@ import { SECTIONS } from './constants';
 import ResponsiveNavbar from '../navigation/ResponsiveNavbar';
 
 const EnhancedVideoLayout = ({ children }: { children?: React.ReactNode }) => {
-  const { activeSection, setActiveSection } = useDesktopNavigation();
+  const { activeSection } = useDesktopNavigation();
   const ActiveComponent = SECTIONS[activeSection];
 
   return (
     <ErrorBoundary>
-      <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      <div className="relative min-h-screen bg-black text-white">
         
-        {/* Enhanced Full-Screen Video Background */}
-        <div className="fixed inset-0 -z-10">
+        {/* Full-Screen Video Background */}
+        <div className="fixed inset-0 z-0">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center center'
-            }}
+            className="w-full h-full object-cover"
           >
             <source src="http://opulentts.com/bgvideo/otsbgvido2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           
-          {/* Enhanced Luxury Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(147,113,39,0.15)_0%,transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(59,130,246,0.1)_0%,transparent_50%)]" />
-          
-          {/* Atmospheric Effects */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-radial from-gold/10 to-transparent rounded-full blur-3xl animate-pulse-slow opacity-60" />
-            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-radial from-blue-400/8 to-transparent rounded-full blur-3xl animate-float opacity-50" />
-            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-radial from-purple-400/8 to-transparent rounded-full blur-2xl animate-pulse-slow opacity-40" />
-          </div>
+          {/* Video Overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        {/* Responsive Navbar */}
+        {/* Navigation */}
         <ResponsiveNavbar />
 
-        {/* Main Content Area with Glass Effects */}
-        <main className="relative z-10 pt-20">
+        {/* Main Content */}
+        <main className="relative z-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.05 }}
-              transition={{ 
-                duration: 0.6, 
-                ease: [0.22, 1, 0.36, 1]
-              }}
-              className="w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="min-h-screen"
             >
-              {activeSection === 'home' ? (
-                <ActiveComponent />
-              ) : (
-                <div className="min-h-screen pb-8">
-                  {/* Content Container with Glass Effect */}
-                  <div className="container mx-auto px-6 lg:px-8 py-8 max-w-7xl">
-                    <div className="backdrop-blur-2xl bg-black/20 rounded-3xl border border-white/10
-                                  shadow-[0_0_60px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.1)]
-                                  overflow-hidden min-h-[calc(100vh-12rem)]"
-                         style={{
-                           background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(10,15,26,0.2) 50%, rgba(0,0,0,0.3) 100%)'
-                         }}>
-
-                      {/* Content with Better Scrolling */}
-                      <div className="h-full overflow-y-auto custom-scrollbar p-8">
-                        <ActiveComponent />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
+              <ActiveComponent />
             </motion.div>
           </AnimatePresence>
         </main>
 
         {/* Floating Contact Button */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1, type: "spring" }}
           className="fixed bottom-8 right-8 z-50"
         >
           <a
             href="tel:+15163245483"
-            className="group flex items-center justify-center w-16 h-16 rounded-full
-                     bg-gradient-to-r from-gold to-gold-dark text-black
-                     shadow-[0_0_30px_rgba(147,113,39,0.5)] hover:shadow-[0_0_40px_rgba(147,113,39,0.7)]
+            className="flex items-center justify-center w-14 h-14 rounded-full
+                     bg-gold text-black shadow-lg hover:shadow-xl
                      transform hover:scale-110 transition-all duration-300"
           >
-            <svg className="w-7 h-7 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
           </a>
         </motion.div>
 
-        {/* Luxury Status Indicators */}
-        <div className="fixed bottom-6 left-6 z-40 flex items-center gap-3">
-          <div className="backdrop-blur-xl bg-black/30 rounded-full px-4 py-2 border border-white/10">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-white/80 text-xs font-medium">LIVE</span>
-            </div>
-          </div>
-          <div className="backdrop-blur-xl bg-black/30 rounded-full px-4 py-2 border border-white/10">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-              <span className="text-white/80 text-xs font-medium">24/7 AVAILABLE</span>
-            </div>
+        {/* Live Status */}
+        <div className="fixed bottom-8 left-8 z-40">
+          <div className="flex items-center gap-2 bg-black/60 backdrop-blur-xl rounded-full px-4 py-2 border border-white/20">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-white text-sm font-medium">LIVE - 24/7 AVAILABLE</span>
           </div>
         </div>
       </div>
-      
-      {/* Enhanced CSS for luxury animations */}
-      <style>{`
-        .animate-pulse-slow {
-          animation: pulse 4s ease-in-out infinite;
-        }
-        .animate-float {
-          animation: float 20s ease-in-out infinite;
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-          25% { transform: translateY(-20px) translateX(10px) scale(1.05); }
-          50% { transform: translateY(-10px) translateX(-5px) scale(0.95); }
-          75% { transform: translateY(-30px) translateX(15px) scale(1.1); }
-        }
-        .bg-gradient-radial {
-          background: radial-gradient(circle, var(--tw-gradient-stops));
-        }
-      `}</style>
     </ErrorBoundary>
   );
 };

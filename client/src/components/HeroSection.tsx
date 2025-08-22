@@ -101,12 +101,109 @@ const HeroSection = () => {
             and all major airports including JFK, LGA, and Newark.</span>
           </motion.p>
 
-          {/* Quick Stats */}
+          {/* Desktop: Three-column layout with side panels */}
+          <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start lg:max-w-6xl lg:mx-auto lg:mb-[15px]">
+            {/* Left Column - Service Features */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="space-y-4"
+            >
+              {[
+                "24/7 Availability",
+                "Professional Chauffeurs",
+                "Luxury Fleet",
+                "Airport Specialists"
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center space-x-3 p-3 rounded-[5px] bg-white/5
+                             backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden"
+                >
+                  <motion.span
+                    className="text-yellow-500"
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                  >
+                    ●
+                  </motion.span>
+                  <span className="text-white/70 text-sm">{feature}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Center Column - Main Content */}
+            <div className="text-center">
+              {/* Reserve Journey Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1, duration: 0.8 }}
+                className="flex justify-center"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-yellow-600
+                             text-black px-[35px] py-[15px] rounded-xl font-bold text-lg
+                             shadow-[0_10px_40px_rgba(147,113,39,0.3)] hover:shadow-[0_20px_60px_rgba(147,113,39,0.4)]
+                             transition-all duration-300 relative overflow-hidden"
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-0
+                               group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <Calendar className="w-6 h-6 relative z-10" />
+                  <span className="relative z-10">Reserve Your Journey</span>
+                  <motion.div
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="relative z-10"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.div>
+                </motion.button>
+              </motion.div>
+            </div>
+
+            {/* Right Column - Quality Stats */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="space-y-4"
+            >
+              {quickStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center space-x-3 p-3 rounded-[5px] bg-white/5
+                             backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden"
+                >
+                  <div className="text-yellow-500">{stat.icon}</div>
+                  <div>
+                    <div className="text-white font-semibold text-sm">{stat.label}</div>
+                    <div className="text-white/70 text-xs">{stat.value}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Mobile: Original horizontal layout */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-8 mb-[15px]"
+            className="lg:hidden flex flex-wrap justify-center gap-8 mb-[15px]"
           >
             {quickStats.map((stat, index) => (
               <motion.div
@@ -115,7 +212,7 @@ const HeroSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.9 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.05, y: -2 }}
-                className="flex items-center space-x-3 bg-white/5 backdrop-blur-xl border border-white/10 
+                className="flex items-center space-x-3 bg-white/5 backdrop-blur-xl border border-white/10
                            rounded-xl px-6 py-4 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="text-yellow-500">{stat.icon}</div>
@@ -127,23 +224,23 @@ const HeroSection = () => {
             ))}
           </motion.div>
 
-          {/* Enhanced Call to Action Buttons */}
+          {/* Mobile: Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="lg:hidden flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="group flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-yellow-600
-                         text-black px-[35px] py-[15px] rounded-xl font-bold text-lg 
+                         text-black px-[35px] py-[15px] rounded-xl font-bold text-lg
                          shadow-[0_10px_40px_rgba(147,113,39,0.3)] hover:shadow-[0_20px_60px_rgba(147,113,39,0.4)]
                          transition-all duration-300 relative overflow-hidden"
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-0 
+                className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 opacity-0
                            group-hover:opacity-100 transition-opacity duration-300"
               />
               <Calendar className="w-6 h-6 relative z-10" />
@@ -156,12 +253,12 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5" />
               </motion.div>
             </motion.button>
-            
-            <motion.button 
+
+            <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="group flex items-center space-x-3 bg-white/10 backdrop-blur-xl text-white
-                         px-[35px] py-[15px] rounded-xl font-bold text-lg border-2 border-white/20 
+                         px-[35px] py-[15px] rounded-xl font-bold text-lg border-2 border-white/20
                          hover:bg-white/20 hover:border-white/40 transition-all duration-300
                          shadow-[0_10px_40px_rgba(255,255,255,0.1)]"
             >
@@ -175,16 +272,16 @@ const HeroSection = () => {
             </motion.button>
           </motion.div>
 
-          {/* Service Highlights with better spacing */}
+          {/* Mobile: Service Highlights */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="mt-[10px] grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70"
+            className="lg:hidden mt-[10px] grid grid-cols-2 md:grid-cols-4 gap-6 text-sm text-white/70"
           >
             {[
               "24/7 Availability",
-              "Professional Chauffeurs", 
+              "Professional Chauffeurs",
               "Luxury Fleet",
               "Airport Specialists"
             ].map((feature, index) => (
@@ -194,7 +291,7 @@ const HeroSection = () => {
                 className="flex items-center justify-center space-x-2 p-3 rounded-[5px] bg-white/5
                            backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden"
               >
-                <motion.span 
+                <motion.span
                   className="text-yellow-500"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}

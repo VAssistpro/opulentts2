@@ -1,4 +1,4 @@
-import CinematicHero from '../sections/desktop/CinematicHero';
+import ResponsiveHero from '../sections/desktop/ResponsiveHero';
 import About from '../sections/desktop/About';
 import Services from '../sections/desktop/Services';
 import Fleet from '../sections/desktop/Fleet';

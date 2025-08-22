@@ -130,8 +130,8 @@ const ResponsiveHero = () => {
                 className="space-y-6"
               >
                 <div className="space-y-4">
-                  <p className="text-3xl sm:text-4xl lg:text-5xl text-gold font-bold
-                               drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)] 
+                  <p className="text-2xl sm:text-3xl lg:text-4xl text-gold font-bold
+                               drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]
                                [text-shadow:_0_0_30px_rgba(147,113,39,0.5)]
                                tracking-wide">
                     Where Excellence Meets Luxury
